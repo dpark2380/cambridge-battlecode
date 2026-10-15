@@ -6367,7 +6367,7 @@ auto result = bc::map::camp(position);
 std::vector<camp_group> camp_groups()
 ```
 
-Query physical camp groups from the engine on every call; throws in draft.
+Query physical camp groups from the engine on every call; also available in draft.
 
 Inspect map geometry when choosing a route or objective.
 
