@@ -28,5 +28,8 @@ compile_commands.json
 *.obj
 *.wasm
 
+# Editor settings (machine-specific paths)
+.vscode/
+
 # macOS metadata
 .DS_Store
