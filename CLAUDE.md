@@ -8,6 +8,7 @@ A competitor workspace for **Cambridge Battlecode (CAMBC), event `cambc2026a`**.
 
 - `bots/` — our bots, one directory per bot, each with a `src/` folder. `starter-cpp` and `starter-python` are untouched copies of `sdk/templates/{cpp,python}`, kept as baseline opponents.
 - `bots/v<N>` — our C++ bot, one folder per iteration (currently `bots/v4`; `bots/v2` and `bots/v3` are frozen as baselines). When an iteration is done, the folder is renamed to its version and the next one starts as `bots/v<N+1>`; older folders stay as baseline opponents. The draft (`draft.cpp`) scores champions against a map profile (`map_profile.cpp`) and writes a `draft_plan` (`plan.h`: roster, per-champion role, map features) to draft memory; champions read it with `read_plan()`. Gameplay (`bot.cpp`) is strategy v4 (see `bots/docs/v4/summary.md`): every body picks its own target group and claims it in shared memory, a 64-bit word of 6-bit claims per body plus a danger marker (layout at the top of `bot.cpp`). `world.cpp` caches camp groups and each champion's own observations of them.
+- `bots/<teammate>/` — personal bots kept apart from the shared `v<N>` line, with their notes in `bots/<teammate>/docs/<bot>/summary.md`. `bots/daniel/`: `v5` (Simon's v4 with self-play-tuned constants and the experiment draft hook; beats v4 63% over 162 games, see `bots/daniel/docs/v5`), `v4-dp`/`v5-dp` (a parallel branch off v3), and `main-cpp`/`main-v1`/`main-v2` (an independent, weaker heuristic bot; `main-cpp` holds the `draft_lab.py` table). Tools accept these by bare name (`tools/arena.py v5 v4`).
 - `bots/docs/<version>/summary.md` — one folder per bot iteration: strategy, results, errors hit and their fixes, weaknesses, next steps, tunables. Add a new version folder whenever the strategy changes meaningfully. After renaming a bot folder, delete its `.cambc/` build cache (it stores absolute paths).
 - `sdk/` — vendored SDK (C++ header `cambc.h`, Python `cambc` package + `_cambc.pyi` stubs, Rust, OCaml) and per-language templates. Treat as upstream; don't edit unless bumping the SDK.
 - `cmake/CMakeLists.txt` — the build used for every C++ bot.
@@ -24,7 +25,7 @@ Python bots need no build; `pyrightconfig.json` adds `../../sdk/python` to the p
 
 ### `cambc` CLI
 
-Installed as a pip package; the executable is at `C:\Users\visvi\AppData\Local\Programs\Python\Python313\Scripts\cambc.exe` (not on PATH — `cambc add-to-path` fixes that per session). Run `cambc <cmd> --help` for options.
+Installed as a pip package. On Windows the executable is at `C:\Users\visvi\AppData\Local\Programs\Python\Python313\Scripts\cambc.exe` (not on PATH — `cambc add-to-path` fixes that per session); on macOS it is installed with `uv tool install cambc` at `~/.local/bin/cambc`. Run `cambc <cmd> --help` for options.
 
 - `cambc run <BOT_A> <BOT_B> --map <name> [--rounds N] [-o DIR] [--statistics out.json] [--view]` — play a match. Bots are directory paths (e.g. `bots/starter-cpp`); maps resolve by bare name under `maps/`. `--rounds` truncates the game.
 - `cambc build <BOT>` — compile a bot to Wasm. `cambc view [replay]` opens the visualiser.
@@ -32,9 +33,18 @@ Installed as a pip package; the executable is at `C:\Users\visvi\AppData\Local\P
 
 The replay bundle (`*.repl26a`) is a ZIP: `team-a.stdout` / `team-b.stdout` hold bot prints, `team-*.debug` the debug draws. Printing from a bot and reading `team-a.stdout` is the easiest way to inspect engine state, e.g. map layout (the `.map26a` format is binary; `game_map.camp_groups()` is empty during the draft, so dump on the first game turn). Bot prints that run out of fuel resume next turn, so give such runs a few rounds.
 
+### Testing and tuning (`tools/*.py`, stdlib Python, parallel)
+
+The engine is deterministic: one map + side = one game. For bigger samples, run with a fuel quantum of `1,000,000 + 10,000 * seed` (`arena.seed_fuel`); bots with the experiment hook (everything in `bots/daniel/`) then draft a random roster. Real matches run at 100k, so the hook is inert in competition. Port the hook into each new version.
+
+- `python3 tools/arena.py <botA> <botB> [--seeds N] [--min-winrate X]` — every map, both sides (plus N random-draft games per map and side); prints per-map results and A's win rate with a 95% interval. Use it as the regression gate before freezing a version. Bots are names under `bots/` (or a teammate folder such as `bots/daniel/`) or paths.
+- `python3 tools/tune.py --bot v5 --params a,b,c [--iterations N --seeds S]` — evolution strategy over named constants (`name = 1.5f` in `src/bot.cpp`): builds copies under `bots/_tune*` (gitignored), plays each candidate against the incumbent, and accepts at ≥56%. Prints the best values; `--apply` writes them back. Always confirm the result with a large `arena.py --seeds` run, because single accepted steps can be noise.
+- `python3 tools/draft_lab.py collect --bot <bot>` / `fit --no-write` — random-roster self-play, then per-team-size champion values (Bradley–Terry plus gem-margin ridge). Findings: `docs/research/drafting.md`.
+- Research notes on ML/RL feasibility: `docs/research/rl-feasibility.md`.
+
 ### Replay analysis
 
-`node tools/replay/analyze.mjs [--us A|B] [--out dir] <replay.zip|.repl26a|dir>...` decodes replays with the visualiser's own engine wasm (found under `%LOCALAPPDATA%/cambc/assets`). It works on platform downloads (zip: `replay.repl26a` + our stdout) and on local bundles. For each input it writes `<name>.stats.json` (same schema as `--statistics`) and `<name>.timeline.csv` (per champion per round: position, health, alive, gems, gold, K/D/A), and prints a report: score over time, per-champion table with builds, and every death with position and gems lost. Our team is detected from the draft log lines. The visualiser's own CSV export only covers rounds already played back, so don't rely on it. Platform replays go in `replays/<version>/` (gitignored); write analysis to `replays/<version>/analysis/`.
+`node tools/replay/analyze.mjs [--us A|B] [--out dir] <replay.zip|.repl26a|dir>...` decodes replays with the visualiser's own engine wasm (found under `%LOCALAPPDATA%/cambc/assets` on Windows, `~/Library/Caches/cambc/assets` on macOS). It works on platform downloads (zip: `replay.repl26a` + our stdout) and on local bundles. For each input it writes `<name>.stats.json` (same schema as `--statistics`) and `<name>.timeline.csv` (per champion per round: position, health, alive, gems, gold, K/D/A), and prints a report: score over time, per-champion table with builds, and every death with position and gems lost. Our team is detected from the draft log lines. The visualiser's own CSV export only covers rounds already played back, so don't rely on it. Platform replays go in `replays/<version>/` (gitignored); write analysis to `replays/<version>/analysis/`.
 
 The installed CLI may be newer than the vendored `sdk/` (it warns and suggests `cambc init`).
 

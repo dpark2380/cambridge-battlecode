@@ -46,3 +46,24 @@ Code: `bots/v3` (C++), forked from frozen `bots/v2`. The draft and squad roles a
 ## Tunables (top of `bots/v3/src/bot.cpp`)
 
 v2's set, plus `danger_radius`, `danger_rounds`, `duo_recall_health`, `lock_detour`, `lock_place_range`; the build order is in `build_order()`.
+
+## Platform results, 20 ranked games (downloaded 2026-10-16, `replays/v3/`)
+
+**6 wins, 14 losses.** Analysed with `tools/replay/analyze.mjs` (report in `replays/v3/analysis/report.txt`).
+
+| Map | Record | What decided it |
+|---|---|---|
+| monolith | 3–0 | — |
+| elkring | 2–1 | — |
+| lanes | 1–1 | close (998–1010 loss) |
+| interlock | 0–4 | Opponent holds the centre (46–62% of early champion-turns vs our 25–36%); one game with 28 of our deaths and 342 gems dropped, Cassi & Issac dying 9 times |
+| rows | 0–3 | **Opponent farms the 3-wolf packs solo, one champion per lane** (Vendetta, Varg, Issac each capturing 66 gems every ~60 rounds in parallel) |
+| corners | 0–2 | Opponent parks 4 champions on the central gem clusters next to the central altar: 272–36 by round 100 |
+| expanse | 0–2 | slower economy, no fights |
+| packs | 0–1 | opponent centre share 41% vs our 6% |
+
+Findings:
+1. **Most losses are economy, not fights.** In 7 of 14 losses we never died. We fall behind on banked gems by round 200 in 11 of 14.
+2. **We never split up.** `plan.split_farm` is computed in the draft but never read by `bot.cpp`, so the gold squad always moves as one pack on one shared target. Capture rewards are *split* among the allies present, so a pack only kills faster; it doesn't earn more. Opponents farm solo, in parallel, wherever one champion can survive the camp.
+3. **We cede the centre** on maps where central gem clusters sit next to an altar (corners, interlock, packs). The danger marker makes us avoid it after one lost skirmish.
+4. **Opponent drafts:** Cassi & Issac 18/20, Vendetta 16, Varg 15, Tavi 14, Stellar 7. Several opponents spend very little gold early and rush gems.

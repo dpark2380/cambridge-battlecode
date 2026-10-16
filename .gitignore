@@ -34,3 +34,7 @@ compile_commands.json
 
 # macOS metadata
 .DS_Store
+
+# Experiment data and tuning scratch
+/data/
+/bots/_tune*/

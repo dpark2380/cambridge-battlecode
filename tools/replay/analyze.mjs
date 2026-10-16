@@ -15,8 +15,8 @@
 import { readFileSync, writeFileSync, readdirSync, statSync, existsSync, mkdirSync } from "node:fs";
 import { join, basename, extname, dirname } from "node:path";
 import { inflateRawSync } from "node:zlib";
-import { WASI } from "node:wasi";
 import { homedir } from "node:os";
+import { WASI } from "node:wasi";
 
 const CHAMPIONS = ["ryth", "vesper_vale", "vendetta", "cassi", "issac", "stellar", "prism", "marcella", "willow", "ren", "varg", "tavi"];
 const DRAFT = ["ryth", "vesper_vale", "vendetta", "cassi_and_issac", "stellar", "prism", "marcella", "willow", "ren", "varg", "tavi"];
