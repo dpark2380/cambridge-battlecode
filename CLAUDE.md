@@ -12,7 +12,7 @@ A competitor workspace for **Cambridge Battlecode (CAMBC), event `cambc2026a`**.
   - `bots/daniel/`: notes are numbered by Daniel's own iterations; the mapping to bot folders is in `bots/daniel/docs/README.md`. `v5` (Simon's v4 with self-play-tuned constants and the experiment draft hook; beats v4 63% over 162 games, Daniel iteration v5) is the strongest bot and the base for the next iteration. `v4-dp`/`v5-dp` (iterations v3/v4, a parallel branch off the team's v3), and `main-v1`/`main-v2` (iterations v1/v2, an independent, weaker heuristic bot; `main-cpp` is v2's working copy and holds the `draft_lab.py` table).
 - `sdk/` — vendored SDK (C++ header `cambc.h`, Python `cambc` package + `_cambc.pyi` stubs, Rust, OCaml) and per-language templates. Treat as upstream; don't edit unless bumping the SDK.
 - `cmake/CMakeLists.txt` — the build used for every C++ bot.
-- `maps/*.map26a` — the current map rotation (binary). `maps/ascii/*.txt` are engine dumps of each: grid, legend and camp-group rewards. Read these to reason about a map. If `cambc maps` downloads UUID-suffixed duplicates, delete them.
+- `maps/*.map26a` — the current map rotation (binary). `maps/ascii/*.txt` are engine dumps of each: grid, legend and camp-group rewards. Read these to reason about a map. After `cambc maps pull`, delete any UUID-suffixed duplicates and run `python3 tools/dump_maps.py [map...]` to write the dumps (it plays `tools/mapdump` for 5 rounds per map).
 - `docs/GameRules.md`, `docs/BotAPICpp.md`, `docs/BotAPIPython.md` — exported handbook and full API reference. These are large; grep for the `### <name>` heading of the function you need rather than reading them whole.
 
 ## Building
@@ -29,7 +29,7 @@ Installed as a pip package. On Windows the executable is at `C:\Users\visvi\AppD
 
 - `cambc run <BOT_A> <BOT_B> --map <name> [--rounds N] [-o DIR] [--statistics out.json] [--view]` — play a match. Bots are directory paths (e.g. `bots/starter-cpp`); maps resolve by bare name under `maps/`. `--rounds` truncates the game.
 - `cambc build <BOT>` — compile a bot to Wasm. `cambc view [replay]` opens the visualiser.
-- `cambc new`, `cambc maps` (download current map pool), `cambc init` (refresh `sdk/`), `cambc submit` / `cambc bundle`.
+- `cambc new`, `cambc maps pull` (refresh the map pool), `cambc init` (refresh `sdk/`), `cambc submit` / `cambc bundle`.
 
 The replay bundle (`*.repl26a`) is a ZIP: `team-a.stdout` / `team-b.stdout` hold bot prints, `team-*.debug` the debug draws. Printing from a bot and reading `team-a.stdout` is the easiest way to inspect engine state, e.g. map layout (the `.map26a` format is binary; `game_map.camp_groups()` is empty during the draft, so dump on the first game turn). Bot prints that run out of fuel resume next turn, so give such runs a few rounds.
 

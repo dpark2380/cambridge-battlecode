@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Play bot A against bot B on every map from both sides, in parallel, and report A's results.
 
-    python3 tools/arena.py main-cpp starter-cpp            # 9 maps x 2 sides
+    python3 tools/arena.py main-cpp starter-cpp            # every map x 2 sides
     python3 tools/arena.py main-cpp main-v1 --seeds 4      # + 4 random-draft games per map and side
 
 Matches are deterministic, so --repeat only helps when a bot is nondeterministic. --seeds N adds games with
