@@ -1,7 +1,9 @@
-# v5: v4 with tuned constants
+# Daniel v5: Simon's v4 with tuned constants (submitted)
 
 Code: `bots/daniel/v5` (C++), forked from `bots/v4` (Simon's solo farming with claims). Strategy is unchanged. v5 adds the
-random-draft experiment hook and self-play-tuned constants.
+random-draft experiment hook and self-play-tuned constants. Submitted to the platform as team bot version 5
+(2026-10-16).
+Iterations: [v1](../v1/summary.md) → [v2](../v2/summary.md) → [v3](../v3/summary.md) → [v4](../v4/summary.md) → v5 (this).
 
 ## Changes from v4
 
@@ -26,6 +28,11 @@ The gain comes from games against a real opponent (contested camps, centre, figh
 
 A second tuning round (15 iterations, smaller steps, 3 accepted) did **not** confirm: 80/162 (49%) against these values
 and 8/18 against v4. Its accepted steps were noise, so it was discarded. The constants look close to a local optimum.
+
+## Per-map result vs `bots/v4` (real drafts)
+
+corners 2/2 +868 · interlock 1/2 +258 · rows 2/2 +143 · elkring 2/2 +27 · expanse 1/2 +23 · lanes 1/2 +12 ·
+collision 1/2 −6 · monolith 1/2 −11 · **packs 0/2 −152** (consistent: `max_group_bodies` = 2 may hurt there).
 
 ## Next steps
 

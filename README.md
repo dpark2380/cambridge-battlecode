@@ -8,7 +8,7 @@ Rules are in `docs/GameRules.md`.
 | Bot | What it is |
 |---|---|
 | `bots/simon/` | Simon's bots, notes in `bots/simon/docs/`. `v4`: every body claims its own target and farms solo. `v6`: v4 plus capture contesting, plus a record of rejected experiments (loses 41% to `bots/daniel/v5`). `v3`, `v2`: earlier versions, kept as regression opponents. Research: `bots/simon/docs/research/` |
-| `bots/daniel/` | Daniel's bots, notes in `bots/daniel/docs/`. `v5`: v4 with self-play-tuned constants (63% vs v4 over 162 games); the team's strongest bot. `v4-dp`, `v5-dp`: a parallel branch off v3. `main-cpp`, `main-v1`, `main-v2`: an earlier, weaker independent bot |
+| `bots/daniel/` | Daniel's bots, one doc per iteration in `bots/daniel/docs/v1`–`v5` (index: `bots/daniel/docs/README.md`). `v5`: v4 with self-play-tuned constants (63% vs v4 over 162 games); the team's strongest bot. `v4-dp`, `v5-dp`: a parallel branch off v3. `main-cpp`, `main-v1`, `main-v2`: an earlier, weaker independent bot |
 | `bots/starter-cpp`, `bots/starter-python` | The SDK starter bots |
 
 ## Test, tune, draft
