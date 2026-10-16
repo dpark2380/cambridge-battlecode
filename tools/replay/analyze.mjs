@@ -16,6 +16,7 @@ import { readFileSync, writeFileSync, readdirSync, statSync, existsSync, mkdirSy
 import { join, basename, extname, dirname } from "node:path";
 import { inflateRawSync } from "node:zlib";
 import { WASI } from "node:wasi";
+import { homedir } from "node:os";
 
 const CHAMPIONS = ["ryth", "vesper_vale", "vendetta", "cassi", "issac", "stellar", "prism", "marcella", "willow", "ren", "varg", "tavi"];
 const DRAFT = ["ryth", "vesper_vale", "vendetta", "cassi_and_issac", "stellar", "prism", "marcella", "willow", "ren", "varg", "tavi"];
@@ -74,8 +75,12 @@ function expandInputs(paths) {
 }
 
 function findWasm() {
-    const root = join(process.env.LOCALAPPDATA ?? "", "cambc", "assets");
-    if (!existsSync(root)) throw new Error(`no cambc assets under ${root}; pass --wasm`);
+    // cambc caches assets in the platform cache dir: %LOCALAPPDATA% on Windows, ~/Library/Caches on macOS.
+    const roots = [join(process.env.LOCALAPPDATA ?? "", "cambc", "assets"),
+        join(homedir(), "Library", "Caches", "cambc", "assets"),
+        join(process.env.XDG_CACHE_HOME ?? join(homedir(), ".cache"), "cambc", "assets")];
+    const root = roots.find(existsSync);
+    if (!root) throw new Error(`no cambc assets under ${roots.join(" or ")}; pass --wasm`);
     const candidates = [];
     for (const hash of readdirSync(root)) {
         const dir = join(root, hash, "visualiser", "assets");

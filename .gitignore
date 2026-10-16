@@ -28,8 +28,9 @@ compile_commands.json
 *.obj
 *.wasm
 
-# Editor settings (machine-specific paths)
+# Editor settings (machine-specific paths) and the clangd index
 .vscode/
+.cache/
 
 # macOS metadata
 .DS_Store
