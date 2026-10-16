@@ -1,6 +1,6 @@
 # v2: gem duo + gold squad
 
-Code: `bots/v2` (C++). The draft is the map-aware scorer from v1, plus duo selection. Gameplay is new in this version.
+Code: `bots/simon/v2` (C++). The draft is the map-aware scorer from v1, plus duo selection. Gameplay is new in this version.
 
 ## Strategy
 
@@ -58,9 +58,9 @@ PvP almost never happened against the starter, so the fight logic is **untested*
 1. **Break altar locks**: walk to a locked altar and attack the lock (or just call `submit_gems`, which converts into lock attacks). Consider buying and placing locks ourselves on the enemy's nearest altar.
 2. **Stop feeding the duo**: don't contest central gems against superior numbers; retreat on first sight of 2+ enemies unless clearly ahead; keep the duo with the squad on small maps.
 3. **Build for passives**: one emblem each of Monster / Durability, then Power, as the opponent does.
-4. **Keep `bots/v2` frozen as a baseline opponent**: start v3 in its own folder.
+4. **Keep `bots/simon/v2` frozen as a baseline opponent**: start v3 in its own folder.
 5. Older items: the interlock gold squad, monoliths, untested mechanics.
 
 ## Tunables
 
-`bots/v2/src/bot.cpp`, top of file: `body_damage`, `body_health`, `max_damage_share`, `mining_weight`, `recall_health`, `spawn_leave_health`, `tribute_gems`, `tribute_detour`, `engage_radius`, `max_wait_turns`, `give_up_rounds`. Shop thresholds (150 squad / 300 duo) are in `Bot::shop_trip`.
+`bots/simon/v2/src/bot.cpp`, top of file: `body_damage`, `body_health`, `max_damage_share`, `mining_weight`, `recall_health`, `spawn_leave_health`, `tribute_gems`, `tribute_detour`, `engage_radius`, `max_wait_turns`, `give_up_rounds`. Shop thresholds (150 squad / 300 duo) are in `Bot::shop_trip`.

@@ -10,7 +10,7 @@ struct self_estimate {
 };
 
 // Per-champion state survives between turns.
-// Strategy v4 (see bots/docs/v4): every body farms its own best group and claims it in shared
+// Strategy v4 (see bots/simon/docs/v4): every body farms its own best group and claims it in shared
 // memory; bodies share a group when it needs them or beats their other options. Everyone tributes
 // the gems they carry.
 class Bot {
@@ -36,6 +36,7 @@ class Bot {
     void take_turn(int round);
     void publish_claim(int round);
     void watch_progress(int round);
+    bool contest_capture(int round);
     void shop();
     bool place_lock();
     bool fight_enemies(int round);

@@ -1,6 +1,6 @@
 # v4: work in progress
 
-Code: `bots/v4` (C++), forked from frozen `bots/v3`. Starts identical to v3; see `bots/docs/v3/summary.md` for the current strategy, tunables and known weaknesses.
+Code: `bots/simon/v4` (C++), forked from frozen `bots/simon/v3`. Starts identical to v3; see `bots/simon/docs/v3/summary.md` for the current strategy, tunables and known weaknesses.
 
 ## Why: v3 vs the +200 bot (0–5)
 
@@ -66,7 +66,7 @@ Farming pace: rounds to 1000 against `starter-cpp`, every map, both sides (18 ga
 | v4, first cut (claims only) | 8,507 | −21% |
 | v4, final | 8,391 | −22%; interlock went from 732 to 448 once the stall bugs were fixed |
 
-Head to head vs `bots/v3`: **16–2** (lost packs and rows as B). The first cut went 11–7.
+Head to head vs `bots/simon/v3`: **16–2** (lost packs and rows as B). The first cut went 11–7.
 
 We still farm slower than the +200 bot. Against v3 it reached 1000 at r375 (packs), r378 (expanse) and r432 (monolith). v4 against v3 does r446/r540, r486/r452 and r490/r567 (as A/B). Their 4-body packs team made ~23 captures by r375; ours makes ~26 by r456.
 
@@ -98,6 +98,6 @@ Fuel: at least 45k of 100k left on every turn on expanse, lanes and corners (r1�
 3. Fights (plan item 2), in a form that doesn't give up space.
 4. Carried over from v3: contest the centre on maps with central free gems.
 
-## Tunables (top of `bots/v4/src/bot.cpp`)
+## Tunables (top of `bots/simon/v4/src/bot.cpp`)
 
 v3's set, plus `claim_bits`, `body_damage` (allies, 50), `max_damage_share` (3.0), `stall_turns` (25), `gold_weight` (0.15), `recall_turns` (10), `max_group_bodies` (3), `extra_body_value` (0.5), `help_wait_turns` (25). `mining_weight` is gone.

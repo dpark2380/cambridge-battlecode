@@ -5,7 +5,7 @@
 #include "world.h"
 
 // Per-champion state survives between turns.
-// Strategy v3 (see bots/docs/v3): the gem duo greedily captures gem camps; the gold squad farms
+// Strategy v3 (see bots/simon/docs/v3): the gem duo greedily captures gem camps; the gold squad farms
 // gold, monsters before gold clusters. Both tribute any gems they carry.
 class Bot {
     std::optional<draft_plan> plan;  // from draft memory; nullopt if the draft wrote none
