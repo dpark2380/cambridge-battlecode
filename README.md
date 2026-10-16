@@ -9,7 +9,7 @@ Rules are in `docs/GameRules.md`.
 |---|---|
 | `bots/v4` | Team's current bot (Simon's): every body claims its own target and farms solo (`bots/docs/v4/summary.md`) |
 | `bots/v3`, `bots/v2` | Frozen earlier versions (`bots/docs/<version>/summary.md`), kept as regression opponents |
-| `bots/daniel/` | Daniel's bots, notes in `bots/daniel/docs/`. `v5`: v4 with self-play-tuned constants (63% vs v4 over 162 games). `v4-dp`, `v5-dp`: a parallel branch off v3. `main-cpp`, `main-v1`, `main-v2`: an earlier, weaker independent bot |
+| `bots/daniel/` | Daniel's bots, one doc per iteration in `bots/daniel/docs/v1`–`v5` (index: `bots/daniel/docs/README.md`). `v5`: v4 with self-play-tuned constants (63% vs v4 over 162 games). `v4-dp`, `v5-dp`: a parallel branch off v3. `main-cpp`, `main-v1`, `main-v2`: an earlier, weaker independent bot |
 | `bots/starter-cpp`, `bots/starter-python` | The SDK starter bots |
 
 ## Test, tune, draft

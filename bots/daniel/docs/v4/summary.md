@@ -1,6 +1,7 @@
-# v5-dp: solo farming
+# Daniel v4: solo farming
 
-Code: `bots/daniel/v5-dp` (renamed from `bots/daniel/v5`) (C++), forked from `bots/v4`. Draft and gem duo unchanged; the gold squad stops moving as one pack.
+Code: `bots/daniel/v5-dp` (C++), forked from Daniel v3 (`bots/daniel/v4-dp`). Draft and gem duo unchanged; the gold squad stops moving as one pack.
+Iterations: [v1](../v1/summary.md) → [v2](../v2/summary.md) → [v3](../v3/summary.md) → v4 (this) → [v5](../v5/summary.md).
 
 ## Why
 
@@ -9,7 +10,7 @@ fights. Opponents farm wolf packs **solo, one champion per lane** (rows: three c
 ~60 rounds), while v3's gold squad always shared one target. Capture rewards are split among the allies present, so
 a pack only kills faster; it doesn't earn more. `plan.split_farm` was computed in the draft but never used.
 
-## Changes from v4
+## Changes from Daniel v3
 
 | Change | Detail |
 |---|---|
@@ -26,9 +27,9 @@ both places fixed it.
 
 | Opponent | Result |
 |---|---|
-| `bots/v4`, real drafts | **13/18 (72%)**: rows 2/2 +270, corners 2/2 +657, collision 2/2 +622, elkring 2/2 +180; no map below −23 average |
+| Daniel v3 (`v4-dp`), real drafts | **13/18 (72%)**: rows 2/2 +270, corners 2/2 +657, collision 2/2 +622, elkring 2/2 +180; no map below −23 average |
 | `bots/v3`, real drafts | **14/18 (78%)** |
-| `bots/v4`, random drafts (`--seeds 6`) | 68/126 (54%). Smaller gain: random rosters often lack a solo-capable gold squad |
+| Daniel v3, random drafts (`--seeds 6`) | 68/126 (54%). Smaller gain: random rosters often lack a solo-capable gold squad |
 
 No faults. `tools/tune.py` (12 iterations over `solo_damage_share`, `squad_gold_weight`, `mining_weight`, `tribute_gems`,
 `recall_health`, `body_damage`) found nothing better than the defaults.
@@ -43,7 +44,7 @@ No faults. `tools/tune.py` (12 iterations over `solo_damage_share`, `squad_gold_
 
 ## Tunables
 
-v4's set plus `solo_farm`, `solo_damage_share` (top of `bots/daniel/v5/src/bot.cpp`).
+Daniel v3's set plus `solo_farm`, `solo_damage_share` (top of `bots/daniel/v5/src/bot.cpp`).
 
 ## Compared with Simon's `bots/v4` (2026-10-16)
 

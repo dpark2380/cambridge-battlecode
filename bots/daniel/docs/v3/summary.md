@@ -1,7 +1,9 @@
-# v4-dp: v3 + gem-aware gold squad, tuned constants, experiment hook
+# Daniel v3: Simon's v3 + gem-aware gold squad, tuned constants
 
-Code: `bots/daniel/v4-dp` (renamed from `bots/v4` when Simon pushed his own v4) (C++), forked from `bots/v3`. Strategy, roles and draft are unchanged; this version is about
+Code: `bots/daniel/v4-dp` (C++), forked from the team's `bots/v3` after v2 lost to it 3/18. (The folder was first called
+`bots/v4`, then renamed when Simon pushed his own v4.) Strategy, roles and draft are unchanged; this iteration is about
 measurement plus two small, tested improvements.
+Iterations: [v1](../v1/summary.md) → [v2](../v2/summary.md) → v3 (this) → [v4](../v4/summary.md) → [v5](../v5/summary.md).
 
 ## Changes from v3
 
@@ -15,7 +17,7 @@ measurement plus two small, tested improvements.
 
 | Opponent | Result | Notes |
 |---|---|---|
-| `bots/v4` without these changes (random drafts both sides) | **159/288 = 55%** (95% CI 49–61%) | gem scoring alone: 158/288; tuned constants alone: 72/126 |
+| v3 code with the hook (no other changes) (random drafts both sides) | **159/288 = 55%** (95% CI 49–61%) | gem scoring alone: 158/288; tuned constants alone: 72/126 |
 | `bots/v3`, real drafts | 11/18 (61%) | deterministic: one game per map and side |
 | `bots/daniel/main-v2` (the older heuristic bot from `tools/`) | v3 already beats it 15/18 | |
 
