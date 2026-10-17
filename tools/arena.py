@@ -48,11 +48,33 @@ def play(bot_a, bot_b, map_name, fuel=None, keep_replay=None):
     with tempfile.TemporaryDirectory() as tmp:
         stats = Path(tmp) / "stats.json"
         cmd = [CAMBC, "run", str(bot_a), str(bot_b), "--map", map_name, "-o", keep_replay or tmp,
-               "--statistics", str(stats)]
+               "--statistics", str(stats), "--json"]
         if fuel:
             cmd += ["--fuel", str(fuel)]
         subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, timeout=600)
-        return json.loads(stats.read_text()) if stats.exists() else None
+        return normalize(json.loads(stats.read_text())) if stats.exists() else None
+
+
+DRAFT_NAMES = ["ryth", "vesper vale", "vendetta", "cassi", "stellar", "prism", "marcella", "willow", "ren", "varg", "tavi"]
+
+
+def normalize(s):
+    """cambc >= 2.2 writes a nested schema; reduce it to the 2.1 fields the tools use:
+    outcome ('teamA'/'teamB'), round, teams[i].submittedGems / draftPicks (champion_draft ids), botFaults [A, B]."""
+    if "match" not in s:
+        return s
+    teams = {t["team"]: int(t["submittedGems"]) for t in s["teams"]}
+    picks = {"teamA": {}, "teamB": {}}
+    for c in s["roster"]["champions"]:
+        name = c["name"].lower()
+        if name == "issac":
+            continue  # Cassi & Issac is one pick
+        picks[c["team"]][c["draftPick"]] = DRAFT_NAMES.index(name)
+    faults = s["diagnostics"]["botFaults"]
+    return {"outcome": s["match"]["outcome"], "round": s["match"]["roundsCompleted"],
+            "teams": [{"submittedGems": teams[t], "draftPicks": [p for _, p in sorted(picks[t].items())]}
+                      for t in ("teamA", "teamB")],
+            "botFaults": [faults["teamA"], faults["teamB"]]}
 
 
 def seed_fuel(seed):

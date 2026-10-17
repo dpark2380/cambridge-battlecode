@@ -3,7 +3,7 @@
 Code: `bots/daniel/v5` (C++), forked from `bots/v4` (Simon's solo farming with claims). Strategy is unchanged. v5 adds the
 random-draft experiment hook and self-play-tuned constants. Submitted to the platform as team bot version 5
 (2026-10-16).
-Iterations: [v1](../v1/summary.md) → [v2](../v2/summary.md) → [v3](../v3/summary.md) → [v4](../v4/summary.md) → v5 (this).
+Iterations: [v1](../v1/summary.md) → [v2](../v2/summary.md) → [v3](../v3/summary.md) → [v4](../v4/summary.md) → v5 (this) → [v6](../v6/summary.md).
 
 ## Changes from v4
 
