@@ -74,7 +74,8 @@ function expandInputs(paths) {
     return result;
 }
 
-function findWasm() {
+// Every cached engine wasm, newest first. Platform replays span engine versions, so callers try each.
+function findWasms() {
     // cambc caches assets in the platform cache dir: %LOCALAPPDATA% on Windows, ~/Library/Caches on macOS.
     const roots = [join(process.env.LOCALAPPDATA ?? "", "cambc", "assets"),
         join(homedir(), "Library", "Caches", "cambc", "assets"),
@@ -89,7 +90,9 @@ function findWasm() {
             if (/^v\d+_\d+_\d+-.*\.wasm$/.test(name)) candidates.push(join(dir, name));
     }
     if (!candidates.length) throw new Error("no engine wasm found; pass --wasm");
-    return candidates.sort((a, b) => statSync(b).mtimeMs - statSync(a).mtimeMs)[0];
+    const version = p => basename(p).match(/^v(\d+)_(\d+)_(\d+)/).slice(1).map(Number);
+    const newer = (a, b) => { const [x, y] = [version(a), version(b)]; return y[0] - x[0] || y[1] - x[1] || y[2] - x[2]; };
+    return [...new Map(candidates.map(p => [version(p).join("."), p])).values()].sort(newer);
 }
 
 // ---------- engine ----------
@@ -304,12 +307,22 @@ if (!opt.inputs.length) {
     process.exit(2);
 }
 
-const engine = new Engine(opt.wasm ?? findWasm());
+// Engines are created on first use; a replay is decoded by the first version that accepts it.
+const wasmPaths = opt.wasm ? [opt.wasm] : findWasms();
+const engines = new Map();
+const engineFor = path => engines.get(path) ?? engines.set(path, new Engine(path)).get(path);
+function loadAny(replay) {
+    let lastError;
+    for (const path of wasmPaths) {
+        try { return engineFor(path).load(replay); } catch (error) { lastError = error; }
+    }
+    throw lastError;
+}
 for (const path of expandInputs(opt.inputs)) {
     const name = basename(path).replace(/\.(zip|repl26a)$/i, "");
     try {
         const input = loadInput(path);
-        const game = engine.load(input.replay);
+        const game = loadAny(input.replay);
         const rounds = timeline(game);
         game.seek(game.size);
         const summary = game.summary();

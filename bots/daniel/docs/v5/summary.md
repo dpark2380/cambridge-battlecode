@@ -40,3 +40,46 @@ collision 1/2 −6 · monolith 1/2 −11 · **packs 0/2 −152** (consistent: `m
 2. Farming pace is now the limit (v4 notes: still ~15–25% slower than the +200 bot). Tuning didn't move it, so it needs
    structural changes: idle time between captures, tribute routing, wolf kill order.
 3. Fights (v4 weakness 1) are untested locally, because local games rarely produce real fights.
+
+## Ranked results: 65 games (downloaded 2026-10-17, `replays/daniel-v5/`)
+
+**18 wins, 47 losses (28%)**, similar to v3's 6–14 on the ladder. The pool has grown to 17 maps; 8 of them are new and
+were never tested locally. As B we went 12–24, as A 6–23. Opponents now mostly draft Varg + Stellar + Cassi & Issac
+(61, 55 and 51 of 65 games), plus Tavi, Vendetta or Ren.
+
+| Map | Record | Avg margin | Our / their deaths per game | Note |
+|---|---|---|---|---|
+| expanse | 4–2 | +141 | 0.0 / 0.3 | farming race we win |
+| rushbait-v2 (new) | 2–0 | +615 | 1.0 / 2.5 | |
+| collision | 2–1 | +300 | 10.7 / 6.7 | |
+| pilgrimage (new) | 2–3 | +100 | 8.8 / 13.6 | |
+| rows | 2–5 | −132 | 0.4 / 0.6 | farming race, behind at r200 in 4/7 |
+| interlock | 1–5 | −245 | 11.0 / 5.3 | |
+| fragment (new) | 2–3 | −266 | 20.0 / 13.2 | brawl |
+| elkring | 0–5 | −288 | 4.0 / 2.4 | behind at r200 in 5/5 |
+| packs | 0–5 | −390 | 7.4 / 3.2 | (also our one consistent local loss vs v4) |
+| swirl (new) | 0–4 | −514 | 27.0 / 9.0 | brawl, 262 carried gems lost per game |
+| lanes | 0–4 | −94 | 0.0 / 0.0 | pure farming race, lost |
+| monolith | 1–3 | −175 | 5.2 / 4.2 | |
+| ambush (new) | 1–2 | −188 | 7.7 / 5.3 | |
+| eight (new) | 0–2 | −902 | 22.0 / 7.5 | brawl |
+| corners | 1–1 | −113 | 6.0 / 5.0 | |
+| stampede (new) | 0–1 | −360 | 23.0 / 23.0 | |
+| **contest (new)** | 0–1 | **0–600** | 99 / 4 | **all gems are in 2 Monoliths, which we skip: we can't score at all** (locally v5 vs starter ends 0–0) |
+
+What it says:
+1. **Monoliths are now mandatory.** On contest they are the only gem source, and the opponent took one (Varg 400, Issac 200).
+   Monoliths also hold most of the gems on monolith and rows.
+2. **Losses are now fights more than farming.** Losses average 12.1 deaths (9.2 with an enemy near) and 92 carried gems
+   lost; wins average 3.6. The small brawl maps (swirl, eight, fragment, stampede) have 20–27 deaths per game.
+3. **Pure farming races are still lost** on lanes, elkring and rows (no deaths, behind on pace). Farming speed is still
+   the other gap, as v4's notes said.
+4. Opponents build Power stacks plus Durability, Jungle and Bruiser emblems (one of each passive) and spend far more gold
+   than us late.
+
+### Tooling notes
+
+- Platform replays now span engine versions 0.0.2 and 0.0.3. `cambc` 2.2.5 (`uv tool upgrade cambc`) brings both, and
+  `tools/replay/analyze.mjs` now tries every cached engine until one decodes the replay. Its layouts were calibrated on
+  0.0.1; per-champion gem sums still match team totals in all 65 games.
+- New platform zips include `team-*.fuel` (per-turn fuel use).
