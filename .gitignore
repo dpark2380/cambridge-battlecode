@@ -32,6 +32,9 @@ compile_commands.json
 .vscode/
 .cache/
 
+# Misc
+TODO.md
+
 # macOS metadata
 .DS_Store
 
