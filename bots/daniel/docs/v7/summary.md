@@ -35,3 +35,13 @@ it held up. Iterations: [v1](../v1/summary.md) → … → [v6](../v6/summary.md
 
 v6's set plus `hidden_response`, `siege_escape_turns`, `carrier_recall_health`, `jungle_first` (top of
 `bots/daniel/v7/src/bot.cpp`).
+
+## Follow-up experiments (rejected; v7 stays current)
+
+| Candidate | vs v7 | vs hunter (v7: 71%) | Verdict |
+|---|---|---|---|
+| `siege_value` 1.5 / 2.0 / 3.0 (meant to start sieges earlier) | 49% / 45% / 41% | — | worse: keep 1.0 |
+| Re-tune of 16 constants on the 17-map pool (2 accepted steps: `max_group_bodies` 3, `gold_weight` 0.11, `tribute_gems` 19, …) | 84/170 (49%) | 103/170 (61%) | worse against a fighting opponent. Self-play again pushed gold down; mirror games don't reward it |
+| Poke response (research #6): the gold squad steps out of reach of a ranged enemy it can't hit | 61/170 (36%) | 102/170 (60%) | much worse: giving up farm time to every ranged enemy costs more than it saves |
+
+Lesson: gate every self-play tune against `hunter` as well. Self-play alone keeps undervaluing gold.
