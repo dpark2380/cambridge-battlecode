@@ -2,7 +2,7 @@
 
 Code: `bots/daniel/v6` (C++), forked from Daniel v5. Built in response to the 65 ranked v5 games (18–47; see
 `../v5/summary.md`). Iterations: [v1](../v1/summary.md) → [v2](../v2/summary.md) → [v3](../v3/summary.md) →
-[v4](../v4/summary.md) → [v5](../v5/summary.md) → v6 (this).
+[v4](../v4/summary.md) → [v5](../v5/summary.md) → v6 (this) → [v7](../v7/summary.md).
 
 ## Changes from v5
 
@@ -58,3 +58,9 @@ The gain shows against opponents that fight, which is what ranked games look lik
    is Monster → Durability → Power. Test their order against the hunter.
 3. Contest: our lone sieger died twice carrying 200 gems. Recall (which keeps gems) after a big capture instead of
    walking to an altar through enemies.
+
+## Ranked results (54 games, 2026-10-18, `replays/daniel-v6/`)
+
+**28–26 (52%)**, up from v5's 18–47. Gold per 100 rounds: us 654 vs them 558 (v5: 596 vs 702), out-earned in 18/54
+(v5: 42/65). Contest 1–0 (+800), collision 4–0. Still losing eight 0–3, stampede 0–3 (0 gems: its only gems are a 6-elk
+group) and swirl 1–2. Losses average 14.8 deaths. Full research: `../research/v6-improvements.md`; fixes in v7.
