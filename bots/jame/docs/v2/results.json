@@ -1,0 +1,806 @@
+{
+  "date": "2026-10-18",
+  "cliVersion": "2.1.3",
+  "engineVersion": "0.0.1",
+  "engineVersionPacked": 65536,
+  "fuel": "runner defaults",
+  "maps": 17,
+  "sides": "both",
+  "heldOutMaps": false,
+  "sourceSHA256": {
+    "bot.cpp": "84c74b7f74cba5d9ee1e0e12df70361d362323b4451a2855b563e7685014baa2",
+    "bot.h": "fc3c5283285539bdac356ebb6b811d5aa315baa017e8441b679659658c911265",
+    "draft.cpp": "3451b84a3c53600ba938f8b938f80ff8fb4a7dfeed7add71df8ee43cb75625ac",
+    "draft.h": "3d41f1714d54b4a116911f6eadeacf2bcc285293955e8357a0a4a3217f221c20",
+    "features.h": "233e3bd528c74b7525385b937087fca3b861b1dca714c1cd29316cd3f1d12736",
+    "main.cpp": "506bcba6510eaeb94977f1e888d356832bbb1f2ad2585d10e4c918e77fdfcdbc",
+    "navigation.cpp": "68ff419299588692c53a88df96184fbf87c41f1b708f1535696035739c0d5293",
+    "navigation.h": "76f58a54766a2aea607f8f86bc345a0500ad8959d780f1064adf656c6ee5381c",
+    "progress.h": "4b6b20a0519f6a90f6afa937075b40cca8f24b89bd54ec43f861ea98598dec45"
+  },
+  "runs": [
+    {
+      "directory": "matches/jame-v2-vs-jame-v1__34-games__17-maps__2026-10-18_032416-UTC",
+      "bots": [
+        {
+          "name": "jame/v2",
+          "version": "v2",
+          "path": "/Users/jamesli/Desktop/UNSW/Year 3/comps/cambridge-battlecode/bots/jame/v2"
+        },
+        {
+          "name": "jame/v1",
+          "version": "v1",
+          "path": "/Users/jamesli/Desktop/UNSW/Year 3/comps/cambridge-battlecode/bots/jame/v1"
+        }
+      ],
+      "summary": {
+        "completed": 34,
+        "failed": 0,
+        "winsA": 22,
+        "winsB": 12,
+        "winRateA": 0.6470588235294118,
+        "meanGemMarginA": 108.88235294117646,
+        "faultsA": 0,
+        "faultsB": 0,
+        "uniqueScenarios": 34,
+        "uniqueWinsA": 22,
+        "repeatedScenariosExcluded": 0,
+        "uniqueWinRateWilson95": [
+          0.47913963119781733,
+          0.785120794051205
+        ],
+        "probabilityABetter": 0.9552344605326653
+      }
+    },
+    {
+      "directory": "matches/jame-v2-vs-starter-cpp__34-games__17-maps__2026-10-18_032422-UTC",
+      "bots": [
+        {
+          "name": "jame",
+          "version": "v2",
+          "path": "/Users/jamesli/Desktop/UNSW/Year 3/comps/cambridge-battlecode/bots/jame/v2"
+        },
+        {
+          "name": "starter-cpp",
+          "version": "starter-cpp",
+          "path": "/Users/jamesli/Desktop/UNSW/Year 3/comps/cambridge-battlecode/bots/starter-cpp"
+        }
+      ],
+      "summary": {
+        "completed": 34,
+        "failed": 0,
+        "winsA": 28,
+        "winsB": 6,
+        "winRateA": 0.8235294117647058,
+        "meanGemMarginA": 347.88235294117646,
+        "faultsA": 0,
+        "faultsB": 0,
+        "uniqueScenarios": 34,
+        "uniqueWinsA": 28,
+        "repeatedScenariosExcluded": 0,
+        "uniqueWinRateWilson95": [
+          0.6648626260015724,
+          0.9165103095462768
+        ],
+        "probabilityABetter": 0.999941579066217
+      }
+    },
+    {
+      "directory": "matches/jame-v2-vs-simon-v5__34-games__17-maps__2026-10-18_032430-UTC",
+      "bots": [
+        {
+          "name": "jame",
+          "version": "v2",
+          "path": "/Users/jamesli/Desktop/UNSW/Year 3/comps/cambridge-battlecode/bots/jame/v2"
+        },
+        {
+          "name": "simon",
+          "version": "v5",
+          "path": "/Users/jamesli/Desktop/UNSW/Year 3/comps/cambridge-battlecode/bots/simon/v5"
+        }
+      ],
+      "summary": {
+        "completed": 34,
+        "failed": 0,
+        "winsA": 0,
+        "winsB": 34,
+        "winRateA": 0.0,
+        "meanGemMarginA": -584.8529411764706,
+        "faultsA": 0,
+        "faultsB": 0,
+        "uniqueScenarios": 34,
+        "uniqueWinsA": 0,
+        "repeatedScenariosExcluded": 0,
+        "uniqueWinRateWilson95": [
+          0.0,
+          0.10151455415332376
+        ],
+        "probabilityABetter": 2.910383045673377e-11
+      }
+    },
+    {
+      "directory": "matches/jame-v2-vs-daniel-v5__34-games__17-maps__2026-10-18_032435-UTC",
+      "bots": [
+        {
+          "name": "jame",
+          "version": "v2",
+          "path": "/Users/jamesli/Desktop/UNSW/Year 3/comps/cambridge-battlecode/bots/jame/v2"
+        },
+        {
+          "name": "daniel",
+          "version": "v5",
+          "path": "/Users/jamesli/Desktop/UNSW/Year 3/comps/cambridge-battlecode/bots/daniel/v5"
+        }
+      ],
+      "summary": {
+        "completed": 34,
+        "failed": 0,
+        "winsA": 0,
+        "winsB": 34,
+        "winRateA": 0.0,
+        "meanGemMarginA": -655.6470588235294,
+        "faultsA": 0,
+        "faultsB": 0,
+        "uniqueScenarios": 34,
+        "uniqueWinsA": 0,
+        "repeatedScenariosExcluded": 0,
+        "uniqueWinRateWilson95": [
+          0.0,
+          0.10151455415332376
+        ],
+        "probabilityABetter": 2.910383045673377e-11
+      }
+    },
+    {
+      "directory": "matches/jame-v2-vs-without-gem-priority__34-games__17-maps__2026-10-18_032440-UTC",
+      "bots": [
+        {
+          "name": "jame",
+          "version": "v2",
+          "path": "/Users/jamesli/Desktop/UNSW/Year 3/comps/cambridge-battlecode/bots/jame/v2"
+        },
+        {
+          "name": "without-gem-priority",
+          "version": "without-gem-priority",
+          "path": "/private/tmp/jame-v2-visibility-ablations/without-gem-priority"
+        }
+      ],
+      "summary": {
+        "completed": 34,
+        "failed": 0,
+        "winsA": 28,
+        "winsB": 6,
+        "winRateA": 0.8235294117647058,
+        "meanGemMarginA": 197.14705882352942,
+        "faultsA": 0,
+        "faultsB": 0,
+        "uniqueScenarios": 34,
+        "uniqueWinsA": 28,
+        "repeatedScenariosExcluded": 0,
+        "uniqueWinRateWilson95": [
+          0.6648626260015724,
+          0.9165103095462768
+        ],
+        "probabilityABetter": 0.999941579066217
+      }
+    },
+    {
+      "directory": "matches/jame-v2-vs-without-target-persistence__34-games__17-maps__2026-10-18_032449-UTC",
+      "bots": [
+        {
+          "name": "jame",
+          "version": "v2",
+          "path": "/Users/jamesli/Desktop/UNSW/Year 3/comps/cambridge-battlecode/bots/jame/v2"
+        },
+        {
+          "name": "without-target-persistence",
+          "version": "without-target-persistence",
+          "path": "/private/tmp/jame-v2-visibility-ablations/without-target-persistence"
+        }
+      ],
+      "summary": {
+        "completed": 34,
+        "failed": 0,
+        "winsA": 22,
+        "winsB": 12,
+        "winRateA": 0.6470588235294118,
+        "meanGemMarginA": -25.705882352941178,
+        "faultsA": 0,
+        "faultsB": 0,
+        "uniqueScenarios": 34,
+        "uniqueWinsA": 22,
+        "repeatedScenariosExcluded": 0,
+        "uniqueWinRateWilson95": [
+          0.47913963119781733,
+          0.785120794051205
+        ],
+        "probabilityABetter": 0.9552344605326653
+      }
+    }
+  ],
+  "validation": {
+    "games": 204,
+    "faults": 0,
+    "diagnosticErrorsOrOverruns": 0,
+    "minimumLoggedFuel": 14824
+  },
+  "v1Comparison": [
+    {
+      "opponent": "jame/v1",
+      "map": "ambush",
+      "side": "A",
+      "won": false,
+      "gems": 178,
+      "opponentGems": 1017,
+      "rounds": 1908,
+      "gemsPer100Rounds": 9.329140461215934,
+      "collectedGems": 178,
+      "deaths": 0,
+      "firstCapture": 83,
+      "firstBank": 117,
+      "faults": 0,
+      "minimumLoggedFuel": 25389
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "ambush",
+      "side": "B",
+      "won": false,
+      "gems": 106,
+      "opponentGems": 1006,
+      "rounds": 1422,
+      "gemsPer100Rounds": 7.454289732770746,
+      "collectedGems": 106,
+      "deaths": 3,
+      "firstCapture": 82,
+      "firstBank": 117,
+      "faults": 0,
+      "minimumLoggedFuel": 24314
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "collision",
+      "side": "A",
+      "won": false,
+      "gems": 880,
+      "opponentGems": 1034,
+      "rounds": 1456,
+      "gemsPer100Rounds": 60.43956043956044,
+      "collectedGems": 1232,
+      "deaths": 21,
+      "firstCapture": 18,
+      "firstBank": 37,
+      "faults": 0,
+      "minimumLoggedFuel": 36176
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "collision",
+      "side": "B",
+      "won": true,
+      "gems": 1034,
+      "opponentGems": 748,
+      "rounds": 1296,
+      "gemsPer100Rounds": 79.78395061728395,
+      "collectedGems": 1210,
+      "deaths": 15,
+      "firstCapture": 19,
+      "firstBank": 51,
+      "faults": 0,
+      "minimumLoggedFuel": 37312
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "contest",
+      "side": "A",
+      "won": true,
+      "gems": 0,
+      "opponentGems": 0,
+      "rounds": 2000,
+      "gemsPer100Rounds": 0.0,
+      "collectedGems": 0,
+      "deaths": 38,
+      "firstCapture": 22,
+      "firstBank": null,
+      "faults": 0,
+      "minimumLoggedFuel": 34255
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "contest",
+      "side": "B",
+      "won": true,
+      "gems": 0,
+      "opponentGems": 0,
+      "rounds": 2000,
+      "gemsPer100Rounds": 0.0,
+      "collectedGems": 0,
+      "deaths": 18,
+      "firstCapture": 22,
+      "firstBank": null,
+      "faults": 0,
+      "minimumLoggedFuel": 37326
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "corners",
+      "side": "A",
+      "won": true,
+      "gems": 1000,
+      "opponentGems": 244,
+      "rounds": 378,
+      "gemsPer100Rounds": 264.55026455026456,
+      "collectedGems": 1000,
+      "deaths": 2,
+      "firstCapture": 20,
+      "firstBank": 47,
+      "faults": 0,
+      "minimumLoggedFuel": 29329
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "corners",
+      "side": "B",
+      "won": true,
+      "gems": 1008,
+      "opponentGems": 386,
+      "rounds": 443,
+      "gemsPer100Rounds": 227.53950338600453,
+      "collectedGems": 1078,
+      "deaths": 5,
+      "firstCapture": 19,
+      "firstBank": 46,
+      "faults": 0,
+      "minimumLoggedFuel": 30961
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "eight",
+      "side": "A",
+      "won": true,
+      "gems": 1012,
+      "opponentGems": 684,
+      "rounds": 1032,
+      "gemsPer100Rounds": 98.06201550387597,
+      "collectedGems": 1122,
+      "deaths": 24,
+      "firstCapture": 24,
+      "firstBank": 37,
+      "faults": 0,
+      "minimumLoggedFuel": 55019
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "eight",
+      "side": "B",
+      "won": true,
+      "gems": 1010,
+      "opponentGems": 694,
+      "rounds": 1030,
+      "gemsPer100Rounds": 98.05825242718447,
+      "collectedGems": 1164,
+      "deaths": 21,
+      "firstCapture": 25,
+      "firstBank": 38,
+      "faults": 0,
+      "minimumLoggedFuel": 57649
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "elkring",
+      "side": "A",
+      "won": false,
+      "gems": 684,
+      "opponentGems": 1008,
+      "rounds": 1439,
+      "gemsPer100Rounds": 47.533009034051425,
+      "collectedGems": 792,
+      "deaths": 32,
+      "firstCapture": 22,
+      "firstBank": 42,
+      "faults": 0,
+      "minimumLoggedFuel": 59152
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "elkring",
+      "side": "B",
+      "won": false,
+      "gems": 594,
+      "opponentGems": 1008,
+      "rounds": 1366,
+      "gemsPer100Rounds": 43.48462664714495,
+      "collectedGems": 720,
+      "deaths": 16,
+      "firstCapture": 22,
+      "firstBank": 42,
+      "faults": 0,
+      "minimumLoggedFuel": 59914
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "expanse",
+      "side": "A",
+      "won": true,
+      "gems": 1036,
+      "opponentGems": 758,
+      "rounds": 583,
+      "gemsPer100Rounds": 177.7015437392796,
+      "collectedGems": 1084,
+      "deaths": 0,
+      "firstCapture": 24,
+      "firstBank": 36,
+      "faults": 0,
+      "minimumLoggedFuel": 22394
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "expanse",
+      "side": "B",
+      "won": true,
+      "gems": 1012,
+      "opponentGems": 806,
+      "rounds": 581,
+      "gemsPer100Rounds": 174.18244406196214,
+      "collectedGems": 1036,
+      "deaths": 0,
+      "firstCapture": 24,
+      "firstBank": 36,
+      "faults": 0,
+      "minimumLoggedFuel": 23795
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "fragment",
+      "side": "A",
+      "won": false,
+      "gems": 770,
+      "opponentGems": 1006,
+      "rounds": 1476,
+      "gemsPer100Rounds": 52.1680216802168,
+      "collectedGems": 792,
+      "deaths": 9,
+      "firstCapture": 23,
+      "firstBank": 36,
+      "faults": 0,
+      "minimumLoggedFuel": 66483
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "fragment",
+      "side": "B",
+      "won": false,
+      "gems": 869,
+      "opponentGems": 1009,
+      "rounds": 1684,
+      "gemsPer100Rounds": 51.60332541567696,
+      "collectedGems": 880,
+      "deaths": 13,
+      "firstCapture": 23,
+      "firstBank": 36,
+      "faults": 0,
+      "minimumLoggedFuel": 65115
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "interlock",
+      "side": "A",
+      "won": true,
+      "gems": 1000,
+      "opponentGems": 968,
+      "rounds": 699,
+      "gemsPer100Rounds": 143.0615164520744,
+      "collectedGems": 1104,
+      "deaths": 12,
+      "firstCapture": 19,
+      "firstBank": 35,
+      "faults": 0,
+      "minimumLoggedFuel": 44806
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "interlock",
+      "side": "B",
+      "won": true,
+      "gems": 1006,
+      "opponentGems": 518,
+      "rounds": 600,
+      "gemsPer100Rounds": 167.66666666666666,
+      "collectedGems": 1072,
+      "deaths": 9,
+      "firstCapture": 19,
+      "firstBank": 35,
+      "faults": 0,
+      "minimumLoggedFuel": 45461
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "lanes",
+      "side": "A",
+      "won": false,
+      "gems": 932,
+      "opponentGems": 1020,
+      "rounds": 437,
+      "gemsPer100Rounds": 213.27231121281466,
+      "collectedGems": 954,
+      "deaths": 2,
+      "firstCapture": 42,
+      "firstBank": 51,
+      "faults": 0,
+      "minimumLoggedFuel": 15566
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "lanes",
+      "side": "B",
+      "won": true,
+      "gems": 1000,
+      "opponentGems": 306,
+      "rounds": 408,
+      "gemsPer100Rounds": 245.09803921568627,
+      "collectedGems": 1022,
+      "deaths": 0,
+      "firstCapture": 42,
+      "firstBank": 51,
+      "faults": 0,
+      "minimumLoggedFuel": 14824
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "monolith",
+      "side": "A",
+      "won": true,
+      "gems": 1004,
+      "opponentGems": 908,
+      "rounds": 841,
+      "gemsPer100Rounds": 119.38168846611177,
+      "collectedGems": 1026,
+      "deaths": 8,
+      "firstCapture": 16,
+      "firstBank": 38,
+      "faults": 0,
+      "minimumLoggedFuel": 39408
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "monolith",
+      "side": "B",
+      "won": true,
+      "gems": 1004,
+      "opponentGems": 702,
+      "rounds": 805,
+      "gemsPer100Rounds": 124.72049689440993,
+      "collectedGems": 1048,
+      "deaths": 9,
+      "firstCapture": 16,
+      "firstBank": 38,
+      "faults": 0,
+      "minimumLoggedFuel": 39715
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "packs",
+      "side": "A",
+      "won": false,
+      "gems": 956,
+      "opponentGems": 1004,
+      "rounds": 819,
+      "gemsPer100Rounds": 116.72771672771673,
+      "collectedGems": 1000,
+      "deaths": 2,
+      "firstCapture": 28,
+      "firstBank": 36,
+      "faults": 0,
+      "minimumLoggedFuel": 59133
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "packs",
+      "side": "B",
+      "won": true,
+      "gems": 1004,
+      "opponentGems": 820,
+      "rounds": 864,
+      "gemsPer100Rounds": 116.20370370370371,
+      "collectedGems": 1004,
+      "deaths": 3,
+      "firstCapture": 28,
+      "firstBank": 36,
+      "faults": 0,
+      "minimumLoggedFuel": 59157
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "pilgrimage",
+      "side": "A",
+      "won": true,
+      "gems": 1004,
+      "opponentGems": 68,
+      "rounds": 1428,
+      "gemsPer100Rounds": 70.30812324929973,
+      "collectedGems": 1004,
+      "deaths": 0,
+      "firstCapture": 60,
+      "firstBank": 75,
+      "faults": 0,
+      "minimumLoggedFuel": 33226
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "pilgrimage",
+      "side": "B",
+      "won": true,
+      "gems": 1026,
+      "opponentGems": 68,
+      "rounds": 1334,
+      "gemsPer100Rounds": 76.91154422788605,
+      "collectedGems": 1140,
+      "deaths": 0,
+      "firstCapture": 65,
+      "firstBank": 80,
+      "faults": 0,
+      "minimumLoggedFuel": 30747
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "rows",
+      "side": "A",
+      "won": false,
+      "gems": 990,
+      "opponentGems": 1012,
+      "rounds": 943,
+      "gemsPer100Rounds": 104.98409331919406,
+      "collectedGems": 990,
+      "deaths": 1,
+      "firstCapture": 38,
+      "firstBank": 52,
+      "faults": 0,
+      "minimumLoggedFuel": 41835
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "rows",
+      "side": "B",
+      "won": false,
+      "gems": 924,
+      "opponentGems": 1056,
+      "rounds": 926,
+      "gemsPer100Rounds": 99.78401727861771,
+      "collectedGems": 924,
+      "deaths": 0,
+      "firstCapture": 38,
+      "firstBank": 52,
+      "faults": 0,
+      "minimumLoggedFuel": 41835
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "rushbait-v2",
+      "side": "A",
+      "won": true,
+      "gems": 1012,
+      "opponentGems": 726,
+      "rounds": 1278,
+      "gemsPer100Rounds": 79.18622848200313,
+      "collectedGems": 1056,
+      "deaths": 13,
+      "firstCapture": 20,
+      "firstBank": 53,
+      "faults": 0,
+      "minimumLoggedFuel": 43598
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "rushbait-v2",
+      "side": "B",
+      "won": true,
+      "gems": 1012,
+      "opponentGems": 660,
+      "rounds": 1304,
+      "gemsPer100Rounds": 77.60736196319019,
+      "collectedGems": 1078,
+      "deaths": 14,
+      "firstCapture": 20,
+      "firstBank": 53,
+      "faults": 0,
+      "minimumLoggedFuel": 43018
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "stampede",
+      "side": "A",
+      "won": true,
+      "gems": 0,
+      "opponentGems": 0,
+      "rounds": 2000,
+      "gemsPer100Rounds": 0.0,
+      "collectedGems": 0,
+      "deaths": 11,
+      "firstCapture": 56,
+      "firstBank": null,
+      "faults": 0,
+      "minimumLoggedFuel": 42550
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "stampede",
+      "side": "B",
+      "won": true,
+      "gems": 0,
+      "opponentGems": 0,
+      "rounds": 2000,
+      "gemsPer100Rounds": 0.0,
+      "collectedGems": 0,
+      "deaths": 25,
+      "firstCapture": 57,
+      "firstBank": null,
+      "faults": 0,
+      "minimumLoggedFuel": 40608
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "swirl",
+      "side": "A",
+      "won": true,
+      "gems": 677,
+      "opponentGems": 603,
+      "rounds": 2000,
+      "gemsPer100Rounds": 33.85,
+      "collectedGems": 1044,
+      "deaths": 86,
+      "firstCapture": 150,
+      "firstBank": 238,
+      "faults": 0,
+      "minimumLoggedFuel": 34507
+    },
+    {
+      "opponent": "jame/v1",
+      "map": "swirl",
+      "side": "B",
+      "won": false,
+      "gems": 608,
+      "opponentGems": 803,
+      "rounds": 2000,
+      "gemsPer100Rounds": 30.4,
+      "collectedGems": 1103,
+      "deaths": 80,
+      "firstCapture": 234,
+      "firstBank": 258,
+      "faults": 0,
+      "minimumLoggedFuel": 34613
+    }
+  ],
+  "v1StarterControl": {
+    "directory": "matches/jame-v1-vs-starter-cpp__34-games__17-maps__2026-10-18_031814-UTC",
+    "bots": [
+      {
+        "name": "jame",
+        "version": "v1",
+        "path": "/Users/jamesli/Desktop/UNSW/Year 3/comps/cambridge-battlecode/bots/jame/v1"
+      },
+      {
+        "name": "starter-cpp",
+        "version": "starter-cpp",
+        "path": "/Users/jamesli/Desktop/UNSW/Year 3/comps/cambridge-battlecode/bots/starter-cpp"
+      }
+    ],
+    "summary": {
+      "completed": 34,
+      "failed": 0,
+      "winsA": 32,
+      "winsB": 2,
+      "winRateA": 0.9411764705882353,
+      "meanGemMarginA": 365.6764705882353,
+      "faultsA": 0,
+      "faultsB": 0,
+      "uniqueScenarios": 34,
+      "uniqueWinsA": 32,
+      "repeatedScenariosExcluded": 0,
+      "uniqueWinRateWilson95": [
+        0.80906393095719,
+        0.9837173447898772
+      ],
+      "probabilityABetter": 0.999999981635483
+    }
+  }
+}
