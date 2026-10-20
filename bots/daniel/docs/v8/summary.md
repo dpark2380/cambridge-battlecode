@@ -36,6 +36,10 @@ in our wins, 4.8k vs 8.6k in our losses.
 |---|---|
 | Daniel v7 | **102/168 = 61%** (95% CI 53–68%). Before the cluster-health fix (54% overall): corridors 7/8, boss-battle 8/8, big-world 5/8 |
 | Hunter | **141/168 = 84%** (95% CI 78–89%) |
+| `bots/simon/v6` | 61/84 = 73% (95% CI 62–81%) |
+| `bots/jame/v3` | **36/84 = 43%** (95% CI 33–54%): Jame's bot is stronger. It sweeps eight, hooks, elk-arena, broken-curve and monolith; v8 sweeps expanse, islands and boss-battle |
+
+Rejected: build order Monster → Jungle → Durability → Power, as Jame's v3 and ranked opponents do: 49% vs v8, 82% vs hunter (no effect).
 
 ## Tooling changes
 
@@ -50,6 +54,7 @@ in our wins, 4.8k vs 8.6k in our losses.
 
 ## Known weaknesses / next steps
 
+0. `bots/jame/v3` beats v8 57%. Its ability sequencing (attack, reset, follow-up; stuns on whoever threatens the caster) and damage-first camp targeting are the likely edge; compare them on eight and hooks.
 1. Heart of Ruin: never drafted. Its kit (self-shield, stunning dash, damage up to +50% at low health) needs a roster
    entry in `draft.cpp` and a check that `cast_offense` uses the dash well.
 2. Contest/gold-rush: one 200-gem Monolith per side. A tank-rotation siege (the Monolith hits only the nearest
