@@ -38,3 +38,8 @@ compile_commands.json
 # Experiment data and tuning scratch
 /data/
 /bots/_tune*/
+bots/*/.cambc/
+matches/
+replays/
+bots/*/build/
+bots/*/target/

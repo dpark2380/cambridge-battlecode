@@ -5,7 +5,7 @@ from cambc import game_map, Vec2, Team, CampType
 
 SYM = {0: "horizontal mirror (x reflected)", 1: "vertical mirror (y reflected)", 2: "180-degree rotation"}
 KIND = {CampType.WOLF: "w", CampType.ELK: "k", CampType.MONOLITH: "M",
-        CampType.GEM_CLUSTER: "g", CampType.GOLD_CLUSTER: "$"}
+        CampType.GEM_CLUSTER: "g", CampType.GOLD_CLUSTER: "$", CampType.GOLEM: "G"}
 picks = None
 
 
@@ -36,7 +36,7 @@ def dump():
     out = ["@@DUMP-BEGIN",
            f"# MAPNAME: {w}x{h}, {picks} picks per team, symmetry: {SYM[int(game_map.symmetry())]}",
            "# Legend: . floor  # wall  o hole  \" bush  A altar  S team-A spawn  E team-B spawn",
-           "#         w wolf  k elk  M monolith  g gem cluster  $ gold cluster (camp spawn tiles)",
+           "#         w wolf  k elk  M monolith  G golem  g gem cluster  $ gold cluster (camp spawn tiles)",
            "# Row index is y, column index is x. Dumped via the engine from Team A's perspective.",
            "",
            "      " + "".join(str(x // 10) if x % 10 == 0 else " " for x in range(w)),

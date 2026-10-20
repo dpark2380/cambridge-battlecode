@@ -1,0 +1,115 @@
+# 01islands: 60x60, 5 picks per team, symmetry: 180-degree rotation
+# Legend: . floor  # wall  o hole  " bush  A altar  S team-A spawn  E team-B spawn
+#         w wolf  k elk  M monolith  g gem cluster  $ gold cluster (camp spawn tiles)
+# Row index is y, column index is x. Dumped via the engine from Team A's perspective.
+
+      0         1         2         3         4         5         
+      012345678901234567890123456789012345678901234567890123456789
+   0  """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+   1  """""""""""........................................"""""""""
+   2  """"""""".............................................""""""
+   3  """"""".....................SSSS......................."""""
+   4  """""....................A..SSSS..A.....................""""
+   5  """"........................SSSS........................."""
+   6  """......................................................"""
+   7  ""...........................$$...........................""
+   8  ""........................................................""
+   9  "..........................oooooooooooo............kk......"
+  10  ".......kk.............ooooooooooo...ooooooo.......$$......"
+  11  ".......$$..........ooooo....oo......oooo..oo.............."
+  12  ".................oooooo.....o..$$$.ooooo..ooo............."
+  13  "..............ooooo...oooo..oooo....oo...ooooo............"
+  14  ".............ooooo...oo..oo..oooooooo..$....oo............"
+  15  "............oo.$.ooo.oo..ooooo."o..o.A.w"".oooo..........."
+  16  "...........ooo.$oooooo...oo...."oooooo.."ooooooo.........."
+  17  "...........o.ooooo""..w$oo.w$...oo...oooooooo..oo........."
+  18  "...........ooooo......ooooo......o....ooooooo..ooo........"
+  19  "..........oo..oooooooooo..ooooooooooooooo..ooo...oo......."
+  20  "..........oo......""wooo..oo.ooooo$$"ooo....oow$."o......."
+  21  ".........oooo.g.....$..o$k.o..goo...oooooo...ooo."o......."
+  22  ".........o..o.k..ooooooo.$....w.ooooooo.ooo..ooo..o......."
+  23  ".........o".o.g.ooo..oo.A.."oo..ooooooo..o..."oo..oo......"
+  24  "........oo".oo.oooo...oo..."ooooogooo..w.oooo"ooo..o......"
+  25  "........o....ooo..oowg.oo.."ooooooo....$..oooooo...o......"
+  26  "........ooow."ooo..ooooo........o"....o""..ooo.....o......"
+  27  ".......ooo.g.ooo...oo...wg..$ww.oo..oooooooooo.."ooo......"
+  28  ".......ooo.A.oo..o..o..okk..oooooooooo$oooooooooooo..gg..."
+  29  "...gg..ooo..ooog.oo.o.oo..oooooo..oooooo.kgoooo.o.o..kk..."
+  30  "...kk..o.o.oooogk.oooooo..oooooo..oo.o.oo.gooo..ooo..gg..."
+  31  "...gg..oooooooooooo$oooooooooo..kko..o..o..oo.A.ooo......."
+  32  "......ooo"..oooooooooo..oo.ww$..gw...oo...ooo.g.ooo......."
+  33  "......o.....ooo..""o...."o........ooooo..ooo".wooo........"
+  34  "......o...oooooo..$....ooooooo"..oo.gwoo..ooo....o........"
+  35  "......o..ooo"oooo.w..ooogooooo"...oo...oooo.oo."oo........"
+  36  "......oo..oo"...o..ooooooo..oo"..A.oo..ooo.g.o."o........."
+  37  ".......o..ooo..ooo.ooooooo.w....$.ooooooo..k.o..o........."
+  38  ".......o".ooo...oooooo...oog..o.k$o..$.....g.oooo........."
+  39  ".......o".$woo....ooo"$$ooooo.oo..ooow""......oo.........."
+  40  ".......oo...ooo..ooooooooooooooo..oooooooooo..oo.........."
+  41  "........ooo..ooooooo....o......ooooo......ooooo..........."
+  42  ".........oo..oooooooo...oo...$w.oo$w..""ooooo.o..........."
+  43  "..........ooooooo"..oooooo"....oo...oooooo$.ooo..........."
+  44  "...........oooo.""w.A.o..o".ooooo..oo.ooo.$.oo............"
+  45  "............oo....$..oooooooo..oo..oo...ooooo............."
+  46  "............ooooo...oo....oooo..oooo...ooooo.............."
+  47  ".............ooo..ooooo.$$$..o.....oooooo................."
+  48  "..............oo..oooo......oo....ooooo..........$$......."
+  49  "......$$.......ooooooo...ooooooooooo.............kk......."
+  50  "......kk............oooooooooooo.........................."
+  51  ""........................................................""
+  52  ""...........................$$...........................""
+  53  """......................................................"""
+  54  """.........................EEEE........................""""
+  55  """".....................A..EEEE..A...................."""""
+  56  """"".......................EEEE....................."""""""
+  57  """"""............................................."""""""""
+  58  """""""""........................................"""""""""""
+  59  """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+# Camp groups (gems/gold per capture, respawn in rounds, centroid of spawn tiles)
+# G0 {'k': 2, 'w': 1, 'g': 1} gems=41 gold=220 respawn=60 at=(26,28)
+# G1 {'k': 2, 'w': 1, 'g': 1} gems=41 gold=220 respawn=60 at=(34,32)
+# G2 {'k': 2, 'g': 4} gems=58 gold=180 respawn=60 at=(4,30)
+# G3 {'k': 2, 'g': 4} gems=58 gold=180 respawn=60 at=(54,29)
+# G4 {'g': 1} gems=7 gold=0 respawn=50 at=(34,24)
+# G5 {'g': 1} gems=7 gold=0 respawn=50 at=(25,35)
+# G6 {'$': 1} gems=0 gold=20 respawn=50 at=(20,31)
+# G7 {'$': 1} gems=0 gold=20 respawn=50 at=(39,28)
+# G8 {'$': 3} gems=0 gold=60 respawn=50 at=(33,12)
+# G9 {'$': 3} gems=0 gold=60 respawn=50 at=(26,47)
+# G10 {'w': 1, '$': 1} gems=4 gold=60 respawn=50 at=(38,38)
+# G11 {'w': 1, '$': 1} gems=4 gold=60 respawn=50 at=(21,20)
+# G12 {'w': 1, '$': 1} gems=4 gold=60 respawn=50 at=(28,17)
+# G13 {'w': 1, '$': 1} gems=4 gold=60 respawn=50 at=(30,42)
+# G14 {'w': 1, '$': 1} gems=4 gold=60 respawn=50 at=(24,17)
+# G15 {'w': 1, '$': 1} gems=4 gold=60 respawn=50 at=(36,42)
+# G16 {'k': 1, '$': 2} gems=15 gold=130 respawn=60 at=(26,21)
+# G17 {'k': 1, '$': 2} gems=15 gold=130 respawn=60 at=(33,38)
+# G18 {'w': 1, '$': 1} gems=4 gold=60 respawn=50 at=(48,20)
+# G19 {'w': 1, '$': 1} gems=4 gold=60 respawn=50 at=(12,39)
+# G20 {'$': 2} gems=0 gold=40 respawn=50 at=(24,39)
+# G21 {'$': 2} gems=0 gold=40 respawn=50 at=(36,20)
+# G22 {'$': 2} gems=0 gold=40 respawn=50 at=(16,16)
+# G23 {'$': 2} gems=0 gold=40 respawn=50 at=(43,44)
+# G24 {'k': 1, 'g': 2} gems=29 gold=90 respawn=60 at=(15,22)
+# G25 {'k': 1, 'g': 2} gems=29 gold=90 respawn=60 at=(44,37)
+# G26 {'w': 1, 'g': 1} gems=11 gold=40 respawn=50 at=(12,26)
+# G27 {'w': 1, 'g': 1} gems=11 gold=40 respawn=50 at=(47,32)
+# G28 {'w': 2, '$': 1} gems=8 gold=100 respawn=50 at=(30,27)
+# G29 {'w': 2, '$': 1} gems=8 gold=100 respawn=50 at=(29,32)
+# G30 {'w': 1, '$': 1} gems=4 gold=60 respawn=50 at=(40,14)
+# G31 {'w': 1, '$': 1} gems=4 gold=60 respawn=50 at=(19,44)
+# G32 {'w': 1, '$': 1} gems=4 gold=60 respawn=50 at=(40,24)
+# G33 {'w': 1, '$': 1} gems=4 gold=60 respawn=50 at=(19,34)
+# G34 {'k': 1, 'g': 2} gems=29 gold=90 respawn=60 at=(43,29)
+# G35 {'k': 1, 'g': 2} gems=29 gold=90 respawn=60 at=(16,30)
+# G36 {'w': 1, 'g': 1} gems=11 gold=40 respawn=50 at=(31,22)
+# G37 {'w': 1, 'g': 1} gems=11 gold=40 respawn=50 at=(28,38)
+# G38 {'k': 2, '$': 2} gems=30 gold=220 respawn=60 at=(8,10)
+# G39 {'k': 2, '$': 2} gems=30 gold=220 respawn=60 at=(50,48)
+# G40 {'k': 2, '$': 2} gems=30 gold=220 respawn=60 at=(8,50)
+# G41 {'k': 2, '$': 2} gems=30 gold=220 respawn=60 at=(52,10)
+# G42 {'w': 1, 'g': 1} gems=11 gold=40 respawn=50 at=(22,25)
+# G43 {'w': 1, 'g': 1} gems=11 gold=40 respawn=50 at=(38,34)
+# G44 {'$': 2} gems=0 gold=40 respawn=50 at=(30,7)
+# G45 {'$': 2} gems=0 gold=40 respawn=50 at=(30,52)
