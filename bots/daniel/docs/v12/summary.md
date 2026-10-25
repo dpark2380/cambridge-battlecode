@@ -26,3 +26,18 @@ use random rosters):
 | **Fixed core order + focus builds (kept)** | **108/140 = 77%** | **110/140 = 79%** | **114/140 = 81%** | **111/140 = 79%** |
 | Fixed core order, old builds | 94/140 = 67% | | | |
 | v11 itself | | | | 92/140 = 66% |
+
+v12 vs v11 by map set (real drafts): old 40 maps 56/80 = 70%, new 30 maps 52/60 = 87%.
+
+## B24: opening scripts (rejected 2026-10-25 23:52Z)
+
+The top 20's usual first 3 groups per map and side (`tools/openings.py --export`, 40 maps) worth x1.5/x2/x3 in rounds
+< 300. Race vs v12: 49% / 48% / 44%; real drafts x1.5: 68/140 = 49%. No gain once the draft matches theirs.
+
+## B26: learned target choice (parked 2026-10-25 23:52Z)
+
+`tools/targetmodel.py` fits a conditional logit over 'which group next' to 22,459 top-team decisions and 19,764 of
+ours (held-out top-1 21% vs nearest-available 22%; log-likelihood −2.49 vs uniform −3.00). Top teams re-clear the
+group they just took half as readily (−1.51 vs −0.74) and favour groups that are up (+0.28 vs −0.08). The bot
+change that follows (waiting at a respawning group beyond the walk costs `wait_penalty` x extra): race x0.5/x1/x2
+73/73/66 of 140; gain gate x0.5 954/1820 = 52%, inconclusive; nonreg 53% PASS; real drafts 69/140 = 49%. Not applied.
