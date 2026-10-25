@@ -41,3 +41,5 @@ ours (held-out top-1 21% vs nearest-available 22%; log-likelihood −2.49 vs uni
 group they just took half as readily (−1.51 vs −0.74) and favour groups that are up (+0.28 vs −0.08). The bot
 change that follows (waiting at a respawning group beyond the walk costs `wait_penalty` x extra): race x0.5/x1/x2
 73/73/66 of 140; gain gate x0.5 954/1820 = 52%, inconclusive; nonreg 53% PASS; real drafts 69/140 = 49%. Not applied.
+
+Seeded nonreg gate vs v11 (random rosters, so the play and build changes only): 178/280 = 64%, PASS.

@@ -11,7 +11,7 @@
 | [v7](v7/summary.md) | `v7` | v6 + fixes from the ranked research: walking-distance stall check, unseen-attacker response, sieges for any too-big group, carriers recall at 50% | 59% vs v6; 72% vs Simon's v5 |
 | [v8](v8/summary.md) | `v8` | v7 ported to the week 2 patch: Golem/range camp table, Monolith leave rule and siege gate, gold-only play when no altar can be reached | 61% vs v7; 84% vs hunter |
 | [v9](v9/summary.md) | `v9` | v8 + pathing blocks living camps out of sight (the_farm freeze) + 40% of Power shards as health. Submitted 10:16Z (team bot version 8); ranked 47–33 | 69% vs v8; 55% vs Jame v3 (v8: 39%) |
-| [v12](v12/summary.md) | `v12` | v11, for the sprint 3 maps. In development | — |
+| [v12](v12/summary.md) | `v12` | v11 + B25 top-20 core draft (Heart of Ruin draftable; Marcella/HoR buy focus). In development | real drafts: 77% vs v11 (old maps 70%, new 87%), 79% vs v10, 81% vs v9, 79% vs Jame v3; seeded 64% vs v11 |
 | [v11](v11/summary.md) | `v11` | v10 + B19 big-map fuel fix (cached target field) + B21 Bruiser shards instead of Power. **Submitted 2026-10-25 23:14Z (team bot version 10)** | 59% vs v10, 56% vs v11-B19, 62% vs v9, 61% vs Jame v3; B19 map gate 67% vs v10 (big-world 17/20) |
 | [v10](v10/summary.md) | `v10` | v9 + also fight when ahead on fighting power (health × damage). Submitted 2026-10-25 12:54Z (team bot version 9) | 57% vs v9; 59% vs Jame v3 (v9: 55%) |
 | — | `hunter` | Test opponent: v5 made aggressive (chases, engages at 8 tiles) | sparring partner for fight-related changes |
