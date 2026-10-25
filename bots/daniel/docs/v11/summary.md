@@ -21,6 +21,10 @@ now buys Bruiser health shards.
 | `gate --mode nonreg` vs v9 | 100/160 = 62%, PASS (B19 alone: 60%) |
 | `gate --mode nonreg` vs Jame v3 (1M fuel, no seed hook) | 98/160 = 61%, PASS |
 
+**Gauntlet (`tools/gauntlet.py`, 20:47Z, v11 = B19 + B21):** v11 +187 [157, 208], v10 +131 [102, 153], v9 +113,
+Jame v3 +37, v8 0, v7 −71, hunter-v0 −153, Simon v6 −213 (Elo scale, 90% intervals). The rough ladder line
+(1450 + 0.54 × local, 3 submitted versions) predicts v11 about 30 points above v10.
+
 ## B20: dominant Monolith value (rejected 2026-10-25 20:33Z)
 
 **Evidence.** rows 0–6 ranked; the opponent took the 470-gem G6 in 2 losses and we never did. A debug print of
