@@ -716,9 +716,13 @@ int Bot::choose_target(int round) {
             return current_target;
 
     const auto origin = cambc::self().position();
-    cambc::distance_field field;
-    cambc::bitboard visited;
-    field.compute(terrain_blocked(), tiles_around(origin, 0), visited);
+    if (distance(origin, target_field_origin) >= 3 || round - target_field_round >= 10) {
+        cambc::bitboard visited;
+        target_field.compute(terrain_blocked(), tiles_around(origin, 0), visited);
+        target_field_origin = origin;
+        target_field_round = round;
+    }
+    const auto& field = target_field;
 
     int best = -1;
     float best_rate = 0;

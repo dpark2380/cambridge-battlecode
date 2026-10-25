@@ -33,6 +33,11 @@ class Bot {
     int published_claim = -2, published_round = -1000;
     bool banking = false;            // committed to tributing what we carry
     cambc::distance_field altar_walk;  // walking distance to the nearest tribute tile
+    // v11 (B19): choose_target's walking field from our position, reused until we move 3+ tiles or
+    // 10 rounds pass. A fresh field each turn cost ~40k fuel on 01big_world (100x100) and froze the bot.
+    cambc::distance_field target_field;
+    cambc::vec2 target_field_origin{-100, -100};
+    int target_field_round = -100;
     bool gems_deliverable = true;    // v8: some altar has a free tile next to it (not 01boss-battle)
 
     float gem_value(const group_info& g) const { return gems_deliverable ? static_cast<float>(g.gems) : 0.f; }

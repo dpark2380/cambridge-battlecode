@@ -44,7 +44,10 @@ def ladder():
 
 def snapshot():
     now = time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime())
-    teams = ladder()
+    for _ in range(3):  # ratings move while we page, so a team can slip between pages; fetch again
+        teams = ladder()
+        if any(t["name"] == TEAM for t in teams):
+            break
     path = ROOT / "data" / "ladder" / f"{now}.json"
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps({"time": now, "teams": teams}))
