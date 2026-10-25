@@ -7,7 +7,10 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
-## v11 (in development, from v10)
+## v12 (in development, from v11)
+- Started 2026-10-25 23:15Z for the sprint 3 maps; no changes yet.
+
+## v11 (submitted 2026-10-25 23:14Z, team bot version 10)
 - **Tooling:** `draft.cpp` reads `experiment_seed.h` when it exists. `tools/arena.py` writes that header into a
   copy per seed, so random-draft test games run at the real 100k fuel (T1). The same inert hook was ported back
   into v9 and v10 (2026-10-25 18:35Z; nothing changes without the header) so that gates against them also run at
@@ -29,7 +32,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 - **Rejected:** build order Treasure > Durability > Power (B11, 51% over 800 games vs v11); late gold-weight decay
   (B15, 50% over 480; a sharp drop after round 500 scores 44%).
 
-## v10 (submitted 2026-10-25 12:54Z, team bot version 9)
+## v10 (submitted 2026-10-25 12:54Z, team bot version 9; ranked 143–137, rating 1495 → peak 1542 → 1513)
 - **Feature:** also take a fight when behind on health but ahead on fighting power: health × damage, where damage
   is the larger of strength and focus (`fight_enemies`). Variants tried: power only 52% vs v9, power *and* health
   43%, power *or* health 57% (kept).

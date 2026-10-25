@@ -1,4 +1,4 @@
-# v11 (in development, from v10)
+# v11 (submitted 2026-10-25 23:14Z as team bot version 10, from v10)
 
 Changes are added one at a time, each gated (`tools/gate.py`) at the real 100k fuel. Backlog ids refer to
 `../backlog.md`.
