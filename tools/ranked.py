@@ -6,14 +6,18 @@
 
 Incremental: <dir>/matches.json accumulates every match seen, and listing stops at the first page that is
 all known (or older than --since, or after --limit new matches), so a re-run only fetches what is new.
-Summaries go to <dir>/summaries/<match id>.json (the `cambc run --statistics --json` schema, stripped of
-the per-round timelines). With --replays, each selected replay is analysed into <dir>/analysis/<match id>.txt
+Summaries go to <dir>/summaries/<match id>.json.gz: full (`cambc run --statistics --json` schema with the `events`
+log and per-round timelines), gzipped to ~70 kB. Summaries saved before 2026-10-25 23:30 are stripped .json files.
+Every game also gets a feature row in <dir>/features.jsonl (tools/features.py: deaths by killer, camp clears,
+fuel exhaustion, shards bought, gems at rounds 250/500/1000, loss signatures). With --replays, each selected replay is analysed into <dir>/analysis/<match id>.txt
 (+ .stats.json) and deleted. Downloads run --jobs at a time (measured: one summary ~2 s, one replay ~8 s,
 8 in parallel take no longer than one, no rate limiting). Then prints the record over every stored match
-since --since, averages for wins and losses, and every game per map as `ours:theirs@round d<ours>/<theirs>`.
+since --since, averages for wins and losses, every game per map as `ours:theirs@round d<ours>/<theirs>`, and a
+table of loss signatures per map.
 """
 import argparse
 import collections
+import gzip
 import json
 import subprocess
 import time
@@ -21,6 +25,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import arena
+import features
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -57,11 +62,17 @@ def download(match_id, path, *kind):
     return False
 
 
-def compact(path):
-    """Drop the per-round timelines and event log (~95% of a summary, read by no tool)."""
-    s = json.loads(path.read_text())
-    if "events" in s or "championTimelines" in s:
-        path.write_text(json.dumps({k: v for k, v in s.items() if k not in ("events", "championTimelines")}))
+def summary_path(out, match_id):
+    """The stored summary: full and gzipped, or stripped .json from before the switch."""
+    full = out / "summaries" / f"{match_id}.json.gz"
+    return full if full.exists() else out / "summaries" / f"{match_id}.json"
+
+
+def save_gzipped(path):
+    """Gzip a downloaded summary next to itself (path + .gz) and delete the plain copy."""
+    with path.open("rb") as src, gzip.open(f"{path}.gz", "wb", compresslevel=9) as dst:
+        dst.write(src.read())
+    path.unlink()
 
 
 def analyze(zip_path, out):
@@ -106,7 +117,7 @@ def main():
     def fetch_summary(m):
         path = out / "summaries" / f"{m['matchId']}.json"
         if download(m["matchId"], path, "summary", "--json"):
-            compact(path)
+            save_gzipped(path)
 
     def fetch_replay(m):
         report, zip_path = out / "analysis" / f"{m['matchId']}.txt", out / "analysis" / f"{m['matchId']}.zip"
@@ -114,7 +125,7 @@ def main():
             analyze(zip_path, out / "analysis")
 
     wanted = [m for m in matches if args.replays == "all" or (args.replays == "losses" and ours_of(m)["result"] != "win")]
-    todo = [m for m in matches if not (out / "summaries" / f"{m['matchId']}.json").exists()]
+    todo = [m for m in matches if not summary_path(out, m["matchId"]).exists()]
     todo_replays = [m for m in wanted if not (out / "analysis" / f"{m['matchId']}.txt").exists()]
     print(f"{len(new)} new matches; fetching {len(todo)} summaries and {len(todo_replays)} replays", flush=True)
     started = time.time()
@@ -124,22 +135,25 @@ def main():
     print(f"downloaded in {time.time() - started:.0f}s", flush=True)
 
     per_map, sums = collections.defaultdict(list), collections.defaultdict(collections.Counter)
+    rows = []
     for m in matches:
-        path = out / "summaries" / f"{m['matchId']}.json"
+        path = summary_path(out, m["matchId"])
         if not path.exists():
             print("missing", m["matchId"])
             continue
         us = ours_of(m)
-        s = json.loads(path.read_text())
+        s = features.load(path)
         ours = "team" + us["side"].upper()
         theirs = "teamB" if ours == "teamA" else "teamA"
+        won = us["result"] == "win"
+        rows.append(features.row(s, ours, m["matchId"], m["map"], won))
         gems = {t["team"]: int(t["submittedGems"]) for t in s["teams"]}
         row = {"us": gems[ours], "them": gems[theirs], "round": s["match"]["roundsCompleted"],
                **{f"{k}": total(s, ours, k) for k in ("deaths", "kills", "earnedGold")},
                **{f"their_{k}": total(s, theirs, k) for k in ("deaths", "kills", "earnedGold")}}
-        won = us["result"] == "win"
         per_map[m["map"]].append((won, row))
         sums["W" if won else "L"].update(row | {"games": 1})
+    (out / "features.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rows))
 
     wins = len([1 for games in per_map.values() for won, _ in games if won])
     print(f"{wins}-{sum(map(len, per_map.values())) - wins} over {len(matches)} ranked matches")
@@ -151,6 +165,8 @@ def main():
         w = sum(won for won, _ in games)
         print(f"{name:22s} {w}-{len(games) - w}  " + "  ".join(
             f"{r['us']}:{r['them']}@{r['round']} d{r['deaths']:.0f}/{r['their_deaths']:.0f}" for _, r in games))
+    print("\nloss signatures (tools/features.py):")
+    print(features.table(rows))
 
 
 if __name__ == "__main__":
