@@ -51,6 +51,7 @@ The engine is deterministic: one map + side = one game. For bigger samples, `are
 - `python3 tools/gauntlet.py [--add <bot>]` — round-robin over the local pool (v7–v10, Jame v3, Simon v6, hunter-v0), results cached in `data/gauntlet/`. Batch Bradley–Terry ratings (v8 = 0) with bootstrap intervals, and a straight-line mapping to the ladder from the submitted versions.
 - `python3 tools/meta.py > docs/research/top-team-meta.md` — the top teams' draft rates by team size, emblem build order and shard mix, from scouted summaries.
 - `python3 tools/openings.py <map>... --ours replays/<v>...` — camp-clear order and timing (round, group id, rewards) of the top teams' games and ours; findings in `docs/research/top-team-play.md`.
+- `python3 tools/styles.py replays/daniel-v8 replays/daniel-v9 ...` — k-means grouping of our ranked opponents (draft, shard mix, kills, gem lead) with our win rate against each group.
 - `python3 tools/draft_lab.py collect --bot <bot>` / `fit --no-write` — random-roster self-play, then per-team-size champion values (Bradley–Terry plus gem-margin ridge). Findings: `docs/research/drafting.md`.
 - Research notes on ML/RL feasibility: `docs/research/rl-feasibility.md`.
 

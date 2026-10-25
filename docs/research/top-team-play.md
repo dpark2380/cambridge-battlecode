@@ -35,3 +35,15 @@ are rare at the top: Stellar 1%, Varg 12%, Cassi & Issac 8%. See B4 and B12.
 
 Held-out accuracy is 75% in rounds 100–500 and 83% afterwards. In submitted-gem equivalents, a death costs 6–9 gems
 all game. One gold is worth 0.22 gems early but 0.05 late (B15). A kill is worth 16 gems early and 1.4 late.
+
+## Who beats us: opponent styles (`tools/styles.py`, 470 ranked v8–v10 games, k = 4)
+
+| Style (traits that set it apart) | Games | Our win rate |
+|---|---|---|
+| Stellar, Ren and Cassi & Issac drafts, few meta picks: drafts like ours | 260 | 53% |
+| Prism +3σ, with Marcella and Vesper | 43 | 47% |
+| Bruiser shards +2.4σ, Power −1.6σ, Heart of Ruin, Treasure, Marcella: the top-team meta | 46 | 48% |
+| Vesper Vale and Vendetta, Monster shards | 121 | 45% |
+
+We beat teams that draft and build like us and lose to the meta drafts and builds, which supports B11 (build) and
+B12 (draft). The spread is modest (45–53%), so this is supporting evidence, not proof on its own.
