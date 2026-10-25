@@ -10,7 +10,8 @@ tools/replay/analyze.mjs into data/scout/replays/<match id>.txt (report) + .stat
 In the report, "us" is team A, whoever that is: check the team names in data/scout/replays/<match id>.json.
 
 For each of the top --top teams: its last --matches ranked games from `cambc matches list --team <id>` (drafts,
-results, maps), and --summaries of them from `cambc matches summary` (items bought per champion). Prints
+results, maps), and --summaries of them from `cambc matches summary` (items bought per champion, and a feature row
+per game appended to data/scout/features.jsonl for tools/benchmark.py). Prints
 how often each champion is drafted (overall and as first pick) and the average shards bought per champion, by stat.
 """
 import argparse
@@ -25,6 +26,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import arena
+import features
 
 ROOT = arena.ROOT
 # champion_draft order in sdk/cpp/cambc.h: the ids the match listing reports.
@@ -37,8 +39,8 @@ def cambc(*args):
     return json.loads(out.stdout) if out.returncode == 0 and out.stdout.strip() else None
 
 
-def builds(match_id, team_side):
-    """{champion name: Counter(item -> quantity bought)} for one side of a match."""
+def builds(match_id, team_side, row_info):
+    """({champion name: Counter(item -> quantity bought)}, feature row) for one side of a match."""
     with tempfile.TemporaryDirectory() as tmp:
         path = Path(tmp) / "s.json"
         for attempt in range(3):
@@ -47,10 +49,13 @@ def builds(match_id, team_side):
                 break
             time.sleep(3 * (attempt + 1))
         else:
-            return {}
+            return {}, None
         s = json.loads(path.read_text())
-    return {c["name"]: collections.Counter({i["item"]: int(i["quantity"]) for i in c.get("itemsBought", [])})
-            for c in s["champions"] if c["team"] == team_side}
+    items = {c["name"]: collections.Counter({i["item"]: int(i["quantity"]) for i in c.get("itemsBought", [])})
+             for c in s["champions"] if c["team"] == team_side}
+    row = features.row(s, team_side, match_id, row_info["map"], row_info["win"]) | {"team": row_info["team"],
+                                                                                    "rank": row_info["rank"]}
+    return items, row
 
 
 def decode(match, out):
@@ -105,9 +110,15 @@ def main():
 
     # Builds from a sample of each team's games, fetched in parallel.
     jobs = [(entry, row) for entry in report for row in entry["games"][:args.summaries]]
-    with ThreadPoolExecutor(args.jobs) as pool:
-        for (entry, row), b in zip(jobs, pool.map(lambda j: builds(j[1]["match"], "team" + j[1]["side"].upper()), jobs)):
+    rows_path = ROOT / "data" / "scout" / "features.jsonl"
+    rows_path.parent.mkdir(parents=True, exist_ok=True)
+    known = {json.loads(line)["match"] + json.loads(line)["side"] for line in rows_path.open()} if rows_path.exists() else set()
+    with ThreadPoolExecutor(args.jobs) as pool, rows_path.open("a") as rows_out:
+        for (entry, row), (b, feat) in zip(jobs, pool.map(
+                lambda j: builds(j[1]["match"], "team" + j[1]["side"].upper(), j[1]), jobs)):
             row["builds"] = {k: dict(v) for k, v in b.items()}
+            if feat and feat["match"] + feat["side"] not in known:
+                rows_out.write(json.dumps(feat) + "\n")  # data/scout/features.jsonl: top-team benchmark rows
 
     if args.replays:
         prefer = set(filter(None, args.maps.split(",")))
