@@ -1,7 +1,8 @@
 # Daniel bot backlog: issues and candidate improvements
 
-**Cadence:** gather **150 ranked games** of the submitted version before starting a bot change. Data and tooling
-items can run in the meantime.
+**Cadence:** pull and analyse ranked games every hour. Start the first bot change once the submitted version has
+**150 ranked games**; after that, start at most one new change every 2 hours, and only for an item with evidence.
+Data and tooling items can run at any time.
 
 Every change is logged here **before** it is tested, with its evidence and the result we expect. Only items with
 evidence that predicts a gain get tested. Results and the final status go back into the row, and full write-ups go
@@ -27,6 +28,7 @@ Ranked data: `python3 tools/ranked.py replays/daniel-v9 --since 2026-10-25T10:16
 | B9 | Starvation: 0/4 vs Jame for both v9 and v10 | Unknown; analyse a local game | — | open |
 | B10 | Strategy copied from top-ladder teams: drafts, builds and gem curves per map | `tools/scout.py`: the top 20 teams' last 100 ranked games each, plus 10 summaries per team for builds | Sources for B4, B11, B12 | **done** 2026-10-25 11:56Z (`data/scout/20261025T1156Z.json`): see B11, B12 |
 | B11 | The top 20 buy **Bruiser** shards almost exclusively: Vesper 41 Bruiser:Strength + 16 Bruiser:Health per game, Vendetta 22 + 13, Marcella 19/19/14. We buy Power. A Bruiser emblem counts as 7 shards (5 of the stat + 1 of each other, `docs/GameRules.md:304`); a Power emblem counts as 6 | After the Monster and Durability emblems, buy Bruiser shards (our stat, plus the v9 health share as Bruiser:Health) instead of Power | +1/6 late-game stats for the same gold; likely a broad gain | next: waits for the 150-game v9 sample |
+| B13 | We see how top teams draft and build (B10), but not how they play: camp order, siege size, Golem/elk handling, Heart of Ruin and Marcella play | Download top-20 replays on our weak maps (stampede, road-of-riches, corridors, eight, starvation) and the Heart of Ruin/Marcella games; analyse them with `analyze.mjs` (timelines: positions, gems, kills per round); write `docs/research/top-team-play.md` | Concrete play patterns to copy for B4, B5, B6, B8, B12 | next (data job) |
 | B12 | The top 20 draft Vesper 92%, Heart of Ruin 85%, Marcella 85%, Vendetta 67%, Ryth 52%. Stellar, Varg and Cassi & Issac are rare (0.6–14%). Our v9 drafts lean on Varg, Stellar and Cassi & Issac | Re-weight the draft towards the top-team core. Marcella needs a check that our play suits her kit; Heart of Ruin is B4 | Possibly large; the top-team evidence is strong, but champion play has to follow | open (after B11) |
 
 ## Tooling (test quality)
