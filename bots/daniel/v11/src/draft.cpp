@@ -222,7 +222,7 @@ std::array<float, 11> score_champions(const map_profile& profile, const std::vec
 // Experiments (tools/arena.py seed_fuel) run with a fuel quantum of 1,000,000 + 10,000 * seed, far above
 // the real 100k, and get a random roster so a deterministic engine still yields many distinct games.
 // Returns 0 (play for real) below 1M. The first draft turn gets 10x fuel.
-// v11: tools/arena.py writes experiment_seed.h into a copy of the bot to pick the seed at compile time, so seeded
+// v11 (ported back for testing; inert without the header): tools/arena.py writes experiment_seed.h into a copy of the bot to pick the seed at compile time, so seeded
 // games run at the real 100k fuel (opponents' fuel limits then behave as in ranked). Without the header the fuel
 // quantum decides, as before.
 #if __has_include("experiment_seed.h")

@@ -9,7 +9,15 @@ Version folder ≠ team submission number: the platform counts every submission 
 
 ## v11 (in development, from v10)
 - **Tooling:** `draft.cpp` reads `experiment_seed.h` when it exists. `tools/arena.py` writes that header into a
-  copy per seed, so random-draft test games run at the real 100k fuel (T1). No gameplay change yet.
+  copy per seed, so random-draft test games run at the real 100k fuel (T1). The same inert hook was ported back
+  into v9 and v10 (2026-10-25 18:35Z; nothing changes without the header) so that gates against them also run at
+  100k. Without it, a pairing with v10 fell back to the 1M fuel quantum, and the first B19 map gate (52%, failed)
+  never saw the freeze it was testing.
+- **Bug fix (B19, accepted):** `choose_target` reuses its walking-distance field from our position until we move
+  3+ tiles or 10 rounds pass (it cost ~40k fuel a turn on the 100×100 01big_world). big_world vs Jame v3 at 100k:
+  fuel-exhausted turns 2,499 → 170 (side A) and 5,972 → 135 (side B); both games go from losses (464:868,
+  0:866) to wins (965:843, 1,021:765). The claim/target mismatch was a side effect of turns cut short by fuel.
+  Gates at 100k: map mode vs v10 on big-world/ambush/lanes 67% (big-world 17/20); nonreg vs v10 51%, vs v9 60%.
 
 ## v10 (submitted 2026-10-25 12:54Z, team bot version 9)
 - **Feature:** also take a fight when behind on health but ahead on fighting power: health × damage, where damage
