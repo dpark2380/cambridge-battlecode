@@ -77,8 +77,15 @@ its weaker body.
 | pool = 2 × weaker body | 38/80 | – |
 | min + recall on the weaker body's health | 41/80 | 61% |
 
-Neither local opponent hunts the duo, so the fix has nothing to act on here. A duo-hunting exploiter opponent is
-the next step before testing it again.
+Neither local opponent hunts the duo. An exploiter (`bots/_var/duo-hunter`, v11 that hits a duo body first) gains
+nothing either: v11 vs it 201/400 = 50%, min vs it 206/400 = 52%. So ranked duo deaths come from something other
+than target choice.
+
+**Replay look.** In 81 v10 loss reports, at 315 duo deaths Cassi and Issac were a median 10 tiles apart (64% 8+
+tiles apart, 14% within 2): each body picks its own group, and Cassi (700 health) farms alone. A follower body
+that takes its partner's claimed group (`bots/_var/b14-follow-*`) keeps them together (median distance 16-21 →
+1-7.5 tiles vs Jame v3), but scores 40/80 and 38/80 in the race vs v11 and 63% vs Jame v3 (v11 65%). Parked: only
+ranked play or scrims can show whether ranked opponents punish the split.
 
 ## Next
 
