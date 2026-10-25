@@ -35,7 +35,7 @@ Ranked data: `python3 tools/ranked.py replays/daniel-v9 --since 2026-10-25T10:16
 
 | # | Issue | Change | Expected effect | Status |
 |---|---|---|---|---|
-| T1 | Random-draft test games run at 1M+ fuel, so opponents' fuel limits never trigger; local runs skip `--release` (research §7) | Seed drafts at compile time; play at 100k with `--release` | Local results closer to ranked | open |
+| T1 | Random-draft test games run at 1M+ fuel, so opponents' fuel limits never trigger; local runs skip `--release` (research §7) | Seed drafts at compile time; play at 100k with `--release` | Local results closer to ranked | **done** (2026-10-25): `arena.py` plays every game with `--release`. Bots whose draft.cpp includes `experiment_seed.h` (v11 on) are copied per seed into `bots/_seeded/` and play at 100k; others fall back to the fuel quantum |
 | T2 | A one-map fix shows as ~52% overall | Paired, side-swapped SPRT on targeted maps, plus a non-regression SPRT on all maps (research §3) | Accept real single-map fixes; stop clear results early | open |
 | T3 | Stripping `events` from summaries drops killer, position and fuel data (research §2) | Save a ~2 KB feature row per game before stripping | Triage every ranked game, not just losses | open |
 | T4 | Ranked record is pulled towards 50% by rating-matched pairing | Hourly `cambc ladder --json` snapshots; log every submission time | Measure versions by rating | open |

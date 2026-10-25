@@ -46,3 +46,4 @@ matches/
 replays/
 bots/*/build/
 bots/*/target/
+/bots/_seeded/

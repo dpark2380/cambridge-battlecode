@@ -4,14 +4,19 @@
     python3 tools/arena.py main-cpp starter-cpp            # every map x 2 sides
     python3 tools/arena.py main-cpp main-v1 --seeds 4      # + 4 random-draft games per map and side
 
-Matches are deterministic, so --repeat only helps when a bot is nondeterministic. --seeds N adds games with
-fuel quantum 1000000 + 10000*seed (seed_fuel), which main-cpp's draft turns into a random roster (paired by side swap);
-use it to compare gameplay versions on many distinct games.
+Matches are deterministic, so --repeat only helps when a bot is nondeterministic. --seeds N adds random-draft games
+(paired by side swap); use it to compare gameplay versions on many distinct games. Every game runs `--release`, as on
+the platform. Seeds reach a bot in one of two ways:
+- compile time (bots whose draft.cpp includes "experiment_seed.h", Daniel v11 on): a copy per seed under
+  bots/_seeded/ with `#define EXPERIMENT_SEED n`, played at the real 100k fuel;
+- fuel quantum 1000000 + 10000*seed (seed_fuel, older bots): far above ranked fuel, so opponents' fuel limits never
+  trigger. Used only when either bot lacks the header.
 
 Bots are directories (bots/<name> or any path to a cambc bot project). Prints per-map results and
 A's overall win rate with a 95% interval. Exit status is 0, so use --min-winrate to gate scripts.
 """
 import argparse
+import hashlib
 import json
 import math
 import os
@@ -38,9 +43,29 @@ def bot_path(name):
 
 
 def build(bot):
-    out = subprocess.run([CAMBC, "build", str(bot)], cwd=ROOT, capture_output=True, text=True)
+    out = subprocess.run([CAMBC, "build", str(bot), "--release"], cwd=ROOT, capture_output=True, text=True)
     if out.returncode:
         sys.exit(f"build failed for {bot}:\n{out.stdout}{out.stderr}")
+
+
+def compile_time_seeds(bot):
+    """True if the bot reads its experiment seed from experiment_seed.h (see seeded())."""
+    draft = Path(bot) / "src" / "draft.cpp"
+    return draft.exists() and "experiment_seed.h" in draft.read_text()
+
+
+def seeded(bot, seed):
+    """A built copy of `bot` with EXPERIMENT_SEED compiled in, under bots/_seeded/ (gitignored, reused)."""
+    tag = hashlib.sha1(str(Path(bot).resolve()).encode()).hexdigest()[:8]
+    copy = ROOT / "bots" / "_seeded" / f"{Path(bot).name}-{tag}-s{seed}"
+    header = f"#define EXPERIMENT_SEED {seed}\n"
+    stale = not copy.exists() or any(src.stat().st_mtime > copy.stat().st_mtime for src in (Path(bot) / "src").iterdir())
+    if stale:
+        shutil.rmtree(copy, ignore_errors=True)
+        shutil.copytree(bot, copy, ignore=shutil.ignore_patterns(".cambc", "build", "compile_commands.json"))
+        (copy / "src" / "experiment_seed.h").write_text(header)
+        build(copy)
+    return copy
 
 
 def play(bot_a, bot_b, map_name, fuel=None, keep_replay=None):
@@ -48,7 +73,7 @@ def play(bot_a, bot_b, map_name, fuel=None, keep_replay=None):
     with tempfile.TemporaryDirectory() as tmp:
         stats = Path(tmp) / "stats.json"
         cmd = [CAMBC, "run", str(bot_a), str(bot_b), "--map", map_name, "-o", keep_replay or tmp,
-               "--statistics", str(stats), "--json"]
+               "--statistics", str(stats), "--json", "--release"]
         if fuel:
             cmd += ["--fuel", str(fuel)]
         subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, timeout=600)
@@ -89,12 +114,19 @@ def maps():
 
 def run_matches(bot_a, bot_b, map_names, repeat=1, jobs=os.cpu_count(), seeds=()):
     """Yield (map, a_is_team_a, stats) for every map, both sides, `repeat` times, plus each draft seed."""
-    fuels = [None] * repeat + [seed_fuel(s) for s in seeds]
-    games = [(m, side, f) for m in map_names for side in (True, False) for f in fuels]
+    variants = [(bot_a, bot_b, None)] * repeat
+    if seeds and compile_time_seeds(bot_a) and compile_time_seeds(bot_b):
+        jobs_ = sorted({(str(b), s) for s in seeds for b in (bot_a, bot_b)})
+        with ThreadPoolExecutor(jobs) as pool:  # build each seeded copy once, up front, in parallel
+            copies = dict(zip(jobs_, pool.map(lambda job: seeded(Path(job[0]), job[1]), jobs_)))
+        variants += [(copies[(str(bot_a), s)], copies[(str(bot_b), s)], None) for s in seeds]
+    else:
+        variants += [(bot_a, bot_b, seed_fuel(s)) for s in seeds]
+    games = [(m, side, v) for m in map_names for side in (True, False) for v in variants]
 
     def one(game):
-        m, a_first, fuel = game
-        first, second = (bot_a, bot_b) if a_first else (bot_b, bot_a)
+        m, a_first, (a, b, fuel) = game
+        first, second = (a, b) if a_first else (b, a)
         return m, a_first, play(first, second, m, fuel)
 
     with ThreadPoolExecutor(jobs) as pool:
