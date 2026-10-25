@@ -2,6 +2,12 @@
 """Tally what the top ladder teams draft and build (read-only platform calls; needs `cambc login`).
 
     python3 tools/scout.py --top 20 --matches 100 --summaries 10      # writes data/scout/<time>.json + prints
+    python3 tools/scout.py --top 20 --matches 30 --summaries 0 --replays 3 --maps 00stampede,01corridors
+
+With --replays N, also downloads each team's N newest games (on --maps first, if given) and decodes them with
+tools/replay/analyze.mjs into data/scout/replays/<match id>.txt (report) + .stats.json + .timeline.csv.gz
+(per-round positions, gems, K/D), then deletes the replay. Games already decoded are skipped, so re-runs are cheap.
+In the report, "us" is team A, whoever that is: check the team names in data/scout/replays/<match id>.json.
 
 For each of the top --top teams: its last --matches ranked games from `cambc matches list --team <id>` (drafts,
 results, maps), and --summaries of them from `cambc matches summary` (items bought per champion). Prints
@@ -9,7 +15,9 @@ how often each champion is drafted (overall and as first pick) and the average s
 """
 import argparse
 import collections
+import gzip
 import json
+import shutil
 import subprocess
 import tempfile
 import time
@@ -45,11 +53,39 @@ def builds(match_id, team_side):
             for c in s["champions"] if c["team"] == team_side}
 
 
+def decode(match, out):
+    """Download one replay, decode it into out/<id>.txt/.stats.json/.timeline.csv.gz, delete the zip."""
+    mid = match["match"]
+    if (out / f"{mid}.txt").exists():
+        return
+    zip_path = out / f"{mid}.zip"
+    for attempt in range(3):
+        if subprocess.run([arena.CAMBC, "matches", "download", mid, "-o", str(zip_path)], capture_output=True).returncode == 0:
+            break
+        time.sleep(3 * (attempt + 1))
+    else:
+        return
+    report = subprocess.run(["node", str(ROOT / "tools/replay/analyze.mjs"), "--us", "A", "--out", str(out), str(zip_path)],
+                            capture_output=True, text=True)
+    zip_path.unlink(missing_ok=True)
+    if report.returncode:
+        return
+    csv = out / f"{mid}.timeline.csv"
+    if csv.exists():
+        with csv.open("rb") as src, gzip.open(f"{csv}.gz", "wb") as dst:
+            shutil.copyfileobj(src, dst)
+        csv.unlink()
+    (out / f"{mid}.json").write_text(json.dumps(match))
+    (out / f"{mid}.txt").write_text(report.stdout)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--top", type=int, default=20)
     parser.add_argument("--matches", type=int, default=100)
     parser.add_argument("--summaries", type=int, default=10)
+    parser.add_argument("--replays", type=int, default=0, help="replays per team to download and decode")
+    parser.add_argument("--maps", default="", help="comma-separated maps to prefer for --replays (listing names, e.g. 00stampede)")
     parser.add_argument("--jobs", type=int, default=8)
     args = parser.parse_args()
 
@@ -61,8 +97,10 @@ def main():
         rows = []
         for m in games:
             us = next(x for x in m["teams"] if x["teamId"] == t["teamId"])
+            them = next(x for x in m["teams"] if x["teamId"] != t["teamId"])
             rows.append({"match": m["matchId"], "map": m["map"], "side": us["side"], "win": us["result"] == "win",
-                         "picks": [DRAFT[int(c)] for c in us["characters"]]})
+                         "picks": [DRAFT[int(c)] for c in us["characters"]], "team": t["name"], "rank": t["rank"],
+                         "opponent": them["name"], "finished": m["finishedAt"]})
         report.append({"rank": t["rank"], "name": t["name"], "rating": t["rating"], "games": rows})
 
     # Builds from a sample of each team's games, fetched in parallel.
@@ -70,6 +108,19 @@ def main():
     with ThreadPoolExecutor(args.jobs) as pool:
         for (entry, row), b in zip(jobs, pool.map(lambda j: builds(j[1]["match"], "team" + j[1]["side"].upper()), jobs)):
             row["builds"] = {k: dict(v) for k, v in b.items()}
+
+    if args.replays:
+        prefer = set(filter(None, args.maps.split(",")))
+        chosen = []
+        for entry in report:
+            # Newest games on the preferred maps, else the newest games (the listing is newest first).
+            chosen += [g for g in entry["games"] if g["map"] in prefer][:args.replays] or entry["games"][:args.replays]
+        replay_dir = ROOT / "data" / "scout" / "replays"
+        replay_dir.mkdir(parents=True, exist_ok=True)
+        with ThreadPoolExecutor(args.jobs) as pool:
+            list(pool.map(lambda g: decode(g, replay_dir), chosen))
+        done = sum((replay_dir / (g["match"] + ".txt")).exists() for g in chosen)
+        print(f"decoded {done}/{len(chosen)} replays into {replay_dir.relative_to(ROOT)}")
 
     out = ROOT / "data" / "scout" / f"{time.strftime('%Y%m%dT%H%MZ', time.gmtime())}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
