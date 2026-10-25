@@ -8,7 +8,13 @@ commit as any change to a bot.
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
 ## v12 (in development, from v11)
-- Started 2026-10-25 23:15Z for the sprint 3 maps; no changes yet.
+- Started 2026-10-25 23:15Z for the sprint 3 maps.
+- **Feature (B25, accepted):** draft the top-20 core in order, Vesper > Heart of Ruin > Marcella > Vendetta > Ryth,
+  map scoring for the rest. Heart of Ruin added to the draft roster (it was never draftable). Marcella and Heart of
+  Ruin buy focus shards. Real drafts, 70 maps x 2 sides: 77% vs v11, 79% vs v10, 81% vs v9, 79% vs Jame v3 (v11:
+  66%). Without the focus builds: 67% vs v11.
+- **Tooling:** `tools/targetmodel.py` (B26), a choice model of which group a champion takes next, fitted to top-team
+  and our ranked decisions; `tools/openings.py --export` writes the opening-script table (B24).
 
 ## v11 (submitted 2026-10-25 23:14Z, team bot version 10)
 - **Tooling:** `draft.cpp` reads `experiment_seed.h` when it exists. `tools/arena.py` writes that header into a
