@@ -118,7 +118,7 @@ def main():
     for _ in range(args.boot):
         sample = [res for k in rng.choices(keys, k=len(keys)) for res in by_group[k]]
         boots.append(fit(sample, bots, iters=80)[0])
-    print(f"\nBradley-Terry ratings (Elo scale, v8 = 0; first side +{side:.0f}):")
+    print(f"\nBradley-Terry ratings (Elo scale, v8 = 0; first side {side:+.0f}):")
     points = ladder_points()
     for bot in sorted(bots, key=lambda b: -ratings[b]):
         vals = sorted(bs[bot] for bs in boots)
