@@ -1,0 +1,78 @@
+# adgato-gemcombat4: 41x61, 5 picks per team, symmetry: 180-degree rotation
+# Legend: . floor  # wall  o hole  " bush  A altar  S team-A spawn  E team-B spawn
+#         w wolf  k elk  M monolith  G golem  g gem cluster  $ gold cluster (camp spawn tiles)
+# Row index is y, column index is x. Dumped via the engine from Team A's perspective.
+
+      0         1         2         3         4
+      01234567890123456789012345678901234567890
+   0  ooooooooooooooooooooooooooooooooooooooooo
+   1  ooooooooooooooooooooooooooooooooooooooooo
+   2  ooooooooooooooooooooooooooooooooooooooooo
+   3  ooooooooooooooooooooooooooooooooooooooooo
+   4  ooooooooooooooooooooooooooooooooooooooooo
+   5  ooooooooooooooooooooooooooooooooooooooooo
+   6  ooooooooooooooo..............oooooooooooo
+   7  oooooooooo.....................oooooooooo
+   8  ooooooo..........SSS.............oooooooo
+   9  oooooooo.........SSS..............ooooooo
+  10  ooooooo..........SSS...............oooooo
+  11  ooooo...............................ooooo
+  12  oooo.................................oooo
+  13  oooo.........oooo.....................ooo
+  14  oo.......oooooooooo....................oo
+  15  oo......oooooooooooooooo.............""oo
+  16  .......oooooooo...oooooooo...gg.......""o
+  17  .....oooooooooo......ooooooo.gg.......g"o
+  18  .....oooo...o...ggg...ooooooo........gg"o
+  19  ...ooooo....o.........oo...ooo.......gg"o
+  20  ..ooooooo.oooooooooooooo....oo........""o
+  21  ..oooooooooooooooooooooooo...o..........o
+  22  ..ooooooooo............oooo..oo.........o
+  23  ..oooooooo...##..........oooooo.........o
+  24  oooooooo""...#...........oooooo.........o
+  25  o.##ooo""".................ooooo........o
+  26  #.##oo"""".......#######....""oo......ggo
+  27  #.ooo..""........#.....#....""""......ggo
+  28  #.o....""".......#.....#....""""......ggo
+  29  #oo...."""....................""".......o
+  30  oo......""".........A........."""......oo
+  31  o......."""...................."""....oo#
+  32  ogg......""""....#.....#......."""....o.#
+  33  ogg......""""....#.....#........""..ooo.#
+  34  ogg......oo""....#######.......""""oo##.#
+  35  o........ooooo................."""ooo##.o
+  36  o.........oooooo...........#...""oooooooo
+  37  o.........oooooo..........##...oooooooo..
+  38  o.........oo..oooo............ooooooooo..
+  39  o..........o...oooooooooooooooooooooooo..
+  40  o""........oo....oooooooooooooo.ooooooo..
+  41  o"gg.......ooo...oo.........o....ooooo...
+  42  o"gg........ooooooo...ggg...o...oooo.....
+  43  o"g.......gg.ooooooo......oooooooooo.....
+  44  o"".......gg...oooooooo...oooooooo.......
+  45  oo"".............oooooooooooooooo......oo
+  46  oo....................oooooooooo.......oo
+  47  ooo.....................oooo.........oooo
+  48  oooo.................................oooo
+  49  ooooo...............................ooooo
+  50  oooooo...............EEE..........ooooooo
+  51  ooooooo..............EEE.........oooooooo
+  52  oooooooo.............EEE..........ooooooo
+  53  oooooooooo.....................oooooooooo
+  54  oooooooooooo..............ooooooooooooooo
+  55  ooooooooooooooooooooooooooooooooooooooooo
+  56  ooooooooooooooooooooooooooooooooooooooooo
+  57  ooooooooooooooooooooooooooooooooooooooooo
+  58  ooooooooooooooooooooooooooooooooooooooooo
+  59  ooooooooooooooooooooooooooooooooooooooooo
+  60  ooooooooooooooooooooooooooooooooooooooooo
+
+# Camp groups (gems/gold per capture, respawn in rounds, centroid of spawn tiles)
+# G0 {'g': 3} gems=21 gold=0 respawn=50 at=(17,18)
+# G1 {'g': 3} gems=21 gold=0 respawn=50 at=(23,42)
+# G2 {'g': 6} gems=42 gold=0 respawn=50 at=(38,27)
+# G3 {'g': 6} gems=42 gold=0 respawn=50 at=(2,33)
+# G4 {'g': 4} gems=28 gold=0 respawn=50 at=(30,16)
+# G5 {'g': 4} gems=28 gold=0 respawn=50 at=(10,44)
+# G6 {'g': 5} gems=35 gold=0 respawn=50 at=(38,18)
+# G7 {'g': 5} gems=35 gold=0 respawn=50 at=(2,42)
