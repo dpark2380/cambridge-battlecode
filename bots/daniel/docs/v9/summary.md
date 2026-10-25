@@ -1,6 +1,6 @@
 # Daniel v9: fixes from 300 ranked v8 games
 
-Code: `bots/daniel/v9` (C++), forked from Daniel v8. **Candidate for submission, awaiting approval** (2026-10-25).
+Code: `bots/daniel/v9` (C++), forked from Daniel v8. **Submitted 2026-10-25 as team bot version 8.**
 
 ## Verdict: v9 vs v8 and every older model
 
@@ -23,7 +23,7 @@ below are rows and yellow-brick-road (4/10 each), neither a collapse. 0 crashes 
    health, like Jame v3 and the ranked opponents in the loss reports we read. This is the big step: 52% → 69% vs v8, 39% → 55% vs Jame.
 
 **Risks.** Starvation stays weak against Jame (0/4 for both). Stampede and the road-of-riches Golem deaths seen in
-ranked did not reproduce locally, so they are unaddressed. `power_health_share = 0.4` is a first guess, not tuned.
+ranked did not reproduce locally, so they are unaddressed. `power_health_share` vs v9 (0.4), all maps × 2 sides × 3 drafts: 0.25 → 110/240 = 46%, 0.55 → 126/240 = 52% (95% CI 46–59%, noise). 0.4 kept.
 
 Per map, games won out of 4 (2 sides × 2 drafts) unless noted:
 
