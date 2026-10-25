@@ -18,8 +18,8 @@ import { inflateRawSync } from "node:zlib";
 import { homedir } from "node:os";
 import { WASI } from "node:wasi";
 
-const CHAMPIONS = ["ryth", "vesper_vale", "vendetta", "cassi", "issac", "stellar", "prism", "marcella", "willow", "ren", "varg", "tavi"];
-const DRAFT = ["ryth", "vesper_vale", "vendetta", "cassi_and_issac", "stellar", "prism", "marcella", "willow", "ren", "varg", "tavi"];
+const CHAMPIONS = ["ryth", "vesper_vale", "vendetta", "cassi", "issac", "stellar", "prism", "marcella", "willow", "ren", "varg", "tavi", "heart_of_ruin"];
+const DRAFT = ["ryth", "vesper_vale", "vendetta", "cassi_and_issac", "stellar", "prism", "marcella", "willow", "ren", "varg", "tavi", "heart_of_ruin"];
 const ITEMS = ["monster", "power", "durability", "treasure", "jungle", "home", "bruiser"].flatMap(family =>
     ["strength", "focus", "health"].flatMap(stat => [`${family}_shard_of_${stat}`, `${family}_emblem_of_${stat}`]));
 const OUTCOME = { 0: "unfinished", 1: "teamA", 2: "teamB" };
