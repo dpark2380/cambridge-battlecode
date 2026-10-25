@@ -8,7 +8,8 @@ Constants are found by name in --file (default src/params.h if present, else src
 `P(name, 1.5f)`; integer literals stay integers, and values in (0, 1) stay in (0.02, 0.98). Each iteration
 perturbs the incumbent into --candidates variants (log-normal steps), builds each as a copy under bots/_tune*/,
 and plays it against the incumbent on every map x --seeds random drafts x both sides. A candidate replaces the
-incumbent only if it wins at least --accept of those games. Random drafts come from the bot's fuel-seed hook
+incumbent only if it wins at least --accept of those games and then again on fresh seeds (T7: the best of several
+noisy candidates is biased upwards). Random drafts come from the bot's fuel-seed hook
 (see draft.cpp), so every game is distinct; a bot without the hook just replays its own draft.
 """
 import argparse
@@ -79,17 +80,11 @@ def perturb(values, sigma, rng):
 
 
 def duel(bot_a, bot_b, seeds, jobs):
-    """Paired games on every map and seed, both sides; return (A's win rate, A's mean gem margin)."""
-    games = [(m, s, a_first) for m in arena.maps() for s in seeds for a_first in (True, False)]
-
-    def one(game):
-        m, s, a_first = game
-        first, second = (bot_a, bot_b) if a_first else (bot_b, bot_a)
-        stats = arena.play(first, second, m, fuel=arena.seed_fuel(s))
-        return arena.a_result(a_first, stats) if stats else None
-
-    with ThreadPoolExecutor(jobs) as pool:
-        results = [r for r in pool.map(one, games) if r]
+    """Paired games on every map and seed, both sides; return (A's win rate, A's mean gem margin).
+    Uses arena.run_matches, so bots with experiment_seed.h play seeded copies at 100k fuel."""
+    results = [arena.a_result(a_first, stats)
+               for _, a_first, stats in arena.run_matches(bot_a, bot_b, arena.maps(), repeat=0, jobs=jobs, seeds=seeds)
+               if stats]
     wins = sum(r[0] for r in results)
     return wins / max(len(results), 1), sum(r[1] for r in results) / max(len(results), 1)
 
@@ -130,6 +125,14 @@ def main():
             print(f"iter {it} cand {i}: win {rate:.0%} margin {margin:+.0f}", flush=True)
         rate, margin, values = max(scored, key=lambda s: (s[0], s[1]))
         accepted = rate >= args.accept
+        if accepted:
+            # T7: the best of several candidates is biased upwards (three 50% candidates pass a 56% bar ~18% of
+            # the time), so the winner must pass again on fresh seeds.
+            confirm_seeds = [rng.randrange(400, 800) for _ in range(args.seeds)]
+            bot = make_bot(source, rel_file, "_tune_confirm", values)
+            confirm, _ = duel(bot, incumbent, confirm_seeds, args.jobs)
+            print(f"iter {it}: best {rate:.0%}, confirmation on fresh seeds {confirm:.0%}", flush=True)
+            accepted = confirm >= args.accept
         with LOG.open("a") as log:
             log.write(json.dumps({"bot": args.bot, "iter": it, "rate": rate, "margin": margin, "accepted": accepted,
                                   "params": {k: v for k, (v, _) in values.items()}}) + "\n")
@@ -140,6 +143,7 @@ def main():
 
     for i in range(args.candidates):
         shutil.rmtree(ROOT / "bots" / f"_tune_{i}", ignore_errors=True)
+    shutil.rmtree(ROOT / "bots" / "_tune_confirm", ignore_errors=True)
     print("best", show(best))
     if args.apply:
         write_params(best, source / rel_file)
