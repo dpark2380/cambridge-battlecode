@@ -129,7 +129,7 @@ bool excludes_walking(const cambc::ability& ability) {
 
 // Shard stat per champion_type: casters buy focus, Ryth health (it also adds strength), the rest strength.
 enum class stat { strength, health, focus };
-constexpr float power_health_share = 0.4f;  // v9: fraction of Power shards bought as health
+constexpr float power_health_share = 0.4f;  // v9: fraction of Power (v11: Bruiser) shards bought as health
 constexpr std::array<stat, 13> build_stat{
     stat::health,   stat::strength, stat::strength, stat::focus, stat::strength, stat::focus,
     stat::focus,    stat::strength, stat::focus,    stat::strength, stat::strength, stat::focus,
@@ -137,7 +137,8 @@ constexpr std::array<stat, 13> build_stat{
 };
 
 // Build order (the +200 elo bot's): one Monster emblem of our stat (10% more camp damage), one
-// Durability emblem of health (10% less damage taken), then Power shards of our stat forever.
+// Durability emblem of health (10% less damage taken), then Bruiser shards of our stat forever (v11 B21:
+// 5 of the stat plus 1 of each other, 7 shards' worth vs Power's 6; the top 20 buy mostly Bruiser).
 // Emblem passives do not stack, so a second emblem of a family only adds stats.
 std::array<cambc::item_type, 3> build_order(stat s) {
     using cambc::item_type;
@@ -147,13 +148,13 @@ std::array<cambc::item_type, 3> build_order(stat s) {
     switch (s) {
     case stat::strength:
         return {jungle_first ? item_type::jungle_shard_of_strength : item_type::monster_shard_of_strength,
-                item_type::durability_shard_of_health, item_type::power_shard_of_strength};
+                item_type::durability_shard_of_health, item_type::bruiser_shard_of_strength};
     case stat::health:
         return {jungle_first ? item_type::jungle_shard_of_health : item_type::monster_shard_of_health,
-                item_type::durability_shard_of_health, item_type::power_shard_of_health};
+                item_type::durability_shard_of_health, item_type::bruiser_shard_of_health};
     default:
         return {jungle_first ? item_type::jungle_shard_of_focus : item_type::monster_shard_of_focus,
-                item_type::durability_shard_of_health, item_type::power_shard_of_focus};
+                item_type::durability_shard_of_health, item_type::bruiser_shard_of_focus};
     }
 }
 
@@ -323,7 +324,7 @@ void Bot::shop() {
     if (me.consumables()[lock].count() == 0 && me.can_buy(lock))
         me.buy(lock);
 
-    // Finish each emblem before starting the next; Power (last) soaks up the rest.
+    // Finish each emblem before starting the next; Bruiser (last) soaks up the rest.
     const auto order = build_order(build_stat[static_cast<int>(me.champion_name())]);
     for (std::size_t i = 0; i < order.size(); ++i) {
         const auto shard = order[i];
@@ -332,9 +333,9 @@ void Bot::shop() {
         const auto emblem = shard.result();
         if (!last && emblem && owned[*emblem] > 0)
             continue;
-        if (last && power_health_share > 0 && shard != cambc::item_type::power_shard_of_health) {
-            // v9: split Power shards between our stat and health (Jame v3 and ranked opponents do).
-            const auto health = cambc::item_type::power_shard_of_health;
+        if (last && power_health_share > 0 && shard != cambc::item_type::bruiser_shard_of_health) {
+            // v9: split the last shards (v11: Bruiser) between our stat and health (Jame v3 and ranked opponents do).
+            const auto health = cambc::item_type::bruiser_shard_of_health;
             while (me.gold_count() >= shard.cost()) {
                 const float share = float(owned_count(health)) / std::max(1u, owned_count(health) + owned_count(shard));
                 const auto pick = share < power_health_share ? health : shard;

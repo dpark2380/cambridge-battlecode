@@ -3,6 +3,35 @@
 Changes are added one at a time, each gated (`tools/gate.py`) at the real 100k fuel. Backlog ids refer to
 `../backlog.md`.
 
+## B21: Bruiser shards instead of Power (accepted 2026-10-25 20:40Z)
+
+**Evidence.** Scout of 750 top-20 games (20:31Z): every main pick buys mostly Bruiser shards (Vesper Bruiser:Strength
+46.7 + Bruiser:Health 19.0 a game vs Power 11.5; Marcella 58 Bruiser; Heart of Ruin 32). By the rules
+(`docs/GameRules.md:304`) a Bruiser emblem gives 5 of the stat plus 1 of each other stat, 7 shards' worth, where
+Power gives 6 of one. We bought Power after the Monster and Durability emblems. This was the untested half of B11.
+
+**Change.** `build_order`'s last entry is the Bruiser shard of our stat; the 40% health split (`power_health_share`)
+now buys Bruiser health shards.
+
+| Test | Result |
+|---|---|
+| race vs v11 (80 games): 40% health split / no split | 42/80 / 40/80 |
+| `gate` gain vs v11, all maps | 135/240 = 56%, PASS |
+| `gate` gain vs v10, all maps | 95/160 = 59%, PASS (v11 with only B19: 50%) |
+| `gate --mode nonreg` vs v9 | 100/160 = 62%, PASS (B19 alone: 60%) |
+| `gate --mode nonreg` vs Jame v3 (1M fuel, no seed hook) | 98/160 = 61%, PASS |
+
+## B20: dominant Monolith value (rejected 2026-10-25 20:33Z)
+
+**Evidence.** rows 0–6 ranked; the opponent took the 470-gem G6 in 2 losses and we never did. A debug print of
+v11's target rates on rows showed G6 rated just under small groups (0.17–0.36 vs 0.21–0.58).
+
+**Change tried.** Multiply a siege group's value by x1.5/x2/x3 when it holds ≥ 50% of the map's gems (rows 80%,
+gold-rush 75%, corridors 57%, contest 50%).
+
+**Result.** Map gate vs v11 on those four maps: 22% / 11% / 9% (contest 0/16 in all three). Bodies start the
+siege before they can finish it and lose the time in trips home and duo deaths. Parked.
+
 ## B19: big_world fuel freeze (accepted 2026-10-25 18:35Z)
 
 **Evidence.** v10 ranked on 01big_world: 4,261 fuel-exhausted turns in one loss. 00ambush 1–5 with 29–60

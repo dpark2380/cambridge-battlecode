@@ -18,6 +18,13 @@ Version folder ≠ team submission number: the platform counts every submission 
   fuel-exhausted turns 2,499 → 170 (side A) and 5,972 → 135 (side B); both games go from losses (464:868,
   0:866) to wins (965:843, 1,021:765). The claim/target mismatch was a side effect of turns cut short by fuel.
   Gates at 100k: map mode vs v10 on big-world/ambush/lanes 67% (big-world 17/20); nonreg vs v10 51%, vs v9 60%.
+- **Feature (B21, accepted 2026-10-25 20:40Z):** after the Monster and Durability emblems, buy Bruiser shards
+  instead of Power (same 40% health split). A Bruiser emblem is 5 of the stat plus 1 of each other, 7 shards'
+  worth against Power's 6; the top 20 buy mostly Bruiser (Vesper ~66 Bruiser shards a game vs 11.5 Power).
+  Gates at 100k: gain vs v11 135/240 = 56%, gain vs v10 95/160 = 59%; nonreg vs v9 100/160 = 62%, vs Jame v3
+  98/160 = 61%. The no-split variant raced 40/80 vs 42/80.
+- **Rejected:** a dominant-Monolith value multiplier (B20; x1.5/x2/x3 on rows, corridors, contest, gold-rush:
+  22%/11%/9% vs v11; early sieges it cannot finish).
 - **Rejected:** lower `max_damage_share` (B17+B18): 1.5 and 2.0 win elkring 57-62% but lose islands ~35% vs v11.
 - **Rejected:** build order Treasure > Durability > Power (B11, 51% over 800 games vs v11); late gold-weight decay
   (B15, 50% over 480; a sharp drop after round 500 scores 44%).
