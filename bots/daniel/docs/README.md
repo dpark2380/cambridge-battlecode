@@ -21,3 +21,5 @@ experiment hook (`--seeds`, `tools/tune.py`).
 Ranked data: `python3 tools/ranked.py replays/<version>` downloads and summarises our ranked games.
 
 Research notes: [`research/v6-improvements.md`](research/v6-improvements.md) (what the 54 ranked v6 games say to fix next).
+
+Overnight report with the v11 recommendation: [overnight-2026-10-26.md](overnight-2026-10-26.md).

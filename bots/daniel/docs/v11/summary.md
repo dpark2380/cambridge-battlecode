@@ -25,6 +25,8 @@ now buys Bruiser health shards.
 Jame v3 +37, v8 0, v7 −71, hunter-v0 −153, Simon v6 −213 (Elo scale, 90% intervals). The rough ladder line
 (1450 + 0.54 × local, 3 submitted versions) predicts v11 about 30 points above v10.
 
+**New maps (22:54Z):** v11 vs v10 on the 30 maps added to the pool on 2026-10-25: 401/780 = 51% (gain gate fails, no regression).
+
 ## B20: dominant Monolith value (rejected 2026-10-25 20:33Z)
 
 **Evidence.** rows 0–6 ranked; the opponent took the 470-gem G6 in 2 losses and we never did. A debug print of
