@@ -1,0 +1,100 @@
+# 00road-of-riches: 40x40, 5 picks per team, symmetry: 180-degree rotation
+# Legend: . floor  # wall  o hole  " bush  A altar  S team-A spawn  E team-B spawn
+#         w wolf  k elk  M monolith  G golem  g gem cluster  $ gold cluster (camp spawn tiles)
+# Row index is y, column index is x. Dumped via the engine from Team A's perspective.
+
+      0         1         2         3         
+      0123456789012345678901234567890123456789
+   0  ggg..................................ggg
+   1  gMg.........g.....gw...g..............Gg
+   2  ggg....$..........kg.......$$....g.....g
+   3  ........................................
+   4  ....################################....
+   5  ....#...................................
+   6  .$..#.$$.........$.......gg......g......
+   7  ....#...................................
+   8  ....#....###############################
+   9  ....#....#..........."o"................
+  10  ....#.g..#..........."o"..$..........gg.
+  11  ..g.#....#.......SSSS"o"................
+  12  ..."o"...........SSSS"o"................
+  13  ..."o"g..........SSSS"o"...#########....
+  14  ..."o"k$.........SSSS"o"...........#....
+  15  .gg"o"..............."o"g........g.#....
+  16  .ww.###################.gg.........#.$k.
+  17  ....#..............A..#............#.$w.
+  18  ....#.....gg..$w$.....#########....#....
+  19  ....#.$...gk..$w$..gg............$.#....
+  20  ....#.$............gg..$w$..kg...$.#....
+  21  ....#....#########.....$w$..gg.....#....
+  22  .w$.#............#..A..............#....
+  23  .k$.#.........gg.###################.ww.
+  24  ....#.g........g"o"..............."o"gg.
+  25  ....#..........."o"EEEE.........$k"o"...
+  26  ....#########..."o"EEEE..........g"o"...
+  27  ................"o"EEEE..........."o"...
+  28  ................"o"EEEE.......#....#.g..
+  29  .gg..........$.."o"...........#..g.#....
+  30  ................"o"...........#....#....
+  31  ###############################....#....
+  32  ...................................#....
+  33  ......g......gg.......$.........$$.#..$.
+  34  ...................................#....
+  35  ....################################....
+  36  ........................................
+  37  g.....g....$$.......gk..........$....ggg
+  38  gG..............g...wg.....g.........gMg
+  39  ggg..................................ggg
+
+# Camp groups (gems/gold per capture, respawn in rounds, centroid of spawn tiles)
+# G0 {'g': 4} gems=28 gold=0 respawn=50 at=(20,20)
+# G1 {'w': 2, '$': 4} gems=8 gold=160 respawn=50 at=(15,18)
+# G2 {'w': 2, '$': 4} gems=8 gold=160 respawn=50 at=(24,20)
+# G3 {'k': 1, 'g': 3} gems=36 gold=90 respawn=60 at=(10,18)
+# G4 {'k': 1, 'g': 3} gems=36 gold=90 respawn=60 at=(28,20)
+# G5 {'$': 2} gems=0 gold=40 respawn=50 at=(6,6)
+# G6 {'$': 2} gems=0 gold=40 respawn=50 at=(32,33)
+# G7 {'g': 1, 'k': 1, '$': 1} gems=22 gold=110 respawn=60 at=(6,14)
+# G8 {'g': 1, 'k': 1, '$': 1} gems=22 gold=110 respawn=60 at=(33,25)
+# G9 {'g': 2, 'w': 2} gems=22 gold=80 respawn=50 at=(2,16)
+# G10 {'g': 2, 'w': 2} gems=22 gold=80 respawn=50 at=(38,24)
+# G11 {'g': 2} gems=14 gold=0 respawn=50 at=(2,29)
+# G12 {'g': 2} gems=14 gold=0 respawn=50 at=(38,10)
+# G13 {'$': 1} gems=0 gold=20 respawn=50 at=(13,29)
+# G14 {'$': 1} gems=0 gold=20 respawn=50 at=(26,10)
+# G15 {'$': 2} gems=0 gold=40 respawn=50 at=(28,2)
+# G16 {'$': 2} gems=0 gold=40 respawn=50 at=(12,37)
+# G17 {'g': 1} gems=7 gold=0 respawn=50 at=(6,10)
+# G18 {'g': 1} gems=7 gold=0 respawn=50 at=(33,29)
+# G19 {'$': 1} gems=0 gold=20 respawn=50 at=(17,6)
+# G20 {'$': 1} gems=0 gold=20 respawn=50 at=(22,33)
+# G21 {'g': 2} gems=14 gold=0 respawn=50 at=(26,6)
+# G22 {'g': 2} gems=14 gold=0 respawn=50 at=(14,33)
+# G23 {'g': 1} gems=7 gold=0 respawn=50 at=(33,6)
+# G24 {'g': 1} gems=7 gold=0 respawn=50 at=(6,33)
+# G25 {'g': 8, 'M': 1} gems=256 gold=300 respawn=150 at=(1,1)
+# G26 {'g': 8, 'M': 1} gems=256 gold=300 respawn=150 at=(38,38)
+# G27 {'g': 3} gems=21 gold=0 respawn=50 at=(15,23)
+# G28 {'g': 3} gems=21 gold=0 respawn=50 at=(24,16)
+# G29 {'g': 1} gems=7 gold=0 respawn=50 at=(6,24)
+# G30 {'g': 1} gems=7 gold=0 respawn=50 at=(33,15)
+# G31 {'$': 2} gems=0 gold=40 respawn=50 at=(6,20)
+# G32 {'$': 2} gems=0 gold=40 respawn=50 at=(33,20)
+# G33 {'k': 1, 'g': 2, 'w': 1} gems=33 gold=130 respawn=60 at=(18,2)
+# G34 {'k': 1, 'g': 2, 'w': 1} gems=33 gold=130 respawn=60 at=(20,38)
+# G35 {'G': 1, 'g': 5} gems=71 gold=160 respawn=80 at=(38,1)
+# G36 {'G': 1, 'g': 5} gems=71 gold=160 respawn=80 at=(1,38)
+# G37 {'$': 1} gems=0 gold=20 respawn=50 at=(7,2)
+# G38 {'$': 1} gems=0 gold=20 respawn=50 at=(32,37)
+# G39 {'g': 1} gems=7 gold=0 respawn=50 at=(23,1)
+# G40 {'g': 1} gems=7 gold=0 respawn=50 at=(16,38)
+# G41 {'g': 1} gems=7 gold=0 respawn=50 at=(33,2)
+# G42 {'g': 1} gems=7 gold=0 respawn=50 at=(6,37)
+# G43 {'$': 1} gems=0 gold=20 respawn=50 at=(1,6)
+# G44 {'$': 1} gems=0 gold=20 respawn=50 at=(38,33)
+# G45 {'g': 1} gems=7 gold=0 respawn=50 at=(12,1)
+# G46 {'g': 1} gems=7 gold=0 respawn=50 at=(27,38)
+# G47 {'g': 1} gems=7 gold=0 respawn=50 at=(2,11)
+# G48 {'g': 1} gems=7 gold=0 respawn=50 at=(37,28)
+# G49 {'w': 1, 'k': 1, '$': 2} gems=19 gold=170 respawn=60 at=(2,22)
+# G50 {'w': 1, 'k': 1, '$': 2} gems=19 gold=170 respawn=60 at=(38,16)
