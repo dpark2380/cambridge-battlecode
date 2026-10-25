@@ -19,6 +19,8 @@ Version folder ≠ team submission number: the platform counts every submission 
   0:866) to wins (965:843, 1,021:765). The claim/target mismatch was a side effect of turns cut short by fuel.
   Gates at 100k: map mode vs v10 on big-world/ambush/lanes 67% (big-world 17/20); nonreg vs v10 51%, vs v9 60%.
 - **Rejected:** lower `max_damage_share` (B17+B18): 1.5 and 2.0 win elkring 57-62% but lose islands ~35% vs v11.
+- **Rejected:** build order Treasure > Durability > Power (B11, 51% over 800 games vs v11); late gold-weight decay
+  (B15, 50% over 480; a sharp drop after round 500 scores 44%).
 
 ## v10 (submitted 2026-10-25 12:54Z, team bot version 9)
 - **Feature:** also take a fight when behind on health but ahead on fighting power: health × damage, where damage

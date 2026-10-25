@@ -49,6 +49,20 @@ so it stays at 4.04. A targeted rule (don't open an elk group alone unless we ca
 **Tool fix.** `gate.py --mode map` on two maps defaulted to 12 seeds (26 pairs), under the 30-pair minimum, so it
 could never decide. The default now scales with the map count.
 
+## B11: build order (rejected 2026-10-25 18:53Z)
+
+Top teams finish Treasure, then Jungle, then Bruiser emblems; v11 builds Monster > Durability > Power.
+`race.py` vs v11 (80 games each): Treasure > Durability > Power 45/80, Treasure > Jungle > Power 41/80, Jungle >
+Treasure > Power 40/80. Gain gate of the winner vs v11: 405/800 = 51%, FAIL. Bruiser was not tried: its emblem
+needs one shard of every other stat, which `shop()` does not buy.
+
+## B15: gold weight decay (rejected 2026-10-25 18:58Z)
+
+The win model values 1 gold at 0.22 gems before round 500 and 0.05 after; v11 uses a fixed `gold_weight = 0.20`.
+Race vs v11: 0.20 then linear to 0.05 by r1000 42/80, 0.10 after r500 36/80, 0.06 after r500 35/80. Gain gate of the
+linear variant: 240/480 = 50%, FAIL. The win model predicts submitted gems, but ranked games are often decided by
+the lifetime-gold tiebreak (21 of v10's 71 losses), so late gold keeps its value.
+
 ## Next
 
-B11 build order (Treasure > Jungle > Bruiser) race variants, applied no earlier than 20:30Z (one change every 2 hours).
+B14 (camp deaths) and B12 (draft meta) need diagnosis from the ranked losses before any variant is built.
