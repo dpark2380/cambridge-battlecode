@@ -1,0 +1,34 @@
+# Daniel bot backlog: issues and candidate improvements
+
+Every change is logged here **before** it is tested, with its evidence and the result we expect. Only items with
+evidence that predicts a gain get tested. Results and the final status go back into the row, and full write-ups go
+in the version's `summary.md`.
+
+Status: `open` (evidence, not tested) · `next` (queued for testing) · `testing` · `kept (vN)` · `rejected` ·
+`blocked` (needs data or tooling first).
+
+Ranked data: `python3 tools/ranked.py replays/daniel-v9 --since 2026-10-25T10:16 --replays losses`.
+
+## Bot behaviour
+
+| # | Issue (evidence) | Hypothesis / change | Expected effect | Status |
+|---|---|---|---|---|
+| B1 | the_farm frozen: carriers oscillate beside camp G16 (ranked v8 1–9) | Block living camps out of sight when pathing | the_farm wins | kept (v9): the_farm 10/10 vs v8 |
+| B2 | Fragile carriers, gold gap in losses (v8 ranked: 4.5k vs 6.9k gold) | 40% of Power shards as health | Broad gain | kept (v9): 69% vs v8 |
+| B3 | Misjudged fights (v9 ranked: eight 0–943 with 131 deaths; contest 84 deaths) | Also fight when ahead on health × damage | Fewer bad fights, more good ones | kept (v10): 57% vs v9 |
+| B4 | We never draft Heart of Ruin. The top two teams draft it 100/100 and 83/100 (`docs/research/training-process.md` §1); #1 also always takes Vesper | Add Heart of Ruin to the draft table, with a play pattern for its kit (shield, stunning dash, damage up at low health) | Possibly large; the top-team evidence is strong | open: needs a study of its kit and of the top teams' builds |
+| B5 | Stampede: our share of the only gem camp (6 elks, 160 gems) is about 0 (v8 ranked 1–7) | Two siege tweaks tried | — | rejected ×2 (v9 notes); blocked: no local reproduction |
+| B6 | road-of-riches: 145/185 loss deaths at the Golem corners (v8 ranked) | Wait for claimants before a mob siege | — | rejected (51% vs v8, pilgrimage 1/10); blocked: no local reproduction |
+| B7 | v10 drops packs (3/10 vs v9) | Inspect packs fights under the new rule | Remove the one regression | open |
+| B8 | corridors: Cassi & Issac die at (32,22) to camps 12 times with 0 gold earned (v9 ranked) | Check which camp the duo targets there; v8's Monolith leave rule may not cover it | corridors wins (v9 ranked 0–2) | open |
+| B9 | Starvation: 0/4 vs Jame for both v9 and v10 | Unknown; analyse a local game | — | open |
+| B10 | Strategy copied from top-ladder teams: drafts, builds and gem curves per map | Tally the top 20 teams' ranked games (read-only `cambc matches`) | Sources for B4 and build changes | next (data job, cheap) |
+
+## Tooling (test quality)
+
+| # | Issue | Change | Expected effect | Status |
+|---|---|---|---|---|
+| T1 | Random-draft test games run at 1M+ fuel, so opponents' fuel limits never trigger; local runs skip `--release` (research §7) | Seed drafts at compile time; play at 100k with `--release` | Local results closer to ranked | open |
+| T2 | A one-map fix shows as ~52% overall | Paired, side-swapped SPRT on targeted maps, plus a non-regression SPRT on all maps (research §3) | Accept real single-map fixes; stop clear results early | open |
+| T3 | Stripping `events` from summaries drops killer, position and fuel data (research §2) | Save a ~2 KB feature row per game before stripping | Triage every ranked game, not just losses | open |
+| T4 | Ranked record is pulled towards 50% by rating-matched pairing | Hourly `cambc ladder --json` snapshots; log every submission time | Measure versions by rating | open |
