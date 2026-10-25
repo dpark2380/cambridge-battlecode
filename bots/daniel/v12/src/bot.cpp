@@ -132,9 +132,11 @@ enum class stat { strength, health, focus };
 constexpr float power_health_share = 0.4f;  // v9: fraction of Power (v11: Bruiser) shards bought as health
 constexpr std::array<stat, 13> build_stat{
     stat::health,   stat::strength, stat::strength, stat::focus, stat::strength, stat::focus,
-    stat::focus,    stat::strength, stat::focus,    stat::strength, stat::strength, stat::focus,
-    stat::strength,  // heart_of_ruin (week 2 patch)
+    stat::focus,    stat::focus,    stat::focus,    stat::strength, stat::strength, stat::focus,
+    stat::focus,  // heart_of_ruin (week 2 patch)
 };
+// v12 (B25): Marcella (focus growth 10 vs strength 5; her spell is 2x focus) and Heart of Ruin (dash damage scales
+// with focus) buy focus, as the top 20 do (Marcella Bruiser:Focus 32 a game, Heart of Ruin Bruiser:Focus 14.9).
 
 // Build order (the +200 elo bot's): one Monster emblem of our stat (10% more camp damage), one
 // Durability emblem of health (10% less damage taken), then Bruiser shards of our stat forever (v11 B21:

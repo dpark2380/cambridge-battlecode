@@ -17,7 +17,7 @@ using cambc::champion_type;
 
 namespace {
 
-constexpr int champion_count = 11;
+constexpr int champion_count = 12;
 
 // Static kit facts from GameRules.md. `base` is ~sustained damage per turn / 75 plus kit value,
 // so an average pick is about 1.0 before map adjustments.
@@ -43,13 +43,14 @@ constexpr std::array<traits, champion_count> roster{{
     /* ren */             {"ren", 0.80f, 900, true, true, true, false},
     /* varg */            {"varg", 0.80f, 1000, true, true, false, true},
     /* tavi */            {"tavi", 0.90f, 750, false, false, true, false},
+    /* heart_of_ruin */   {"heart_of_ruin", 1.10f, 1000, true, true, true, true},  // v12 (B25): self-shield, stunning area dash, +50% damage at low health
 }};
 
 // Safe order if the map profile cannot be computed (or fuel runs short).
 constexpr std::array fallback_order{
     champion_draft::cassi_and_issac, champion_draft::stellar, champion_draft::ryth, champion_draft::vendetta,
     champion_draft::tavi, champion_draft::varg, champion_draft::marcella, champion_draft::ren,
-    champion_draft::prism, champion_draft::vesper_vale, champion_draft::willow,
+    champion_draft::prism, champion_draft::vesper_vale, champion_draft::willow, champion_draft::heart_of_ruin,
 };
 
 // Below this much fuel, skip analysis and pick from the fallback order. Missing a pick randomises
@@ -106,6 +107,7 @@ float map_bonus(champion_draft pick, const signals& s) {
     case champion_draft::prism: return 0.2f * s.aoe + 0.2f * s.boss;
     case champion_draft::vesper_vale: return 0.3f * s.gold_bonus;
     case champion_draft::willow: return 0.2f * (s.picks - 3) + 0.25f * s.boss + 0.15f * s.contested;
+    case champion_draft::heart_of_ruin: return 0.2f * s.brawl + 0.15f * s.contested;
     }
     return 0.f;
 }
@@ -139,7 +141,15 @@ champion_type body_type(champion_draft pick) {
 }
 
 // Greedily extend our picks to a full team; the first new entry is this round's pick.
+// v12 (B25): the top 20's core, drafted in this order (pick rates over 750 games: Vesper 90%, Heart of Ruin 84%,
+// Marcella 82%, Vendetta 67%, Ryth 45%); map scoring fills the rest.
+constexpr std::array core_order{champion_draft::vesper_vale, champion_draft::heart_of_ruin, champion_draft::marcella,
+                                champion_draft::vendetta, champion_draft::ryth};
+
 std::vector<champion_draft> project_team(const map_profile& profile, std::vector<champion_draft> team) {
+    for (auto pick : core_order)
+        if (static_cast<int>(team.size()) < profile.team_size && !contains(team, pick))
+            team.push_back(pick);
     while (static_cast<int>(team.size()) < profile.team_size) {
         const auto scores = score_champions(profile, team);
         const auto best = std::max_element(scores.begin(), scores.end()) - scores.begin();
@@ -208,7 +218,7 @@ void log_analysis(const map_profile& p, const std::vector<champion_draft>& team)
 
 } // namespace
 
-std::array<float, 11> score_champions(const map_profile& profile, const std::vector<champion_draft>& ours) {
+std::array<float, champion_count> score_champions(const map_profile& profile, const std::vector<champion_draft>& ours) {
     const auto s = read_signals(profile);
     std::array<float, champion_count> scores{};
     for (int i = 0; i < champion_count; ++i) {

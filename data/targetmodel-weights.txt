@@ -1,0 +1,9 @@
+gems 0.3359
+gold 0.1324
+dist -0.9101
+altar 0.0150
+threat -1.2429
+up 0.1952
+again -1.5268
+own_side 1.4069
+late_gems 0.2793
