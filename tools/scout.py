@@ -51,6 +51,11 @@ def builds(match_id, team_side, row_info):
         else:
             return {}, None
         s = json.loads(path.read_text())
+        keep = ROOT / "data" / "scout" / "summaries" / f"{match_id}.json.gz"  # full summary for tools/winmodel.py
+        keep.parent.mkdir(parents=True, exist_ok=True)
+        if not keep.exists():
+            with gzip.open(keep, "wt", compresslevel=9) as f:
+                f.write(path.read_text())
     items = {c["name"]: collections.Counter({i["item"]: int(i["quantity"]) for i in c.get("itemsBought", [])})
              for c in s["champions"] if c["team"] == team_side}
     row = features.row(s, team_side, match_id, row_info["map"], row_info["win"]) | {"team": row_info["team"],
