@@ -1,7 +1,7 @@
 # Daniel v10: take fights we win on fighting power
 
 Code: `bots/daniel/v10` (C++), forked from Daniel v9 (submitted 2026-10-25 ~10:16Z as team bot version 8).
-**Candidate for submission, awaiting approval** (2026-10-25).
+**Submitted 2026-10-25 12:54Z as team bot version 9** (approved by Daniel).
 
 ## Verdict
 

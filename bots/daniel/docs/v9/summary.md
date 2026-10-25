@@ -1,6 +1,6 @@
 # Daniel v9: fixes from 300 ranked v8 games
 
-Code: `bots/daniel/v9` (C++), forked from Daniel v8. **Submitted 2026-10-25 as team bot version 8.**
+Code: `bots/daniel/v9` (C++), forked from Daniel v8. **Submitted 2026-10-25 10:16Z as team bot version 8; replaced by v10 at 12:54Z. Ranked: 47–33 (59%) over 80 games, rating 1453 → 1486.**
 
 ## Verdict: v9 vs v8 and every older model
 

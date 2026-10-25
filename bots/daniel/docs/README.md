@@ -10,8 +10,8 @@
 | [v6](v6/summary.md) | `v6` | v5 + Monolith sieges + gold weight 0.20 (gold wins fights) | 62% vs hunter (v5: 52%); 61% vs Simon's v5 |
 | [v7](v7/summary.md) | `v7` | v6 + fixes from the ranked research: walking-distance stall check, unseen-attacker response, sieges for any too-big group, carriers recall at 50% | 59% vs v6; 72% vs Simon's v5 |
 | [v8](v8/summary.md) | `v8` | v7 ported to the week 2 patch: Golem/range camp table, Monolith leave rule and siege gate, gold-only play when no altar can be reached | 61% vs v7; 84% vs hunter |
-| [v9](v9/summary.md) | `v9` | v8 + pathing blocks living camps out of sight (the_farm freeze) + 40% of Power shards as health. Submitted (team bot version 8) | 69% vs v8; 55% vs Jame v3 (v8: 39%) |
-| [v10](v10/summary.md) | `v10` | v9 + also fight when ahead on fighting power (health × damage). Candidate, awaiting approval | 57% vs v9; 59% vs Jame v3 (v9: 55%) |
+| [v9](v9/summary.md) | `v9` | v8 + pathing blocks living camps out of sight (the_farm freeze) + 40% of Power shards as health. Submitted 10:16Z (team bot version 8); ranked 47–33 | 69% vs v8; 55% vs Jame v3 (v8: 39%) |
+| [v10](v10/summary.md) | `v10` | v9 + also fight when ahead on fighting power (health × damage). Submitted 2026-10-25 12:54Z (team bot version 9) | 57% vs v9; 59% vs Jame v3 (v9: 55%) |
 | — | `hunter` | Test opponent: v5 made aggressive (chases, engages at 8 tiles) | sparring partner for fight-related changes |
 
 All bots accept bare names in the tools (`python3 tools/arena.py v5 v4`). Iterations v2–v8 have the random-draft

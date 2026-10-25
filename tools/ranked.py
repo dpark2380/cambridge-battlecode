@@ -96,7 +96,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("dir")
     parser.add_argument("--team", default="Deer Park", help="our team name on the platform")
-    parser.add_argument("--since", default="", help="only matches finished at or after this ISO time")
+    parser.add_argument("--since", default="", help="only matches created at or after this ISO time (the submission)")
+    parser.add_argument("--until", default="", help="only matches created before this ISO time (the next submission)")
     parser.add_argument("--limit", type=int, default=500, help="most new matches to fetch this run")
     parser.add_argument("--jobs", type=int, default=8, help="parallel downloads")
     parser.add_argument("--replays", choices=("none", "losses", "all"), default="none",
@@ -111,7 +112,8 @@ def main():
     new = list_matches(args.limit, args.since, stored)
     stored.update({m["matchId"]: m for m in new})
     listing.write_text(json.dumps(sorted(stored.values(), key=lambda m: m["finishedAt"], reverse=True), indent=1))
-    matches = [m for m in stored.values() if m["finishedAt"] >= args.since]
+    # A version's games are those created between its submission and the next (docs/submissions.jsonl).
+    matches = [m for m in stored.values() if m["createdAt"] >= args.since and (not args.until or m["createdAt"] < args.until)]
     ours_of = lambda m: next(t for t in m["teams"] if t["name"] == args.team)
 
     def fetch_summary(m):
