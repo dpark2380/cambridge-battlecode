@@ -52,8 +52,9 @@ def main():
     parser.add_argument("bot_b")
     parser.add_argument("--mode", choices=MODES, default="gain")
     parser.add_argument("--maps", nargs="*", default=None)
-    parser.add_argument("--max-seeds", type=int, default=12,
-                        help="batches beyond the real draft before giving up (map mode: raise it, e.g. 40)")
+    parser.add_argument("--max-seeds", type=int, default=None,
+                        help="batches beyond the real draft before giving up (default 12, and on few maps enough "
+                             "batches for 4x the minimum pairs)")
     parser.add_argument("--jobs", type=int, default=os.cpu_count())
     args = parser.parse_args()
 
@@ -62,6 +63,8 @@ def main():
     arena.build(bot_a)
     arena.build(bot_b)
     maps = args.maps or arena.maps()
+    if args.max_seeds is None:  # 12 seeds on 2 maps is 26 pairs: under MIN_PAIRS, so it could never decide
+        args.max_seeds = max(12, 4 * MIN_PAIRS // len(maps))
     scores, per_map = [], collections.defaultdict(lambda: [0, 0])
     games = faults = 0
     print(f"{args.mode}: H0 {s0:.2f} vs H1 {s1:.2f} on {len(maps)} maps, pairs of side-swapped games", flush=True)

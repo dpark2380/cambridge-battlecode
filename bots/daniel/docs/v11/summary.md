@@ -31,6 +31,24 @@ fell back to the 1M fuel quantum and the freeze never showed (map gate 52%). The
 v10, where it does nothing without the header, and the gates were rerun. Gates against Jame v3 still run at 1M
 fuel.
 
+## B17+B18: max_damage_share (rejected 2026-10-25 18:46Z)
+
+**Hypothesis.** `max_damage_share = 4.04` (tuned before the week 2 patch) lets a body start an elk group it cannot
+finish (elkring first clear r67 vs Jame's r11), and leaves islands re-clearing a 0-gem group.
+
+| Test | 1.0 | 1.5 | 2.0 | 3.0 |
+|---|---|---|---|---|
+| `race.py` vs v11, all maps | 35/80 | 119/240 | 39/80 | 120/240 |
+| elkring vs Jame v3: first clears | r27, r28, r70 | r27, r28, r70 | r27, r32, r54 | – |
+| islands vs Jame v3: first gem group G38 | r84 | r84 | r223 | – |
+| `gate --mode map` vs v11 (elkring, islands) | – | 47% FAIL (17/30, 11/30) | 49% FAIL (21/34, 12/34) | – |
+
+v11 itself: elkring first clears r67, r67, r80; islands G38 at r193. The constant helps elkring and hurts islands,
+so it stays at 4.04. A targeted rule (don't open an elk group alone unless we can finish it) is the follow-up.
+
+**Tool fix.** `gate.py --mode map` on two maps defaulted to 12 seeds (26 pairs), under the 30-pair minimum, so it
+could never decide. The default now scales with the map count.
+
 ## Next
 
-B17+B18 (`max_damage_share` race 1.0/1.5/2.0/4.04), from 20:30Z at the earliest (one change every 2 hours).
+B11 build order (Treasure > Jungle > Bruiser) race variants, applied no earlier than 20:30Z (one change every 2 hours).

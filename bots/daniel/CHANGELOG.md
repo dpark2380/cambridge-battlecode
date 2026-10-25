@@ -18,6 +18,7 @@ Version folder ≠ team submission number: the platform counts every submission 
   fuel-exhausted turns 2,499 → 170 (side A) and 5,972 → 135 (side B); both games go from losses (464:868,
   0:866) to wins (965:843, 1,021:765). The claim/target mismatch was a side effect of turns cut short by fuel.
   Gates at 100k: map mode vs v10 on big-world/ambush/lanes 67% (big-world 17/20); nonreg vs v10 51%, vs v9 60%.
+- **Rejected:** lower `max_damage_share` (B17+B18): 1.5 and 2.0 win elkring 57-62% but lose islands ~35% vs v11.
 
 ## v10 (submitted 2026-10-25 12:54Z, team bot version 9)
 - **Feature:** also take a fight when behind on health but ahead on fighting power: health × damage, where damage
