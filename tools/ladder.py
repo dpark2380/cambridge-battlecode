@@ -27,8 +27,12 @@ TEAM = "Deer Park"
 def ladder():
     teams, page = [], 1
     while True:
-        out = subprocess.run([arena.CAMBC, "ladder", "--page", str(page), "--limit", "25", "--json"],
-                             capture_output=True, text=True)
+        for attempt in range(6):  # the public API rate-limits bursts (HTTP 429)
+            out = subprocess.run([arena.CAMBC, "ladder", "--page", str(page), "--limit", "25", "--json"],
+                                 capture_output=True, text=True)
+            if out.returncode == 0 or "429" not in out.stderr:
+                break
+            time.sleep(10 * (attempt + 1))
         if out.returncode:
             raise SystemExit(out.stderr)
         rows = json.loads(out.stdout)["teams"]
