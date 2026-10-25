@@ -63,6 +63,23 @@ Race vs v11: 0.20 then linear to 0.05 by r1000 42/80, 0.10 after r500 36/80, 0.0
 linear variant: 240/480 = 50%, FAIL. The win model predicts submitted gems, but ranked games are often decided by
 the lifetime-gold tiebreak (21 of v10's 71 losses), so late gold keeps its value.
 
+## B14: duo health in fights (neutral, not applied, 2026-10-25 19:15Z)
+
+**Evidence.** v10 ranked (150 games): 25.9 deaths per loss vs 14.0 per win; camp deaths flat (8.6 vs 7.6), champion
+kills the gap (17.3 vs 6.4). Cassi and Issac die 4.0 times each per loss (1.4 per win). They share one life, so
+that is 4 duo deaths a game, the most of any unit. `fight_enemies` adds both bodies' health, but the pair dies with
+its weaker body.
+
+| Variant | race vs v11 | vs Jame v3 (400 games) |
+|---|---|---|
+| v11 (sum both bodies) | – | 65% |
+| pool = weaker body (min) | 41/80 | 65% |
+| pool = 2 × weaker body | 38/80 | – |
+| min + recall on the weaker body's health | 41/80 | 61% |
+
+Neither local opponent hunts the duo, so the fix has nothing to act on here. A duo-hunting exploiter opponent is
+the next step before testing it again.
+
 ## Next
 
 B14 (camp deaths) and B12 (draft meta) need diagnosis from the ranked losses before any variant is built.
