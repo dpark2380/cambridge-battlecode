@@ -47,3 +47,4 @@ replays/
 bots/*/build/
 bots/*/target/
 /bots/_seeded/
+/bots/_var/
