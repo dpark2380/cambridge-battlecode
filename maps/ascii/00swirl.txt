@@ -1,0 +1,61 @@
+# 00swirl: 45x30, 4 picks per team, symmetry: 180-degree rotation
+# Legend: . floor  # wall  o hole  " bush  A altar  S team-A spawn  E team-B spawn
+#         w wolf  k elk  M monolith  G golem  g gem cluster  $ gold cluster (camp spawn tiles)
+# Row index is y, column index is x. Dumped via the engine from Team A's perspective.
+
+      0         1         2         3         4    
+      012345678901234567890123456789012345678901234
+   0  ooooooooooooooo...gg.........................
+   1  ooooooooooo$gg....kk..........kg.............
+   2  ooooooooo..gkk......ooooooo....k$............
+   3  ooooooo....gkk...ooooooooooooo...............
+   4  oooooo.........oooooooooooooooo..............
+   5  ooooo........ooooooo.......ooooo....kk.......
+   6  oooo..gg...oooooo.........SSS.oo....$$...o...
+   7  ooo..kwg..ooooo...........SSS.#..........o...
+   8  ooo..ww..oooo.......$.....SSS.#.........oo...
+   9  oo......oooo........$.........#.........oo.w.
+  10  oo.....oooo............A."#####.........oo.$.
+  11  o.gg..oooo..............."#........$$...oo.w.
+  12  o.ww.oooo...$ww$......""""#............ooo...
+  13  o.w$oooo....gww$...$$.#####............ooo...
+  14  ....ooo............$k."...............ooo....
+  15  ....ooo...............".k$............ooo....
+  16  ...ooo............#####.$$...$wwg....oooo$w.o
+  17  ...ooo............#""""......$ww$...oooo.ww.o
+  18  .w.oo...$$........#"...............oooo..gg.o
+  19  .$.oo.........#####".A............oooo.....oo
+  20  .w.oo.........#.........$........oooo......oo
+  21  ...oo.........#.EEE.....$.......oooo..ww..ooo
+  22  ...o..........#.EEE...........ooooo..gwk..ooo
+  23  ...o...$$....oo.EEE.........oooooo...gg..oooo
+  24  .......kk....ooooo.......ooooooo........ooooo
+  25  ..............oooooooooooooooo.........oooooo
+  26  ...............ooooooooooooo...kkg....ooooooo
+  27  ............$k....ooooooo......kkg..ooooooooo
+  28  .............gk..........kk....gg$ooooooooooo
+  29  .........................gg...ooooooooooooooo
+
+# Camp groups (gems/gold per capture, respawn in rounds, centroid of spawn tiles)
+# G0 {'$': 1, 'w': 2} gems=8 gold=100 respawn=50 at=(1,19)
+# G1 {'$': 1, 'w': 2} gems=8 gold=100 respawn=50 at=(43,10)
+# G2 {'$': 1, 'w': 3, 'g': 2} gems=26 gold=140 respawn=50 at=(2,12)
+# G3 {'$': 1, 'w': 3, 'g': 2} gems=26 gold=140 respawn=50 at=(42,17)
+# G4 {'w': 3, 'g': 3, 'k': 1} gems=48 gold=210 respawn=60 at=(6,7)
+# G5 {'w': 3, 'g': 3, 'k': 1} gems=48 gold=210 respawn=60 at=(38,22)
+# G6 {'k': 2, '$': 2} gems=30 gold=220 respawn=60 at=(8,24)
+# G7 {'k': 2, '$': 2} gems=30 gold=220 respawn=60 at=(36,6)
+# G8 {'$': 2} gems=0 gold=40 respawn=50 at=(8,18)
+# G9 {'$': 2} gems=0 gold=40 respawn=50 at=(36,11)
+# G10 {'k': 1, '$': 3} gems=15 gold=150 respawn=60 at=(20,14)
+# G11 {'k': 1, '$': 3} gems=15 gold=150 respawn=60 at=(24,16)
+# G12 {'k': 2, 'g': 1, '$': 1} gems=37 gold=200 respawn=60 at=(31,2)
+# G13 {'k': 2, 'g': 1, '$': 1} gems=37 gold=200 respawn=60 at=(13,28)
+# G14 {'k': 2, 'g': 2} gems=44 gold=180 respawn=60 at=(18,0)
+# G15 {'k': 2, 'g': 2} gems=44 gold=180 respawn=60 at=(26,28)
+# G16 {'k': 4, 'g': 4, '$': 1} gems=88 gold=380 respawn=60 at=(12,2)
+# G17 {'k': 4, 'g': 4, '$': 1} gems=88 gold=380 respawn=60 at=(32,27)
+# G18 {'w': 4, '$': 3, 'g': 1} gems=23 gold=220 respawn=50 at=(14,12)
+# G19 {'w': 4, '$': 3, 'g': 1} gems=23 gold=220 respawn=50 at=(30,16)
+# G20 {'$': 2} gems=0 gold=40 respawn=50 at=(20,8)
+# G21 {'$': 2} gems=0 gold=40 respawn=50 at=(24,20)
