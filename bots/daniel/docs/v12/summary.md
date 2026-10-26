@@ -43,3 +43,5 @@ change that follows (waiting at a respawning group beyond the walk costs `wait_p
 73/73/66 of 140; gain gate x0.5 954/1820 = 52%, inconclusive; nonreg 53% PASS; real drafts 69/140 = 49%. Not applied.
 
 Seeded nonreg gate vs v11 (random rosters, so the play and build changes only): 178/280 = 64%, PASS.
+
+Scout 2026-10-25 23:38Z: on the 30 new maps the top 20 draft the same core (312 team-games: Vesper 90%, Heart of Ruin 89%, Marcella 88%, Vendetta 63%, Ryth 47%), so the fixed core order suits sprint 3. No ranked games anywhere since about 22:41Z (v11: 0 games by 00:20Z), so ranked play appears paused for the sprint change.
