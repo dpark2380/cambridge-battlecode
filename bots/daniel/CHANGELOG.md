@@ -7,6 +7,16 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v13 (from v12; not submitted)
+- Started 2026-10-26 06:50Z.
+- **Bug fix (B29):** 02the_pack's only altar sits inside a 48-wolf ring; carriers found no path and stood at the
+  ring all game (v12 ranked 0:0, lost on gold; every local game 0:0). At init, when every walk from our spawn to an
+  altar crosses a camp, a 0-1 BFS (one kill per camp tile, on local grids: bitboard reads are engine calls) picks
+  the corridor to cut (on the_pack, one wolf by a diagonal). A carrier whose altar walk fails waits within 3 tiles
+  of it and hits once 2 allies are within 3 (damage wakes the whole ring). Only the_pack sets the flag (all 70
+  maps probed).
+- Gates: map 02the_pack 51/60 = 85% vs v12 (pass); nonreg all maps 51% vs v12, 57% vs v11, 66% vs Jame v3 (all pass).
+
 ## v12 (from v11; submitted 2026-10-26 05:45Z as team bot version 11)
 - Started 2026-10-25 23:15Z for the sprint 3 maps.
 - **Feature (B25, accepted):** draft the top-20 core in order, Vesper > Heart of Ruin > Marcella > Vendetta > Ryth,
