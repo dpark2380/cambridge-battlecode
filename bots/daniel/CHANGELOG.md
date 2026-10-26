@@ -7,7 +7,7 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
-## v14 (from v13; candidate, not submitted)
+## v14 (from v13; submitted 2026-10-26 23:06Z as team bot version 13)
 - Started 2026-10-26 15:20Z.
 - **Bug fix (B29b):** in ranked 02the_pack (v13, match 611f181c) all three carriers waited inside
   `corridor_gather` from r221 to r2000 and never struck: `breach()` counted allies within 3 tiles of the body
@@ -16,7 +16,7 @@ Version folder ≠ team submission number: the platform counts every submission 
   nonreg 50% vs v13, 51% vs v12, 66% vs Jame v3 (280 games each, PASS). Zero-gem games on 02the-pack: v13 13/44,
   v14 9/44. Remaining 0:0 games: B29c.
 
-## v13 (from v12; submitted 2026-10-26 10:58Z as team bot version 12)
+## v13 (from v12; submitted 2026-10-26 10:58Z as team bot version 12; ranked 189-176, peak #273 1615)
 - Started 2026-10-26 06:50Z.
 - **Bug fix (B29):** 02the_pack's only altar sits inside a 48-wolf ring; carriers found no path and stood at the
   ring all game (v12 ranked 0:0, lost on gold; every local game 0:0). At init, when every walk from our spawn to an
