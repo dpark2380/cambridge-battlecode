@@ -3,3 +3,4 @@
 {"time": "2026-10-25T12:54Z", "bot": "bots/daniel/v10", "platform_version": 9, "note": "Daniel v10: fight on health x damage"}
 {"time": "2026-10-25T23:14Z", "bot": "bots/daniel/v11", "platform_version": 10, "note": "Daniel v11: big-map fuel fix + Bruiser shards"}
 {"time": "2026-10-26T05:45Z", "bot": "bots/daniel/v12", "platform_version": 11, "note": "v11 + B25 core draft; 68% vs v11 on SDK 4.0"}
+{"time": "2026-10-26T10:58Z", "bot": "bots/daniel/v13", "platform_version": 12, "note": ""}

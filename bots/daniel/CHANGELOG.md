@@ -7,7 +7,7 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
-## v13 (from v12; not submitted)
+## v13 (from v12; submitted 2026-10-26 10:58Z as team bot version 12)
 - Started 2026-10-26 06:50Z.
 - **Bug fix (B29):** 02the_pack's only altar sits inside a 48-wolf ring; carriers found no path and stood at the
   ring all game (v12 ranked 0:0, lost on gold; every local game 0:0). At init, when every walk from our spawn to an
@@ -17,7 +17,7 @@ Version folder ≠ team submission number: the platform counts every submission 
   maps probed).
 - Gates: map 02the_pack 51/60 = 85% vs v12 (pass); nonreg all maps 51% vs v12, 57% vs v11, 66% vs Jame v3 (all pass).
 
-## v12 (from v11; submitted 2026-10-26 05:45Z as team bot version 11)
+## v12 (from v11; submitted 2026-10-26 05:45Z as team bot version 11; ranked 87-68, peak #331 1563)
 - Started 2026-10-25 23:15Z for the sprint 3 maps.
 - **Feature (B25, accepted):** draft the top-20 core in order, Vesper > Heart of Ruin > Marcella > Vendetta > Ryth,
   map scoring for the rest. Heart of Ruin added to the draft roster (it was never draftable). Marcella and Heart of
