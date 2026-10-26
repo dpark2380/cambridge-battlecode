@@ -11,7 +11,9 @@
 // Our team is detected from the "draft: round N picked X" lines our bot logs, unless --us is given.
 //
 // Byte layouts were calibrated against `cambc run --statistics` output and the visualiser's
-// snapshot decoder for engine 0.0.1 (Version() == 65536). Re-check them if the engine changes.
+// snapshot decoder (PanelChrome-*.js), keyed by Game_Visualiser_SnapshotSize(): 184696 (engine 0.0.x)
+// and 184760 (1.0.x) share one layout; 189768 (2.0.0, SDK 4.0: 14 item families) widens the champion
+// records and shifts the extension tables. Re-check them if the engine changes.
 import { readFileSync, writeFileSync, readdirSync, statSync, existsSync, mkdirSync } from "node:fs";
 import { join, basename, extname, dirname } from "node:path";
 import { inflateRawSync } from "node:zlib";
@@ -20,10 +22,13 @@ import { WASI } from "node:wasi";
 
 const CHAMPIONS = ["ryth", "vesper_vale", "vendetta", "cassi", "issac", "stellar", "prism", "marcella", "willow", "ren", "varg", "tavi", "heart_of_ruin"];
 const DRAFT = ["ryth", "vesper_vale", "vendetta", "cassi_and_issac", "stellar", "prism", "marcella", "willow", "ren", "varg", "tavi", "heart_of_ruin"];
-const ITEMS = ["monster", "power", "durability", "treasure", "jungle", "home", "bruiser"].flatMap(family =>
+const ITEMS = ["monster", "power", "durability", "treasure", "jungle", "home", "bruiser",
+    "tribute", "capture", "prospector", "hunter", "skirmish", "greed", "collectors"].flatMap(family =>
     ["strength", "focus", "health"].flatMap(stat => [`${family}_shard_of_${stat}`, `${family}_emblem_of_${stat}`]));
 const OUTCOME = { 0: "unfinished", 1: "teamA", 2: "teamB" };
-const ENGINE_VERSION = 65536;
+// Per snapshot ABI: item slots, champion snapshot stride, offset added to the snapshot extension tables.
+const LAYOUTS = { 184696: { items: 42, stride: 456, ext: 0 }, 184760: { items: 42, stride: 456, ext: 0 },
+    189768: { items: 84, stride: 624, ext: 4688 } };
 
 // ---------- inputs ----------
 
@@ -104,8 +109,8 @@ class Engine {
             { wasi_snapshot_preview1: wasi.wasiImport });
         wasi.initialize(this.instance);
         this.x = this.instance.exports;
-        if (Number(this.x.Version()) !== ENGINE_VERSION)
-            console.warn(`warning: engine version ${this.x.Version()} differs from the calibrated ${ENGINE_VERSION}; layouts may be wrong`);
+        this.layout = LAYOUTS[this.x.Game_Visualiser_SnapshotSize()];
+        if (!this.layout) throw new Error(`${basename(wasmPath)}: snapshot size ${this.x.Game_Visualiser_SnapshotSize()} is not calibrated`);
         this.out = this.x.Engine_Malloc(64);
         this.args = this.x.Engine_Malloc(64);
         this.buf = this.x.Engine_Malloc(4096);
@@ -168,23 +173,25 @@ class Game {
         this.e.check(this.x.Game_Statistics_GetChampion(this.handle, index, buf), "Statistics_GetChampion");
         const m = this.e.mem;
         const u32 = o => m.getUint32(buf + o, true), u64 = o => Number(m.getBigUint64(buf + o, true)), f64 = o => m.getFloat64(buf + o, true);
+        // itemsBought (u64), consumablesBought (4 u64), items (u32), consumables (4 u32), then the f64 totals.
+        const n = this.e.layout.items, cb = 64 + 8 * n, it = cb + 32, co = it + 4 * n, f = co + 16;
         return {
             champion: u32(0), team: u32(4), type: u32(8), kills: u32(12), deaths: u32(16), assists: u32(20),
             earnedGold: u64(24), collectedGems: u64(32), submittedGems: u64(40), spentGold: u64(48),
             gold: u32(56), gems: u32(60),
-            itemsBought: Array.from({ length: 42 }, (_, i) => u64(64 + 8 * i)),
-            consumablesBought: Array.from({ length: 4 }, (_, i) => u64(400 + 8 * i)),
-            items: Array.from({ length: 42 }, (_, i) => u32(432 + 4 * i)),
-            consumables: Array.from({ length: 4 }, (_, i) => u32(600 + 4 * i)),
-            monsterDamageDone: f64(616), monsterDamageTaken: f64(624), championDamageDone: f64(632),
-            championDamageTaken: f64(640), healingDone: f64(648), shieldingDone: f64(656),
+            itemsBought: Array.from({ length: n }, (_, i) => u64(64 + 8 * i)),
+            consumablesBought: Array.from({ length: 4 }, (_, i) => u64(cb + 8 * i)),
+            items: Array.from({ length: n }, (_, i) => u32(it + 4 * i)),
+            consumables: Array.from({ length: 4 }, (_, i) => u32(co + 4 * i)),
+            monsterDamageDone: f64(f), monsterDamageTaken: f64(f + 8), championDamageDone: f64(f + 16),
+            championDamageTaken: f64(f + 24), healingDone: f64(f + 32), shieldingDone: f64(f + 40),
         };
     }
     champions(count) { return Array.from({ length: count }, (_, i) => this.champion(i)); }
 
     // Spectator snapshot (Game_Visualiser_ReadState). Layout from the visualiser's decoder:
-    // header; champion table count@120, data@140, stride 456; extension tables for earned gold
-    // (@184248, 16 B per champion) and K/D/A (@184504, 12 B per champion).
+    // header; champion table count@120, data@140, stride 456 (624 on 2.0); extension tables for earned
+    // gold (@184248, 16 B per champion) and K/D/A (@184504, 12 B per champion), both +4688 on 2.0.
     snapshot() {
         const { e } = this, b = e.snapshotPtr, view = e.args + 48;
         e.mem.setUint32(view, 2, true);             // team 2: spectator
@@ -193,15 +200,16 @@ class Game {
         const m = e.mem;
         const u32 = o => m.getUint32(b + o, true), i32 = o => m.getInt32(b + o, true), f32 = o => m.getFloat32(b + o, true);
         if (u32(0) !== 1) throw new Error("unsupported snapshot ABI");
+        const { stride, ext } = e.layout, gold = 184248 + ext, kda = 184504 + ext;
         const champions = [];
         for (let i = 0; i < u32(120); i++) {
-            const c = 140 + i * 456, index = u32(c + 4);
+            const c = 140 + i * stride, index = u32(c + 4);
             champions.push({
                 champion: index, team: u32(c + 8), type: u32(c + 12),
                 x: i32(c + 20), y: i32(c + 24), health: f32(c + 28), maxHealth: f32(c + 32),
                 alive: u32(c + 224) !== 0, gold: u32(c + 232), gems: u32(c + 236),
-                earnedGold: u32(184248 + index * 16) + u32(184252 + index * 16) * 2 ** 32,
-                kills: u32(184504 + index * 12), deaths: u32(184508 + index * 12), assists: u32(184512 + index * 12),
+                earnedGold: u32(gold + index * 16) + u32(gold + 4 + index * 16) * 2 ** 32,
+                kills: u32(kda + index * 12), deaths: u32(kda + 4 + index * 12), assists: u32(kda + 8 + index * 12),
             });
         }
         return { round: u32(8), submittedGems: [Number(m.getBigUint64(b + 32, true)), Number(m.getBigUint64(b + 40, true))], champions };
@@ -339,5 +347,6 @@ for (const path of expandInputs(opt.inputs)) {
         console.log(report(name, summary, champions, rounds, us));
     } catch (error) {
         console.log(`== ${name}: ERROR ${error.message}`);
+        process.exitCode = 1; // ranked.py keeps no report for a failed decode, so the next run retries it
     }
 }
