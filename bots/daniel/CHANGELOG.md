@@ -7,6 +7,15 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v14 (from v13; candidate, not submitted)
+- Started 2026-10-26 15:20Z.
+- **Bug fix (B29b):** in ranked 02the_pack (v13, match 611f181c) all three carriers waited inside
+  `corridor_gather` from r221 to r2000 and never struck: `breach()` counted allies within 3 tiles of the body
+  itself, and the team stood up to 4 apart. It now counts allies standing anywhere in `corridor_gather`.
+- **Gates** (`data/b29b-gates.txt`): map 02the-pack 32/60 = 53% vs v13 (FAIL: local carriers usually bunch);
+  nonreg 50% vs v13, 51% vs v12, 66% vs Jame v3 (280 games each, PASS). Zero-gem games on 02the-pack: v13 13/44,
+  v14 9/44. Remaining 0:0 games: B29c.
+
 ## v13 (from v12; submitted 2026-10-26 10:58Z as team bot version 12)
 - Started 2026-10-26 06:50Z.
 - **Bug fix (B29):** 02the_pack's only altar sits inside a 48-wolf ring; carriers found no path and stood at the
