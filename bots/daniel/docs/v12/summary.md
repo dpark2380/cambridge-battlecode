@@ -45,3 +45,7 @@ change that follows (waiting at a respawning group beyond the walk costs `wait_p
 Seeded nonreg gate vs v11 (random rosters, so the play and build changes only): 178/280 = 64%, PASS.
 
 Scout 2026-10-25 23:38Z: on the 30 new maps the top 20 draft the same core (312 team-games: Vesper 90%, Heart of Ruin 89%, Marcella 88%, Vendetta 63%, Ryth 47%), so the fixed core order suits sprint 3. No ranked games anywhere since about 22:41Z (v11: 0 games by 00:20Z), so ranked play appears paused for the sprint change.
+
+## Re-check on cambc/SDK 4.0.0 (sprint 3 patch, 2026-10-26 02:10Z)
+
+Real drafts, 70 maps x 2 sides: v12 vs v11 95/140 = 68% (77% on 3.0.5); v12 vs Jame v3 96/140 = 69%; v11 vs Jame v3 94/140 = 67%. See backlog B27.
