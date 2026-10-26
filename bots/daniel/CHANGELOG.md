@@ -7,7 +7,7 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
-## v12 (in development, from v11)
+## v12 (from v11; submitted 2026-10-26 05:45Z as team bot version 11)
 - Started 2026-10-25 23:15Z for the sprint 3 maps.
 - **Feature (B25, accepted):** draft the top-20 core in order, Vesper > Heart of Ruin > Marcella > Vendetta > Ryth,
   map scoring for the rest. Heart of Ruin added to the draft roster (it was never draftable). Marcella and Heart of
