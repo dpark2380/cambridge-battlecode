@@ -14,7 +14,7 @@ then counts as walled in and B29's breach gathers beside the Monolith and strike
 ## Results
 - Local seed 0: v15 656:0 vs v14. Monolith first down ~r1500; 24 deaths, 22 to camps (piecemeal strikes).
 - Rejected: strike a Monolith corridor only with the whole team, cutting both tiles: 0:0, never gathered.
-- Gates (data/b34-gates.txt): pending.
+- Gates (data/b34-gates.txt): map 01boss-battle 59/60 = 98% vs v14 (PASS); nonreg 138/280 = 49% vs v14, 142/280 = 51% vs v12, 183/280 = 65% vs Jame v3 (all PASS).
 
 ## Weaknesses / next
 - B34b: the kill is slow and costly. Opponents reach 1013 by r900.

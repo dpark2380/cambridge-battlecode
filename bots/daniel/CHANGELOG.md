@@ -14,7 +14,7 @@ Version folder ≠ team submission number: the platform counts every submission 
   five). Now, when no camp-free altar tile exists, that tile stays the tribute goal and the altar counts as
   walled in, so the B29 breach code kills the Monolith first. Other maps keep the old altar tiles.
 - Local 01boss-battle seed 0: 656:0 vs v14 (v14 0:0). Rejected: whole-team-only Monolith strike (0:0).
-- Gates: see `docs/v15/summary.md` once done.
+- Gates: map 01boss-battle 59/60 = 98% vs v14 (PASS); nonreg 138/280 = 49% vs v14, 142/280 = 51% vs v12, 183/280 = 65% vs Jame v3 (all PASS).
 
 ## v14 (from v13; submitted 2026-10-26 23:06Z as team bot version 13)
 - Started 2026-10-26 15:20Z.
