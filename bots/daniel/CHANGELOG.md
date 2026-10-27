@@ -8,7 +8,7 @@ commit as any change to a bot.
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
 ## v16 (from v15; submitted 2026-10-27 07:52Z as team bot version 14)
-- Started 2026-10-27 09:50Z.
+- Started 2026-10-27 07:38Z.
 - **Opening fix (B36):** the top-team benchmark showed our first camp clear is the largest gap on almost every map
   (z -2.41; 00elkring r49 vs r12). Bodies soloed camps: each scores its own rate with the value split by bodies
   and joiners valued at 0.45, so splitting always won. `extra_body_value` 0.4538 → 1.0, `max_group_bodies` 2 → 3.
@@ -16,7 +16,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 - Gates: gain 165/280 = 59% vs v15; nonreg 173/280 = 62% vs v12, 218/280 = 78% vs Jame v3 (all PASS, data/b36-gates.txt).
 
 ## v15 (from v14; candidate, not submitted)
-- Started 2026-10-27 08:20Z.
+- Started 2026-10-27 07:20Z.
 - **Bug fix (B34):** on 01boss_battle the only walkable tile beside the altar is a Monolith spawn tile, and
   v8 called gems undeliverable there, so carriers held 100-240 gems all game (v14 ranked 1-4, 0 gems in all
   five). Now, when no camp-free altar tile exists, that tile stays the tribute goal and the altar counts as
