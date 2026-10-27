@@ -11,6 +11,7 @@
 | [v7](v7/summary.md) | `v7` | v6 + fixes from the ranked research: walking-distance stall check, unseen-attacker response, sieges for any too-big group, carriers recall at 50% | 59% vs v6; 72% vs Simon's v5 |
 | [v8](v8/summary.md) | `v8` | v7 ported to the week 2 patch: Golem/range camp table, Monolith leave rule and siege gate, gold-only play when no altar can be reached | 61% vs v7; 84% vs hunter |
 | [v9](v9/summary.md) | `v9` | v8 + pathing blocks living camps out of sight (the_farm freeze) + 40% of Power shards as health. Submitted 10:16Z (team bot version 8); ranked 47–33 | 69% vs v8; 55% vs Jame v3 (v8: 39%) |
+| [v16](v16/summary.md) | `v16` | v15 + B36: bodies join a claimed camp (joiner value 1.0, up to 3 per camp). Candidate | 59% vs v15, 62% vs v12, 78% vs Jame v3 |
 | [v15](v15/summary.md) | `v15` | v14 + B34: on 01boss_battle, tribute from the Monolith tile instead of calling gems undeliverable. Candidate | boss-battle 98% vs v14; nonreg 49% v14, 51% v12, 65% Jame v3 |
 | [v14](v14/summary.md) | `v14` | v13 + B29b: the_pack strike waits for allies in the gather zone, not near itself. **Submitted 2026-10-26 23:06Z as team bot version 13** | the_pack 53% vs v13; nonreg 50% vs v13, 51% vs v12, 66% vs Jame v3 |
 | [v13](v13/summary.md) | `v13` | v12 + B29 the_pack corridor: carriers cut through the wolf ring around the only altar. Team bot version 12, ranked 189-176 | the_pack 85% vs v12; nonreg 51% vs v12, 57% vs v11, 66% vs Jame v3 |

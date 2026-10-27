@@ -7,6 +7,14 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v16 (from v15; candidate, not submitted)
+- Started 2026-10-27 09:50Z.
+- **Opening fix (B36):** the top-team benchmark showed our first camp clear is the largest gap on almost every map
+  (z -2.41; 00elkring r49 vs r12). Bodies soloed camps: each scores its own rate with the value split by bodies
+  and joiners valued at 0.45, so splitting always won. `extra_body_value` 0.4538 → 1.0, `max_group_bodies` 2 → 3.
+- Races vs v15: cap only (mgb 3/5) 53%/50%; joiners at 1.0 with mgb 3/5 63%/60%.
+- Gates: gain 165/280 = 59% vs v15; nonreg 173/280 = 62% vs v12, 218/280 = 78% vs Jame v3 (all PASS, data/b36-gates.txt).
+
 ## v15 (from v14; candidate, not submitted)
 - Started 2026-10-27 08:20Z.
 - **Bug fix (B34):** on 01boss_battle the only walkable tile beside the altar is a Monolith spawn tile, and
