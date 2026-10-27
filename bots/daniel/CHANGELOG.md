@@ -7,7 +7,7 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
-## v17 (from v16; candidate, held until v16 has ~150 ranked games)
+## v17 (from v16; submitted 2026-10-27 13:29Z as team bot version 15)
 - Started 2026-10-27 10:05Z.
 - **Fight fix (B37):** on 00oasis/02crossing top teams trade kills evenly (oasis 13 kills / 13.5 deaths); we
   died without killing (3 / 27) and took 2x their champion damage. When outmatched, bodies walked to spawn and
@@ -16,7 +16,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 - Race vs v16: both 55%, shoot-back only 53%, fall back to ally only 49%.
 - Gates: gain 162/280 = 58% vs v16; nonreg 182/280 = 65% vs v12, 216/280 = 77% vs Jame v3 (all PASS, data/b37-gates.txt).
 
-## v16 (from v15; submitted 2026-10-27 07:52Z as team bot version 14)
+## v16 (from v15; submitted 2026-10-27 07:52Z as team bot version 14; ranked 81-79)
 - Started 2026-10-27 07:38Z.
 - **Opening fix (B36):** the top-team benchmark showed our first camp clear is the largest gap on almost every map
   (z -2.41; 00elkring r49 vs r12). Bodies soloed camps: each scores its own rate with the value split by bodies
