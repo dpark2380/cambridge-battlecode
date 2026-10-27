@@ -7,6 +7,22 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v18 (from v17; candidate, not submitted)
+- Started 2026-10-27 13:00Z, from the research note `docs/research/strategy-options-2026-10-27.md` (our economy
+  runs at half the top teams' from round 1: gold by r500 1,152 vs 2,427, emblems 4 vs 12).
+- **B41 Heart of Ruin dash kit:** damage dashes are kept for fights, aimed at the tile covering the most targets
+  around the current target, and counted in `measure_damage` (HoR camp damage 10,980 → 20,464 in one game).
+- **B42 shop early:** one 150-gold shop threshold for every role (the duo waited for 300); a bag of ≤10 gems no
+  longer blocks the trip when no enemy was seen for 10 rounds.
+- **B43 Prospector first:** the first emblem is Prospector of our stat (+25% of our share of cluster rewards).
+- **B44 wards:** each turn, a ready ward goes on the bush in reach nearest our target (no ally ward on it).
+- **B45 one receiver:** with a reward waiting, an ally already on a spawn tile and no enemy seen, move on.
+- **B49 own-altar lock:** right after our bag empties beside an altar, lock it (5 hits to clear).
+- Races, each on the previous best: combo1 (B41a+B42a+B43) 57% vs v17 (B41a alone 54%, B43 54%, B42a 51%);
+  B44 56% vs combo1; B45 54% and B49 54% (twice) vs B44. Rejected: B41b (HoR off the duo) 56% < B41a's lead,
+  B48 bigger bags 52%.
+- Gates: gain 200/280 = 71% vs v17; nonreg 210/280 = 75% vs v12, 231/280 = 82% vs Jame v3 (all PASS, data/stack2-gates.txt); gauntlet +346 [+315, +349] vs v17 +240, combo1 +292.
+
 ## v17 (from v16; submitted 2026-10-27 13:29Z as team bot version 15)
 - Started 2026-10-27 10:05Z.
 - **Fight fix (B37):** on 00oasis/02crossing top teams trade kills evenly (oasis 13 kills / 13.5 deaths); we
