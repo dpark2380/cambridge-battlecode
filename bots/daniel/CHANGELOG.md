@@ -7,6 +7,15 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v15 (from v14; candidate, not submitted)
+- Started 2026-10-27 08:20Z.
+- **Bug fix (B34):** on 01boss_battle the only walkable tile beside the altar is a Monolith spawn tile, and
+  v8 called gems undeliverable there, so carriers held 100-240 gems all game (v14 ranked 1-4, 0 gems in all
+  five). Now, when no camp-free altar tile exists, that tile stays the tribute goal and the altar counts as
+  walled in, so the B29 breach code kills the Monolith first. Other maps keep the old altar tiles.
+- Local 01boss-battle seed 0: 656:0 vs v14 (v14 0:0). Rejected: whole-team-only Monolith strike (0:0).
+- Gates: see `docs/v15/summary.md` once done.
+
 ## v14 (from v13; submitted 2026-10-26 23:06Z as team bot version 13)
 - Started 2026-10-26 15:20Z.
 - **Bug fix (B29b):** in ranked 02the_pack (v13, match 611f181c) all three carriers waited inside
