@@ -18,3 +18,6 @@ three bodies take a non-siege group (max_group_bodies 2 → 3).
 ## Weaknesses / next
 - Not tuned: 1.0 and 3 are the first values tried; tune.py over extra_body_value, max_group_bodies, help_wait_turns.
 - Check the ranked first-clear gap closes (benchmark.py on v16's games).
+
+## Ranked (first 75 games, 10:30Z)
+- 36-39. benchmark vs v14: first_clear z −1.36 → −0.97, gems r250 −0.32 → +0.07, r500 −0.69 → −0.39, r1000 −0.75 → −0.57; deaths −0.94 → −0.93; earnedGold −0.06 → −0.56 (B38). 01boss_battle won 276:0 (B34).
