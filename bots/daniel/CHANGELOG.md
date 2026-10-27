@@ -7,7 +7,7 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
-## v16 (from v15; candidate, not submitted)
+## v16 (from v15; submitted 2026-10-27 07:52Z as team bot version 14)
 - Started 2026-10-27 09:50Z.
 - **Opening fix (B36):** the top-team benchmark showed our first camp clear is the largest gap on almost every map
   (z -2.41; 00elkring r49 vs r12). Bodies soloed camps: each scores its own rate with the value split by bodies

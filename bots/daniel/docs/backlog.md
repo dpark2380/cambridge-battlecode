@@ -11,7 +11,7 @@ in the version's `summary.md`.
 Status: `open` (evidence, not tested) · `next` (queued for testing) · `testing` · `kept (vN)` · `rejected` ·
 `blocked` (needs data or tooling first).
 
-Ranked data for the live bot (v14, submitted 2026-10-26 23:06Z): `python3 tools/ranked.py replays/daniel-v14 --since 2026-10-26T23:06 --replays losses`. v13's window is closed: `replays/daniel-v13 --since 2026-10-26T10:58 --until 2026-10-26T23:06` (189-176, peak #273 1615). v12's window is closed: `replays/daniel-v12 --since 2026-10-26T05:45 --until 2026-10-26T10:58` (87-68). Earlier: v10 `replays/daniel-v10 --since 2026-10-25T12:54`. v9's window is closed: `replays/daniel-v9 --since 2026-10-25T10:16 --until 2026-10-25T12:54` (47–33).
+Ranked data for the live bot (v16, submitted 2026-10-27 07:52Z): `python3 tools/ranked.py replays/daniel-v16 --since 2026-10-27T07:52` (live v16; v14 closed `--until 2026-10-27T07:52` at about 119-121, #299 1593; v15 never submitted) ` --replays losses`. v13's window is closed: `replays/daniel-v13 --since 2026-10-26T10:58 --until 2026-10-26T23:06` (189-176, peak #273 1615). v12's window is closed: `replays/daniel-v12 --since 2026-10-26T05:45 --until 2026-10-26T10:58` (87-68). Earlier: v10 `replays/daniel-v10 --since 2026-10-25T12:54`. v9's window is closed: `replays/daniel-v9 --since 2026-10-25T10:16 --until 2026-10-25T12:54` (47–33).
 
 ## Bot behaviour
 
