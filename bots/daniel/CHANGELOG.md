@@ -7,7 +7,7 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
-## v17 (from v16; candidate, not submitted)
+## v17 (from v16; candidate, held until v16 has ~150 ranked games)
 - Started 2026-10-27 10:05Z.
 - **Fight fix (B37):** on 00oasis/02crossing top teams trade kills evenly (oasis 13 kills / 13.5 deaths); we
   died without killing (3 / 27) and took 2x their champion damage. When outmatched, bodies walked to spawn and
