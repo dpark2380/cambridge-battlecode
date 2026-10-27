@@ -493,7 +493,7 @@ The scripts were throwaway Python run with stdlib only, kept outside the repo.
   `cambc.me().abilities()` payloads for a Heart of Ruin, Vesper, Marcella, Vendetta, Ryth draft on 00rows
   (`cambc run <probe> bots/starter-python --map 00rows --rounds 3`).
 
-## Yardstick for the 60% target (added 2026-10-28 00:40Z)
+## Yardstick for the 60% target (added 2026-10-27 13:10Z)
 
 `python3 tools/gauntlet.py --add bots/daniel/v12 bots/daniel/v14 bots/daniel/v16 bots/daniel/v17` (output in
 `data/gauntlet-v17.txt`): v17 +256 [+231, +270], v16 +239, v14 +172, v12 +170, v10 +110, Jame v3 +37, v8 0.
