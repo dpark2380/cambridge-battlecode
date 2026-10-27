@@ -21,3 +21,4 @@ three bodies take a non-siege group (max_group_bodies 2 → 3).
 
 ## Ranked (first 75 games, 10:30Z)
 - 36-39. benchmark vs v14: first_clear z −1.36 → −0.97, gems r250 −0.32 → +0.07, r500 −0.69 → −0.39, r1000 −0.75 → −0.57; deaths −0.94 → −0.93; earnedGold −0.06 → −0.56 (B38). 01boss_battle won 276:0 (B34).
+- 160 games (13:12Z): 81-79, #301 1599. benchmark: first_clear −0.91, deaths −0.69, gems r1000 −0.61, r500 −0.51, gold −0.45, r250 −0.11. Median gold 4444 (v14 5535), clears 44.5 (49), deaths 8 (9).
