@@ -7,6 +7,15 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v17 (from v16; candidate, not submitted)
+- Started 2026-10-27 10:05Z.
+- **Fight fix (B37):** on 00oasis/02crossing top teams trade kills evenly (oasis 13 kills / 13.5 deaths); we
+  died without killing (3 / 27) and took 2x their champion damage. When outmatched, bodies walked to spawn and
+  ranged ones never shot. Now an outmatched body falls back toward the nearest ally (`retreat_to_allies` 0 → 1),
+  and a ranged body with a target in range shoots instead of walking.
+- Race vs v16: both 55%, shoot-back only 53%, fall back to ally only 49%.
+- Gates: gain 162/280 = 58% vs v16; nonreg 182/280 = 65% vs v12, 216/280 = 77% vs Jame v3 (all PASS, data/b37-gates.txt).
+
 ## v16 (from v15; submitted 2026-10-27 07:52Z as team bot version 14)
 - Started 2026-10-27 07:38Z.
 - **Opening fix (B36):** the top-team benchmark showed our first camp clear is the largest gap on almost every map
