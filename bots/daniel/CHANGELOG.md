@@ -7,7 +7,7 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
-## v18 (from v17; candidate, not submitted)
+## v18 (from v17; submitted 2026-10-27 23:06Z as team bot version 16)
 - Started 2026-10-27 13:00Z, from the research note `docs/research/strategy-options-2026-10-27.md` (our economy
   runs at half the top teams' from round 1: gold by r500 1,152 vs 2,427, emblems 4 vs 12).
 - **B41 Heart of Ruin dash kit:** damage dashes are kept for fights, aimed at the tile covering the most targets
@@ -23,7 +23,7 @@ Version folder ≠ team submission number: the platform counts every submission 
   B48 bigger bags 52%.
 - Gates: gain 200/280 = 71% vs v17; nonreg 210/280 = 75% vs v12, 231/280 = 82% vs Jame v3 (all PASS, data/stack2-gates.txt); gauntlet +346 [+315, +349] vs v17 +240, combo1 +292.
 
-## v17 (from v16; submitted 2026-10-27 13:29Z as team bot version 15)
+## v17 (from v16; submitted 2026-10-27 13:29Z as team bot version 15; ranked 127-134)
 - Started 2026-10-27 10:05Z.
 - **Fight fix (B37):** on 00oasis/02crossing top teams trade kills evenly (oasis 13 kills / 13.5 deaths); we
   died without killing (3 / 27) and took 2x their champion damage. When outmatched, bodies walked to spawn and
