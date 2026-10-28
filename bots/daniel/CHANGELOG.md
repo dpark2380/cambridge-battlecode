@@ -12,7 +12,12 @@ Version folder ≠ team submission number: the platform counts every submission 
   50.6) and more deaths (12.4 vs 9.6) than v18, while local gates had it level with v18 (B58). Back to v18, with
   the user's approval. If v18 also struggles at this rating, the drop was the opponents.
 
-## v22 (from v18; submitted 2026-10-28 06:29Z as team bot version 19)
+## v18 resubmitted again (2026-10-28 10:25Z as team bot version 20, auto-revert)
+- v22 went 50-61 (#243 1656 → #284 1611), 7-21 in its last 28 with gold 4,335 vs 5,012 before, which meets the
+  standing revert rule (user, 06:30Z). Its fixed scrim panel (`tools/scrim.py`) went 16-44; v18's panel is queued
+  for a like-for-like comparison.
+
+## v22 (from v18; submitted 2026-10-28 06:29Z as team bot version 19; withdrawn 10:25Z at 50-61)
 - v18 + B56 (monster-free groups at real cluster health). 02treasure-box map gate 65% (39/60) vs v18; nonreg 52%.
 
 ## v21 (from v20; not submitted)
