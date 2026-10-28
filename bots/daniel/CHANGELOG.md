@@ -16,6 +16,8 @@ Version folder ≠ team submission number: the platform counts every submission 
 - **B68 who closes in:** Vesper does not close in, and no body closes in while outnumbered. From the panel death
   breakdown (Vesper healthy-1v1 deaths 25% → 42% and 3v1 deaths 48% → 74% after B64). Locally neutral (49% vs v25);
   66% vs v22, 90% vs Jame v3.
+- **B70 Heart of Ruin health:** HoR buys 65% of its Bruiser shards as health (was 40%; top teams ~64%). Locally neutral
+  (51%, nonreg 52%).
 
 ## v25 (from v24; submitted 2026-10-28 12:35Z as team bot version 22, user-approved; v22 closed 36-24)
 - **B54 alone:** a Monolith is struck only with min(team, 3) bodies within 6 of it (no B54b). 01corridors map gate

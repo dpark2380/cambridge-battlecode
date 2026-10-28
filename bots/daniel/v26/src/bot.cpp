@@ -419,7 +419,10 @@ void Bot::shop() {
             const auto health = cambc::item_type::bruiser_shard_of_health;
             while (me.gold_count() >= shard.cost()) {
                 const float share = float(owned_count(health)) / std::max(1u, owned_count(health) + owned_count(shard));
-                const auto pick = share < power_health_share ? health : shard;
+                // v26 (B70): top teams' Heart of Ruin buys ~64% of its Bruiser shards as health (ours 40%); ranked v25 HoR
+                // dies in 30% of healthy 1v1s (theirs 19%).
+                const float health_share = me.champion_name() == cambc::champion_type::heart_of_ruin ? 0.65f : power_health_share;
+                const auto pick = share < health_share ? health : shard;
                 if (!me.can_buy(pick, 1)) return;
                 me.buy(pick, 1);
             }

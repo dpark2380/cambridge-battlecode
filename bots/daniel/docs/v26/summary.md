@@ -1,4 +1,4 @@
-# v26: v25 + B68 (who closes in)
+# v26: v25 + B68 (who closes in) + B70 (Heart of Ruin health)
 
 ## Evidence
 `tools/fights.py` on the scrim panels (same 60 setups), v22 → v25:
@@ -19,3 +19,8 @@ In `fight_enemies`, after a missed strike:
 
 It is neutral locally because our own bots do not punish these fights. The evidence comes from real opponents, so judge v26
 on its scrim panel against v25's 14-46: fewer outnumbered and Vesper deaths, with kills kept near 8.8.
+
+## B70: Heart of Ruin builds health like the top teams
+Scout 2026-10-28 13:42Z (top 20 teams, 2,000 games): top Heart of Ruins buy ~64% of their Bruiser shards as health; ours
+bought 40% (`power_health_share`). Ranked v25: our HoR dies in 30% of healthy 1v1s, theirs in 19%. v26 gives HoR a
+0.65 health share. Race vs v26-without-it: 51% (0.80: 51%); nonreg 52% (`data/b70-race.txt`, `data/b70-gates.txt`).
