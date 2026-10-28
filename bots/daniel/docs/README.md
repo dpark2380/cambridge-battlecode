@@ -11,6 +11,7 @@
 | [v7](v7/summary.md) | `v7` | v6 + fixes from the ranked research: walking-distance stall check, unseen-attacker response, sieges for any too-big group, carriers recall at 50% | 59% vs v6; 72% vs Simon's v5 |
 | [v8](v8/summary.md) | `v8` | v7 ported to the week 2 patch: Golem/range camp table, Monolith leave rule and siege gate, gold-only play when no altar can be reached | 61% vs v7; 84% vs hunter |
 | [v9](v9/summary.md) | `v9` | v8 + pathing blocks living camps out of sight (the_farm freeze) + 40% of Power shards as health. Submitted 10:16Z (team bot version 8); ranked 47–33 | 69% vs v8; 55% vs Jame v3 (v8: 39%) |
+| [v29](v29/summary.md) | `v29` | v28 + B73: Vesper fights only with a clear edge. Not submitted | gates running |
 | [v28](v28/summary.md) | `v28` | v26 + B78b: Vesper kites (steps away while her attack recharges). **Submitted 2026-10-28 19:37Z as team bot version 24, the live bot** | 50% vs v26 (neutral locally), 58% vs v25, 79% vs v12, 91% vs Jame v3 |
 | [v27](v27/summary.md) | `v27` | v26 + B73: Vesper fights only with a clear edge. Not submitted | 48% vs v26 (neutral locally), 56% vs v25, 76% vs v12, 91% vs Jame v3 |
 | [v26](v26/summary.md) | `v26` | v25 + B68: Vesper and outnumbered bodies don't close in; B70: HoR buys 65% health shards; B71: a leaving body dashes away. Team bot version 23 (16:15Z), ranked 55-45 | **58% vs v25**, 79% vs v12, 91% vs Jame v3 |
