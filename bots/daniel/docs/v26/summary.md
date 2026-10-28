@@ -38,3 +38,6 @@ retreats with any dash allowed. Race vs v26-without-it: 59% (82/140). Gain gate 
 **v26 as a whole is 58% vs v25, the live bot.**
 - Gauntlet (old 8-bot pool): v26 +373 vs v25 +365 (saturated pool).
 - Gauntlet with v18/v22/v25 in the pool (`data/gauntlet-v18-v26.txt`): v26 +399, v25 +375, v18 +297, v22 +293; v26 vs v25 162/280 (58%).
+
+## Scrim panel (16:16Z, 90 games, `data/scrims/v26`)
+**27-63 vs v25's 20-70** on the same setups; gold 5,531 vs 4,992, deaths 17.7 vs 20.2, gems r500 137 vs 126. EternalWisdom 9-6, Aynir 6-9, The Onkeys 4-11, noobers 3-12, Micron 5-10, Fish 0-15.
