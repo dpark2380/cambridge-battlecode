@@ -11,3 +11,6 @@ chipping a Monolith wakes it, and it hits our bodies at the camps beside it from
 It changes target logic like B54b did, so judge it on ranked camp deaths in the Monolith's reach and on the panel's
 corridors games (0-12 for v18 and v22).
 - Gain vs v22 **65% (183/280) PASS**; nonreg vs v12 78%, Jame v3 91% (`data/v25-gates.txt`).
+
+## Scrim panel (12:36Z, `data/scrims/v25`)
+14-46 vs v22's 16-44 on the same 60 setups (paired 9 vs 11). Kills 8.8 vs 4.8, gold 5,105 vs 4,582, but champion deaths 17.8 vs 14.9 (B67).
