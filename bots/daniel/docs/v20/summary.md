@@ -17,3 +17,4 @@ monsters keep the 500 effective health per cluster: v8 found the real value over
 - Map gate on 02treasure-box: **65% (39/60), PASS**.
 - Nonreg vs v19: 51%, PASS.
 - Local treasure-box vs v12: 1020-514 (v19 lost 372-1024).
+- Nonreg vs v12 80% (224/280), Jame v3 85% (237/280), PASS (`data/v20-gates.txt`).
