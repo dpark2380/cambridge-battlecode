@@ -12,6 +12,9 @@ Version folder ≠ team submission number: the platform counts every submission 
   50.6) and more deaths (12.4 vs 9.6) than v18, while local gates had it level with v18 (B58). Back to v18, with
   the user's approval. If v18 also struggles at this rating, the drop was the opponents.
 
+## v22 (from v18; not submitted)
+- v18 + B56 (monster-free groups at real cluster health). 02treasure-box map gate 65% (39/60) vs v18; nonreg 52%.
+
 ## v21 (from v20; not submitted)
 - v20 with B54b reverted (gather rule for Monoliths only), plus B56. Nonreg vs v18 50%, vs v19 50%.
 
