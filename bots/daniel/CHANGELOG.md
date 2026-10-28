@@ -7,12 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
-## v18 resubmitted (2026-10-28 04:50Z as team bot version 18)
+## v18 resubmitted (2026-10-28 04:50Z as team bot version 18; ranked 27-23 until 06:29Z)
 - v19 went 16-24 in ranked (#250 1650 → #282 1618) with less gold (4,162 vs 5,376), fewer camp clears (43.7 vs
   50.6) and more deaths (12.4 vs 9.6) than v18, while local gates had it level with v18 (B58). Back to v18, with
   the user's approval. If v18 also struggles at this rating, the drop was the opponents.
 
-## v22 (from v18; not submitted)
+## v22 (from v18; submitted 2026-10-28 06:29Z as team bot version 19)
 - v18 + B56 (monster-free groups at real cluster health). 02treasure-box map gate 65% (39/60) vs v18; nonreg 52%.
 
 ## v21 (from v20; not submitted)
