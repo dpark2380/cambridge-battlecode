@@ -30,3 +30,6 @@ The direction is right, but she is still far from top teams' 12% adjacency.
 14-21 over 35 ranked games: gold 4,608 (v26 5,272), deaths 12.8 (11.8), opponents' gold 5,130 (v26's 5,646). That met
 the trigger (≤ ~44% at 35 games) with no stronger field, so v26 was resubmitted. The panel's +4 (31 vs 27) did not
 hold in ranked.
+- Ranked fight breakdown (35 games, `replays/daniel-v28/timelines`): Vesper's healthy-1v1 deaths **45%** (v26 28%), adjacent
+  24% (v26 20%). The kiting made her worse against real opponents: stepping away on cooldown lands her next to other
+  enemies or gives up the fight's tempo. **B78b rejected.**

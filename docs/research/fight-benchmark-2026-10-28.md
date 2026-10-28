@@ -46,3 +46,8 @@ cause is which fights she takes. `visible_champions` rates her damage at max(str
 real, so the fight check sends her into fights she loses. B73 (v27: Vesper needs ours ≥ 1.3 × theirs) targets that.
 
 v28 (kiting, B78b) went live at 19:37Z with panel 31-59 vs v26's 27-63. The next candidate is v28 + B73.
+
+## Update 20:55Z: kiting failed in ranked
+v28 (v26 + B78b kiting) ranked, 35 games: Vesper healthy-1v1 deaths **45%** (v26 28%), adjacent 24% (v26 20%); record
+14-21, reverted to v26 at 20:47Z. Its panel lead (31 vs 27 of 90) was inside the panel's noise. So moving Vesper does
+not fix her deaths, which points to fight entry (B73 / v27) as the next test.
