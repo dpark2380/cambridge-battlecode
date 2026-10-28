@@ -970,7 +970,8 @@ void Bot::work_group(int index, int round) {
     // v19 (B54): a lone body chipping a Monolith (20,000 health) wakes it, and it then hits our bodies at the camps
     // beside it for 180 a turn from behind walls they cannot see through (01corridors: 30 of 32 deaths to camps).
     // Strike it only with `monolith_gather` bodies here; wait (it sleeps) otherwise.
-    const bool lone_monolith = group.siege_target && siege && group.monolith;
+    // B54b: any siege (02harvest: lone bodies at the 2-golem centre group died every ~100 rounds, 23 of 30 deaths).
+    const bool lone_monolith = group.siege_target && siege;
     if (target && !target->is_gem_cluster() && !target->is_gold_cluster() && (!(group.siege_target && siege) || lone_monolith)) {
         int helpers = 0;
         for (const auto& ally : visible_champions(team::ally))

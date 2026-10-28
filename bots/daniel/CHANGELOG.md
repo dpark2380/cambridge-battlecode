@@ -11,6 +11,8 @@ Version folder ≠ team submission number: the platform counts every submission 
 - **B54 Monolith siege needs company:** a Monolith is struck only with min(team, 3) bodies within 6 of it. A lone
   body chipping it kept it awake, and it killed our bodies at the camps beside it from behind walls (v18 ranked
   01corridors 0-3, 18-37 camp deaths a game). 01corridors map gate 62% (41/66) vs v18; nonreg vs v18 51% over 70 maps.
+- **B54b same for every siege target:** 02harvest lone bodies died at the 2-golem centre group every ~100 rounds
+  (v18 ranked 22 camp deaths there). 02harvest map gate 75% (45/60) vs v19-with-B54; nonreg 51%.
 
 ## v18 (from v17; submitted 2026-10-27 23:06Z as team bot version 16)
 - Started 2026-10-27 13:00Z, from the research note `docs/research/strategy-options-2026-10-27.md` (our economy

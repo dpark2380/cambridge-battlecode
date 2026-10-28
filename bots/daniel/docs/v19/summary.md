@@ -1,4 +1,4 @@
-# v19: v18 + B54 (Monolith siege needs company)
+# v19: v18 + B54/B54b (sieges need company)
 
 ## Problem
 v18 ranked (85 games, 51-34) lost 01corridors 0-3 with 18-37 deaths to camps a game; top teams die 6 times
@@ -21,6 +21,12 @@ bodies within 6 of it. Otherwise a body waits, and gives up after `max_wait_turn
 - Local corridors vs v12: side-A deaths 32 → 16.
 
 Gates: `data/b54-gates.txt`.
+
+## B54b: every siege target
+02harvest: Vesper and Heart of Ruin walked alone to the centre group G20 (6 gem clusters, 2 golems), hit a golem
+for ~45 a turn while taking 240, and died every ~100 rounds (local and ranked). Sieged groups skip the
+survivable check, so the gather rule now covers every siege target. Gain 51% FAIL; 02harvest map gate
+**75% (45/60) PASS**; nonreg 51% PASS (`data/b54b-gates.txt`).
 
 ## Next
 Deaths on 02harvest, 02guardians, 00eight, 02fields and adgato_gemcombat2.
