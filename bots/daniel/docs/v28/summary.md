@@ -20,3 +20,8 @@ Vesper's adjacency and healthy-1v1 deaths in its ranked replays.
 - Mechanism check vs Jame v3 (10 maps × 2 sides, `tools/fights.py`): Vesper adjacent 13% vs v26 14%, healthy-1v1 deaths 5% vs 9%. Jame does not chase her, so this is weak evidence; the panel is the test.
 - Gauntlet (`data/gauntlet-v28.txt`): v28 +394, v26 +394, v27 +388, v25 +364.
 - Nonreg vs v25 58% (162/280) PASS (`data/v28-gates.txt`).
+
+## Scrim panel (19:38Z, 90 games, `data/scrims/v28`)
+**31-59 vs v26's 27-63** on the same setups. Paired: v28 won 7 setups that v26 lost, v26 won 3. Gold 5,783 vs 5,531,
+deaths 17.0 vs 17.7. Vesper on the panel (`tools/fights.py`): healthy-1v1 deaths 34% vs 39%, adjacent 26% vs 28%.
+The direction is right, but she is still far from top teams' 12% adjacency.
