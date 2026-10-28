@@ -23,7 +23,7 @@ The panel is our 6 hardest opponents on 15 maps, so its rates run higher than ra
   top-team level.
 - The gap left is **Vesper**: she dies two and a half times as often as top teams' Vesper and stands next to enemies
   twice as often. Top teams keep her at range; she is ranged, with a 2-tile travel dash.
-- Heart of Ruin (21% vs 14%) and Marcella (8% vs 4%) are smaller gaps.
+- Marcella (7% vs 4%) is a smaller gap.
 
 ## Candidates (not submitted)
 - **v27** = v26 + B73: Vesper treats a fight as even only when ours ≥ 1.3 × theirs. 48% vs v26 locally.
