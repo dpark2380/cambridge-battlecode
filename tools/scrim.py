@@ -179,6 +179,15 @@ def sync():
 def report():
     for vdir in sorted(p for p in DIR.iterdir() if (p / "features.jsonl").exists()):
         rows = [json.loads(l) for l in (vdir / "features.jsonl").read_text().splitlines()]
+        for purpose in sorted({r.get("purpose", "panel") for r in rows} - {"panel"}):
+            extra = [r for r in rows if r.get("purpose") == purpose]
+            tally = collections.defaultdict(lambda: [0, 0])
+            for r in extra:
+                tally[r["team"]][0] += r["win"]
+                tally[r["team"]][1] += 1
+            print(f"\n-- {vdir.name} {purpose} games (not in the panel): "
+                  + ", ".join(f"{k} {w}-{n - w}" for k, (w, n) in sorted(tally.items())))
+        rows = [r for r in rows if r.get("purpose", "panel") == "panel"]
         wins = sum(r["win"] for r in rows)
         mean = lambda k: statistics.mean(r[k] for r in rows if isinstance(r.get(k), (int, float)))
         print(f"\n== {vdir.name}: {wins}-{len(rows) - wins} over {len(rows)} scrims; gold {mean('earnedGold'):.0f}, "
