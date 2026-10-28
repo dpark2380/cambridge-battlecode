@@ -12,6 +12,11 @@ Version folder ≠ team submission number: the platform counts every submission 
   50.6) and more deaths (12.4 vs 9.6) than v18, while local gates had it level with v18 (B58). Back to v18, with
   the user's approval. If v18 also struggles at this rating, the drop was the opponents.
 
+## v24 (from v23; not submitted)
+- **B64 the gold squad fights:** Vesper, Marcella and Vendetta close in on the weakest enemy like the duo when the
+  fight check says we are even or ahead (they only hit what was in range). 61% vs v23 (172/280), 64% vs v22,
+  77% vs v12, 91% vs Jame v3, 94% vs hunter-v0.
+
 ## v23 (from v22; not submitted)
 - **B62 don't walk home under attack:** with an enemy champion close, a leaving body shoots back (ranged, target in
   range) or retreats and strikes, instead of a recall that each hit cancels; the duo leaves at 50% health with an
