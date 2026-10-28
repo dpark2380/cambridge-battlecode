@@ -12,7 +12,7 @@ Version folder ≠ team submission number: the platform counts every submission 
   50.6) and more deaths (12.4 vs 9.6) than v18, while local gates had it level with v18 (B58). Back to v18, with
   the user's approval. If v18 also struggles at this rating, the drop was the opponents.
 
-## v26 (from v25; not submitted)
+## v26 (from v25; submitted 2026-10-28 16:15Z as team bot version 23, overnight auto-submit; v25 closed 59-51)
 - **B68 who closes in:** Vesper does not close in, and no body closes in while outnumbered. From the panel death
   breakdown (Vesper healthy-1v1 deaths 25% → 42% and 3v1 deaths 48% → 74% after B64). Locally neutral (49% vs v25);
   66% vs v22, 90% vs Jame v3.
@@ -22,7 +22,7 @@ Version folder ≠ team submission number: the platform counts every submission 
   in fights; 85 of 122 ranked HoR deaths came alone, caught on a one-tile retreat). 58% vs v26-without-it, 58% vs v25,
   79% vs v12, 91% vs Jame v3.
 
-## v25 (from v24; submitted 2026-10-28 12:35Z as team bot version 22, user-approved; v22 closed 36-24)
+## v25 (from v24; submitted 2026-10-28 12:35Z as team bot version 22, user-approved; v22 closed 36-24; ranked 59-51)
 - **B54 alone:** a Monolith is struck only with min(team, 3) bodies within 6 of it (no B54b). 01corridors map gate
   68% (41/60) vs v24; nonreg 51%.
 
