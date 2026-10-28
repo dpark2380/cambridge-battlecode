@@ -16,7 +16,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 - v28 went 14-21 in ranked (#196 1711 → #217 1688): gold 4,608 vs v26's 5,272, deaths 12.8 vs 11.8, opponents' gold
   5,130 vs v26's 5,646, so not a stronger field. Its panel (31-59 vs 27-63) did not carry over to ranked.
 
-## v29 (from v28; not submitted)
+## v29 (from v28; dropped: built on v28, whose kiting was rejected in ranked)
 - **B73 on v28:** Vesper treats a fight as even only when ours ≥ 1.3 × theirs (v27's rule on top of the kiting).
 
 ## v28 (from v26; submitted 2026-10-28 19:37Z as team bot version 24, overnight auto-submit; v26 closed 55-45; reverted 20:47Z at 14-21)
