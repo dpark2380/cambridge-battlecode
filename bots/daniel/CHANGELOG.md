@@ -12,7 +12,7 @@ Version folder ≠ team submission number: the platform counts every submission 
   50.6) and more deaths (12.4 vs 9.6) than v18, while local gates had it level with v18 (B58). Back to v18, with
   the user's approval. If v18 also struggles at this rating, the drop was the opponents.
 
-## v28 (from v26; not submitted)
+## v28 (from v26; submitted 2026-10-28 19:37Z as team bot version 24, overnight auto-submit; v26 closed 55-45)
 - **B78b Vesper kites:** with an enemy adjacent and her attack on cooldown, Vesper steps or dashes to a tile in range of
   her target and next to no enemy. Top-10 replays: their Vesper dies in 10% of healthy 1v1s (ours 28%) and is adjacent
   12% of contact rounds (ours 20%). Locally 50% vs v26; 79% vs v12, 91% vs Jame v3.
@@ -21,7 +21,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 - **B73 Vesper needs a clear edge:** Vesper engages only when ours ≥ 1.3 × theirs. She dies in 38% of healthy ranked
   1v1s (v25) and 39% on v26's panel. Locally neutral (48% vs v26, nonreg borderline PASS).
 
-## v26 (from v25; submitted 2026-10-28 16:15Z as team bot version 23, overnight auto-submit; v25 closed 59-51)
+## v26 (from v25; submitted 2026-10-28 16:15Z as team bot version 23, overnight auto-submit; v25 closed 59-51; ranked 55-45)
 - **B68 who closes in:** Vesper does not close in, and no body closes in while outnumbered. From the panel death
   breakdown (Vesper healthy-1v1 deaths 25% → 42% and 3v1 deaths 48% → 74% after B64). Locally neutral (49% vs v25);
   66% vs v22, 90% vs Jame v3.
