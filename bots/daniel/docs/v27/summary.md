@@ -23,3 +23,8 @@ v26's own ranked breakdown (35 games, `replays/daniel-v26/timelines`) cut Vesper
 deaths per contact to 17% (v25 21%). That leaves too little evidence for a change that is neutral locally, so v26 keeps
 its sample and v27 goes to the user in the morning.
 - Gauntlet with b78 (`data/gauntlet-b78.txt`): v26 +394, v27 +387, b78 +385, v25 +361 (newest three within noise).
+
+## Submitted 2026-10-28 22:22Z (team bot version 26, user-approved); scrim panel (90 games, `data/scrims/v27`)
+**32-58 vs v26's 27-63** on the same setups. Paired: v27 won 13 setups that v26 lost, v26 won 8. Deaths 16.5 vs 17.7.
+Vesper on the panel: healthy-1v1 deaths 35% (v26 39%), adjacent 23% (v26 28%). v28's +4 on the panel did not hold in
+ranked, so ranked games decide.
