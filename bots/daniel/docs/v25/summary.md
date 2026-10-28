@@ -10,3 +10,4 @@ chipping a Monolith wakes it, and it hits our bodies at the camps beside it from
 
 It changes target logic like B54b did, so judge it on ranked camp deaths in the Monolith's reach and on the panel's
 corridors games (0-12 for v18 and v22).
+- Gain vs v22 **65% (183/280) PASS**; nonreg vs v12 78%, Jame v3 91% (`data/v25-gates.txt`).
