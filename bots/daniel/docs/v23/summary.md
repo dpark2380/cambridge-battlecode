@@ -17,3 +17,4 @@ Research note `docs/research/path-to-60-2026-10-28.md` §2: 46% of our scrim-pan
   check) 52%, b63 (HoR dash in planning damage) 45%.
 - Gain gate vs v22: **58% (163/280), PASS**.
 - b62b + b61: 48% vs b62b, dropped.
+- Nonreg PASS vs v12 78% (219/280), Jame v3 86% (242/280), hunter-v0 90% (252/280) (`data/v23-gates.txt`).
