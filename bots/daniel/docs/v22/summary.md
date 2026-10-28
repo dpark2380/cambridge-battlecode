@@ -9,3 +9,4 @@ siege rule, because v19 lost in ranked (16-24 against v18's 66-44 and 11-4, B58)
 
 B56 changes target choice on every map with lone clusters, and local gates missed v19's ranked regression.
 Watch v22's ranked gold, camp clears and deaths against v18's if it is submitted.
+- Nonreg vs v12 78%, Jame v3 84%, PASS.
