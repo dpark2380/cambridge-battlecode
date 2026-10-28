@@ -14,3 +14,4 @@ corridors games (0-12 for v18 and v22).
 
 ## Scrim panel (12:36Z, `data/scrims/v25`)
 14-46 vs v22's 16-44 on the same 60 setups (paired 9 vs 11). Kills 8.8 vs 4.8, gold 5,105 vs 4,582, but champion deaths 17.8 vs 14.9 (B67).
+- Panel extended to 90 games (third map set, 14:25Z): v25 20-70 (new set 6-24).
