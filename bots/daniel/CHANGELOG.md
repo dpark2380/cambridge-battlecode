@@ -7,6 +7,11 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v19 (from v18; not submitted)
+- **B54 Monolith siege needs company:** a Monolith is struck only with min(team, 3) bodies within 6 of it. A lone
+  body chipping it kept it awake, and it killed our bodies at the camps beside it from behind walls (v18 ranked
+  01corridors 0-3, 18-37 camp deaths a game). 01corridors map gate 62% (41/66) vs v18; nonreg vs v18 51% over 70 maps.
+
 ## v18 (from v17; submitted 2026-10-27 23:06Z as team bot version 16)
 - Started 2026-10-27 13:00Z, from the research note `docs/research/strategy-options-2026-10-27.md` (our economy
   runs at half the top teams' from round 1: gold by r500 1,152 vs 2,427, emblems 4 vs 12).
