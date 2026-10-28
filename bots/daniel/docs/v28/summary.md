@@ -19,3 +19,4 @@ It is neutral locally because our bots do not punish adjacent trading. Judge it 
 Vesper's adjacency and healthy-1v1 deaths in its ranked replays.
 - Mechanism check vs Jame v3 (10 maps × 2 sides, `tools/fights.py`): Vesper adjacent 13% vs v26 14%, healthy-1v1 deaths 5% vs 9%. Jame does not chase her, so this is weak evidence; the panel is the test.
 - Gauntlet (`data/gauntlet-v28.txt`): v28 +394, v26 +394, v27 +388, v25 +364.
+- Nonreg vs v25 58% (162/280) PASS (`data/v28-gates.txt`).
