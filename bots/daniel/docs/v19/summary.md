@@ -28,5 +28,9 @@ for ~45 a turn while taking 240, and died every ~100 rounds (local and ranked). 
 survivable check, so the gather rule now covers every siege target. Gain 51% FAIL; 02harvest map gate
 **75% (45/60) PASS**; nonreg 51% PASS (`data/b54b-gates.txt`).
 
+## Gates for the folded v19 (`data/v19-gates.txt`)
+Nonreg PASS vs v18 52% (147/280), v12 77%, Jame v3 85%. Gauntlet +339 [+303, +359]; this run used the
+older 8-bot pool, so it is not directly comparable with v18's +346.
+
 ## Next
 Deaths on 02harvest, 02guardians, 00eight, 02fields and adgato_gemcombat2.
