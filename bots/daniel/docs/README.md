@@ -12,9 +12,9 @@
 | [v8](v8/summary.md) | `v8` | v7 ported to the week 2 patch: Golem/range camp table, Monolith leave rule and siege gate, gold-only play when no altar can be reached | 61% vs v7; 84% vs hunter |
 | [v9](v9/summary.md) | `v9` | v8 + pathing blocks living camps out of sight (the_farm freeze) + 40% of Power shards as health. Submitted 10:16Z (team bot version 8); ranked 47–33 | 69% vs v8; 55% vs Jame v3 (v8: 39%) |
 | [v29](v29/summary.md) | `v29` | v28 + B73: Vesper fights only with a clear edge. Not submitted | 48% vs v28 (neutral locally), 76% vs v12, 91% vs Jame v3 |
-| [v28](v28/summary.md) | `v28` | v26 + B78b: Vesper kites (steps away while her attack recharges). **Submitted 2026-10-28 19:37Z as team bot version 24, the live bot** | 50% vs v26 (neutral locally), 58% vs v25, 79% vs v12, 91% vs Jame v3 |
+| [v28](v28/summary.md) | `v28` | v26 + B78b: Vesper kites (steps away while her attack recharges). Team bot version 24 (19:37Z), reverted 20:47Z at 14-21 | 50% vs v26 (neutral locally), 58% vs v25, 79% vs v12, 91% vs Jame v3 |
 | [v27](v27/summary.md) | `v27` | v26 + B73: Vesper fights only with a clear edge. Not submitted | 48% vs v26 (neutral locally), 56% vs v25, 76% vs v12, 91% vs Jame v3 |
-| [v26](v26/summary.md) | `v26` | v25 + B68: Vesper and outnumbered bodies don't close in; B70: HoR buys 65% health shards; B71: a leaving body dashes away. Team bot version 23 (16:15Z), ranked 55-45 | **58% vs v25**, 79% vs v12, 91% vs Jame v3 |
+| [v26](v26/summary.md) | `v26` | v25 + B68: Vesper and outnumbered bodies don't close in; B70: HoR buys 65% health shards; B71: a leaving body dashes away. Team bot version 23 (16:15Z), ranked 55-45; **resubmitted 2026-10-28 20:47Z as team bot version 25, the live bot** | **58% vs v25**, 79% vs v12, 91% vs Jame v3 |
 | [v25](v25/summary.md) | `v25` | v24 + B54 (Monolith struck only with 3 bodies; no B54b). Team bot version 22 (12:35Z), ranked 59-51 | 01corridors 68% vs v24, nonreg 51%; 65% vs v22, 78% vs v12, 91% vs Jame v3 |
 | [v24](v24/summary.md) | `v24` | v23 + B64: the gold squad closes in on enemies too. Not submitted | 61% vs v23, 64% vs v22, 77% vs v12, 91% vs Jame v3 |
 | [v23](v23/summary.md) | `v23` | v22 + B62: a hurt body near an enemy fights back instead of recalling; the duo leaves at 50% health. Not submitted | 58% vs v22 (gain gate); 78% vs v12, 86% vs Jame v3, 90% vs hunter-v0 |

@@ -25,3 +25,8 @@ Vesper's adjacency and healthy-1v1 deaths in its ranked replays.
 **31-59 vs v26's 27-63** on the same setups. Paired: v28 won 7 setups that v26 lost, v26 won 3. Gold 5,783 vs 5,531,
 deaths 17.0 vs 17.7. Vesper on the panel (`tools/fights.py`): healthy-1v1 deaths 34% vs 39%, adjacent 26% vs 28%.
 The direction is right, but she is still far from top teams' 12% adjacency.
+
+## Ranked and revert (20:47Z)
+14-21 over 35 ranked games: gold 4,608 (v26 5,272), deaths 12.8 (11.8), opponents' gold 5,130 (v26's 5,646). That met
+the trigger (≤ ~44% at 35 games) with no stronger field, so v26 was resubmitted. The panel's +4 (31 vs 27) did not
+hold in ranked.

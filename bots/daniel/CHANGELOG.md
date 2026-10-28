@@ -12,10 +12,14 @@ Version folder ≠ team submission number: the platform counts every submission 
   50.6) and more deaths (12.4 vs 9.6) than v18, while local gates had it level with v18 (B58). Back to v18, with
   the user's approval. If v18 also struggles at this rating, the drop was the opponents.
 
+## v26 resubmitted (2026-10-28 20:47Z as team bot version 25, auto-revert)
+- v28 went 14-21 in ranked (#196 1711 → #217 1688): gold 4,608 vs v26's 5,272, deaths 12.8 vs 11.8, opponents' gold
+  5,130 vs v26's 5,646, so not a stronger field. Its panel (31-59 vs 27-63) did not carry over to ranked.
+
 ## v29 (from v28; not submitted)
 - **B73 on v28:** Vesper treats a fight as even only when ours ≥ 1.3 × theirs (v27's rule on top of the kiting).
 
-## v28 (from v26; submitted 2026-10-28 19:37Z as team bot version 24, overnight auto-submit; v26 closed 55-45)
+## v28 (from v26; submitted 2026-10-28 19:37Z as team bot version 24, overnight auto-submit; v26 closed 55-45; reverted 20:47Z at 14-21)
 - **B78b Vesper kites:** with an enemy adjacent and her attack on cooldown, Vesper steps or dashes to a tile in range of
   her target and next to no enemy. Top-10 replays: their Vesper dies in 10% of healthy 1v1s (ours 28%) and is adjacent
   12% of contact rounds (ours 20%). Locally 50% vs v26; 79% vs v12, 91% vs Jame v3.
