@@ -11,7 +11,7 @@ the opponents as our rating moves, which hid whether v19 or the ladder caused it
     python3 tools/scrim.py quota
 
 Scrims always play our *submitted* bot. Each group is 5 games and uses one unit of the team's shared quota
-(50 groups, rolling one hour from the first use). The panel is 12 groups (60 games). By default `panel` keeps
+(50 groups, rolling one hour from the first use). The panel is 18 groups (90 games; 60 before 2026-10-28 14:25Z). By default `panel` keeps
 `--reserve` 10 units for teammates.
 
     python3 tools/scrim.py timelines <version>   # re-download a version's replays to rebuild timelines
@@ -50,6 +50,8 @@ PANEL_TEAMS = [
 PANEL_MAPS = [
     ("00ribs,01corridors,00galaxy,00vault,00eight", "a,b,a,b,a"),
     ("00stampede,00swirl,02geodes,00lanes,00expanse", "b,a,b,a,b"),
+    # Added 2026-10-28 14:25Z: maps of v25's ranked losses, so the panel is not only our worst maps (90 games a version).
+    ("01islands,01starfish,02arena,00collision,02the_pond", "a,b,a,b,a"),
 ]
 
 

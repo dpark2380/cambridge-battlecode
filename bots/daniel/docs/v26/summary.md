@@ -36,3 +36,4 @@ retreats with any dash allowed. Race vs v26-without-it: 59% (82/140). Gain gate 
 58%, v12 79%, Jame v3 91% (`data/b71-race.txt`, `data/b71-gates.txt`).
 
 **v26 as a whole is 58% vs v25, the live bot.**
+- Gauntlet (old 8-bot pool): v26 +373 vs v25 +365 (saturated pool).
