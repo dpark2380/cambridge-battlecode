@@ -12,7 +12,7 @@ Version folder ≠ team submission number: the platform counts every submission 
   50.6) and more deaths (12.4 vs 9.6) than v18, while local gates had it level with v18 (B58). Back to v18, with
   the user's approval. If v18 also struggles at this rating, the drop was the opponents.
 
-## v25 (from v24; not submitted)
+## v25 (from v24; submitted 2026-10-28 12:35Z as team bot version 22, user-approved; v22 closed 36-24)
 - **B54 alone:** a Monolith is struck only with min(team, 3) bodies within 6 of it (no B54b). 01corridors map gate
   68% (41/60) vs v24; nonreg 51%.
 
