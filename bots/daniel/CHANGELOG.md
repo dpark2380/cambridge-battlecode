@@ -12,6 +12,11 @@ Version folder ≠ team submission number: the platform counts every submission 
   50.6) and more deaths (12.4 vs 9.6) than v18, while local gates had it level with v18 (B58). Back to v18, with
   the user's approval. If v18 also struggles at this rating, the drop was the opponents.
 
+## v23 (from v22; not submitted)
+- **B62 don't walk home under attack:** with an enemy champion close, a leaving body shoots back (ranged, target in
+  range) or retreats and strikes, instead of a recall that each hit cancels; the duo leaves at 50% health with an
+  enemy in sight (was 75%). Race 61% vs v22 (255/420), gain gate 58% (163/280).
+
 ## v22 resubmitted (2026-10-28 10:40Z as team bot version 21, user-approved)
 - Back from v18 after the scrim panel (B60): v22 16-44 vs v18 10-50 on the same 60 setups.
 
