@@ -22,3 +22,4 @@ health-only clause.
 v26's own ranked breakdown (35 games, `replays/daniel-v26/timelines`) cut Vesper's healthy-1v1 deaths to 26% (v25 38%) and
 deaths per contact to 17% (v25 21%). That leaves too little evidence for a change that is neutral locally, so v26 keeps
 its sample and v27 goes to the user in the morning.
+- Gauntlet with b78 (`data/gauntlet-b78.txt`): v26 +394, v27 +387, b78 +385, v25 +361 (newest three within noise).
