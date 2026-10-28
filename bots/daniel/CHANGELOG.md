@@ -12,7 +12,10 @@ Version folder ≠ team submission number: the platform counts every submission 
   50.6) and more deaths (12.4 vs 9.6) than v18, while local gates had it level with v18 (B58). Back to v18, with
   the user's approval. If v18 also struggles at this rating, the drop was the opponents.
 
-## v18 resubmitted again (2026-10-28 10:25Z as team bot version 20, auto-revert)
+## v22 resubmitted (2026-10-28 10:40Z as team bot version 21, user-approved)
+- Back from v18 after the scrim panel (B60): v22 16-44 vs v18 10-50 on the same 60 setups.
+
+## v18 resubmitted again (2026-10-28 10:25Z as team bot version 20, auto-revert; replaced 10:40Z)
 - v22 went 50-61 (#243 1656 → #284 1611), 7-21 in its last 28 with gold 4,335 vs 5,012 before, which meets the
   standing revert rule (user, 06:30Z). Its fixed scrim panel (`tools/scrim.py`) went 16-44; v18's panel is queued
   for a like-for-like comparison. Result: v18's panel went 10-50 (gold 4,180, clears 46.3) against v22's 16-44 (4,582,
