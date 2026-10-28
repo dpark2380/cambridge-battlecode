@@ -14,7 +14,11 @@ Scrims always play our *submitted* bot. Each group is 5 games and uses one unit 
 (50 groups, rolling one hour from the first use). The panel is 12 groups (60 games). By default `panel` keeps
 `--reserve` 10 units for teammates.
 
+    python3 tools/scrim.py timelines <version>   # re-download a version's replays to rebuild timelines
+
 Files: data/scrims/groups.jsonl (one row per group), data/scrims/<version>/{summaries,analysis,features.jsonl}.
+analysis/ keeps each replay's report, stats and timeline CSV, so `tools/fights.py data/scrims/<version>/analysis
+--features data/scrims/<version>/features.jsonl` runs on any version.
 """
 import argparse
 import collections
@@ -103,6 +107,39 @@ def panel(reserve):
         create(t, n, m, s, version, "panel")
 
 
+def analyze(zip_path, out):
+    """Decode a replay into <out>/<match id>.txt, .stats.json and .timeline.csv (kept for tools/fights.py)."""
+    report = subprocess.run(["node", str(ROOT / "tools/replay/analyze.mjs"), "--out", str(out), str(zip_path)],
+                            capture_output=True, text=True)
+    if report.returncode:
+        print("analyze failed", zip_path.name, report.stderr.strip()[-300:])
+        return
+    (out / f"{zip_path.stem}.txt").write_text(report.stdout)
+    zip_path.unlink()
+
+
+def unpack(group, vdir):
+    """Download a finished group's five replays and decode each into vdir/analysis."""
+    bundle = vdir / f"{group}.zip"
+    if cambc("match-groups", "download", group, "-o", str(bundle)).returncode:
+        return
+    with zipfile.ZipFile(bundle) as z:
+        for name in z.namelist():
+            target = vdir / "analysis" / (name.split("-", 1)[1] if "-" in name else name)
+            target.write_bytes(z.read(name))
+            analyze(target, vdir / "analysis")
+    bundle.unlink()
+
+
+def timelines(version):
+    vdir = DIR / version
+    (vdir / "analysis").mkdir(parents=True, exist_ok=True)
+    for g in groups():
+        if g["version"] == version and g["done"]:
+            unpack(g["group"], vdir)
+            print("decoded", g["team"], g["group"])
+
+
 def sync():
     rows = groups()
     for g in rows:
@@ -117,14 +154,7 @@ def sync():
         vdir = DIR / g["version"]
         (vdir / "summaries").mkdir(parents=True, exist_ok=True)
         (vdir / "analysis").mkdir(exist_ok=True)
-        bundle = vdir / f"{g['group']}.zip"
-        if cambc("match-groups", "download", g["group"], "-o", str(bundle)).returncode == 0:
-            with zipfile.ZipFile(bundle) as z:
-                for name in z.namelist():
-                    target = vdir / "analysis" / (name.split("-", 1)[1] if "-" in name else name)
-                    target.write_bytes(z.read(name))
-                    ranked.analyze(target, vdir / "analysis")
-            bundle.unlink()
+        unpack(g["group"], vdir)
         feats = vdir / "features.jsonl"
         seen = {json.loads(l)["match"] for l in feats.read_text().splitlines()} if feats.exists() else set()
         with feats.open("a") as f:
@@ -161,7 +191,7 @@ def report():
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["panel", "create", "sync", "report", "quota"])
+    parser.add_argument("command", choices=["panel", "create", "sync", "report", "quota", "timelines"])
     parser.add_argument("team", nargs="?")
     parser.add_argument("--maps")
     parser.add_argument("--sides", default="a,b,a,b,a")
@@ -176,6 +206,8 @@ def main():
         sync()
     elif args.command == "report":
         report()
+    elif args.command == "timelines":
+        timelines(args.team)
     else:
         print(quota())
 
