@@ -11,6 +11,7 @@
 | [v7](v7/summary.md) | `v7` | v6 + fixes from the ranked research: walking-distance stall check, unseen-attacker response, sieges for any too-big group, carriers recall at 50% | 59% vs v6; 72% vs Simon's v5 |
 | [v8](v8/summary.md) | `v8` | v7 ported to the week 2 patch: Golem/range camp table, Monolith leave rule and siege gate, gold-only play when no altar can be reached | 61% vs v7; 84% vs hunter |
 | [v9](v9/summary.md) | `v9` | v8 + pathing blocks living camps out of sight (the_farm freeze) + 40% of Power shards as health. Submitted 10:16Z (team bot version 8); ranked 47–33 | 69% vs v8; 55% vs Jame v3 (v8: 39%) |
+| [v20](v20/summary.md) | `v20` | v19 + B56: monster-free groups at real cluster health (02treasure_box). Not submitted | 02treasure-box 65% vs v19, nonreg 51% |
 | [v19](v19/summary.md) | `v19` | v18 + B54/B54b: strike a siege target (Monolith, golem groups) only with 3 bodies there. **Submitted 2026-10-28 03:22Z as team bot version 17** | 01corridors 62% vs v18, 02harvest 75%; 52% vs v18, 77% vs v12, 85% vs Jame v3 |
 | [v18](v18/summary.md) | `v18` | v17 + research strategy stack: HoR dash in fights, shop early, Prospector first, wards, one capture receiver, own-altar lock. Team bot version 16 (23:06Z) | 71% vs v17, 75% vs v12, 82% vs Jame v3; gauntlet +346 |
 | [v17](v17/summary.md) | `v17` | v16 + B37: outmatched bodies fall back to allies; ranged bodies shoot back instead of running. Team bot version 15, ranked 127-134 | 58% vs v16, 65% vs v12, 77% vs Jame v3 |

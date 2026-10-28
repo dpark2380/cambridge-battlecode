@@ -7,6 +7,11 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v20 (from v19; not submitted)
+- **B56 lone gem clusters at their real health:** a group with nothing that hits back is priced at 120 health per
+  cluster, not the 500 effective. On 02treasure_box, 16 lone clusters sit around the altar; v19 cleared 10 groups to
+  the opponent's 128 there. 02treasure-box map gate 65% (39/60) vs v19; nonreg 51%.
+
 ## v19 (from v18; submitted 2026-10-28 03:22Z as team bot version 17)
 - **B54 Monolith siege needs company:** a Monolith is struck only with min(team, 3) bodies within 6 of it. A lone
   body chipping it kept it awake, and it killed our bodies at the camps beside it from behind walls (v18 ranked
