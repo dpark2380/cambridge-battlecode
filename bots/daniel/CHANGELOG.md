@@ -12,6 +12,10 @@ Version folder ≠ team submission number: the platform counts every submission 
   50.6) and more deaths (12.4 vs 9.6) than v18, while local gates had it level with v18 (B58). Back to v18, with
   the user's approval. If v18 also struggles at this rating, the drop was the opponents.
 
+## v27 (from v26; not submitted)
+- **B73 Vesper needs a clear edge:** Vesper engages only when ours ≥ 1.3 × theirs. She dies in 38% of healthy ranked
+  1v1s (v25) and 39% on v26's panel. Locally neutral (48% vs v26, nonreg borderline PASS).
+
 ## v26 (from v25; submitted 2026-10-28 16:15Z as team bot version 23, overnight auto-submit; v25 closed 59-51)
 - **B68 who closes in:** Vesper does not close in, and no body closes in while outnumbered. From the panel death
   breakdown (Vesper healthy-1v1 deaths 25% → 42% and 3v1 deaths 48% → 74% after B64). Locally neutral (49% vs v25);

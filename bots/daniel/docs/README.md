@@ -11,6 +11,7 @@
 | [v7](v7/summary.md) | `v7` | v6 + fixes from the ranked research: walking-distance stall check, unseen-attacker response, sieges for any too-big group, carriers recall at 50% | 59% vs v6; 72% vs Simon's v5 |
 | [v8](v8/summary.md) | `v8` | v7 ported to the week 2 patch: Golem/range camp table, Monolith leave rule and siege gate, gold-only play when no altar can be reached | 61% vs v7; 84% vs hunter |
 | [v9](v9/summary.md) | `v9` | v8 + pathing blocks living camps out of sight (the_farm freeze) + 40% of Power shards as health. Submitted 10:16Z (team bot version 8); ranked 47–33 | 69% vs v8; 55% vs Jame v3 (v8: 39%) |
+| [v27](v27/summary.md) | `v27` | v26 + B73: Vesper fights only with a clear edge. Not submitted | 48% vs v26 (neutral locally) |
 | [v26](v26/summary.md) | `v26` | v25 + B68: Vesper and outnumbered bodies don't close in; B70: HoR buys 65% health shards; B71: a leaving body dashes away. **Submitted 2026-10-28 16:15Z as team bot version 23, the live bot** | **58% vs v25**, 79% vs v12, 91% vs Jame v3 |
 | [v25](v25/summary.md) | `v25` | v24 + B54 (Monolith struck only with 3 bodies; no B54b). Team bot version 22 (12:35Z), ranked 59-51 | 01corridors 68% vs v24, nonreg 51%; 65% vs v22, 78% vs v12, 91% vs Jame v3 |
 | [v24](v24/summary.md) | `v24` | v23 + B64: the gold squad closes in on enemies too. Not submitted | 61% vs v23, 64% vs v22, 77% vs v12, 91% vs Jame v3 |
