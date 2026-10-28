@@ -28,3 +28,8 @@ its sample and v27 goes to the user in the morning.
 **32-58 vs v26's 27-63** on the same setups. Paired: v27 won 13 setups that v26 lost, v26 won 8. Deaths 16.5 vs 17.7.
 Vesper on the panel: healthy-1v1 deaths 35% (v26 39%), adjacent 23% (v26 28%). v28's +4 on the panel did not hold in
 ranked, so ranked games decide.
+
+## Ranked, first 30 games (18-12; `replays/daniel-v27/timelines`, `tools/fights.py`)
+- Deaths per contact: 17%.
+- Healthy-1v1 deaths: Vesper **25%** (v26 28%, v28 45%, top 10%), Marcella 4% (top 4%), HoR 21%.
+- Deaths on the walk home: 38% overall; Ryth 63%, Marcella 53%.

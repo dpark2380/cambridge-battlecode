@@ -51,3 +51,7 @@ v28 (kiting, B78b) went live at 19:37Z with panel 31-59 vs v26's 27-63. The next
 v28 (v26 + B78b kiting) ranked, 35 games: Vesper healthy-1v1 deaths **45%** (v26 28%), adjacent 24% (v26 20%); record
 14-21, reverted to v26 at 20:47Z. Its panel lead (31 vs 27 of 90) was inside the panel's noise. So moving Vesper does
 not fix her deaths, which points to fight entry (B73 / v27) as the next test.
+
+## Update 23:35Z: v27 (v26 + B73) ranked, 30 games
+18-12. Vesper healthy-1v1 deaths 25% (v26 28%): a small step, still well above the top teams' 10%. Marcella is at 4%,
+level with the top teams. Walk-home deaths rose to 38% of all deaths (Ryth 63%, Marcella 53%), the next thing to look at.
