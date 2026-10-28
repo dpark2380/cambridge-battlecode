@@ -32,3 +32,17 @@ The panel is our 6 hardest opponents on 15 maps, so its rates run higher than ra
 
 Both are neutral locally, which is expected: our own bots do not punish Vesper's melee-range trading the way top teams
 do. Judge them on the scrim panel (v26: 27-63) and on Vesper's adjacency and healthy-1v1 deaths in its replays.
+
+## Update 20:05Z: positioning explains little
+Vesper's distance to the nearest enemy over contact rounds (Chebyshev, ≤ 4):
+
+| | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Top 10 (60 games) | 13% | 17% | 33% | 37% |
+| v26 ranked (85) | 18% | 14% | 30% | 38% |
+
+The profiles are close, so standing too close is only a small part of her 28% vs 10% healthy-1v1 deaths. The likelier
+cause is which fights she takes. `visible_champions` rates her damage at max(strength, focus) = 100 against about 45
+real, so the fight check sends her into fights she loses. B73 (v27: Vesper needs ours ≥ 1.3 × theirs) targets that.
+
+v28 (kiting, B78b) went live at 19:37Z with panel 31-59 vs v26's 27-63. The next candidate is v28 + B73.
