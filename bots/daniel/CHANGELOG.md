@@ -7,12 +7,20 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v18 resubmitted (2026-10-28 04:50Z as team bot version 18)
+- v19 went 16-24 in ranked (#250 1650 → #282 1618) with less gold (4,162 vs 5,376), fewer camp clears (43.7 vs
+  50.6) and more deaths (12.4 vs 9.6) than v18, while local gates had it level with v18 (B58). Back to v18, with
+  the user's approval. If v18 also struggles at this rating, the drop was the opponents.
+
+## v21 (from v20; not submitted)
+- v20 with B54b reverted (gather rule for Monoliths only), plus B56. Nonreg vs v18 50%, vs v19 50%.
+
 ## v20 (from v19; not submitted)
 - **B56 lone gem clusters at their real health:** a group with nothing that hits back is priced at 120 health per
   cluster, not the 500 effective. On 02treasure_box, 16 lone clusters sit around the altar; v19 cleared 10 groups to
   the opponent's 128 there. 02treasure-box map gate 65% (39/60) vs v19; nonreg 51%.
 
-## v19 (from v18; submitted 2026-10-28 03:22Z as team bot version 17)
+## v19 (from v18; submitted 2026-10-28 03:22Z as team bot version 17; withdrawn 04:50Z)
 - **B54 Monolith siege needs company:** a Monolith is struck only with min(team, 3) bodies within 6 of it. A lone
   body chipping it kept it awake, and it killed our bodies at the camps beside it from behind walls (v18 ranked
   01corridors 0-3, 18-37 camp deaths a game). 01corridors map gate 62% (41/66) vs v18; nonreg vs v18 51% over 70 maps.
