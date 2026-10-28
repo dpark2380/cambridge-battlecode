@@ -24,3 +24,4 @@ on its scrim panel against v25's 14-46: fewer outnumbered and Vesper deaths, wit
 Scout 2026-10-28 13:42Z (top 20 teams, 2,000 games): top Heart of Ruins buy ~64% of their Bruiser shards as health; ours
 bought 40% (`power_health_share`). Ranked v25: our HoR dies in 30% of healthy 1v1s, theirs in 19%. v26 gives HoR a
 0.65 health share. Race vs v26-without-it: 51% (0.80: 51%); nonreg 52% (`data/b70-race.txt`, `data/b70-gates.txt`).
+- Final v26 nonreg PASS (`data/v26-gates.txt`): vs v25 50% (208/420), v22 66%, v12 80%, Jame v3 91%.
