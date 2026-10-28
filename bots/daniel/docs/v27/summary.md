@@ -15,3 +15,4 @@ health-only clause.
 ## Results
 - Race vs v26: 48% (67/140), neutral locally.
 - Nonreg vs v26: 48% (543/1120), PASS (borderline).
+- Nonreg PASS vs v12 76%, Jame v3 91%, v25 56% (`data/v27-gates.txt`).
