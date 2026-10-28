@@ -26,6 +26,7 @@ class Bot {
     self_estimate own;
     bool initialised = false;
     bool moved = false;              // this turn: blocks casts that exclude walking
+    bool escaping = false;           // B71: leaving under attack, so a damage dash may carry the escape
     int waiting_for = -1, waited = 0;  // group we are holding off from until help arrives
     int current_target = -1, target_round = -1;
     unsigned previous_gems = 0;      // B49: bag last turn, to spot a completed tribute

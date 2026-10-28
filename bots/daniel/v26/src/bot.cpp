@@ -518,7 +518,7 @@ bool Bot::move_towards_closest(cambc::bitboard goals) {
     // Dash further along the same field when one is ready (dashes allow walking).
     if (field.get(step) > 2 && me.can_cast())
         for (const auto& ability : me.abilities())
-            if (ability.is_dash() && ability.is_ready() && dash_modifier(ability) == 0) {  // v18 (B41): damage dashes are for fights
+            if (ability.is_dash() && ability.is_ready() && (dash_modifier(ability) == 0 || escaping)) {  // v18 (B41): damage dashes are for fights (B71: or an escape)
                 auto landing = step;
                 for (auto tile : (ability.valid_tiles() & ~blocked_tiles()).positions())
                     if (field.get(tile) < field.get(landing)) landing = tile;
@@ -1156,8 +1156,12 @@ void Bot::take_turn(int round) {
         if (near) {
             const auto target = near->unit;
             if (!(me.attack_range() > 1 && distance(me.position(), near->position) <= me.attack_range() && strike(target))) {
-                retreat();
+                // v26 (B71): ranked v25 HoR deaths (122): 85 alone, most adjacent to an enemy that follows the one-tile retreat
+                // and keeps hitting; let the dash carry the escape.
                 strike(target);
+                escaping = true;
+                retreat();
+                escaping = false;
             }
             return;
         }

@@ -18,6 +18,9 @@ Version folder ≠ team submission number: the platform counts every submission 
   66% vs v22, 90% vs Jame v3.
 - **B70 Heart of Ruin health:** HoR buys 65% of its Bruiser shards as health (was 40%; top teams ~64%). Locally neutral
   (51%, nonreg 52%).
+- **B71 dash escape:** a body leaving with an enemy close strikes, then retreats with its dash allowed (HoR used it only
+  in fights; 85 of 122 ranked HoR deaths came alone, caught on a one-tile retreat). 58% vs v26-without-it, 58% vs v25,
+  79% vs v12, 91% vs Jame v3.
 
 ## v25 (from v24; submitted 2026-10-28 12:35Z as team bot version 22, user-approved; v22 closed 36-24)
 - **B54 alone:** a Monolith is struck only with min(team, 3) bodies within 6 of it (no B54b). 01corridors map gate

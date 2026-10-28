@@ -1,4 +1,4 @@
-# v26: v25 + B68 (who closes in) + B70 (Heart of Ruin health)
+# v26: v25 + B68 (who closes in) + B70 (Heart of Ruin health) + B71 (dash escape)
 
 ## Evidence
 `tools/fights.py` on the scrim panels (same 60 setups), v22 → v25:
@@ -25,3 +25,14 @@ Scout 2026-10-28 13:42Z (top 20 teams, 2,000 games): top Heart of Ruins buy ~64%
 bought 40% (`power_health_share`). Ranked v25: our HoR dies in 30% of healthy 1v1s, theirs in 19%. v26 gives HoR a
 0.65 health share. Race vs v26-without-it: 51% (0.80: 51%); nonreg 52% (`data/b70-race.txt`, `data/b70-gates.txt`).
 - Final v26 nonreg PASS (`data/v26-gates.txt`): vs v25 50% (208/420), v22 66%, v12 80%, Jame v3 91%.
+
+## B71: Heart of Ruin escapes with its dash
+Ranked v25 timelines (`replays/daniel-v25/timelines`), 122 HoR deaths:
+- 85 had no ally within 3 eight rounds before, and 109 were above 50% health then.
+- Typically HoR stood adjacent to an enemy and lost 80-150 a round to 0, because the enemy followed its one-tile retreat.
+
+`move_towards_closest` kept damage dashes for fights. Now, when leaving with an enemy close, a body strikes, then
+retreats with any dash allowed. Race vs v26-without-it: 59% (82/140). Gain gate **58% (163/280) PASS**. Nonreg vs v25
+58%, v12 79%, Jame v3 91% (`data/b71-race.txt`, `data/b71-gates.txt`).
+
+**v26 as a whole is 58% vs v25, the live bot.**
