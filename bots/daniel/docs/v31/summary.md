@@ -5,3 +5,6 @@ Two changes, each locally neutral and each built from ranked evidence (backlog B
   had 2+ enemies that close.
 - **B81:** the fight check's health-only clause applies only when our damage is at least 75% of theirs. v25-v27 win
   33% vs Power stackers, and r300-800 deaths run 5.6 vs their 3.5.
+
+## Gates (`data/v31-gates.txt`)
+Nonreg PASS: vs v27 50% (280/560), v12 76%, Jame v3 93%. Neutral locally, as both parts were.
