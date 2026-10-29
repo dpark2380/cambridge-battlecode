@@ -7,6 +7,14 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v35 (2026-10-29 14:28Z as team bot version 38)
+- v34 + B87b + B91a (backlog B92). B87b: a body also takes up a fight an ally within `ally_radius` is in, not only
+  enemies within its own `engage_radius`. B91a: before round 60 on 4-5 body maps, a camp group takes all bodies and
+  joining does not split its value, so the team clears the first groups together.
+- Local: race vs v34 57% (80/140); gain gate vs v34 PASS (234/420 = 56%); nonreg PASS vs v12 and Jame v3 (94%).
+- Scrim A/B (team bot version 36, 14:06Z): panel 28-62 vs v34's 30-60, paired net -2 (noise ±4), deaths -0.9/game.
+  Submitted for a full ranked run on the user's approval; fallback v34.
+
 ## v18 resubmitted (2026-10-28 04:50Z as team bot version 18; ranked 27-23 until 06:29Z)
 - v19 went 16-24 in ranked (#250 1650 → #282 1618) with less gold (4,162 vs 5,376), fewer camp clears (43.7 vs
   50.6) and more deaths (12.4 vs 9.6) than v18, while local gates had it level with v18 (B58). Back to v18, with
