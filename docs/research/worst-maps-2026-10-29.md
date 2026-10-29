@@ -285,3 +285,15 @@ map has a Monolith corridor.
 3. **B86**: map gate on boss_battle.
 
 Log B84-B86 in `bots/daniel/docs/backlog.md` before testing (cadence rule). This note does not edit the backlog.
+
+## Openings vs the top teams (scout 2026-10-29 12:25Z, `tools/openings.py <map> --ours replays/daniel-v26..v34`)
+
+Median round of clears #1/#3/#5, top teams vs us:
+
+| Map | Top | Us |
+|---|---|---|
+| 00vault | 6 / 95 / 214 | 3 / 61 / 102 |
+| 01islands | 5 / 66 / 122 | 2 / 71 / 130 |
+| 00expanse | 26 / 49 / 66 | 29 / 50 / 64 |
+
+Our opening clears are as fast as theirs, or faster. On these maps the losses come after round 100, in fights and in holding objectives, not in the opening. This fits B91a: the opening pack was neutral on wins.
