@@ -41,6 +41,10 @@ at r500, camp clears 44 vs 67, gold 4.4k vs 8.3k, and the winners buy 50% more s
 Gauntlet (`data/gauntlet-v35.txt`): v35 +384 [+340, +392] (v8 = 0), predicted ladder 1605; the local pool is far
 below it, so the gauntlet no longer separates candidates.
 
+- 18:59Z: **64-71 over 135** (47.4%; last 30: 13-17); our gold 5.0k, opponents' 6.2k over the last 30 (6.8k before);
+  ladder #230, 1684. **Auto-revert:** at or under the 48% limit, panel no better than v34's (28-62 vs 30-60), and
+  opponents' gold fell, so v34 was resubmitted 19:01Z as team bot version 39.
+
 ## Weaknesses / next
 - Healthy 1v1: our Vesper dies 37-42%, opponents' Vesper 8-13%.
 - Ryth and Marcella die walking home 50-70% of their deaths (opponents 20-35%).

@@ -39,3 +39,6 @@ resubmitted 12:21Z as team bot version 35.
 Second round (user: "Can you try the A/B again"): b92 passed the local gain gate vs v34 (234/420 = 56%, race 57%) but
 the panel is neutral (net -2, deaths -0.9/game). Local and scrim disagree again, as with every candidate since v27.
 v34 resubmitted 14:23Z as team bot version 37.
+
+v35 (b92) then had a full ranked run from 14:28Z: 64-71 over 135, which met the auto-revert rule. v34 resubmitted
+2026-10-29 19:01Z as team bot version 39, the live bot.

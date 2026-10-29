@@ -7,6 +7,10 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v34 resubmitted (2026-10-29 19:01Z as team bot version 39, auto-revert)
+- v35 went 64-71 over 135 ranked games (last 30: 13-17), at the 48% limit; its panel was no better than v34's and
+  opponents' gold fell, so the rule reverted it.
+
 ## v35 (2026-10-29 14:28Z as team bot version 38)
 - v34 + B87b + B91a (backlog B92). B87b: a body also takes up a fight an ally within `ally_radius` is in, not only
   enemies within its own `engage_radius`. B91a: before round 60 on 4-5 body maps, a camp group takes all bodies and
