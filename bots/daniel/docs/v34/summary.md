@@ -18,3 +18,4 @@ no camp on it, a carrier banks only with 100+ gems.
 Submitted 2026-10-29 07:49Z as team bot version 30 (user-approved), replacing v33 at 54-51. Scrim panel queued.
 - tune.py on v34 (08:20Z; tribute_gems, tribute_detour, spawn_leave_health, gold_weight, max_damage_share,
   carrier_recall_health; 6 iterations x 3 candidates): no candidate beat the incumbent (best step 53%, not confirmed).
+- Scrim panel: 30-60, identical game for game to v33's (no panel map is 01boss_battle and games are deterministic). A panel only tells versions apart when the change plays on panel maps.
