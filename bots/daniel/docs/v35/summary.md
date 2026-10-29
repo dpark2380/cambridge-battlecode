@@ -28,6 +28,8 @@ detects large effects; the user approved a full ranked run.
 Submitted 2026-10-29 14:28Z as team bot version 38. Fallback v34 under the auto-revert rule.
 
 - 16:02Z: 24-26 over 50 (gold 6.1k in wins, 4.5k in losses); ladder #214, 1700 (14:28Z: about 1690).
+- 17:01Z: 38-40 over 78 (last 30: 16-14); our gold 6.6k, opponents' 6.5k → 7.0k; ladder #223, 1691. Ranked
+  win rate by opponents' picks is flat at 50-52% for every champion, as rating-matched pairing predicts.
 
 ## Weaknesses / next
 - Healthy 1v1: our Vesper dies 37-42%, opponents' Vesper 8-13%.
