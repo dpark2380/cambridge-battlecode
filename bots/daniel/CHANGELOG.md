@@ -24,6 +24,11 @@ Version folder ≠ team submission number: the platform counts every submission 
   her target and next to no enemy. Top-10 replays: their Vesper dies in 10% of healthy 1v1s (ours 28%) and is adjacent
   12% of contact rounds (ours 20%). Locally 50% vs v26; 79% vs v12, 91% vs Jame v3.
 
+## v32 (from v27; not submitted)
+- **B83 clusters at 250:** gem and gold clusters in groups with a monster were priced at 500 health (real 120), so the
+  71-gem elk+8-cluster groups on 00gem_fields looked too slow (top teams open them at r25-31, we at r126-143; 1-10 there).
+  Locally neutral (50% vs v27); 80% vs v12, 92% vs Jame v3; gems at r250 213 vs 138 on gem-fields.
+
 ## v27 resubmitted (2026-10-29 03:37Z as team bot version 28, auto-revert)
 - v31 went 24-26, 12-18 over its last 30 (≤43% trigger), and its panel was 28-62 vs v27's 32-58, which confirms it.
 
