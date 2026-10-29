@@ -31,6 +31,16 @@ Submitted 2026-10-29 14:28Z as team bot version 38. Fallback v34 under the auto-
 - 17:01Z: 38-40 over 78 (last 30: 16-14); our gold 6.6k, opponents' 6.5k → 7.0k; ladder #223, 1691. Ranked
   win rate by opponents' picks is flat at 50-52% for every champion, as rating-matched pairing predicts.
 
+- 18:01Z: **51-54 over 105** (48.6%; last 30: 16-14); our gold 5.7k, opponents' 6.6k; ladder #215, 1697.
+
+**Verdict at ~100 games: neutral.** v34 went 62-53 (54%) over 115, inside the ±9-point interval of either sample, and
+the ladder rating is flat (1690 → 1697). No revert trigger (48% at 100+ games; gold above 4,700), so v35 stays live.
+Losses are fight snowballs: 20 champion deaths a game vs the opponents' 9, gems level at r250 (59 vs 67) but 138 vs 194
+at r500, camp clears 44 vs 67, gold 4.4k vs 8.3k, and the winners buy 50% more shards (Bruiser + Power).
+
+Gauntlet (`data/gauntlet-v35.txt`): v35 +384 [+340, +392] (v8 = 0), predicted ladder 1605; the local pool is far
+below it, so the gauntlet no longer separates candidates.
+
 ## Weaknesses / next
 - Healthy 1v1: our Vesper dies 37-42%, opponents' Vesper 8-13%.
 - Ryth and Marcella die walking home 50-70% of their deaths (opponents 20-35%).
