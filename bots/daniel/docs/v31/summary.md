@@ -13,3 +13,5 @@ Nonreg PASS: vs v27 50% (280/560), v12 76%, Jame v3 93%. Neutral locally, as bot
 28-62 vs v27's 32-58 on the same setups. Paired: v31 won 7 setups v27 lost, v27 won 11. Deaths 15.7 vs 16.5, gems r500
 148 vs 139. The -4 is inside the panel's ±6 noise (v28's +4 did not hold in ranked), so ranked decides; the revert rule
 applies from 30 games.
+- Kingstonks probe (15 games, same map sets as v26's): **5-10** (v26 4-11; paired 2-1). Our deaths 12.6 vs v26's 14.9,
+  theirs 8.6 vs 11.9: B81 avoids some losing fights but kills less, so little net change against this Power team.
