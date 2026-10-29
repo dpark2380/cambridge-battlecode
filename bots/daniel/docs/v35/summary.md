@@ -27,6 +27,8 @@ detects large effects; the user approved a full ranked run.
 ## Ranked
 Submitted 2026-10-29 14:28Z as team bot version 38. Fallback v34 under the auto-revert rule.
 
+- 16:02Z: 24-26 over 50 (gold 6.1k in wins, 4.5k in losses); ladder #214, 1700 (14:28Z: about 1690).
+
 ## Weaknesses / next
 - Healthy 1v1: our Vesper dies 37-42%, opponents' Vesper 8-13%.
 - Ryth and Marcella die walking home 50-70% of their deaths (opponents 20-35%).
