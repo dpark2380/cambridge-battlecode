@@ -11,3 +11,7 @@ gold by r300.
 Locally (`data/b84-race.txt`): race vs v27 53%; map gate on the 6 maps vs v27 49%. At 500 per cluster the map gate was
 40%, because v27 farms gold groups and wins the late fights in self-play. Ranked is the judge.
 - Nonreg PASS: vs v27 50% (212/420), v12 80%, Jame v3 92% (`data/v33-gates.txt`).
+
+## Submitted 2026-10-29 04:16Z (team bot version 29, user-approved). Scrim panel (90 games)
+30-60 vs v27's 32-58; paired: v33 won 11 setups v27 lost, v27 won 13. Level, as expected: the panel's maps barely
+overlap the target maps (only 00collision). Ranked results on the worst maps decide.
