@@ -18,3 +18,4 @@ overlap the target maps (only 00collision). Ranked results on the worst maps dec
 - Ranked, 30 games (16-14): gems r500 217 vs their 182 (ahead), but `tools/fights.py` shows deaths per contact 21% (v27 17%)
   and Vesper healthy-1v1 33% (v27 26%). The pricing change may send bodies into bigger groups where enemies catch them;
   recheck at ~60.
+- Ranked final (07:49Z, 105 games): **54-51**. 46-34 at 80 games (#207, 1702 at 06:56Z), then 11-19 over the last 30 against stronger opponents (their gold 5.4k → 6.0k, their deaths 13.0 → 8.2; ours 12.3 → 13.6). The auto-revert trigger fired on the last 30 (37%) but looked like a field shift; the user chose to submit v34 instead of reverting to v27.

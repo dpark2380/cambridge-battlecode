@@ -13,3 +13,6 @@ no camp on it, a carrier banks only with 100+ gems.
 - Nonreg vs v33: 51% (144/280), PASS.
 - Local vs v12: 646-0 with 6 deaths (v33 494-0, 25 deaths).
 - Nonreg PASS vs v12 80%, Jame v3 92% (`data/v34-gates.txt`).
+
+## Ranked
+Submitted 2026-10-29 07:49Z as team bot version 30 (user-approved), replacing v33 at 54-51. Scrim panel queued.

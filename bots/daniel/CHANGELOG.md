@@ -24,7 +24,7 @@ Version folder ≠ team submission number: the platform counts every submission 
   her target and next to no enemy. Top-10 replays: their Vesper dies in 10% of healthy 1v1s (ours 28%) and is adjacent
   12% of contact rounds (ours 20%). Locally 50% vs v26; 79% vs v12, 91% vs Jame v3.
 
-## v34 (from v33; not submitted)
+## v34 (from v33; submitted 2026-10-29 07:49Z as team bot version 30)
 - **B86 01boss_battle bags:** until the Monolith corridor to the only altar is open, carriers bank only 100+ gems (they
   died at the breach with 9-19). Map gate 97% (58/60) vs v33; nonreg 51%.
 
