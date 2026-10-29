@@ -10,3 +10,4 @@ gold by r300.
 
 Locally (`data/b84-race.txt`): race vs v27 53%; map gate on the 6 maps vs v27 49%. At 500 per cluster the map gate was
 40%, because v27 farms gold groups and wins the late fights in self-play. Ranked is the judge.
+- Nonreg PASS: vs v27 50% (212/420), v12 80%, Jame v3 92% (`data/v33-gates.txt`).
