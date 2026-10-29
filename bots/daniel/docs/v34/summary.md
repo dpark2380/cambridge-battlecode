@@ -42,3 +42,5 @@ v34 resubmitted 14:23Z as team bot version 37.
 
 v35 (b92) then had a full ranked run from 14:28Z: 64-71 over 135, which met the auto-revert rule. v34 resubmitted
 2026-10-29 19:01Z as team bot version 39, the live bot.
+
+Since the 19:01Z resubmission: 58-55 over 115 ranked games by 22:55Z (ladder #236, 1677). That is about level, close to v34's first run (v33 54-51 before it) and better than v35's 64-71.
