@@ -24,7 +24,7 @@ Version folder ≠ team submission number: the platform counts every submission 
   her target and next to no enemy. Top-10 replays: their Vesper dies in 10% of healthy 1v1s (ours 28%) and is adjacent
   12% of contact rounds (ours 20%). Locally 50% vs v26; 79% vs v12, 91% vs Jame v3.
 
-## v31 (from v27; not submitted)
+## v31 (from v27; submitted 2026-10-29 01:54Z as team bot version 27, user-approved; v27 closed 56-49)
 - **B80 + B81:** v30's earlier leaving for Ryth/Marcella against pairs, plus the fight check's health-only clause only when
   our damage is ≥ 0.75× theirs (v25-v27: 33% vs Power stackers). Nonreg vs v27 50%, v12 76%, Jame v3 93%.
 
@@ -32,7 +32,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 - **B80 leave earlier against pairs:** Ryth and Marcella leave at 65% when 2+ enemies are within 5 (v27 ranked: 58% of Ryth's
   deaths had 2+ enemies that close, 63% of them on the walk home). Locally neutral (51% vs v27); 78% vs v12, 91% vs Jame v3.
 
-## v27 (from v26; submitted 2026-10-28 22:22Z as team bot version 26, user-approved; v26b closed 22-28)
+## v27 (from v26; submitted 2026-10-28 22:22Z as team bot version 26, user-approved; v26b closed 22-28; ranked 56-49)
 - **B73 Vesper needs a clear edge:** Vesper engages only when ours ≥ 1.3 × theirs. She dies in 38% of healthy ranked
   1v1s (v25) and 39% on v26's panel. Locally neutral (48% vs v26, nonreg borderline PASS).
 
