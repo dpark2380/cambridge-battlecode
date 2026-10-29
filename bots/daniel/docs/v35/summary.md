@@ -15,6 +15,7 @@ v34 plus two fight changes, each neutral on wins in the first scrim A/B round bu
 | gain gate vs v34 | PASS, 234/420 = 56% |
 | nonreg vs v12 | PASS |
 | nonreg vs Jame v3 | PASS, 262/280 = 94% |
+| nonreg vs v33 | PASS, 162/280 = 58% |
 | scrim panel (team bot version 36, 14:06Z) | 28-62 (v34 30-60); paired 8 L→W, 10 W→L, net -2; deaths -0.90/game |
 
 Scrim panels, `tools/fights.py` (death within 24 rounds of contact): v34 28%, b87b 25%, b91a 25%; outnumbered 2v1
