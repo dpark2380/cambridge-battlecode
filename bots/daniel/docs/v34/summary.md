@@ -19,3 +19,18 @@ Submitted 2026-10-29 07:49Z as team bot version 30 (user-approved), replacing v3
 - tune.py on v34 (08:20Z; tribute_gems, tribute_detour, spawn_leave_health, gold_weight, max_damage_share,
   carrier_recall_health; 6 iterations x 3 candidates): no candidate beat the incumbent (best step 53%, not confirmed).
 - Scrim panel: 30-60, identical game for game to v33's (no panel map is 01boss_battle and games are deterministic). A panel only tells versions apart when the change plays on panel maps.
+
+## Scrim A/B round (2026-10-29 10:42-12:21Z, user-approved)
+Scrims are deterministic per (opponent, map, side), so each candidate was submitted for its 90-game panel and compared
+game by game with v34's panel (30-60). Candidates are v34 plus one change each (backlog rows).
+
+| Candidate | Live (team bot version) | Panel | L→W | W→L | Net | Identical games | Deaths/game | Verdict |
+|---|---|---|---|---|---|---|---|---|
+| b89c: Vesper Treasure > Durability > Power of strength, 25% health (B89) | 10:42 (31) | 25-65 | 3 | 8 | -5 | 25 | ~0 | rejected |
+| b87b: join a fight an ally within 4 is in (B87) | 11:00 (32) | 29-61 | 8 | 9 | -1 | 4 | -0.50 | neutral |
+| b91a: opening pack before r60 on 4-5 body maps (B91) | 11:45 (33) | 31-59 | 12 | 11 | +1 | 20 | -1.26 | neutral |
+| b88d: wait for 2 allies near a recent lost fight (B88) | 12:04 (34) | 20-70 | 5 | 15 | -10 | 7 | +0.36 | rejected |
+
+A change that touches every game makes almost every game diverge, so flips have a spread of about sqrt(flips) (±4
+for ~20 flips): only b88d's -10 is clearly real. Ranked over the A/B period (mixed candidates): 22-18. v34
+resubmitted 12:21Z as team bot version 35.
