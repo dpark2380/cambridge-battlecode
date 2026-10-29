@@ -21,7 +21,7 @@ applies from 30 games.
   - Deaths per contact 19% (v27 17%). Vesper healthy-1v1 35% (v27 26%).
   - Mixed so far; keep collecting.
 
-## Reverted (03:35Z)
+## Reverted (03:37Z)
 24-26 over 50 ranked games, 12-18 over the last 30. That met the trigger, and the panel (28-62 vs 32-58) confirmed it, so v27
 was resubmitted. B80 and B81 are neither confirmed nor ruled out: the Ryth walk-home share fell (55% → 40%), but overall
 fight trade and Vesper got worse.
