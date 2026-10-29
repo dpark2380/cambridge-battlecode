@@ -33,3 +33,4 @@ ranked, so ranked games decide.
 - Deaths per contact: 17%.
 - Healthy-1v1 deaths: Vesper **25%** (v26 28%, v28 45%, top 10%), Marcella 4% (top 4%), HoR 21%.
 - Deaths on the walk home: 38% overall; Ryth 63%, Marcella 53%.
+- Ranked, 80 games (43-37): deaths per contact 17%; Vesper healthy-1v1 26% (v26 28%), HoR 21%, Marcella 7%; walk-home 33% (Ryth 55%). B73 barely moved Vesper in ranked.
