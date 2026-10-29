@@ -30,7 +30,12 @@ game by game with v34's panel (30-60). Candidates are v34 plus one change each (
 | b87b: join a fight an ally within 4 is in (B87) | 11:00 (32) | 29-61 | 8 | 9 | -1 | 4 | -0.50 | neutral |
 | b91a: opening pack before r60 on 4-5 body maps (B91) | 11:45 (33) | 31-59 | 12 | 11 | +1 | 20 | -1.26 | neutral |
 | b88d: wait for 2 allies near a recent lost fight (B88) | 12:04 (34) | 20-70 | 5 | 15 | -10 | 7 | +0.36 | rejected |
+| b92: b87b + b91a (B92) | 14:06 (36) | 28-62 | 8 | 10 | -2 | 2 | -0.90 | neutral |
 
 A change that touches every game makes almost every game diverge, so flips have a spread of about sqrt(flips) (±4
 for ~20 flips): only b88d's -10 is clearly real. Ranked over the A/B period (mixed candidates): 22-18. v34
 resubmitted 12:21Z as team bot version 35.
+
+Second round (user: "Can you try the A/B again"): b92 passed the local gain gate vs v34 (234/420 = 56%, race 57%) but
+the panel is neutral (net -2, deaths -0.9/game). Local and scrim disagree again, as with every candidate since v27.
+v34 resubmitted 14:23Z as team bot version 37.
