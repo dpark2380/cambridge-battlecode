@@ -24,6 +24,10 @@ Version folder ≠ team submission number: the platform counts every submission 
   her target and next to no enemy. Top-10 replays: their Vesper dies in 10% of healthy 1v1s (ours 28%) and is adjacent
   12% of contact rounds (ours 20%). Locally 50% vs v26; 79% vs v12, 91% vs Jame v3.
 
+## v33 (from v32; not submitted)
+- **B84 gold-only groups at 250:** B56 had priced 0-gem gold groups at 120 per cluster too, making them the best target;
+  the six maps they dominate fell from 59% to 28% after B56. Gem groups keep 120. Locally neutral (53% race, 49% map gate).
+
 ## v32 (from v27; not submitted)
 - **B83 clusters at 250:** gem and gold clusters in groups with a monster were priced at 500 health (real 120), so the
   71-gem elk+8-cluster groups on 00gem_fields looked too slow (top teams open them at r25-31, we at r126-143; 1-10 there).
