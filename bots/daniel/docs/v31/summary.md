@@ -15,3 +15,8 @@ Nonreg PASS: vs v27 50% (280/560), v12 76%, Jame v3 93%. Neutral locally, as bot
 applies from 30 games.
 - Kingstonks probe (15 games, same map sets as v26's): **5-10** (v26 4-11; paired 2-1). Our deaths 12.6 vs v26's 14.9,
   theirs 8.6 vs 11.9: B81 avoids some losing fights but kills less, so little net change against this Power team.
+- Ranked, 35 games (18-17), `replays/daniel-v31/timelines`:
+  - Ryth walk-home deaths 40% (v27 55%; 25 deaths).
+  - vs ≥40% Power stackers 4/9 (v25-v27 33%; small n).
+  - Deaths per contact 19% (v27 17%). Vesper healthy-1v1 35% (v27 26%).
+  - Mixed so far; keep collecting.
