@@ -24,7 +24,10 @@ Version folder ≠ team submission number: the platform counts every submission 
   her target and next to no enemy. Top-10 replays: their Vesper dies in 10% of healthy 1v1s (ours 28%) and is adjacent
   12% of contact rounds (ours 20%). Locally 50% vs v26; 79% vs v12, 91% vs Jame v3.
 
-## v31 (from v27; submitted 2026-10-29 01:54Z as team bot version 27, user-approved; v27 closed 56-49)
+## v27 resubmitted (2026-10-29 03:35Z as team bot version 28, auto-revert)
+- v31 went 24-26, 12-18 over its last 30 (≤43% trigger), and its panel was 28-62 vs v27's 32-58, which confirms it.
+
+## v31 (from v27; submitted 2026-10-29 01:54Z as team bot version 27, user-approved; v27 closed 56-49; reverted 03:35Z at 24-26)
 - **B80 + B81:** v30's earlier leaving for Ryth/Marcella against pairs, plus the fight check's health-only clause only when
   our damage is ≥ 0.75× theirs (v25-v27: 33% vs Power stackers). Nonreg vs v27 50%, v12 76%, Jame v3 93%.
 
