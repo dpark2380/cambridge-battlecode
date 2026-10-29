@@ -12,3 +12,4 @@ no camp on it, a carrier banks only with 100+ gems.
 - Map gate on 01boss-battle vs v33: **97% (58/60), PASS**.
 - Nonreg vs v33: 51% (144/280), PASS.
 - Local vs v12: 646-0 with 6 deaths (v33 494-0, 25 deaths).
+- Nonreg PASS vs v12 80%, Jame v3 92% (`data/v34-gates.txt`).

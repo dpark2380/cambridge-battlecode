@@ -11,7 +11,7 @@
 | [v7](v7/summary.md) | `v7` | v6 + fixes from the ranked research: walking-distance stall check, unseen-attacker response, sieges for any too-big group, carriers recall at 50% | 59% vs v6; 72% vs Simon's v5 |
 | [v8](v8/summary.md) | `v8` | v7 ported to the week 2 patch: Golem/range camp table, Monolith leave rule and siege gate, gold-only play when no altar can be reached | 61% vs v7; 84% vs hunter |
 | [v9](v9/summary.md) | `v9` | v8 + pathing blocks living camps out of sight (the_farm freeze) + 40% of Power shards as health. Submitted 10:16Z (team bot version 8); ranked 47–33 | 69% vs v8; 55% vs Jame v3 (v8: 39%) |
-| [v34](v34/summary.md) | `v34` | v33 + B86: on 01boss_battle carriers bank only 100+ gems until the Monolith corridor opens. Not submitted | 01boss-battle 97% vs v33, nonreg 51% |
+| [v34](v34/summary.md) | `v34` | v33 + B86: on 01boss_battle carriers bank only 100+ gems until the Monolith corridor opens. Not submitted | 01boss-battle 97% vs v33, nonreg 51%; 80% vs v12, 92% vs Jame v3 |
 | [v33](v33/summary.md) | `v33` | v32 + B84: 0-gem gold groups priced at 250 again. **Submitted 2026-10-29 04:16Z as team bot version 29, the live bot** | race 53% vs v27, map gate 49%; nonreg 50% vs v27, 80% vs v12, 92% vs Jame v3 |
 | [v32](v32/summary.md) | `v32` | v27 + B83: clusters priced at 250 (was 500), so cluster-rich monster groups get taken early. Not submitted | 50% vs v27 (neutral locally), 80% vs v12, 92% vs Jame v3 |
 | [v31](v31/summary.md) | `v31` | v27 + B80 + B81 (leave earlier vs pairs; no health-only fights against stronger damage). Team bot version 27 (01:54Z), reverted 03:37Z at 24-26 | 50% vs v27 (neutral locally), 76% vs v12, 93% vs Jame v3 |
