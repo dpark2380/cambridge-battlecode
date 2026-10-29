@@ -8,3 +8,8 @@ Two changes, each locally neutral and each built from ranked evidence (backlog B
 
 ## Gates (`data/v31-gates.txt`)
 Nonreg PASS: vs v27 50% (280/560), v12 76%, Jame v3 93%. Neutral locally, as both parts were.
+
+## Submitted 2026-10-29 01:54Z (team bot version 27, user-approved). Scrim panel (90 games, `data/scrims/v31`)
+28-62 vs v27's 32-58 on the same setups. Paired: v31 won 7 setups v27 lost, v27 won 11. Deaths 15.7 vs 16.5, gems r500
+148 vs 139. The -4 is inside the panel's ±6 noise (v28's +4 did not hold in ranked), so ranked decides; the revert rule
+applies from 30 games.
