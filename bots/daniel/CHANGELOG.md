@@ -7,6 +7,11 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v34 resubmitted (2026-10-30 12:12Z as team bot version 46, auto-revert)
+- v37 went 10-20 over 30 ranked games (33%, limit 43%). Its panel beat v34's, but opponents' gold fell (5,320 a game vs
+  5,500-6,100 in v34's last three samples), so the rule reverted it. Next, on the user's approval: B109 ported onto v34
+  (`bots/_var/b109v34`) once its map and nonreg gates pass.
+
 ## v37 (2026-10-30 11:14Z as team bot version 45, user-approved)
 - v34 + B99c: while an enemy was seen in the last `threat_memory` rounds, plain movement dashes are kept for escapes;
   Vesper leaves at 50% health with an enemy in sight; a leaving Vesper runs unless her target is below 25% health.
