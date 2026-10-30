@@ -7,6 +7,10 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v38 re-activated (2026-10-30 20:55Z, `cambc submissions activate 47`, auto-revert of v39)
+- v39 went 63-67 over 130; the last 30 were 7-23 (limit 43%), on the six Willow maps 2-9. Opponents' gold rose only
+  5,852 → 6,266 and v39's panel was no better than v38's, so the rule reverted it. B111 (Willow draft) rejected in ranked.
+
 ## v39 (2026-10-30 16:14Z as team bot version 49, overnight auto-submit)
 - v38 + B111: Willow replaces the last core pick on 00dunes, 00eight, 00vault, 00monolith, 00crater, 02crossing (top-60
   teams drafting Willow win 65-79% there vs 35-46% without; our record there 44%). Draft only; elsewhere identical to v38.
