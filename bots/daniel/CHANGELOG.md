@@ -7,6 +7,15 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v37 (built 2026-10-30, not yet submitted)
+- v34 + B99c: while an enemy was seen in the last `threat_memory` rounds, plain movement dashes are kept for escapes;
+  Vesper leaves at 50% health with an enemy in sight; a leaving Vesper runs unless her target is below 25% health.
+- Scrim A/B (team bot version 43): panel 32-58 (v34 30-60), net +2 vs v34 and +6 vs v36, deaths 14.2 a game vs 17.7;
+  ranked 16-9 while live. Local race 53%, gain gate 51%.
+
+## v34 resubmitted (2026-10-30 10:08Z as team bot version 44, end of the scrim A/B round)
+- b95v34 (Jungle, team bot version 42) panel 23-67, net -7: rejected. b99c (team bot version 43) → v37. b97 skipped.
+
 ## v34 resubmitted (2026-10-30 01:32Z as team bot version 41, auto-revert)
 - v36 went 11-19 over 30 ranked games (37%, limit 43%); its panel was 26-64 vs v34's 30-60, so the rule reverted it.
   On most maps v36 plays exactly as v34, so much of the 11-19 is the field (opponents' gold 5.5k → 6.1k); the 4

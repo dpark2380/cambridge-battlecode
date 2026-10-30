@@ -48,3 +48,10 @@ By 23:59Z: 75-70 over 145 (ladder #230, 1689).
 Final: 86-79 over 165 by 00:36Z 2026-10-30, replaced by v36 (team bot version 40).
 Resubmitted 2026-10-30 01:32Z as team bot version 41 (auto-revert: v36 11-19 over 30, panel 26-64).
 Since the 01:32Z resubmission: 53-37 over 90 by 04:37Z (59%); ladder from #244 1670 to #195 1726 at 04:23Z (a new high, previous 1721 on 10-28), #200 1722 at 04:37Z.
+
+## Scrim A/B round 2026-10-30 (user: "yes run ab")
+| Candidate | Live (team bot version) | Panel | vs v34 L→W / W→L / net | vs v36 net | Deaths/game | Ranked while live | Verdict |
+|---|---|---|---|---|---|---|---|
+| b95v34: Jungle emblem (B95) | 08:37 (42) | 23-67 | 3 / 10 / -7 | -3 | 18.6 | about 6-17 | rejected |
+| b99c: Vesper survival (B99c) | 09:17 (43) | 32-58 | 11 / 9 / +2 | +6 | 14.2 (v34 17.7) | 16-9 | → v37, proposed |
+b97 skipped: the round cost rating (#194 1729 → #242 1674 at 09:22Z, mostly under b95v34). v34 resubmitted 10:08Z as team bot version 44.
