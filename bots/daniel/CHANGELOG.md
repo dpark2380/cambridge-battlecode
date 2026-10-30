@@ -12,6 +12,8 @@ Version folder ≠ team submission number: the platform counts every submission 
   ranked sample from 12:42Z. The team is now in pinned mode: a new submit goes live only after `cambc submissions activate <n>`.
 - v34 + B109: on 02guardians a carrier with 100+ gems and >60% health strikes the Monolith gate alone.
 - Map gate vs v34 (02guardians, 01boss-battle) PASS 50/80 = 62%; nonreg vs v34 PASS 141/280 = 50%. See `docs/v38`.
+- Nonreg PASS vs v12 227/280 = 81%, vs Jame v3 257/280 = 92%. Gauntlet +408 [+360, +412] (predicted ladder 1655; actual
+  1651 at 13:00Z). v37's 20 ranked losses: 8 races, 4 fuel, 3 tiebreak, 2 spirals; no map cluster pointing at B99c.
 
 ## v34 resubmitted (2026-10-30 12:12Z as team bot version 46, auto-revert)
 - v37 went 10-20 over 30 ranked games (33%, limit 43%). Its panel beat v34's, but opponents' gold fell (5,320 a game vs
