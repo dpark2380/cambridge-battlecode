@@ -47,3 +47,4 @@ Since the 19:01Z resubmission: 58-55 over 115 ranked games by 22:55Z (ladder #23
 By 23:59Z: 75-70 over 145 (ladder #230, 1689).
 Final: 86-79 over 165 by 00:36Z 2026-10-30, replaced by v36 (team bot version 40).
 Resubmitted 2026-10-30 01:32Z as team bot version 41 (auto-revert: v36 11-19 over 30, panel 26-64).
+Since the 01:32Z resubmission: 53-37 over 90 by 04:37Z (59%); ladder from #244 1670 to #195 1726 at 04:23Z (a new high, previous 1721 on 10-28), #200 1722 at 04:37Z.
