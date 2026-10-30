@@ -15,6 +15,8 @@ Version folder ≠ team submission number: the platform counts every submission 
 - v38 at 100 games: 55-45; the last 30 went 9-21 (trigger), but opponents' gold rose 4,743 → 6,443 a game as we
   climbed to #212 (field shift), and v34 plays identically off 02guardians, so no revert. v39 submitted under the
   overnight scout-evidence clause; fallback v38 (version 47).
+- Live by 16:32Z. Scrim panel (17:21Z): 24-66, same as v38's 24-66; 53 of 90 games identical. Willow maps: 00eight 2-4
+  (v38 1-5), 00vault 0-6 (v38 3-3; on 4-pick vault Willow replaces Vendetta). Ranked 7-8 over the first 15.
 
 ## v38 (2026-10-30 ~12:22Z, submitted by the user as team bot version 47)
 - 12:40-12:42Z a second session resubmitted v34 by mistake (version 48, cancelled); v47 re-pinned live. Count v38's
