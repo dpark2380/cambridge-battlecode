@@ -31,3 +31,4 @@ rebuilt on every call (static: could be cached).
 
 ## Ranked
 Submitted 2026-10-30 00:36Z as team bot version 40 (user: "yes submit"), replacing v34 at 86-79 over 165 since its 19:01Z resubmission. Fallback v34 under the auto-revert rule. Scrim panel queued 00:37Z (includes 01islands and 00lanes).
+- 01:13Z: 6-14 over 20 (#243, 1670). 18 of the 20 games had 0-4 fuel-exhausted turns, where v36 plays exactly as v34 (same code paths, deterministic), so the start is opponents and variance, not B100. Losses: 3 spirals (00eight 38 deaths, 01hooks 48, 02crossing 34), 5 races.
