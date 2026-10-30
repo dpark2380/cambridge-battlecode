@@ -21,6 +21,8 @@ changes (`living_key`, `living_camps` in `bot.h`). Decisions are identical whene
 | Fuel-exhausted turns, one local game vs v33 | 02tangle 402 → 98, 01islands 32 → 2, 00lanes 65 → 10 |
 | Gain gate vs v34 on 02tangle, 01islands, 01big-world, 00lanes, 01boss-battle, 02harvest, 00ambush | **PASS, 91/154 = 59%** (02tangle 16/22, 01islands 14/22) |
 | Nonreg vs v34, all maps | PASS, 140/280 = 50% |
+| Nonreg vs v12 | PASS, 222/280 = 79% |
+| Nonreg vs Jame v3 | PASS, 259/280 = 92% |
 
 ## Remaining fuel (02tangle, after the fix)
 Turns average ~34k. Peaks: `target_field` recompute (~38k every 10 rounds), `go_tribute`'s two walk fields
