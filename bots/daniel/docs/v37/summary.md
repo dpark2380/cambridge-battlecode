@@ -20,4 +20,7 @@ on cooldown when she needed to leave, and a leaving Vesper with an enemy in rang
 | Panel deaths | **14.2 a game** (v34 17.7); opponents' deaths 11.6 (9.7); gems 558/766 (511/819); gold 5,348 (5,057) |
 | Ranked while live (09:17-10:08Z) | **16-9**; ladder #242 1674 → #219 1700 |
 
-Not yet submitted for a full ranked run: v34 resubmitted 10:08Z as team bot version 44 at the end of the A/B round.
+Nonreg PASS vs v12 225/280 = 80%, vs Jame v3 250/280 = 89% (`data/v37-gates.txt`).
+
+## Ranked
+v34 resubmitted 10:08Z as team bot version 44 at the end of the A/B round (#219 1700 → #235 1683 by 11:14Z). **v37 submitted 2026-10-30 11:14Z as team bot version 45** (user: "Submit"). Fallback v34 under the auto-revert rule; v37's panel (32-58) is already better than v34's (30-60), so a ranked trigger reverts only if opponents' gold did not rise.
