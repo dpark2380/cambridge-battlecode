@@ -28,3 +28,6 @@ changes (`living_key`, `living_camps` in `bot.h`). Decisions are identical whene
 Turns average ~34k. Peaks: `target_field` recompute (~38k every 10 rounds), `go_tribute`'s two walk fields
 (~38k), the camp union rebuild (~16k when a group changes), `place_ward` ~6k every turn, `terrain_blocked()`
 rebuilt on every call (static: could be cached).
+
+## Ranked
+Submitted 2026-10-30 00:36Z as team bot version 40 (user: "yes submit"), replacing v34 at 86-79 over 165 since its 19:01Z resubmission. Fallback v34 under the auto-revert rule. Scrim panel queued 00:37Z (includes 01islands and 00lanes).
