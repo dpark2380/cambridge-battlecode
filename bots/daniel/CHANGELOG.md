@@ -7,7 +7,7 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
-## v38 (built 2026-10-30, not yet submitted)
+## v38 (2026-10-30 ~12:22Z, submitted by the user, likely team bot version 47)
 - v34 + B109: on 02guardians a carrier with 100+ gems and >60% health strikes the Monolith gate alone.
 - Map gate vs v34 (02guardians, 01boss-battle) PASS 50/80 = 62%; nonreg vs v34 PASS 141/280 = 50%. See `docs/v38`.
 
