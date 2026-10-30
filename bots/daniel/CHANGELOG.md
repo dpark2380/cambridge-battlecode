@@ -7,6 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v36 (not yet submitted)
+- v34 + B100: `move_towards_closest` caches the union of living camp groups' tiles instead of ORing every group's
+  tiles on every move (~1k fuel per group: 33k of a 45k move on 02tangle). Same decisions whenever fuel sufficed.
+- Fuel-exhausted turns, local vs v33: 02tangle 402 → 98, 01islands 32 → 2, 00lanes 65 → 10.
+- Gain gate vs v34 on seven fuel-heavy maps PASS (91/154 = 59%); nonreg vs v34 all maps PASS (140/280 = 50%).
+
 ## v34 resubmitted (2026-10-29 19:01Z as team bot version 39, auto-revert)
 - v35 went 64-71 over 135 ranked games (last 30: 13-17), at the 48% limit; its panel was no better than v34's and
   opponents' gold fell, so the rule reverted it.
