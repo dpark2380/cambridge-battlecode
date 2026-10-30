@@ -7,11 +7,14 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
-## v39 (built 2026-10-30, candidate)
+## v39 (2026-10-30 16:14Z as team bot version 49, overnight auto-submit)
 - v38 + B111: Willow replaces the last core pick on 00dunes, 00eight, 00vault, 00monolith, 00crater, 02crossing (top-60
   teams drafting Willow win 65-79% there vs 35-46% without; our record there 44%). Draft only; elsewhere identical to v38.
 - Map gate vs v38 52% (neutral); nonreg PASS vs v38 50%, v12 81%, Jame v3 92%. See `docs/v39`.
 - v38 at 60 ranked games: 38-22 (63%); ladder #214, 1706 (14:43Z).
+- v38 at 100 games: 55-45; the last 30 went 9-21 (trigger), but opponents' gold rose 4,743 → 6,443 a game as we
+  climbed to #212 (field shift), and v34 plays identically off 02guardians, so no revert. v39 submitted under the
+  overnight scout-evidence clause; fallback v38 (version 47).
 
 ## v38 (2026-10-30 ~12:22Z, submitted by the user as team bot version 47)
 - 12:40-12:42Z a second session resubmitted v34 by mistake (version 48, cancelled); v47 re-pinned live. Count v38's

@@ -41,3 +41,4 @@
 {"time": "2026-10-30T12:22Z", "bot": "bots/daniel/v38", "platform_version": null, "note": ""}
 {"time": "2026-10-30T12:40Z", "bot": "bots/daniel/v34", "platform_version": 48, "note": "submitted in error by a second session (stale auto-revert of v37); cancelled 12:42Z, v38 (version 47) re-pinned live"}
 {"time": "2026-10-30T12:42Z", "bot": "bots/daniel/v38", "platform_version": 47, "note": "re-activated (cambc submissions activate 47) after the stray version 48 was cancelled"}
+{"time": "2026-10-30T16:14Z", "bot": "bots/daniel/v39", "platform_version": 49, "note": "selected via cambc submissions activate 49 (pinned mode); live once its build finishes"}
