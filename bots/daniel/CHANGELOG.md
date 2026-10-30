@@ -17,7 +17,8 @@ Version folder ≠ team submission number: the platform counts every submission 
   overnight scout-evidence clause; fallback v38 (version 47).
 - Live by 16:32Z. Scrim panel (17:21Z): 24-66, same as v38's 24-66; 53 of 90 games identical. Willow maps: 00eight 2-4
   (v38 1-5), 00vault 0-6 (v38 3-3; on 4-pick vault Willow replaces Vendetta). Ranked 7-8 over the first 15.
-- Ranked: 17-13 at 30, 31-29 at 60 (18:41Z); on the six Willow maps 1-6. Ladder #213 1713 at 18:10Z.
+- Ranked: 17-13 at 30, 31-29 at 60, 57-53 at 110 (20:20Z); on the six Willow maps 2-7. Ladder #213 1715 at 19:15Z, #219
+  1702 at 20:21Z.
 
 ## v38 (2026-10-30 ~12:22Z, submitted by the user as team bot version 47)
 - 12:40-12:42Z a second session resubmitted v34 by mistake (version 48, cancelled); v47 re-pinned live. Count v38's
