@@ -14,6 +14,8 @@ Version folder ≠ team submission number: the platform counts every submission 
 - Baseline to beat: v38 83-62 over 145 (21:15Z-02:10Z), ladder #187 1745 at 02:30Z.
 - Scrim panel (03:20Z): 27-63 (v38/v39 24-66); deaths 15.2 vs 18.3 a game, kills 8.4 vs 7.9, gold 5,414 vs 5,098; 89 of 90
   games diverged. Ranked 10-10 over the first 20.
+- 35 games (03:36Z): 15-20 (43%, trigger). Kept as a field shift: panel better, opponents' gold 5,456 (v38 window) → 6,695.
+  Ranked deaths 13.5 a game vs v38's 12.7, so the panel's death cut is not showing yet.
 
 ## v38 re-activated (2026-10-30 20:55Z, `cambc submissions activate 47`, auto-revert of v39)
 - v39 went 63-67 over 130; the last 30 were 7-23 (limit 43%), on the six Willow maps 2-9. Opponents' gold rose only
