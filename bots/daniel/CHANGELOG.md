@@ -7,6 +7,11 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v42 (2026-10-31 09:20Z uploaded as team bot version 53, ranked trial)
+- v41 + B113b: gold counts 0.5 (not 0.2) in target choice before round 500. Losses trail 1.2k vs 2.3k gold by r500.
+- Race vs v41 59%; **gain gate vs v41 PASS 55% (233/420)**; nonreg PASS vs v12 81%, Jame v3 90%. See `docs/v42`.
+- v41 ended 22-28 over 50 (07:27-09:20Z), rating ~1676.
+
 ## v41 (2026-10-31 07:10Z uploaded as team bot version 52, ranked trial)
 - v38 + B100 (fuel cache, first tried as v36). 5 of v38's 41 losses since 04:35Z are fuel stalls.
 - Gain on 7 fuel-heavy maps vs v38 54% (inconclusive, leaning positive); nonreg PASS vs v38 49%, v12 79%, Jame v3 92%.
