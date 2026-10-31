@@ -8,6 +8,8 @@ commit as any change to a bot.
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
 ## v38 re-uploaded (2026-10-31 04:18Z as team bot version 51, revert of v40)
+- Live by 04:35Z. After 50 games (06:12Z) v38 itself was 22-28 at rating ~1723, the same as v40's 22-28: the revert made no
+  measurable difference. Near our equilibrium rating (~1725-1745) every bot wins about half; compare by rating over 100+ games.
 - v40 went 22-28 over 50 (44%, under the ~45% limit at 50). Opponents' gold was higher (6,315 vs 5,456), but v38's own last
   50 games at the same rating (1700-1745, 00:30-02:00Z) went 32-18 against 5,313: the gold rise is our deaths feeding kill
   gold, not a stronger field. Ranked deaths per game: Vesper 3.44 (v38 4.01), Heart of Ruin 3.80 (3.90); the panel's
