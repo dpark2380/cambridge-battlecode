@@ -7,6 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v40 (2026-10-31 02:05Z uploaded as team bot version 50; live by 02:29Z, ranked trial)
+- v38 + B112a: a lone Vesper/Heart of Ruin (no ally within 4) that sees 2+ enemies within 6 falls back toward the nearest
+  ally or home before the fight. Evidence: 19 loss replays, their deaths come alone and from healthy (B112).
+- Nonreg PASS vs v38 51%, v12 82%, Jame v3 93%; hunter-v0 91% (v38 93%). See `docs/v40`.
+- Baseline to beat: v38 83-62 over 145 (21:15Z-02:10Z), ladder #187 1745 at 02:30Z.
+
 ## v38 re-activated (2026-10-30 20:55Z, `cambc submissions activate 47`, auto-revert of v39)
 - v39 went 63-67 over 130; the last 30 were 7-23 (limit 43%), on the six Willow maps 2-9. Opponents' gold rose only
   5,852 → 6,266 and v39's panel was no better than v38's, so the rule reverted it. B111 (Willow draft) rejected in ranked.

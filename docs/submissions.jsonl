@@ -43,3 +43,4 @@
 {"time": "2026-10-30T12:42Z", "bot": "bots/daniel/v38", "platform_version": 47, "note": "re-activated (cambc submissions activate 47) after the stray version 48 was cancelled"}
 {"time": "2026-10-30T16:14Z", "bot": "bots/daniel/v39", "platform_version": 49, "note": "selected via cambc submissions activate 49 (pinned); live by 16:32Z (build queued until then): count v39's ranked games from 16:32Z"}
 {"time": "2026-10-30T20:55Z", "bot": "bots/daniel/v38", "platform_version": 47, "note": "auto-revert: cambc submissions activate 47 (v39 last 30 7-23, Willow maps 2-9, panel no better); live by 21:15Z (count from then)"}
+{"time": "2026-10-31T02:30Z", "bot": "bots/daniel/v40", "platform_version": 50, "note": "uploaded 02:05Z; the user activated it (team now in 'follow newest' mode); live by 02:29Z. v38b window ends ~02:10Z, v40 counted from 02:30Z"}
