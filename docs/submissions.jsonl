@@ -47,4 +47,4 @@
 {"time": "2026-10-31T04:18Z", "bot": "bots/daniel/v38", "platform_version": 51, "note": "revert of v40: v38 re-uploaded (follow-newest mode); live once built; live by 04:35Z (count v38c from then)"}
 {"time": "2026-10-31T07:10Z", "bot": "bots/daniel/v41", "platform_version": 52, "note": "follow-newest; live by 07:27Z (count v41 from then)"}
 {"time": "2026-10-31T09:20Z", "bot": "bots/daniel/v42", "platform_version": 53, "note": "follow-newest; live by 09:37Z (count v42 from then)"}
-{"time": "2026-10-31T10:40Z", "bot": "bots/daniel/v41", "platform_version": 54, "note": "revert of v42 (11-19 over 30): v41 re-uploaded; live once built"}
+{"time": "2026-10-31T10:40Z", "bot": "bots/daniel/v41", "platform_version": 54, "note": "revert of v42 (11-19 over 30): v41 re-uploaded; live once built; live by 10:56Z (count v41b from then)"}
