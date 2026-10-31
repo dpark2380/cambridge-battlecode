@@ -99,7 +99,10 @@ def main():
     parser.add_argument("--jobs", type=int, default=8)
     args = parser.parse_args()
 
-    teams = cambc("ladder", "--limit", str(args.top), "--json")["teams"][:args.top]
+    teams = []  # `cambc ladder` returns at most 100 teams per page
+    for page in range(1, (args.top + 99) // 100 + 1):
+        teams += cambc("ladder", "--page", str(page), "--limit", "100", "--json")["teams"]
+    teams = teams[:args.top]
     report = []
     for t in teams:
         listing = cambc("matches", "list", "--team", t["teamId"], "--kind", "ranked", "--limit", str(args.matches), "--json")
