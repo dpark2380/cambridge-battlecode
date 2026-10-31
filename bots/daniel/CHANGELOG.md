@@ -7,6 +7,10 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v41 re-uploaded (2026-10-31 10:40Z as team bot version 54, revert of v42)
+- v42 went 11-19 over 30 (37%) vs v41's 22-28 (44%) at the same rating (~1660-1676). Its gold rose (losses 6.4k vs ~4.2k)
+  but deaths in losses stayed at 16: more gold did not buy wins. B113b rejected in ranked.
+
 ## v42 (2026-10-31 09:20Z uploaded as team bot version 53, ranked trial)
 - v41 + B113b: gold counts 0.5 (not 0.2) in target choice before round 500. Losses trail 1.2k vs 2.3k gold by r500.
 - Race vs v41 59%; **gain gate vs v41 PASS 55% (233/420)**; nonreg PASS vs v12 81%, Jame v3 90%. See `docs/v42`.
