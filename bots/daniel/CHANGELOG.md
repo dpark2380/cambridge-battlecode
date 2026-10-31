@@ -7,6 +7,11 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v41 (2026-10-31 07:10Z uploaded as team bot version 52, ranked trial)
+- v38 + B100 (fuel cache, first tried as v36). 5 of v38's 41 losses since 04:35Z are fuel stalls.
+- Gain on 7 fuel-heavy maps vs v38 54% (inconclusive, leaning positive); nonreg PASS vs v38 49%, v12 79%, Jame v3 92%.
+  See `docs/v41`.
+
 ## v38 re-uploaded (2026-10-31 04:18Z as team bot version 51, revert of v40)
 - Live by 04:35Z. After 50 games (06:12Z) v38 itself was 22-28 at rating ~1723, the same as v40's 22-28: the revert made no
   measurable difference. Near our equilibrium rating (~1725-1745) every bot wins about half; compare by rating over 100+ games.
