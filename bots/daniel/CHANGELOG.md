@@ -9,6 +9,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 
 ## v41 re-uploaded (2026-10-31 10:40Z as team bot version 54, revert of v42)
 - Live by 10:56Z: 8-7 over 15 by 11:31Z, ladder #239 1686. On the 7 fuel-heavy maps v41 is 4-3 vs v38 8-14.
+- **100 games (14:14Z): 54-46 (54%)**, rating 1660 → 1707 (#222). Proven; the sprint 3 deadline bot.
 - v42 went 11-19 over 30 (37%) vs v41's 22-28 (44%) at the same rating (~1660-1676). Its gold rose (losses 6.4k vs ~4.2k)
   but deaths in losses stayed at 16: more gold did not buy wins. B113b rejected in ranked.
 
