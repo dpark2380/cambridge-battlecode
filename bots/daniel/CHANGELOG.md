@@ -11,6 +11,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 - Live by 10:56Z: 8-7 over 15 by 11:31Z, ladder #239 1686. On the 7 fuel-heavy maps v41 is 4-3 vs v38 8-14.
 - **100 games (14:14Z): 54-46 (54%)**, rating 1660 → 1707 (#222). Proven; the sprint 3 deadline bot.
 - 18:00Z freeze: 110-95 over 205, ladder #199 1730. Stays live to the deadline.
+- Deadline check (23:49Z): 198-177 over 375, ladder #182 1749 (sprint best).
 - v42 went 11-19 over 30 (37%) vs v41's 22-28 (44%) at the same rating (~1660-1676). Its gold rose (losses 6.4k vs ~4.2k)
   but deaths in losses stayed at 16: more gold did not buy wins. B113b rejected in ranked.
 

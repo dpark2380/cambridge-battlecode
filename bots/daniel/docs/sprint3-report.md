@@ -1,7 +1,7 @@
 # Sprint 3 report (deadline 2026-11-01 00:00Z)
 
 **Live at the deadline: v41 = v38 + B100 fuel cache, team bot version 54**, chosen as the best proven bot:
-180-170 over 350 ranked games since 2026-10-31 10:56Z (23:01Z), ladder #208 of 815, rating 1714.
+198-177 over 375 ranked games since 2026-10-31 10:56Z (23:49Z), ladder **#182 of 814, rating 1749**.
 
 ## Ladder path (UTC)
 
@@ -15,8 +15,9 @@
 | 31 Oct 14:14 | #222 | 1707 | v41 (version 54), 100 games |
 | 31 Oct 18:04 | #199 | 1730 | v41, freeze |
 | 31 Oct 23:01 | #208 | 1714 | v41 |
+| 31 Oct 23:49 | **#182** | **1749** | v41 (final check) |
 
-The user's goal of rank ≤180 (≈1750) was not reached. The best was #187 (1745) at 02:30Z.
+Rank ≤180 (≈1750) was missed by two places: #182 at 1749 at the final check, the sprint's best.
 
 ## Versions tried
 
@@ -25,7 +26,7 @@ The user's goal of rank ≤180 (≈1750) was not reached. The best was #187 (174
 | v38 | v34 + B109 (02guardians gate) | map gate 62%, nonreg 50% | 55-45 first 100; 83-62 over 145; later windows 33-47, 22-28 | benchmark |
 | v39 | v38 + B111 Willow on six maps | top-60 scout (65-79% with Willow); map gate 52% | 63-67 over 130, Willow maps 2-9 | reverted |
 | v40 | v38 + B112a lone Vesper/HoR fall back | 19 loss replays; panel 27-63 (-3 deaths/game) | 22-28 over 50 (= v38's 22-28 later) | reverted; indistinguishable |
-| v41 | v38 + B100 fuel cache (retry) | gain on fuel maps 54% (inconclusive), nonreg 49% | 22-28 over 50, then **180-170 over 350**; fuel-exhausted turns 6.3/game vs 17.5-18.5; fuel maps 4-3 vs 8-14 | **deadline bot** |
+| v41 | v38 + B100 fuel cache (retry) | gain on fuel maps 54% (inconclusive), nonreg 49% | 22-28 over 50, then **198-177 over 375**; fuel-exhausted turns 6.3/game vs 17.5-18.5; fuel maps 4-3 vs 8-14 | **deadline bot** |
 | v42 | v41 + B113b early gold weight 0.5 | race 59%, **gain gate PASS 55%** | 11-19 over 30 | reverted |
 
 ## Findings (backlog B110-B116)
