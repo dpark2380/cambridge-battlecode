@@ -7,6 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v38 re-uploaded (2026-10-31 04:18Z as team bot version 51, revert of v40)
+- v40 went 22-28 over 50 (44%, under the ~45% limit at 50). Opponents' gold was higher (6,315 vs 5,456), but v38's own last
+  50 games at the same rating (1700-1745, 00:30-02:00Z) went 32-18 against 5,313: the gold rise is our deaths feeding kill
+  gold, not a stronger field. Ranked deaths per game: Vesper 3.44 (v38 4.01), Heart of Ruin 3.80 (3.90); the panel's
+  death cut did not carry over. B112a rejected in ranked; B112b (same rule for all champions) dropped with it.
+
 ## v40 (2026-10-31 02:05Z uploaded as team bot version 50; live by 02:29Z, ranked trial)
 - v38 + B112a: a lone Vesper/Heart of Ruin (no ally within 4) that sees 2+ enemies within 6 falls back toward the nearest
   ally or home before the fight. Evidence: 19 loss replays, their deaths come alone and from healthy (B112).
