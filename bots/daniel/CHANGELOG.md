@@ -12,6 +12,8 @@ Version folder ≠ team submission number: the platform counts every submission 
 - Gain on 7 fuel-heavy maps vs v38 54% (inconclusive, leaning positive); nonreg PASS vs v38 49%, v12 79%, Jame v3 92%.
   See `docs/v41`.
 - Live by 07:27Z. Scrim panel (08:30Z): 25-65 (v38 24-66); 01islands 2-4 (v38 1-5). Ranked 6-9 over the first 15.
+- 35 games (08:32Z): 14-21 (40%) at rating 1672-1694, v38 at the same rating 33-47 (41%). Fuel-exhausted turns per ranked
+  game 6.3 vs v38's 17.5-18.5; games with 50+ such turns 2/35 vs 20/225. Mechanism confirmed; results level.
 
 ## v38 re-uploaded (2026-10-31 04:18Z as team bot version 51, revert of v40)
 - Live by 04:35Z. After 50 games (06:12Z) v38 itself was 22-28 at rating ~1723, the same as v40's 22-28: the revert made no
