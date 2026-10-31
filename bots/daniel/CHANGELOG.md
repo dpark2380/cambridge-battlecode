@@ -11,6 +11,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 - v38 + B100 (fuel cache, first tried as v36). 5 of v38's 41 losses since 04:35Z are fuel stalls.
 - Gain on 7 fuel-heavy maps vs v38 54% (inconclusive, leaning positive); nonreg PASS vs v38 49%, v12 79%, Jame v3 92%.
   See `docs/v41`.
+- Live by 07:27Z. Scrim panel (08:30Z): 25-65 (v38 24-66); 01islands 2-4 (v38 1-5). Ranked 6-9 over the first 15.
 
 ## v38 re-uploaded (2026-10-31 04:18Z as team bot version 51, revert of v40)
 - Live by 04:35Z. After 50 games (06:12Z) v38 itself was 22-28 at rating ~1723, the same as v40's 22-28: the revert made no
