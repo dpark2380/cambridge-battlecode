@@ -7,6 +7,10 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v45 (2026-11-01 11:04Z uploaded as team bot version 59, scrim A/B + ranked trial vs v44)
+- v44 + B120: the lone fall-back for every champion. Nonreg PASS vs v44 52%, v12 81%, Jame v3 89%. See `docs/v45`.
+- Baseline: v44 20-20 over 40 since 09:32Z, panel 28-62 (deaths 15.8); ladder #237 1678.
+
 ## v44 (2026-11-01 09:29Z uploaded as team bot version 58, scrim A/B + ranked trial vs v43)
 - v43 + B112a: a lone Vesper/Heart of Ruin that sees 2+ enemies within 6 falls back before the fight.
 - Nonreg PASS vs v43 49%, v12 81%, Jame v3 92%. See `docs/v44`.
