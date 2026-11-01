@@ -7,6 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v48 (2026-11-01)
+
+- v47 + B126b: each body finishes Treasure (own stat), Prospector, Durability (health) and Jungle (own stat) emblems, then Bruiser forever (was Prospector, Durability, Bruiser).
+- Gates (nonreg): v47 52%, v12 73%, Jame v3 90%; race vs v47 49% (self-play hides an economy edge).
+- Submitted 13:25Z as team bot version 62. v47's trial: panel 29-61 (= v46) with deaths 12.1 (v46 13.9), ranked 19-11 over 30, ladder #226 1687 → #213 1713: kept as the base.
+
 ## v47 (2026-11-01)
 
 - v46 + B124 = B99c from v37: plain dashes kept for escapes while an enemy was seen lately; Vesper leaves at 50% with an enemy in sight; a leaving Vesper runs unless her target is below 25%.
