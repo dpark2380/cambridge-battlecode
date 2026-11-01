@@ -7,6 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v47 (2026-11-01)
+
+- v46 + B124 = B99c from v37: plain dashes kept for escapes while an enemy was seen lately; Vesper leaves at 50% with an enemy in sight; a leaving Vesper runs unless her target is below 25%.
+- Gates (nonreg): v46 51%, v12 77%, Jame v3 88%.
+- Submitted 12:10Z as team bot version 61 (first upload attempt returned an invalid response). v46's panel was 29-61 with 13.9 deaths (v44 28-62, 15.8): kept as the base. Ladder #230, 1688 at 12:10Z.
+
 ## v46 (2026-11-01)
 
 - v45 + B121: `carrier_recall_health` 0.5 → 0.65, so a body carrying gems leaves at 65% health.

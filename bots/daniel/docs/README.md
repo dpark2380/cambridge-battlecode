@@ -12,7 +12,8 @@
 | [v8](v8/summary.md) | `v8` | v7 ported to the week 2 patch: Golem/range camp table, Monolith leave rule and siege gate, gold-only play when no altar can be reached | 61% vs v7; 84% vs hunter |
 | [v9](v9/summary.md) | `v9` | v8 + pathing blocks living camps out of sight (the_farm freeze) + 40% of Power shards as health. Submitted 10:16Z (team bot version 8); ranked 47–33 | 69% vs v8; 55% vs Jame v3 (v8: 39%) |
 | [v45](v45/summary.md) | `v45` | v44 + B120: lone fall-back for every champion. Team bot version 59, 11:12-11:35Z: panel 26-64 (deaths 14.7) vs v44 28-62, ranked 6-4; replaced by v46 | nonreg 52% vs v44, 81% v12, 89% Jame v3 |
-| [v46](v46/summary.md) | `v46` | v45 + B121: carriers leave at 65% health. **Scrim A/B + ranked trial from 2026-11-01 11:35Z (team bot version 60)**; fallback v44 | nonreg 52% vs v45, 80% v12, 90% Jame v3 |
+| [v46](v46/summary.md) | `v46` | v45 + B121: carriers leave at 65% health. Team bot version 60, 11:42-12:10Z: panel 29-61 (deaths 13.9; v44 28-62/15.8), ranked 4-6; kept as the base | nonreg 52% vs v45, 80% v12, 90% Jame v3 |
+| [v47](v47/summary.md) | `v47` | v46 + B124 (B99c Vesper escapes from v37). **Scrim A/B + ranked trial from 2026-11-01 12:10Z (team bot version 61)**; fallback v46 | nonreg 51% vs v46, 77% v12, 88% Jame v3 |
 | [v44](v44/summary.md) | `v44` | v43 + B112a lone Vesper/HoR fall-back. Team bot version 58: panel 28-62 (deaths 15.8), ranked 20-20 over 40 | nonreg 49% vs v43, 81% v12, 92% Jame v3 |
 | [v43](v43/summary.md) | `v43` | v41 + B118: everyone fights only with ≥1.2x power. Team bot versions 55/57: panel 24-66 (= v41), ranked 38-27 over two stints | nonreg 48% vs v41 (borderline), 81% v12, 92% Jame v3 |
 | [v42](v42/summary.md) | `v42` | v41 + B113b: gold counts 0.5 before round 500 (losses trail 1.2k vs 2.3k gold by r500). Ranked from 09:37Z (team bot version 53): 11-19 over 30, reverted 10:40Z | gain gate vs v41 PASS 55%; nonreg 81% v12, 90% Jame v3 |
