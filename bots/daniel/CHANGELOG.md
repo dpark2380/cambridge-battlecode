@@ -7,7 +7,7 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
-## Night of 2026-11-01 (summary, written 21:30Z; ranked and ladder figures updated at 23:30Z)
+## Night of 2026-11-01 (summary, written 21:30Z; ranked and ladder figures as of 23:25Z)
 
 **Live in the morning: v51 = team bot version 65** (v48 + B127 + B128a + B129; live since 18:21Z). It is the first candidate
 judged *better* than its base by the new rule: paired panel vs v50, deaths −0.94 ± 0.43 (z −2.2), gem margin +20 ± 32,
@@ -29,10 +29,10 @@ under 200 games, revert only on rating −100. Found on the way: the panel is fu
 | v48 (62, 13:32Z) | B126b Treasure/Prospector/Durability/Jungle emblems before Bruiser | panel v1 vs v47: gold +582 ± 165, gold/clear +7 ± 3, kills +1.1 ± 0.5, margin 0 ± 50, deaths +0.7 ± 0.8 | 14-25 over 40 | neutral, kept (gold pays) |
 | v49 (63, 16:03Z) | B127 HoR leaves at 50% with an enemy in sight | v49p2 = v48p2 game for game (90/90) | 8-12 over 20 | no-op |
 | v50 (64, 17:12Z) | B128a camp exposure priced one monster at a time | vs v49p2: margin +12 ± 41, deaths +0.1 ± 0.7, gems/capture +1.07 ± 0.39, gems r500 +12 ± 4, captures −4.9 ± 1.2, gold −304 ± 204 | 13-7 over 20 | neutral, kept |
-| v51 (65, 18:21Z) | B129 camp-damage-aware leave at every monster group | vs v50p2: **deaths −0.94 ± 0.43, margin +20 ± 32**, gems r500 +6.8 ± 3.4, camp deaths 1.83 → 1.54/game, wins 41 → 46 | 34-31 over 65 (20:40Z) | **BETTER**, kept |
+| v51 (65, 18:21Z) | B129 camp-damage-aware leave at every monster group | vs v50p2: **deaths −0.94 ± 0.43, margin +20 ± 32**, gems r500 +6.8 ± 3.4, camp deaths 1.83 → 1.54/game, wins 41 → 46 | 79-71 over 150 (23:25Z) | **BETTER**, kept |
 
 Panel v2 baseline (`v48p2`): 44-46, every opponent between 6-9 and 9-6, as designed. Ladder: #213 1713 (13:24Z) → #228
-1691 (15:27Z) → #195 1739 (19:24Z) → #206 1726 (21:24Z).
+1691 (15:27Z) → #195 1739 (19:24Z) → #206 1726 (21:24Z) → #210 1720 (22:25Z) → **#192 1745 (23:25Z)**.
 
 **Found but not fixed (next):**
 - B130: 00eight's 37-gem elk group beside our spawn is a battleground, not a pricing problem: our bodies spend 650-1,200
