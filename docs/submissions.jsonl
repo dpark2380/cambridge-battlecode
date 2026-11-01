@@ -51,4 +51,4 @@
 {"time": "2026-11-01T06:27Z", "bot": "bots/daniel/v43", "platform_version": 55, "note": "follow-newest: live once built; scrim A/B vs v41-1101 (24-66); live by 06:32Z"}
 {"time": "2026-11-01T07:36Z", "bot": "bots/daniel/v41", "platform_version": 56, "note": "revert of v43 (panel 24-66 = v41's, not clearly better)"}
 {"time": "2026-11-01T08:14Z", "bot": "bots/daniel/v43", "platform_version": 57, "note": "user-approved full ranked trial of v43 (23-12 over 35 before; v41 3-12 after its revert)"}
-{"time": "2026-11-01T09:29Z", "bot": "bots/daniel/v44", "platform_version": 58, "note": "A/B vs v43 (v43 stint 2: 15-15 over 30; combined 38-27)"}
+{"time": "2026-11-01T09:29Z", "bot": "bots/daniel/v44", "platform_version": 58, "note": "A/B vs v43 (v43 stint 2: 15-15 over 30; combined 38-27); live by 09:32Z"}
