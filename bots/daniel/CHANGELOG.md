@@ -7,6 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v50 (2026-11-01)
+
+- v49 + B128a: a camp group's `exposure` sums each monster's health × its own damage instead of × the whole group's damage, so 22-59-gem elk groups are no longer priced below 8-11-gem wolf pairs (H1 of the process review: 00eight's 37-gem elk group taken 0.3× a game by us vs 10× by the opponents; 547 gems captured a game vs 892 with equal capture counts).
+- Gates: nonreg vs v49 PASS 49% (980); race vs v47 47%.
+- Submitted 2026-11-01T17:06Z as team bot version 64. v49's panel (`v49p2`) replayed v48p2 game for game: 90/90 identical outcomes, every paired delta 0 — B127 is a no-op (HoR with an enemy in sight is already at the duo/carrier threshold), v49 kept as the base. v49 ranked 8-12 over 20; ladder #225 1694 at 16:51Z.
+
 ## v49 (2026-11-01)
 
 - v48 + B127: Heart of Ruin leaves at 50% health with an enemy in sight (the B99 Vesper rule), after HoR became our worst healthy-1v1 death rate on v47's panel (25% vs opponents' 19%). Also ranked-like seeded rosters in `random_team` (no-op in real drafts).

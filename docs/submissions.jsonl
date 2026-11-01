@@ -57,3 +57,4 @@
 {"time": "2026-11-01T12:10Z", "bot": "bots/daniel/v47", "platform_version": 61, "note": "v46 + B124 (B99c Vesper escapes); A/B vs v46 panel 29-61 (deaths 13.9) and v44 28-62"}
 {"time": "2026-11-01T13:25Z", "bot": "bots/daniel/v48", "platform_version": 62, "note": "v47 + B126b early emblem passives; A/B vs v47 panel 29-61 (gold 5258, deaths 12.1)"}
 {"time": "2026-11-01T15:42Z", "bot": "bots/daniel/v49", "platform_version": 63, "note": "v48 + B127 HoR leaves at 50% with an enemy in sight; panel v2 A/B vs v48p2 (44-46, deaths 11.1, gold 7208)"}
+{"time": "2026-11-01T17:06Z", "bot": "bots/daniel/v50", "platform_version": 64, "note": "v49 + B128a per-monster camp exposure (H1: elk groups never farmed); panel v2 A/B vs v49p2 = v48p2 (44-46)"}
