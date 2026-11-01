@@ -7,6 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v49 (2026-11-01)
+
+- v48 + B127: Heart of Ruin leaves at 50% health with an enemy in sight (the B99 Vesper rule), after HoR became our worst healthy-1v1 death rate on v47's panel (25% vs opponents' 19%). Also ranked-like seeded rosters in `random_team` (no-op in real drafts).
+- Gates (nonreg): v48 50% (301); as `b127` on v47: v47 49%, v12 77%, Jame v3 87%.
+- Submitted 2026-11-01T15:42Z as team bot version 63. v48's panel-v2 baseline (`v48p2`, the new ~50% panel): 44-46, deaths 11.1, gold 7,208, gems captured 734 vs 860. v48 ranked 14-25 over 40 (below the 200-game bar; rating 1719 → 1691, not near the −100 revert line).
+
 ## v48 (2026-11-01)
 
 - v47 + B126b: each body finishes Treasure (own stat), Prospector, Durability (health) and Jungle (own stat) emblems, then Bruiser forever (was Prospector, Durability, Bruiser).
