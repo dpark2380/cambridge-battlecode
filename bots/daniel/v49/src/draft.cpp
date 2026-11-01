@@ -251,9 +251,16 @@ static int experiment_seed() {
 static std::vector<champion_draft> random_team(int seed, std::vector<champion_draft> team, std::size_t size) {
     const auto spawn = cambc::map::spawn_region(cambc::team::ally).positions()[0];
     std::uint32_t h = static_cast<std::uint32_t>(seed) * 2654435761u ^ spawn.x * 73856093u ^ spawn.y * 19349663u;
+    // T13 (process review #5): ranked-like rosters. Draw by the top-30 teams' 5-pick draft rates
+    // (docs/research/top-team-meta.md) instead of uniformly, so local gates meet the Vesper/Marcella/Vendetta/HoR
+    // cores ranked opponents field (87/94/89/82%) and almost never Stellar (1%). Enum order of champion_draft.
+    static constexpr int weight[champion_count] = {60, 87, 89, 12, 1, 11, 94, 17, 8, 15, 24, 82};
+    static constexpr int total = [] { int t = 0; for (int w : weight) t += w; return t; }();
     while (team.size() < size) {
         h ^= h >> 16; h *= 0x7feb352du; h ^= h >> 15; h *= 0x846ca68bu; h ^= h >> 16;
-        const auto pick = static_cast<champion_draft>(h % champion_count);
+        int r = static_cast<int>(h % total), i = 0;
+        while (r >= weight[i]) r -= weight[i++];
+        const auto pick = static_cast<champion_draft>(i);
         if (!contains(team, pick)) team.push_back(pick);
     }
     return team;
