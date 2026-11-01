@@ -13,6 +13,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 - Baseline: fresh v41 panel `v41-1101` (06:26Z) 24-66, deaths 19.0/game; v41 ranked 263-262 over 525, ladder #251 1663.
 - Live by 06:32Z. Panel (07:15Z): 24-66 = v41-1101's 24-66; deaths 17.7 vs 19.0, gold 5,148 vs 4,988. Not clearly
   better (rule: net ≥ +5), so revert to v41; two re-uploads at 07:20Z failed (platform 'invalid response'). Ranked 10-5 at 07:04Z.
+- v41 re-uploaded at 07:36Z as team bot version 56 (third attempt).
 
 ## v41 re-uploaded (2026-10-31 10:40Z as team bot version 54, revert of v42)
 - Live by 10:56Z: 8-7 over 15 by 11:31Z, ladder #239 1686. On the 7 fuel-heavy maps v41 is 4-3 vs v38 8-14.
