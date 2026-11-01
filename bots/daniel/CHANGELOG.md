@@ -7,6 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v51 (2026-11-01)
+
+- v50 + B129: the siege-style leave threshold applies at every monster group with the real escape cost, `(exit + 1) × group damage × remaining share / bodies at the group`, exit = elk range 4 + 1 − own attack range. Before, a non-siege monster group had no camp-aware leave (a body stayed to 28.8% under 120+ damage a turn with 4 tiles to walk).
+- Gate: nonreg vs v50 PASS 52% (280).
+- Submitted 2026-11-01T18:15Z as team bot version 65. v50's panel (`v50p2` vs `v49p2`, paired): wins 44 → 41 (net −3), gem margin +12 ± 41, deaths +0.1 ± 0.7, gems/capture +1.07 ± 0.39, gems r500 +12 ± 4, captures −4.9 ± 1.2, gold −304 ± 204, camp deaths 1.83/game (eight 32 → 20 per 6 games): neutral, kept as the base. Our 00eight elk group is still taken 0.2× a game (theirs 8.8×). v50 ranked 13-7 over 20; ladder #211 1716 at 17:59Z.
+
 ## v50 (2026-11-01)
 
 - v49 + B128a: a camp group's `exposure` sums each monster's health × its own damage instead of × the whole group's damage, so 22-59-gem elk groups are no longer priced below 8-11-gem wolf pairs (H1 of the process review: 00eight's 37-gem elk group taken 0.3× a game by us vs 10× by the opponents; 547 gems captured a game vs 892 with equal capture counts).
