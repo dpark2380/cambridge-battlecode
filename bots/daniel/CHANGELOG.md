@@ -11,6 +11,8 @@ Version folder ≠ team submission number: the platform counts every submission 
 - v43 + B112a: a lone Vesper/Heart of Ruin that sees 2+ enemies within 6 falls back before the fight.
 - Nonreg PASS vs v43 49%, v12 81%, Jame v3 92%. See `docs/v44`.
 - Baseline: v43 38-27 over its two stints (stint 2 15-15), panel 24-66 (deaths 17.7); ladder #242 1676.
+- Live by 09:32Z. Panel (10:20Z): **28-62** (v43 24-66, v41 24-66); deaths 15.8 vs 17.7 vs 19.0, gold 5,255. Ranked 11-4 at
+  10:03Z, ladder #220 1701. Kept for a full ranked trial (fallback v43).
 
 ## v43 (2026-11-01 06:27Z uploaded as team bot version 55, scrim A/B + ranked trial)
 - v41 + B118: every champion fights only with ≥1.2x power (Vesper 1.3x; the health tiebreak is gone).
