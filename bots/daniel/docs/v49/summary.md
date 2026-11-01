@@ -13,4 +13,4 @@
 | v47 (`b127`) | Jame v3 | 87% | 280 | PASS |
 | v48 (`v49`) | v48 | 50% | 301 | PASS |
 
-**Decision metric:** HoR healthy-1v1 death rate on its panel-v2 run (`fights.py`), and `panelcmp.py v48 v49` deaths and gem margin. It is a threshold change, the family the process review parks, kept only because it has this target metric.
+**Decision metric:** HoR healthy-1v1 death rate on its panel-v2 run (`fights.py`) against the v48p2 baseline of **19% of 394** (opponents' HoR 18%; on panel v2 our engagement deaths are 14% vs their 15% and every other champion 7-9%, so the v1 figure of 25% was partly the stronger opponents), and `panelcmp.py v48p2 v49p2` deaths and gem margin. Deaths while walking home stay the one asymmetry: 46% of ours vs 30% of theirs. It is a threshold change, the family the process review parks, kept only because it has this target metric.
