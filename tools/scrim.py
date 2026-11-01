@@ -98,8 +98,9 @@ def create(team_id, team, maps, sides, version, purpose):
     return row
 
 
-def panel(reserve):
-    version, _ = live()
+def panel(reserve, label=None):
+    """`label` tags a repeat panel of the live bot (e.g. v41-1101) so it is queued again, not skipped."""
+    version = label or live()[0]
     have = {(g["teamId"], g["maps"]) for g in groups() if g["version"] == version}
     todo = [(t, n, m, s) for t, n in PANEL_TEAMS for m, s in PANEL_MAPS if (t, m) not in have]
     q = quota()
@@ -207,10 +208,11 @@ def main():
     parser.add_argument("--maps")
     parser.add_argument("--sides", default="a,b,a,b,a")
     parser.add_argument("--reserve", type=int, default=10, help="quota units left for teammates")
+    parser.add_argument("--label", help="panel: version label for a fresh repeat panel of the live bot")
     args = parser.parse_args()
     DIR.mkdir(parents=True, exist_ok=True)
     if args.command == "panel":
-        panel(args.reserve)
+        panel(args.reserve, args.label)
     elif args.command == "create":
         create(args.team, args.team, args.maps, args.sides, live()[0], "adhoc")
     elif args.command == "sync":
