@@ -7,6 +7,11 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v43 (2026-11-01 06:27Z uploaded as team bot version 55, scrim A/B + ranked trial)
+- v41 + B118: every champion fights only with ≥1.2x power (Vesper 1.3x; the health tiebreak is gone).
+- Race vs v41 51%; nonreg PASS vs v41 48% (borderline), v12 81%, Jame v3 92%. See `docs/v43`.
+- Baseline: fresh v41 panel `v41-1101` (06:26Z) 24-66, deaths 19.0/game; v41 ranked 263-262 over 525, ladder #251 1663.
+
 ## v41 re-uploaded (2026-10-31 10:40Z as team bot version 54, revert of v42)
 - Live by 10:56Z: 8-7 over 15 by 11:31Z, ladder #239 1686. On the 7 fuel-heavy maps v41 is 4-3 vs v38 8-14.
 - **100 games (14:14Z): 54-46 (54%)**, rating 1660 → 1707 (#222). Proven; the sprint 3 deadline bot.
