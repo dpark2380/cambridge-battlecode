@@ -53,3 +53,4 @@
 {"time": "2026-11-01T08:14Z", "bot": "bots/daniel/v43", "platform_version": 57, "note": "user-approved full ranked trial of v43 (23-12 over 35 before; v41 3-12 after its revert)"}
 {"time": "2026-11-01T09:29Z", "bot": "bots/daniel/v44", "platform_version": 58, "note": "A/B vs v43 (v43 stint 2: 15-15 over 30; combined 38-27); live by 09:32Z"}
 {"time": "2026-11-01T11:04Z", "bot": "bots/daniel/v45", "platform_version": 59, "note": "A/B vs v44 (v44 20-20 over 40, panel 28-62)"}
+{"time": "2026-11-01T11:35Z", "bot": "bots/daniel/v46", "platform_version": 60, "note": "v45 + B121 carriers leave at 65%; A/B vs v44 panel 28-62 (v45 panel 26-64, deaths 14.7; ranked 6-4)"}
