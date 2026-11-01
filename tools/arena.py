@@ -97,8 +97,16 @@ def normalize(s):
             continue  # Cassi & Issac is one pick
         picks[c["team"]][c["draftPick"]] = DRAFT_NAMES.index(name)
     faults = s["diagnostics"]["botFaults"]
+    # Per-team deaths, gold and gems captured too (process review 2026-11-01 §1.6: gates report paired deltas).
+    extra = {t: {"deaths": 0, "earnedGold": 0, "gemsCaptured": 0} for t in ("teamA", "teamB")}
+    for c in s.get("champions", []):
+        extra[c["team"]]["deaths"] += int(float(c["metrics"]["deaths"]))
+        extra[c["team"]]["earnedGold"] += int(float(c["metrics"]["earnedGold"]))
+    for e in s.get("events", []):
+        if e["kind"] == "gemCollection":
+            extra[e["owner"]["team"]]["gemsCaptured"] += sum(int(x["value"]) for x in e["entries"] if x["context"] == "campGroup")
     return {"outcome": s["match"]["outcome"], "round": s["match"]["roundsCompleted"],
-            "teams": [{"submittedGems": teams[t], "draftPicks": [p for _, p in sorted(picks[t].items())]}
+            "teams": [{"submittedGems": teams[t], "draftPicks": [p for _, p in sorted(picks[t].items())], **extra[t]}
                       for t in ("teamA", "teamB")],
             "botFaults": [faults["teamA"], faults["teamB"]]}
 
@@ -139,6 +147,16 @@ def a_result(a_first, stats):
     won = stats["outcome"] == ("teamA" if a_first else "teamB")
     gems = [t["submittedGems"] for t in stats["teams"]]
     return won, gems[a] - gems[b], stats["botFaults"][a]
+
+
+DELTAS = ("submittedGems", "deaths", "earnedGold", "gemsCaptured")
+
+
+def a_deltas(a_first, stats):
+    """{metric: A's value minus B's} for DELTAS (0 when the stats lack the field)."""
+    a, b = (0, 1) if a_first else (1, 0)
+    t = stats["teams"]
+    return {k: t[a].get(k, 0) - t[b].get(k, 0) for k in DELTAS}
 
 
 def wilson(wins, n, z=1.96):

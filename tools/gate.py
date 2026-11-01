@@ -66,6 +66,7 @@ def main():
     if args.max_seeds is None:  # 12 seeds on 2 maps is 26 pairs: under MIN_PAIRS, so it could never decide
         args.max_seeds = max(12, 4 * MIN_PAIRS // len(maps))
     scores, per_map = [], collections.defaultdict(lambda: [0, 0])
+    deltas = collections.defaultdict(list)  # A minus B per game: gems, deaths, gold, gems captured
     games = faults = 0
     print(f"{args.mode}: H0 {s0:.2f} vs H1 {s1:.2f} on {len(maps)} maps, pairs of side-swapped games", flush=True)
     for seed in range(args.max_seeds + 1):
@@ -75,6 +76,8 @@ def main():
             if stats is None:
                 continue
             won, _, crash = arena.a_result(a_first, stats)
+            for k, v in arena.a_deltas(a_first, stats).items():
+                deltas[k].append(v)
             faults += crash
             batch[m].append(won)
             per_map[m][0] += won
@@ -95,6 +98,10 @@ def main():
         print(f"  {m:24s} {w}/{n}")
     wins = sum(w for w, _ in per_map.values())
     print(f"{Path(bot_a).name} vs {Path(bot_b).name}: {wins}/{games} games = {wins / max(games, 1):.0%}")
+    # Paired continuous metrics (A minus B per game, mean +- SE): what a 1-3 point win-rate change cannot show.
+    print("  A - B per game: " + ", ".join(
+        f"{k} {sum(v) / len(v):+.1f} ± {(sum((x - sum(v) / len(v)) ** 2 for x in v) / max(1, len(v) - 1)) ** 0.5 / len(v) ** 0.5:.1f}"
+        for k, v in deltas.items() if v))
     value = llr(scores, s0, s1) if len(scores) >= max(MIN_PAIRS, 2 * len(maps)) else 0.0
     if value >= BOUND:
         print(f"PASS ({args.mode}): accepted H1, A's pair score is about {s1:.2f} or better")
