@@ -12,6 +12,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 - v47 + B126b: each body finishes Treasure (own stat), Prospector, Durability (health) and Jungle (own stat) emblems, then Bruiser forever (was Prospector, Durability, Bruiser).
 - Gates (nonreg): v47 52%, v12 73%, Jame v3 90%; race vs v47 49% (self-play hides an economy edge).
 - Submitted 13:25Z as team bot version 62. v47's trial: panel 29-61 (= v46) with deaths 12.1 (v46 13.9), ranked 19-11 over 30, ladder #226 1687 → #213 1713: kept as the base.
+- 14:20Z: panel v1 paired vs v47 (`tools/panelcmp.py`, new): wins 29 → 30, gold +582 ± 165, kills +1.1 ± 0.5, deaths +0.7 ± 0.8, gem margin 0 ± 50. Not worse, gold up: **kept as the base**. Process review (`docs/research/process-review-2026-11-01.md`) adopted: paired panel metrics decide, not W-L or short ranked windows; panel v2 (near-50% opponents and maps) queued on v48 14:21Z as the new baseline.
 
 ## v47 (2026-11-01)
 
