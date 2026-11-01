@@ -7,6 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v52 (2026-11-01)
+
+- v51 + B131b: camp groups' gold is weighted 0.5 before round 500 (0.2 after, as before). From the v51p2 panel: the opponents re-farm the wolf + gold groups on their own half ~10× a game, we take ours 0-2× (00collision, 00galaxy, 00interlock, 01big_world), ~600 gold a game per group.
+- Gates: nonreg vs v51 PASS 54% (280), A − B per game gold +687 ± 238, deaths −1.4 ± 0.7, gems +26 ± 29. The all-game 0.5 variant failed (45%: gold +1,691 but gems captured −72).
+- Submitted 2026-11-01T23:48Z as team bot version 66 (user: "Do new trials", 23:35Z). Ladder #192 1745 at 23:31Z.
+
 ## Night of 2026-11-01 (summary, written 21:30Z; ranked and ladder figures as of 23:25Z)
 
 **Live in the morning: v51 = team bot version 65** (v48 + B127 + B128a + B129; live since 18:21Z). It is the first candidate
