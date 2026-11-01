@@ -37,20 +37,23 @@ ROOT = Path(__file__).resolve().parent.parent
 DIR = ROOT / "data" / "scrims"
 GROUPS = DIR / "groups.jsonl"
 
-# Opponents: teams that beat us most in ranked (v17-v22, 2026-10-27/28; EternalWisdom builds 79% Power, B59) and
-# two top-5 teams for the gap to the top. Maps: our worst ranked maps, then a set of common ones.
+# Panel v2 (2026-11-01 14:15Z, process review §1.4): setups near 50% carry the most information per game. The v1 panel
+# (teams that beat us most + our worst maps) was 0-405 vs Intercontinental Fish, 14% vs The Onkeys and 15-17% on
+# 00ribs/00expanse/02geodes/01corridors: half its games could not move. Opponents: ranked v41-v48 W-L 30-70% over
+# 20+ games (NotSoLonely 16-14, meowest 13-12, Mu&Hoon 11-14) plus the three v1 teams near 50% (Aynir 48%, Eternal
+# 51%, Micron 40%). Maps: the four dead ones replaced by 50-56% ranked maps with 14+ games. Versions compare only
+# within the same panel: v1 results are v22-v48, v2 from the first base panel on.
 PANEL_TEAMS = [
     ("eeb96607-55bb-421b-9868-38767018cb93", "Aynir Industries"),
-    ("6f67dab5-8edd-4700-b33b-71c2df1dc881", "noobers"),
-    ("aa795cbd-97f0-489d-868b-2988d7b2e394", "The Onkeys"),
+    ("d9124ac1-e2c0-40ca-ba01-6297618af1dd", "NotSoLonely"),
+    ("2aa08e1e-f986-4c2a-a15f-e10b10f159ba", "meowest"),
     ("05c4d857-1412-4c63-8c8e-ad05df77f193", "EternalWisdom"),
-    ("1890540d-1ffc-4847-adbf-d0d08772f268", "Intercontinental Fish"),
+    ("ee94077f-ae11-4a1c-b3cd-4db00e7a598c", "Mu&Hoon"),
     ("695ddbdf-afd9-43bf-9988-2a98fdb0f750", "Micron"),
 ]
 PANEL_MAPS = [
-    ("00ribs,01corridors,00galaxy,00vault,00eight", "a,b,a,b,a"),
-    ("00stampede,00swirl,02geodes,00lanes,00expanse", "b,a,b,a,b"),
-    # Added 2026-10-28 14:25Z: maps of v25's ranked losses, so the panel is not only our worst maps (90 games a version).
+    ("00galaxy,00vault,00eight,00interlock,01big_world", "a,b,a,b,a"),
+    ("00stampede,00swirl,00lanes,adgato_gemcombat2,02famine", "b,a,b,a,b"),
     ("01islands,01starfish,02arena,00collision,02the_pond", "a,b,a,b,a"),
 ]
 

@@ -52,7 +52,8 @@ def row(summary, ours, match_id="", map_name="", won=None):
          "gems": gems[ours], "their_gems": gems[theirs]}
     for side, prefix in ((ours, ""), (theirs, "their_")):
         champs = [c for c in summary["champions"] if c["team"] == side]
-        for metric in ("deaths", "kills", "earnedGold", "monsterDamageTaken", "championDamageTaken"):
+        for metric in ("deaths", "kills", "earnedGold", "monsterDamageTaken", "championDamageTaken",
+                       "monsterDamageDone", "championDamageDone"):
             r[prefix + metric] = round(sum(float(c["metrics"][metric]) for c in champs))
         shards = collections.Counter()
         for c in champs:
@@ -73,10 +74,28 @@ def row(summary, ours, match_id="", map_name="", won=None):
         fuel = clears = their_clears = 0
         first_clear = None
         faults = 0
+        # Economy (process review 2026-11-01 §2.2): captures and gems per capture, shop timing, bags, gems lost.
+        eco = {"": collections.Counter(), "their_": collections.Counter()}
+        bags = {"": [], "their_": []}
+        first_emblem = {"": None, "their_": None}
+        shop_rounds = {"": set(), "their_": set()}
         for e in events:
             mine = e["owner"].get("team") == ours
+            side = "" if mine else "their_"
             for entry in e["entries"]:
                 rnd = entry["timestamp"]["round"]
+                if e["kind"] == "gemCollection" and entry["context"] == "campGroup":
+                    eco[side]["captures"] += 1
+                    eco[side]["gems_captured"] += int(entry["value"])
+                elif e["kind"] == "gemSubmission":
+                    bags[side].append(int(entry["value"]))
+                elif e["kind"] == "gemLoss" and entry["context"] == "champion":
+                    eco[side]["gems_lost_to_champions"] += int(entry["value"])
+                elif e["kind"] == "itemCombination":
+                    eco[side]["emblems_r200"] += rnd <= 200
+                    first_emblem[side] = rnd if first_emblem[side] is None else min(first_emblem[side], rnd)
+                elif e["kind"] == "buyItem":
+                    shop_rounds[side].add((e["owner"].get("id"), rnd))
                 if e["kind"] == "death" and mine:
                     killer = entry["context"] or "unknown"
                     deaths_by[killer] += 1
@@ -92,6 +111,13 @@ def row(summary, ours, match_id="", map_name="", won=None):
                         first_clear = rnd if first_clear is None else min(first_clear, rnd)
                     else:
                         their_clears += 1
+        for side in ("", "their_"):
+            b = sorted(bags[side])
+            r.update({side + k: eco[side][k] for k in ("captures", "gems_captured", "gems_lost_to_champions", "emblems_r200")})
+            r[side + "bags"] = len(b)
+            r[side + "bag_median"] = b[len(b) // 2] if b else 0
+            r[side + "first_emblem"] = first_emblem[side]
+            r[side + "shop_visits"] = len(shop_rounds[side])
         r.update({"deaths_by": dict(deaths_by), "fuel_exhausted": fuel, "faults": faults, "camp_clears": clears,
                   "their_camp_clears": their_clears, "first_clear": first_clear,
                   "camp_hotspot": list(hotspots.most_common(1)[0][0]) if hotspots else None,
