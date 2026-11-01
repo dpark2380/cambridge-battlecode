@@ -45,7 +45,9 @@ Rank ≤180 (≈1750) was missed by two places: #182 at 1749 at the final check,
 
 ## Next sprint
 
-1. A stronger test opponent built from top-team behaviour, since local gates no longer predict ranked results.
-2. Losses diverge from round 250 on gems (B113/B114). Study close games' r250-r1000 decisions in the 1,287 decoded scout
-   replays (`data/scout/replays`).
-3. Keep v41 as the base (the fuel fix is confirmed in ranked).
+(Updated 2026-11-01 21:30Z after the process review, `docs/research/process-review-2026-11-01.md`.)
+
+1. Judge every change on the paired panel v2 (`tools/panelcmp.py`), never on short ranked windows; the panel is deterministic within the hour, so one run per candidate is exact on its 90 setups.
+2. Economy: the gap is gems per capture (746 vs 866 a game with equal captures). Next targets from `tools/captures.py`: 00vault's cluster, gem-only clusters on 02the_pond/00galaxy, elk groups on 01big_world/01islands, and B130 (the contested elk group on 00eight).
+3. Build the review's #8 (handicapped-candidate local test) and #9 (profile bots from panel opponents' summaries) so local gates can see fight changes.
+4. Base: v51 (v48 + B128a + B129).

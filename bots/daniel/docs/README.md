@@ -1,5 +1,7 @@
 # Daniel's iterations
 
+**2026-11-01 night:** live bot **v51** (team bot version 65), the first version judged better than its base on the paired panel (`tools/panelcmp.py`, process review `docs/research/process-review-2026-11-01.md`); see the CHANGELOG summary "Night of 2026-11-01".
+
 | Iteration | Bot folder | Summary | Key result |
 |---|---|---|---|
 | [v1](v1/summary.md) | `main-v1` | First independent heuristic bot: reward-per-turn camp choice with claims, retreat-before-recall | 16/18 vs starter |

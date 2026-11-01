@@ -7,6 +7,43 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## Night of 2026-11-01 (summary, written 21:30Z; ranked and ladder figures updated at 23:30Z)
+
+**Live in the morning: v51 = team bot version 65** (v48 + B127 + B128a + B129; live since 18:21Z). It is the first candidate
+judged *better* than its base by the new rule: paired panel vs v50, deaths −0.94 ± 0.43 (z −2.2), gem margin +20 ± 32,
+gems at r500 +6.8 ± 3.4, champion damage taken −1.7k ± 1.2k, wins 41 → 46; a confirmation panel replayed it 90/90.
+Fallback: v50 = version 64 (`bots/daniel/v50`).
+
+**Process (docs/research/process-review-2026-11-01.md, adopted 14:00-14:35Z):** every instrument we had was blind to
+1-3 point effects, half the scrim panel could not move (0-405 vs the #1 team, 15-17% maps), and all 23 ranked verdicts
+since v19 were below power. Now in use: `tools/panelcmp.py` (paired Δ ± SE per opponent/map/side for margin, deaths, gold,
+captures, gems captured, gems/capture, bags, first emblem, damage), `tools/captures.py` (per-map capture lists ours vs
+theirs), economy fields in `tools/features.py`, A − B per-game deltas in `gate.py`, panel v2 (`scrim.py`: six ~50%
+opponents, four dead maps swapped for 50-56% ones; runs labelled `vNNp2`), ranked-like seeded rosters in `random_team`
+(v49 on), and the §1.6 rule: better / worse / neutral on paired metrics, never on W-L flips inside ±9 or ranked windows
+under 200 games, revert only on rating −100. Found on the way: the panel is fully deterministic within the hour
+(v49p2 = v48p2 and v51p2b = v51p2 game for game), so a candidate's panel is an exact measurement on its 90 setups.
+
+| Version | Change | Paired panel vs base | Ranked (window) | Verdict |
+|---|---|---|---|---|
+| v48 (62, 13:32Z) | B126b Treasure/Prospector/Durability/Jungle emblems before Bruiser | panel v1 vs v47: gold +582 ± 165, gold/clear +7 ± 3, kills +1.1 ± 0.5, margin 0 ± 50, deaths +0.7 ± 0.8 | 14-25 over 40 | neutral, kept (gold pays) |
+| v49 (63, 16:03Z) | B127 HoR leaves at 50% with an enemy in sight | v49p2 = v48p2 game for game (90/90) | 8-12 over 20 | no-op |
+| v50 (64, 17:12Z) | B128a camp exposure priced one monster at a time | vs v49p2: margin +12 ± 41, deaths +0.1 ± 0.7, gems/capture +1.07 ± 0.39, gems r500 +12 ± 4, captures −4.9 ± 1.2, gold −304 ± 204 | 13-7 over 20 | neutral, kept |
+| v51 (65, 18:21Z) | B129 camp-damage-aware leave at every monster group | vs v50p2: **deaths −0.94 ± 0.43, margin +20 ± 32**, gems r500 +6.8 ± 3.4, camp deaths 1.83 → 1.54/game, wins 41 → 46 | 34-31 over 65 (20:40Z) | **BETTER**, kept |
+
+Panel v2 baseline (`v48p2`): 44-46, every opponent between 6-9 and 9-6, as designed. Ladder: #213 1713 (13:24Z) → #228
+1691 (15:27Z) → #195 1739 (19:24Z) → #206 1726 (21:24Z).
+
+**Found but not fixed (next):**
+- B130: 00eight's 37-gem elk group beside our spawn is a battleground, not a pricing problem: our bodies spend 650-1,200
+  rounds a game within 5 of it, 12 of our deaths a game are champion kills there, we capture it 0.2× (they take their
+  mirror 8.8-10×). B130a (start 2-body groups only with an ally within 6) was neutral locally with negative deltas, parked.
+- The economy gap is now measured, not guessed: equal captures, 746 vs 866 gems captured a game on panel v2; the
+  remaining big gaps are 00vault's 343-gem cluster (0.7× vs 4.0×), 02the_pond and 00galaxy gem-only clusters, 01big_world
+  and 01islands elk groups (`tools/captures.py v51p2`).
+- Deaths walking home: 46% of ours vs 30% of theirs (fights.py, panel v2); the threshold family is parked (B93/B122/B123).
+- Review items not done: #8 handicapped-candidate local test, #9 profile bots from panel opponents' summaries.
+
 ## v51 (2026-11-01)
 
 - v50 + B129: the siege-style leave threshold applies at every monster group with the real escape cost, `(exit + 1) × group damage × remaining share / bodies at the group`, exit = elk range 4 + 1 − own attack range. Before, a non-siege monster group had no camp-aware leave (a body stayed to 28.8% under 120+ damage a turn with 4 tiles to walk).
