@@ -56,3 +56,4 @@
 {"time": "2026-11-01T11:35Z", "bot": "bots/daniel/v46", "platform_version": 60, "note": "v45 + B121 carriers leave at 65%; A/B vs v44 panel 28-62 (v45 panel 26-64, deaths 14.7; ranked 6-4)"}
 {"time": "2026-11-01T12:10Z", "bot": "bots/daniel/v47", "platform_version": 61, "note": "v46 + B124 (B99c Vesper escapes); A/B vs v46 panel 29-61 (deaths 13.9) and v44 28-62"}
 {"time": "2026-11-01T13:25Z", "bot": "bots/daniel/v48", "platform_version": 62, "note": "v47 + B126b early emblem passives; A/B vs v47 panel 29-61 (gold 5258, deaths 12.1)"}
+{"time": "2026-11-01T15:42Z", "bot": "bots/daniel/v49", "platform_version": 63, "note": "v48 + B127 HoR leaves at 50% with an enemy in sight; panel v2 A/B vs v48p2 (44-46, deaths 11.1, gold 7208)"}
