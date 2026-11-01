@@ -7,6 +7,11 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v44 (2026-11-01 09:29Z uploaded as team bot version 58, scrim A/B + ranked trial vs v43)
+- v43 + B112a: a lone Vesper/Heart of Ruin that sees 2+ enemies within 6 falls back before the fight.
+- Nonreg PASS vs v43 49%, v12 81%, Jame v3 92%. See `docs/v44`.
+- Baseline: v43 38-27 over its two stints (stint 2 15-15), panel 24-66 (deaths 17.7); ladder #242 1676.
+
 ## v43 (2026-11-01 06:27Z uploaded as team bot version 55, scrim A/B + ranked trial)
 - v41 + B118: every champion fights only with ≥1.2x power (Vesper 1.3x; the health tiebreak is gone).
 - Race vs v41 51%; nonreg PASS vs v41 48% (borderline), v12 81%, Jame v3 92%. See `docs/v43`.
