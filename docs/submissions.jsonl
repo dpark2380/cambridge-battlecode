@@ -63,3 +63,4 @@
 {"time": "2026-11-02T00:54Z", "bot": "bots/daniel/v53", "platform_version": 67, "note": "v52 + B133a Monster-first build on cluster maps; panel v2 A/B vs v52p2 (51-39, gold 7473)"}
 {"time": "2026-11-02T02:04Z", "bot": "bots/daniel/v52", "platform_version": 68, "note": "v52 re-uploaded: revert of v53 (B133a worse on vault/adgato2: gems captured -28 +- 13)"}
 {"time": "2026-11-02T02:22Z", "bot": "bots/daniel/v54", "platform_version": 69, "note": "v52 + B130b battleground skip after a death; panel v2 A/B vs v52p2 (51-39, deaths 10.1)"}
+{"time": "2026-11-02T03:34Z", "bot": "bots/daniel/v52", "platform_version": 70, "note": "v52 re-uploaded: revert of v54 (B130b WORSE: margin -113 +- 45, ranked 4-16)"}

@@ -7,6 +7,10 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v52 re-uploaded (2026-11-02T03:34Z as team bot version 70, revert of v54)
+
+- v54's panel (`v54p2` vs `v52p2`, paired): **gem margin −113 ± 45 (z −2.5)**, gems −63 ± 25, gems captured −49 ± 22, gold −370 ± 240, deaths +0.0 ± 0.7, wins 51 → 42 (net −9). Ranked 4-16 over 20, rating 1750 → 1716. **WORSE: B130b rejected** — a body that skips its target for 150 rounds after a death hands the group to the opponents more often than it avoids a second death. v55/v56 rebuilt on v52 without it.
+
 ## v54 (2026-11-02)
 
 - v52 + B130b: a body back at spawn with full health after a death, whose last alive position was within 8 of its target group with an enemy seen within 30 rounds before, skips that group for 150 rounds (this body only). B130: on 00eight our bodies walked straight back to the contested 2-elk group where 12 of our deaths a game happen.
