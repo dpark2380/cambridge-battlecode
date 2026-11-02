@@ -7,6 +7,10 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v52 re-uploaded (2026-11-02T02:04Z as team bot version 68, revert of v53)
+
+- v53's panel (`v53p2` vs `v52p2`, paired; 86/90 games identical, only the three cluster maps changed): gems captured −28 ± 13 (z −2.1), gem margin −26 ± 24, wins 51 → 49; on its target maps 00vault 477 → 225 gems captured a game (1-5 from 2-4), adgato_gemcombat2 948 → 774, 00galaxy 824 → 834. The Monster-first build (no Jungle, Treasure third) loses the kill-speed race it was meant to win. **B133a rejected**; v53 ranked 11-9 over 20. v54/v55 rebuilt on v52 without it.
+
 ## v53 (2026-11-02)
 
 - v52 + B133a: on maps whose draft plan has `free_share` ≥ 50% (half the gems in groups that do not hit back: 00vault 96%, 00galaxy 93%, adgato_gemcombat2 100% on the panel) the build is Monster, Prospector, Treasure, Durability, then Bruiser (no Jungle). B133: 00vault's 343-gem block is a kill-speed race we lose (0.7× vs 4.0× captures, 26k vs 36k monster damage).

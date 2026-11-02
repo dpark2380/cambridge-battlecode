@@ -61,3 +61,4 @@
 {"time": "2026-11-01T18:15Z", "bot": "bots/daniel/v51", "platform_version": 65, "note": "v50 + B129 camp-damage-aware leave at every monster group; panel v2 A/B vs v50p2 (41-49, camp deaths 1.83/game)"}
 {"time": "2026-11-01T23:48Z", "bot": "bots/daniel/v52", "platform_version": 66, "note": "v51 + B131b gold weight 0.5 before r500; panel v2 A/B vs v51p2 (46-44, gold 6918)"}
 {"time": "2026-11-02T00:54Z", "bot": "bots/daniel/v53", "platform_version": 67, "note": "v52 + B133a Monster-first build on cluster maps; panel v2 A/B vs v52p2 (51-39, gold 7473)"}
+{"time": "2026-11-02T02:04Z", "bot": "bots/daniel/v52", "platform_version": 68, "note": "v52 re-uploaded: revert of v53 (B133a worse on vault/adgato2: gems captured -28 +- 13)"}
