@@ -7,6 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v54 (2026-11-02)
+
+- v52 + B130b: a body back at spawn with full health after a death, whose last alive position was within 8 of its target group with an enemy seen within 30 rounds before, skips that group for 150 rounds (this body only). B130: on 00eight our bodies walked straight back to the contested 2-elk group where 12 of our deaths a game happen.
+- Gate: nonreg vs v52 PASS 50% (420); A − B per game deaths −0.6 ± 0.7, gold +152 ± 210, gems +2 ± 23.
+- Submitted 2026-11-02T02:22Z as team bot version 69.
+
 ## v52 re-uploaded (2026-11-02T02:04Z as team bot version 68, revert of v53)
 
 - v53's panel (`v53p2` vs `v52p2`, paired; 86/90 games identical, only the three cluster maps changed): gems captured −28 ± 13 (z −2.1), gem margin −26 ± 24, wins 51 → 49; on its target maps 00vault 477 → 225 gems captured a game (1-5 from 2-4), adgato_gemcombat2 948 → 774, 00galaxy 824 → 834. The Monster-first build (no Jungle, Treasure third) loses the kill-speed race it was meant to win. **B133a rejected**; v53 ranked 11-9 over 20. v54/v55 rebuilt on v52 without it.
