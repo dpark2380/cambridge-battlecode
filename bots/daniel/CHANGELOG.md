@@ -7,11 +7,18 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v56 (2026-11-02)
+
+- v55 + B134 (review H9): when a group's reward is waiting, no enemy was seen for 30 rounds, the group carries gold and a Vesper ally is within 3 of its tiles, a non-Vesper body steps beside the tiles and skips the group 10 rounds so Vesper (+20% gold, +40% with Treasure) takes it.
+- Gate: nonreg vs v55 PASS 52% (280); A − B per game gold +250 ± 243, gems +16 ± 30, deaths −0.1 ± 0.7.
+- Submitted 2026-11-02T05:04Z as team bot version 72. After its verdict, live trials pause for ~2 h on the best bot.
+
 ## v55 (2026-11-02)
 
 - v52 + B133b: a group with nothing that hits back may take 4 bodies instead of 3 (B133: 00vault's 49-cluster block is a kill-speed race; the 4th body idled on 4-gem wolf groups).
 - Gate: nonreg vs v52 PASS 49% (280); deltas ~0 (few maps affected).
 - Submitted 2026-11-02T03:50Z as team bot version 71. Ladder #225 1700 at 03:50Z (v53/v54's trials cost ~50 rating; v52 was live again from 03:34Z).
+- 05:03Z: panel `v55p2` vs `v52p2`, paired: 87/90 identical, margin +8 ± 16, deaths 0.0 ± 0.1, gold −107 ± 78; galaxy 824 → 862 gems captured (3-3 → 4-2), vault 477 → 411 (their 931 → 1,215), adgato2 948 → 958. Neutral, kept as the base (it is v52 on 12 of 15 maps). Ranked 6-14 over 20; ladder #241 1679 at 04:49Z.
 
 ## v52 re-uploaded (2026-11-02T03:34Z as team bot version 70, revert of v54)
 
