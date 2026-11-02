@@ -7,6 +7,10 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v51 re-uploaded (2026-11-02T05:10Z as team bot version 73; the v52 line reverted)
+
+- Ranked since the v52 switch (23:52Z, rating 1745): **61-79 over 155 (39%)** across v52/v53/v54/v55/v56 windows, against v51's 79-71 (53%) over its 150; ladder 1750 (02:26Z) → 1673 (05:04Z). The v52 panel (+5 wins, gold +555, margin +70 ± 64, **gems r500 −47 ± 10**) did not generalise: the ranked field punishes the slower first 500 rounds. B131b rejected in ranked; v53 (B133a) and v54 (B130b) were already rejected on the panel; v55/v56 (B133b, B134) are rebased on v51 for a fresh gate. Lesson for the process review: a panel-neutral change with a large early-game metric swing needs a ranked check at ≥100 games before stacking on it.
+
 ## v56 (2026-11-02)
 
 - v55 + B134 (review H9): when a group's reward is waiting, no enemy was seen for 30 rounds, the group carries gold and a Vesper ally is within 3 of its tiles, a non-Vesper body steps beside the tiles and skips the group 10 rounds so Vesper (+20% gold, +40% with Treasure) takes it.
