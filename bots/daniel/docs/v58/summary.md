@@ -6,4 +6,4 @@
 
 **Local gate:** nonreg vs v51 PASS 174/344 = 51% (86 maps, including the 16 new ones); A − B per game deaths +0.3 ± 0.6, gems +2 ± 25, gold −43 ± 198 (mirror games rarely put a retreating body past an enemy).
 
-**Decision metrics:** `panelcmp.py v51p2 v58p2` deaths and gem margin; the walking-home share of deaths in `fights.py` (vs 46%); then ≥100 ranked games before anything is stacked on it.
+**Decision metrics:** `panelcmp.py v51p2 v58p2` deaths and gem margin; the walking-home share of deaths in `fights.py` (v51p2 baseline: **48% of 924** deaths; opponents 33%); then ≥100 ranked games before anything is stacked on it.
