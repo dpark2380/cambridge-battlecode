@@ -7,11 +7,18 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v53 (2026-11-02)
+
+- v52 + B133a: on maps whose draft plan has `free_share` ≥ 50% (half the gems in groups that do not hit back: 00vault 96%, 00galaxy 93%, adgato_gemcombat2 100% on the panel) the build is Monster, Prospector, Treasure, Durability, then Bruiser (no Jungle). B133: 00vault's 343-gem block is a kill-speed race we lose (0.7× vs 4.0× captures, 26k vs 36k monster damage).
+- Gate: nonreg vs v52 PASS (3 of 70 maps affected; deltas ~0).
+- Submitted 2026-11-02T00:54Z as team bot version 67.
+
 ## v52 (2026-11-01)
 
 - v51 + B131b: camp groups' gold is weighted 0.5 before round 500 (0.2 after, as before). From the v51p2 panel: the opponents re-farm the wolf + gold groups on their own half ~10× a game, we take ours 0-2× (00collision, 00galaxy, 00interlock, 01big_world), ~600 gold a game per group.
 - Gates: nonreg vs v51 PASS 54% (280), A − B per game gold +687 ± 238, deaths −1.4 ± 0.7, gems +26 ± 29. The all-game 0.5 variant failed (45%: gold +1,691 but gems captured −72).
 - Submitted 2026-11-01T23:48Z as team bot version 66 (user: "Do new trials", 23:35Z). Ladder #192 1745 at 23:31Z.
+- 00:53Z 2 Nov: panel `v52p2` vs `v51p2`, paired: wins 46 → 51, gem margin +70 ± 64, gold +555 ± 332, captures +2.5 ± 1.5, deaths −0.2 ± 0.9, gems r500 −47 ± 10 (the gold detour before r500); vault 0-6 → 2-4, galaxy 1-5 → 3-3. Neutral by the rule, not worse: **kept as the base**. Ranked 11-9 over 20.
 
 ## Night of 2026-11-01 (summary, written 21:30Z; ranked and ladder figures as of 23:25Z)
 
