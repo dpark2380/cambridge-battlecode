@@ -160,17 +160,8 @@ constexpr std::array<stat, 13> build_stat{
 // Emblem passives do not stack, so a second emblem of a family only adds stats.
 // v18 (B43): Prospector first (+25% of our share of gem- and gold-cluster rewards) instead of Monster.
 // B126: one emblem of each passive family in `families`, then Bruiser of our stat (top teams finish 4-6 passives by r200).
-// B133a: on cluster maps (at least half the gems in groups that do not hit back, e.g. 00vault's 343-gem block that we
-// capture 0.7x a game to the opponents' 4.0x) camp damage decides the race and Jungle (less camp damage taken) buys
-// nothing: Monster (+10% to camps) first, Prospector, Treasure, Durability, then Bruiser.
-std::vector<cambc::item_type> build_order(stat s, bool cluster_map) {
+std::vector<cambc::item_type> build_order(stat s) {
     using cambc::item_type;
-    if (cluster_map)
-        return {(s == stat::strength ? item_type::monster_shard_of_strength : s == stat::health ? item_type::monster_shard_of_health : item_type::monster_shard_of_focus),
-                (s == stat::strength ? item_type::prospector_shard_of_strength : s == stat::health ? item_type::prospector_shard_of_health : item_type::prospector_shard_of_focus),
-                (s == stat::strength ? item_type::treasure_shard_of_strength : s == stat::health ? item_type::treasure_shard_of_health : item_type::treasure_shard_of_focus),
-                item_type::durability_shard_of_health,
-                (s == stat::strength ? item_type::bruiser_shard_of_strength : s == stat::health ? item_type::bruiser_shard_of_health : item_type::bruiser_shard_of_focus)};
     return {(s == stat::strength ? item_type::treasure_shard_of_strength : s == stat::health ? item_type::treasure_shard_of_health : item_type::treasure_shard_of_focus),
             (s == stat::strength ? item_type::prospector_shard_of_strength : s == stat::health ? item_type::prospector_shard_of_health : item_type::prospector_shard_of_focus),
             item_type::durability_shard_of_health,
@@ -413,7 +404,7 @@ void Bot::shop() {
         me.buy(lock);
 
     // Finish each emblem before starting the next; Bruiser (last) soaks up the rest.
-    const auto order = build_order(build_stat[static_cast<int>(me.champion_name())], plan && plan->features.free_share >= 128);
+    const auto order = build_order(build_stat[static_cast<int>(me.champion_name())]);
     for (std::size_t i = 0; i < order.size(); ++i) {
         const auto shard = order[i];
         const auto owned = me.item_count();
