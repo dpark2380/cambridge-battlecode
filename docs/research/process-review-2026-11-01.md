@@ -403,3 +403,15 @@ opponent's full capture list and timeline, which is an oracle for H1 and H3 with
 **Not recommended:** a larger panel (W-L sd 5.3 → 3.7 for twice the quota, while deaths and margin already
 resolve at 90); more self-play volume for 1-2-point effects (19,625 games for 1 point, §1.1); further build-order
 races without a mechanism metric; any new ranked candidate before items 1-3 are in place.
+
+## Addendum (2026-11-02 05:15Z): what the first night of the rule showed
+
+- Panel determinism: a repeat of the same bot within the hour replays all 90 games identically (v49p2 = v48p2, v51p2b = v51p2),
+  so one panel per candidate is an exact measurement on its 90 setups; the ±4-win band in §1.4 is between-setup variation.
+- Generalisation failure: v52 (B131b, gold weight 0.5 before r500) was panel-neutral-positive (wins +5, gold +555 ± 332,
+  margin +70 ± 64) but carried a large early-game swing (gems r500 −47 ± 10). In ranked the v52 line went 61-79 over 155
+  (39%) against v51's 79-71 (53%), rating 1745 → 1673, and was reverted. Rule 3 above should read: a panel-neutral change
+  whose early-game metrics move by more than 2 SE gets a ranked check (≥100 games, rating-matched) before anything is
+  stacked on it; two further candidates (v53, v54) were built on v52 and both failed their own panels, costing ~50 rating.
+- Confirmed by both instruments: v51 (B129 camp-aware leave) was the only "better" verdict (deaths −0.94 ± 0.43) and rose
+  in ranked (79-71, 1733 → 1750); v54 (B130b) was "worse" on the panel (margin −113 ± 45) and 4-16 in ranked.
