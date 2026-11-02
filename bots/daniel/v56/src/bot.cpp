@@ -82,7 +82,6 @@ constexpr int ally_radius = 4;
 constexpr int retreat_to_allies = 1;  // v17 (B37): was 0
 constexpr int threat_tribute_gems = 25;
 constexpr int threat_memory = 30;
-constexpr int battleground_rounds = 150;  // B130b: a group where this body died with an enemy about is skipped this long
 // v7: react to damage from attackers we cannot see (see take_turn). 0 = v6 behaviour.
 constexpr int hidden_response = 1;
 // v7: a body carrying gems leaves at this health fraction while an enemy was seen in the last
@@ -1176,16 +1175,6 @@ void Bot::take_turn(int round) {
         hidden_round = round;
         mark_danger(me.position(), round);
     }
-    // B130b: back at spawn with full health after a death (no alive turn for 20+ rounds, or 0 health last turn): if
-    // the last life ended at our target with an enemy about, that group is a battleground for this body for a while
-    // (00eight: 12 champion kills a game beside the 2-elk group we capture 0.2x; bodies went straight back).
-    if (last_health_round >= 0 && at_spawn && hp >= me.max_health() - 1
-        && (round - last_health_round >= 20 || last_health <= 0)) {
-        if (auto* g = camps.group(current_target); g && distance(last_position, g->anchor) <= 8
-            && last_enemy_round >= 0 && last_health_round - last_enemy_round <= threat_memory)
-            g->skip_until = std::max(g->skip_until, round + battleground_rounds);
-    }
-    if (hp > 0) last_position = me.position();
     last_health = hp;
     last_health_round = round;
     const bool hidden_threat = hidden_response && round - hidden_round <= 2;

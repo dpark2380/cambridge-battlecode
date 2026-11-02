@@ -17,7 +17,6 @@ class Bot {
     cambc::distance_field progress_field;  // walking distance to the progress target (v7 stall check)
     int progress_field_target = -1;
     float last_health = 0;
-    cambc::vec2 last_position{0, 0};  // B130b: where the last alive turn was (a death's location)
     int last_health_round = -10, hidden_round = -10;  // v7 unseen-attacker detection
     std::optional<draft_plan> plan;  // from draft memory; nullopt if the draft wrote none
     role squad = role::gold_squad;   // the draft's role: now only steers fighting and shopping

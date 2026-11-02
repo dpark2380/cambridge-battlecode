@@ -1,4 +1,4 @@
-# v55: v54 + B133b (on v52, B133a dropped), four bodies on cluster-only groups
+# v55: v52 + B133b, four bodies on cluster-only groups
 
 **Change (`src/bot.cpp`, `choose_target`):** a group with nothing that hits back may take `max_group_bodies` + 1 = 4 bodies instead of 3; monster groups keep 3.
 

@@ -1,4 +1,4 @@
-# v56: v55 + B134, Vesper receives gold captures
+# v56: v55 + B134 (v52 + B133b + B134; B130b dropped), Vesper receives gold captures
 
 **Change (`src/bot.cpp`, the `reward_ready` block of `work_group`):** when a group's reward is waiting, no enemy was seen for `threat_memory` rounds, the group carries gold, and a Vesper ally is within 3 of its spawn tiles, a non-Vesper body steps beside the tiles (off them if it was on them) and skips the group for 10 rounds so Vesper takes the capture alone.
 
