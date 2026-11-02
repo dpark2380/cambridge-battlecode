@@ -7,6 +7,27 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## Trials of 2026-11-01 23:35Z – 2026-11-02 07:15Z (summary)
+
+User: "Do new trials" (23:35Z), "keep going" (00:05Z). **Live at the end: v51 = team bot version 73** (re-uploaded 05:10Z).
+
+| Version | Change | Paired panel vs base | Ranked | Outcome |
+|---|---|---|---|---|
+| v52 (66) | B131b gold weight 0.5 before r500 | vs v51p2: wins 46 → 51, gold +555 ± 332, margin +70 ± 64, **gems r500 −47 ± 10** | line 61-79 over 155 | kept on the panel, **reverted 05:10Z on ranked** |
+| v53 (67) | B133a Monster-first build on cluster maps | vs v52p2: gems captured −28 ± 13, vault 477 → 225 | 11-9 / 20 | rejected |
+| v54 (69) | B130b skip a group 150 rounds after dying there | vs v52p2: **margin −113 ± 45** | 4-16 / 20 | rejected |
+| v55 (71) | B133b four bodies on cluster-only groups | vs v52p2: 87/90 identical, margin +8 ± 16 | 6-14 / 20 | neutral |
+| v56 (72) / v57 | B134 Vesper receives gold captures | not panelled; on v51 the gate deltas were negative | — | parked |
+| — | B131 gold 0.5 all game; B131c window 300 | local: gems captured −72 ± 17; gold −282 ± 121 | — | rejected locally |
+| — | B132 teleport to island groups | built; the pond needs teleport + two dashes | — | parked |
+
+Ladder: #192 1745 (23:31Z) → high #189 1750 (02:26Z) → #264 1660 (05:42Z) → #251 1671 (07:13Z). v51 since its re-upload:
+26-28 over 55. B135: from ~02:30Z every version lost on gems to a pool of ordinary ~50% teams (11 of 17 opponents new
+to us, teams we used to beat now beating us), so part of the slide is the field at this hour, not the bots; scouting
+them found nothing new to copy. Lessons (process review addendum): a panel-neutral change with a large early-game swing
+needs ≥100 ranked games before anything is stacked on it; skipping or redistributing work around contested groups
+(B130b, B133b) hands them to the opponent.
+
 ## v51 re-uploaded (2026-11-02T05:10Z as team bot version 73; the v52 line reverted)
 
 - Ranked since the v52 switch (23:52Z, rating 1745): **61-79 over 155 (39%)** across v52/v53/v54/v55/v56 windows, against v51's 79-71 (53%) over its 150; ladder 1750 (02:26Z) → 1673 (05:04Z). The v52 panel (+5 wins, gold +555, margin +70 ± 64, **gems r500 −47 ± 10**) did not generalise: the ranked field punishes the slower first 500 rounds. B131b rejected in ranked; v53 (B133a) and v54 (B130b) were already rejected on the panel; v55/v56 (B133b, B134) are rebased on v51 for a fresh gate. Lesson for the process review: a panel-neutral change with a large early-game metric swing needs a ranked check at ≥100 games before stacking on it.
