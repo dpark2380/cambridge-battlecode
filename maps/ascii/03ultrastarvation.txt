@@ -1,0 +1,88 @@
+# 03ultrastarvation: 67x73, 3 picks per team, symmetry: 180-degree rotation
+# Legend: . floor  # wall  o hole  " bush  A altar  S team-A spawn  E team-B spawn
+#         w wolf  k elk  M monolith  G golem  g gem cluster  $ gold cluster (camp spawn tiles)
+# Row index is y, column index is x. Dumped via the engine from Team A's perspective.
+
+      0         1         2         3         4         5         6      
+      0123456789012345678901234567890123456789012345678901234567890123456
+   0  oo......ooooooooooooooooooooooooooooooooooooooooooooooooooo.....ooo
+   1  o.......oooooooooooooooooooooooooooooooooooooooooooooooooo......ooo
+   2  .........oooooooooooooooooooooooooooooooooooooooooooooo..........oo
+   3  ..........oooooooooooooooooooooooooooooooooo..ooooo..............oo
+   4  ...........oooooooooooooooooooooooooooooooo.....o................oo
+   5  ............ooooooooooooooooooooooooooooooo.....o................oo
+   6  ......g......ooooooooooooooooooooooooooooooo.g..o................oo
+   7  "..............oooooooooooooooooooooooooooooooooo........EEE.....oo
+   8  ""...............ooooooooooooooooooooooooooooooo.........EEE.....oo
+   9  ""................ooooooooooooooooooooooooooooo..........EEE.....oo
+  10  ...................ooooooooooooooooooooooooooo...................oo
+  11  oo.................ooooooooooooooooooooooooo.....................oo
+  12  oo..................ooooooooooooooooooooooo......................oo
+  13  ooo.....####........ooooooooooooooooooooooo......................oo
+  14  ooo.....####.........ooooooooooooooooooooo.......................oo
+  15  oooo.....###...........oooooooooooooooooo.......................ooo
+  16  oooo......##.............ooooooooooooooo........................ooo
+  17  ooooo.....................ooooooooooooo.........................ooo
+  18  ooooo......................ooooooooooo..........................ooo
+  19  oooooo.....................oooooooooo..........................oooo
+  20  ooooooo.....................oooooooo.........................oooooo
+  21  oooooooo....................oooooo.........w................ooooooo
+  22  ooooooooo......................o..........................ooooooooo
+  23  oooooooooo...............................................oooooooooo
+  24  ooooooooooo.............................................ooooooooooo
+  25  ooooooooooo.............................................ooooooooooo
+  26  oooooooooooo...........................................oooooooooooo
+  27  ooooooooooooo.........................................ooooooooooooo
+  28  oooooooooooooo.......................................oooooooooooooo
+  29  ooooooooooooooo.....................................ooooooooooooooo
+  30  oooooooooooooooo...................................oooooooooooooooo
+  31  ooooooooooooooooo.................................ooooooooooooooooo
+  32  oooooooooooooooooo...............................oooooooooooooooooo
+  33  ooooooooooooooooooo.............................ooooooooooooooooooo
+  34  ooooooooooooooooooo.............................ooooooooooooooooooo
+  35  oooooooooooooooooooo...........................oooooooooooooooooooo
+  36  oooooooooooooooooooo.............A.............oooooooooooooooooooo
+  37  oooooooooooooooooooo...........................oooooooooooooooooooo
+  38  ooooooooooooooooooo.............................ooooooooooooooooooo
+  39  ooooooooooooooooooo.............................ooooooooooooooooooo
+  40  oooooooooooooooooo...............................oooooooooooooooooo
+  41  ooooooooooooooooo.................................ooooooooooooooooo
+  42  oooooooooooooooo...................................oooooooooooooooo
+  43  ooooooooooooooo.....................................ooooooooooooooo
+  44  oooooooooooooo.......................................oooooooooooooo
+  45  ooooooooooooo.........................................ooooooooooooo
+  46  oooooooooooo...........................................oooooooooooo
+  47  ooooooooooo.............................................ooooooooooo
+  48  ooooooooooo.............................................ooooooooooo
+  49  oooooooooo...............................................oooooooooo
+  50  ooooooooo..........................o......................ooooooooo
+  51  ooooooo................w.........oooooo....................oooooooo
+  52  oooooo.........................oooooooo.....................ooooooo
+  53  oooo..........................oooooooooo.....................oooooo
+  54  ooo..........................ooooooooooo......................ooooo
+  55  ooo.........................ooooooooooooo.....................ooooo
+  56  ooo........................ooooooooooooooo.............##......oooo
+  57  ooo.......................oooooooooooooooooo...........###.....oooo
+  58  oo.......................ooooooooooooooooooooo.........####.....ooo
+  59  oo......................ooooooooooooooooooooooo........####.....ooo
+  60  oo......................ooooooooooooooooooooooo..................oo
+  61  oo.....................ooooooooooooooooooooooooo.................oo
+  62  oo...................ooooooooooooooooooooooooooo...................
+  63  oo.....SSS..........ooooooooooooooooooooooooooooo................""
+  64  oo.....SSS.........ooooooooooooooooooooooooooooooo...............""
+  65  oo.....SSS........oooooooooooooooooooooooooooooooooo.............."
+  66  oo................o..g.ooooooooooooooooooooooooooooooo......g......
+  67  oo................o.....ooooooooooooooooooooooooooooooo............
+  68  oo................o.....oooooooooooooooooooooooooooooooo...........
+  69  oo..............ooooo..oooooooooooooooooooooooooooooooooo..........
+  70  oo..........oooooooooooooooooooooooooooooooooooooooooooooo.........
+  71  ooo......oooooooooooooooooooooooooooooooooooooooooooooooooo.......o
+  72  ooo.....ooooooooooooooooooooooooooooooooooooooooooooooooooo......oo
+
+# Camp groups (gems/gold per capture, respawn in rounds, centroid of spawn tiles)
+# G0 {'g': 1} gems=7 gold=0 respawn=50 at=(6,6)
+# G1 {'g': 1} gems=7 gold=0 respawn=50 at=(60,66)
+# G2 {'g': 1} gems=7 gold=0 respawn=50 at=(45,6)
+# G3 {'g': 1} gems=7 gold=0 respawn=50 at=(21,66)
+# G4 {'w': 1} gems=4 gold=40 respawn=40 at=(43,21)
+# G5 {'w': 1} gems=4 gold=40 respawn=40 at=(23,51)
