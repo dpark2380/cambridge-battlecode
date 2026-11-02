@@ -4,12 +4,14 @@ scrim panel's maps, both sides (stdlib only; process review #9).
 
     python3 tools/profgate.py v51 v58                 # per-version mean gem margin, deaths, gold, win rate
     python3 tools/profgate.py v51 v58 --base v51      # also the paired delta of each version against the base
+    python3 tools/profgate.py v51 v58 --base v51 --handicap 300   # candidates cannot shop before round 300
 
 Games are deterministic per (version, profile, map, side), so versions are paired setup by setup, like panelcmp.py.
 Calibrate before trusting it: the versions' order here should match their scrim-panel order.
 """
 import argparse
 import math
+import shutil
 import sys
 from pathlib import Path
 
@@ -26,8 +28,22 @@ def panel_maps():
     return maps
 
 
-def play(version, profiles, maps):
-    bot = arena.bot_path(version)
+def handicapped(version, rounds):
+    """A copy of the version that cannot shop before `rounds` (behind on shards, as we are in ranked: review §4)."""
+    src = arena.bot_path(version)
+    dst = ROOT / "bots" / "_var" / f"hc{rounds}-{src.name}"
+    shutil.rmtree(dst, ignore_errors=True)
+    shutil.copytree(src, dst, ignore=shutil.ignore_patterns(".cambc"))
+    p = dst / "src" / "bot.cpp"
+    s = p.read_text()
+    anchor = "void Bot::shop() {\n"
+    assert s.count(anchor) == 1, f"{version}: shop() anchor"
+    p.write_text(s.replace(anchor, anchor + f"    if (cambc::round_number() < {rounds}) return;  // profgate handicap\n"))
+    return dst
+
+
+def play(version, profiles, maps, handicap=0):
+    bot = handicapped(version, handicap) if handicap else arena.bot_path(version)
     arena.build(bot)
     rows = {}
     for prof in profiles:
@@ -54,6 +70,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("versions", nargs="+")
     ap.add_argument("--base")
+    ap.add_argument("--handicap", type=int, default=0, help="candidates cannot shop before this round")
     a = ap.parse_args()
     profiles = sorted((ROOT / "bots" / "_var").glob("prof-*"))
     if not profiles:
@@ -62,8 +79,8 @@ def main():
         arena.build(p)
     maps = panel_maps()
     versions = list(dict.fromkeys(([a.base] if a.base else []) + a.versions))
-    results = {v: play(v, profiles, maps) for v in versions}
-    print(f"{len(profiles)} profiles x {len(maps)} maps x 2 sides")
+    results = {v: play(v, profiles, maps, a.handicap) for v in versions}
+    print(f"{len(profiles)} profiles x {len(maps)} maps x 2 sides" + (f", candidates handicapped to round {a.handicap}" if a.handicap else ""))
     print(f"  {'version':10s} {'games':>5s} {'win%':>5s} {'margin':>8s} {'deaths':>7s} {'gold':>7s} {'captured':>8s}")
     for v, rows in results.items():
         r = list(rows.values())
