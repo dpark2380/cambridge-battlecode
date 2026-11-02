@@ -7,6 +7,10 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v51 re-uploaded (2026-11-02T12:54Z as team bot version 75, revert of v58)
+
+- v58's panel (`v58p2` vs `v51p2`, paired): wins 46 → 40, gem margin −95 ± 53 (z −1.8), gold −456 ± 262, opponents' gold +481 ± 257, deaths +0.8 ± 0.8, kills −1.3 ± 0.8; walking-home share of deaths 48% → 45% (opponents 29-33%). Neutral by the rule but every metric leans negative and the target barely moved: **B136 rejected**. A detour around enemies costs farming time and leaves the gold to them; the walking-home deaths are not caused by the route. Ranked 11-9 over 20.
+
 ## v58 (2026-11-02)
 
 - v51 + B136: `retreat()` walks home around visible enemies (tiles within 2 of an enemy are walls for that path; falls back to the direct route). 46% of our panel deaths happen walking home, the opponents' 30%.

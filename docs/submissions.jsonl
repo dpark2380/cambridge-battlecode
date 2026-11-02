@@ -68,3 +68,4 @@
 {"time": "2026-11-02T05:04Z", "bot": "bots/daniel/v56", "platform_version": 72, "note": "v55 + B134 Vesper receives gold captures; panel v2 A/B vs v55p2 (52-38, gold 7366)"}
 {"time": "2026-11-02T05:10Z", "bot": "bots/daniel/v51", "platform_version": 73, "note": "v51 re-uploaded: the v52 line (B131b early gold) went 61-79 over 155 ranked vs v51 79-71 over 150; rating 1745 -> 1673"}
 {"time": "2026-11-02T11:41Z", "bot": "bots/daniel/v58", "platform_version": 74, "note": "v51 + B136 walk home around enemies; panel v2 A/B vs v51p2 (46-44, deaths 10.3)"}
+{"time": "2026-11-02T12:54Z", "bot": "bots/daniel/v51", "platform_version": 75, "note": "v51 re-uploaded: revert of v58 (B136: walking-home share 48% -> 45%, margin -95 +- 53, gold -456)"}
