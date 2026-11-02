@@ -26,6 +26,7 @@
 | [v55](v55/summary.md) | `v55` | v52 + B133b: four bodies on cluster-only groups. Team bot version 71 (04:02Z): v55p2 vs v52p2 87/90 identical, margin +8 ± 16, galaxy up, vault down; neutral, base for v56 | nonreg 49% vs v52 |
 | [v56](v56/summary.md) | `v56` | v55 + B134: Vesper receives gold captures. Team bot version 72 (05:04Z), superseded minutes later by the v51 revert; B134 rebased on v51 as v57 | nonreg 52% vs v55, gold +250 ± 243 |
 | [v57](v57/summary.md) | `v57` | v51 + B134: Vesper receives gold captures (rebased). Not trialled: gate vs v51 50% with gems −15 ± 14, gold −34 ± 118; parked | nonreg PASS vs v51 |
+| [v58](v58/summary.md) | `v58` | v51 + B136: walk home around enemies. **Panel-v2 A/B + ranked trial from 2026-11-02T11:41Z (team bot version 74)**; base v51 (v51p2 46-44) | nonreg 51% vs v51 |
 | [v44](v44/summary.md) | `v44` | v43 + B112a lone Vesper/HoR fall-back. Team bot version 58: panel 28-62 (deaths 15.8), ranked 20-20 over 40 | nonreg 49% vs v43, 81% v12, 92% Jame v3 |
 | [v43](v43/summary.md) | `v43` | v41 + B118: everyone fights only with ≥1.2x power. Team bot versions 55/57: panel 24-66 (= v41), ranked 38-27 over two stints | nonreg 48% vs v41 (borderline), 81% v12, 92% Jame v3 |
 | [v42](v42/summary.md) | `v42` | v41 + B113b: gold counts 0.5 before round 500 (losses trail 1.2k vs 2.3k gold by r500). Ranked from 09:37Z (team bot version 53): 11-19 over 30, reverted 10:40Z | gain gate vs v41 PASS 55%; nonreg 81% v12, 90% Jame v3 |

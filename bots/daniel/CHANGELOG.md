@@ -7,6 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v58 (2026-11-02)
+
+- v51 + B136: `retreat()` walks home around visible enemies (tiles within 2 of an enemy are walls for that path; falls back to the direct route). 46% of our panel deaths happen walking home, the opponents' 30%.
+- Gate: nonreg vs v51 PASS 51% (344 games on 86 maps, including the 16 new `03*`/halloween maps pulled 11:30Z); deaths +0.3 ± 0.6.
+- Submitted 2026-11-02T11:41Z as team bot version 74 (user: "improve rating", 11:20Z). Ladder #229 1696 at 11:40Z; v51 76-68 over 145 since 05:21Z.
+
 ## Trials of 2026-11-01 23:35Z – 2026-11-02 07:15Z (summary)
 
 User: "Do new trials" (23:35Z), "keep going" (00:05Z). **Live at the end: v51 = team bot version 73** (re-uploaded 05:10Z).
