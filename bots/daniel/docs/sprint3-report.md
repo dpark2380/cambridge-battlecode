@@ -51,3 +51,12 @@ Rank ≤180 (≈1750) was missed by two places: #182 at 1749 at the final check,
 2. Economy: the gap is gems per capture (746 vs 866 a game with equal captures). Next targets from `tools/captures.py`: 00vault's cluster, gem-only clusters on 02the_pond/00galaxy, elk groups on 01big_world/01islands, and B130 (the contested elk group on 00eight).
 3. Build the review's #8 (handicapped-candidate local test) and #9 (profile bots from panel opponents' summaries) so local gates can see fight changes.
 4. Base: v51 (v48 + B128a + B129).
+
+## Tournament result (read from the platform's bracket, 2026-11-03)
+
+Sprint 3: single elimination, 713 teams, 15 games per pairing, played on unseen maps (not the ladder pool). Our entry was
+team bot version 54 (v41). Seed **#186**. Round 1: bye. Round 2: beat #327 Give me a job **9-6**. Round 3 (last 256): lost
+to #71 dromedaries **1-14**. Out in round 3 of 10, i.e. placed 129th-256th.
+
+The international qualifier locks **Tue 3 Nov, 23:59 GMT** (the platform's schedule: "All dates and lock deadlines are in
+UK time"); tournaments use only unseen maps.
