@@ -12,3 +12,5 @@
 - nonreg vs v59: PASS, 177/344 = 51%; gems +16 ± 25, deaths −0.0 ± 0.6.
 
 **Decision metrics:** panel `v60p2` vs `v59p2` must not be worse (03fan is not a panel map). Ranked games on 03fan.
+
+**Result:** Panel v60p2 vs v59p2 (paired, 90): 89/90 identical outcomes, wins 53 → 52, margin −2 ± 6, deaths +0.06 ± 0.05: neutral as expected (03fan is not a panel map); kept. Versions 78 (v61) and 79 (v62) went live during the panel's last games; they play the panel maps the same way.

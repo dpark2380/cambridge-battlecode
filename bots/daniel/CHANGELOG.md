@@ -21,7 +21,8 @@ Version folder ≠ team submission number: the platform counts every submission 
 ## v60 (2026-11-04)
 
 - v59 + B138: in `move_towards_closest`, when no path reaches free goals (approaches, altar, spawn), path through the camps and strike the first one in the way (never a Monolith or Golem). On 03fan each spawn quarter is sealed by camps: ranked 1-9, 0 gems in 7 games; the bodies stood at spawn all game.
-- Gates: vs v59 03fan 18/18 (+1,011), 02tangle 9/18; nonreg PASS 51% (344). The first version without the free-goal condition lost 02tangle 3/18 (cut through clusters to the Golem).
+- Gates: vs v59 03fan 18/18 (+1,011), 02tangle 9/18; nonreg PASS 51% (344).
+- Submitted 2026-11-04T02:39Z as team bot version 77. Panel v60p2 vs v59p2 (paired, 90): 89/90 identical outcomes, wins 53 → 52, margin −2 ± 6, deaths +0.06 ± 0.05: neutral as expected (03fan is not a panel map); kept. Versions 78 (v61) and 79 (v62) went live during the panel's last games; they play the panel maps the same way. The first version without the free-goal condition lost 02tangle 3/18 (cut through clusters to the Golem).
 
 ## v59 (2026-11-04)
 
