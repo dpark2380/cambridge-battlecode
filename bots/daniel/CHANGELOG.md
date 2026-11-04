@@ -7,6 +7,11 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v62 (2026-11-04)
+
+- v61 + B140: B137's approach fallback also for a monster target when the group deals at most one elk's damage: the 71-gem groups of 00gem-fields (1 elk in 8 clusters beside each spawn) and 01concentrated-wealth (1 elk in 20 clusters) were skipped as unreachable (ranked 1-11 on each).
+- arena vs v61: gem-fields 12/14 (+229), concentrated-wealth 11/14 (+220), the-front 7/14; nonreg PASS 50%; profgate +0.6 (panel maps unchanged).
+
 ## v61 (2026-11-04)
 
 - v60 + B139: the target rate's gold weight drops to 0.01 when the map's gold is worth 10x all its gems (only 03one-gem: one 7-gem cluster, 1,600 gold; ranked 0-5, our gems 1 vs 129 because a 60-gold group always outrated the cluster).
