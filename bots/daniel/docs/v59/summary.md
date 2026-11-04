@@ -15,3 +15,5 @@
 02the-pond is unchanged: its island clusters need teleports (B132).
 
 **Decision metrics:** panel `v59p2` vs `v51p2` (`panelcmp.py`): gem margin, gems captured, and 00vault in particular.
+
+**Result:** **Panel v59p2 vs v51p2 (paired, 90):** wins 46 → 53, margin **+68 ± 35** (z 1.9), gems captured +37 ± 21, gems/capture +1.9 ± 1.0, gems r500 +20 ± 12, opponents' gold −246 ± 104, champion damage done −2.4k ± 1.2k; 00vault 0-6 → 3-3 (gems captured 305 → 772, r500 190 → 509). Neutral by §1.6 (z < 2) with every economy metric up and the early game not worse: **kept** (team bot version 76).

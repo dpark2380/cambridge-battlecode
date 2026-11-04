@@ -7,10 +7,16 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v60 (2026-11-04)
+
+- v59 + B138: in `move_towards_closest`, when no path reaches free goals (approaches, altar, spawn), path through the camps and strike the first one in the way (never a Monolith or Golem). On 03fan each spawn quarter is sealed by camps: ranked 1-9, 0 gems in 7 games; the bodies stood at spawn all game.
+- Gates: vs v59 03fan 18/18 (+1,011), 02tangle 9/18; nonreg PASS 51% (344). The first version without the free-goal condition lost 02tangle 3/18 (cut through clusters to the Golem).
+
 ## v59 (2026-11-04)
 
 - v51 + B137: in `work_group`, when the chosen cluster's tile has no path (00vault: clusters seen through the holes, walled in by their own group), walk to the group's approaches and strike any member in reach instead of standing still until `stall_turns` gives the group up. Monster targets are unchanged (the same fallback for them lost 03the-front 5/18).
 - Gates: profgate vs v51 margin +81 ± 32, deaths −0.6 ± 0.3; nonreg vs v51 PASS 50% (344); vs prof-meowest on 00vault, gems captured 391 → 1,053.
+- Submitted 2026-11-04T01:27Z as team bot version 76. **Panel v59p2 vs v51p2 (paired, 90):** wins 46 → 53, margin **+68 ± 35** (z 1.9), gems captured +37 ± 21, gems/capture +1.9 ± 1.0, gems r500 +20 ± 12, opponents' gold −246 ± 104, champion damage done −2.4k ± 1.2k; 00vault 0-6 → 3-3 (gems captured 305 → 772, r500 190 → 509). Neutral by §1.6 (z < 2) with every economy metric up and the early game not worse: **kept** (team bot version 76).
 - Intl qualifier snapshot (3 Nov 23:59Z) entered v51 = team bot version 75; seeded at #227, 1711 (01:07Z 4 Nov). Trials resumed on the user's "Yes resume" (01:10Z).
 
 ## v51 re-uploaded (2026-11-02T12:54Z as team bot version 75, revert of v58)
