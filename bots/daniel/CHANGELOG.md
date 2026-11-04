@@ -11,6 +11,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 
 - v62 + B143: the ring fallback also for a lone Golem ringed by clusters (02cuts G16/G17: 1 Golem in 6 clusters, 78 gems; ranked 3-17; same shape on 7 more maps).
 - Gates vs v62: gain on the 8 maps PASS 57% (80); nonreg PASS 54% (344), gems +37 ± 27.
+- Submitted 2026-11-04T03:57Z as team bot version 80.
 
 ## v62 (2026-11-04)
 

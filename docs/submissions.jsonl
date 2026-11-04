@@ -69,3 +69,8 @@
 {"time": "2026-11-02T05:10Z", "bot": "bots/daniel/v51", "platform_version": 73, "note": "v51 re-uploaded: the v52 line (B131b early gold) went 61-79 over 155 ranked vs v51 79-71 over 150; rating 1745 -> 1673"}
 {"time": "2026-11-02T11:41Z", "bot": "bots/daniel/v58", "platform_version": 74, "note": "v51 + B136 walk home around enemies; panel v2 A/B vs v51p2 (46-44, deaths 10.3)"}
 {"time": "2026-11-02T12:54Z", "bot": "bots/daniel/v51", "platform_version": 75, "note": "v51 re-uploaded: revert of v58 (B136: walking-home share 48% -> 45%, margin -95 +- 53, gold -456)"}
+{"time": "2026-11-04T01:27:09Z", "bot": "v59", "platform_version": null, "note": ""}
+{"time": "2026-11-04T02:39:56Z", "bot": "v60", "platform_version": null, "note": ""}
+{"time": "2026-11-04T02:45:49Z", "bot": "v61", "platform_version": null, "note": ""}
+{"time": "2026-11-04T02:52:03Z", "bot": "v62", "platform_version": null, "note": ""}
+{"time": "2026-11-04T03:57:40Z", "bot": "v63", "platform_version": null, "note": "team bot version 80 (first attempts at 03:54Z failed: invalid response)"}
