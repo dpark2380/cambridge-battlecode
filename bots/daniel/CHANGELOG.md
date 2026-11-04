@@ -11,6 +11,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 
 - v63 + B145: Teleport Crystals. Groups of 20+ gems whose approaches our spawn cannot reach on foot, with 5+ shore tiles within range 3, are priced as walk-to-shore + 4; bodies buy a crystal on such maps, teleport onto an approach and recall home after the capture.
 - Gates vs v63: gain on the 4 island maps PASS 67% (72; quadrants 14/18, big-world 15/18); nonreg PASS 51% (516).
+- Submitted 2026-11-04T06:40Z as team bot version 81 (live 07:20Z). Panel v64p2 vs v60p2 (paired, 80 of 90 synced): wins 46 → 51, margin +72 ± 48, gems +45 ± 23, gems r500 +13 ± 5, captures +1.8 ± 0.8, deaths −0.4 ± 0.5: neutral by §1.6 (margin z 1.5) with the early game and captures up; kept (team bot version 81, live 07:20Z).
 
 ## v63 (2026-11-04)
 

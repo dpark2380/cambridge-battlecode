@@ -18,3 +18,5 @@
 - nonreg on all maps: PASS, 265/516 = 51%; gems +20 ± 20.
 
 **Decision metrics:** panel `v64p2` vs `v59p2`/`v60p2` (01big_world is a panel map), and ranked.
+
+**Result:** Panel v64p2 vs v60p2 (paired, 80 of 90 synced): wins 46 → 51, margin +72 ± 48, gems +45 ± 23, gems r500 +13 ± 5, captures +1.8 ± 0.8, deaths −0.4 ± 0.5: neutral by §1.6 (margin z 1.5) with the early game and captures up; kept (team bot version 81, live 07:20Z).
