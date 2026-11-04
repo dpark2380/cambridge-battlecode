@@ -7,6 +7,11 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v61 (2026-11-04)
+
+- v60 + B139: the target rate's gold weight drops to 0.01 when the map's gold is worth 10x all its gems (only 03one-gem: one 7-gem cluster, 1,600 gold; ranked 0-5, our gems 1 vs 129 because a 60-gold group always outrated the cluster).
+- arena vs v60: 03one-gem 10/10 (+215), other maps identical. Uploaded while v60's panel ran (same play on panel maps).
+
 ## v60 (2026-11-04)
 
 - v59 + B138: in `move_towards_closest`, when no path reaches free goals (approaches, altar, spawn), path through the camps and strike the first one in the way (never a Monolith or Golem). On 03fan each spawn quarter is sealed by camps: ranked 1-9, 0 gems in 7 games; the bodies stood at spawn all game.
