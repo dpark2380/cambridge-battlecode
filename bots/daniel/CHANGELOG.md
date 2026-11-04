@@ -7,6 +7,11 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v64 (2026-11-04)
+
+- v63 + B145: Teleport Crystals. Groups of 20+ gems whose approaches our spawn cannot reach on foot, with 5+ shore tiles within range 3, are priced as walk-to-shore + 4; bodies buy a crystal on such maps, teleport onto an approach and recall home after the capture.
+- Gates vs v63: gain on the 4 island maps PASS 67% (72; quadrants 14/18, big-world 15/18); nonreg PASS 51% (516).
+
 ## v63 (2026-11-04)
 
 - v62 + B143: the ring fallback also for a lone Golem ringed by clusters (02cuts G16/G17: 1 Golem in 6 clusters, 78 gems; ranked 3-17; same shape on 7 more maps).
