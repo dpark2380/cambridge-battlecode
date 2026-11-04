@@ -7,6 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v59 (2026-11-04)
+
+- v51 + B137: in `work_group`, when the chosen cluster's tile has no path (00vault: clusters seen through the holes, walled in by their own group), walk to the group's approaches and strike any member in reach instead of standing still until `stall_turns` gives the group up. Monster targets are unchanged (the same fallback for them lost 03the-front 5/18).
+- Gates: profgate vs v51 margin +81 ± 32, deaths −0.6 ± 0.3; nonreg vs v51 PASS 50% (344); vs prof-meowest on 00vault, gems captured 391 → 1,053.
+- Intl qualifier snapshot (3 Nov 23:59Z) entered v51 = team bot version 75; seeded at #227, 1711 (01:07Z 4 Nov). Trials resumed on the user's "Yes resume" (01:10Z).
+
 ## v51 re-uploaded (2026-11-02T12:54Z as team bot version 75, revert of v58)
 
 - v58's panel (`v58p2` vs `v51p2`, paired): wins 46 → 40, gem margin −95 ± 53 (z −1.8), gold −456 ± 262, opponents' gold +481 ± 257, deaths +0.8 ± 0.8, kills −1.3 ± 0.8; walking-home share of deaths 48% → 45% (opponents 29-33%). Neutral by the rule but every metric leans negative and the target barely moved: **B136 rejected**. A detour around enemies costs farming time and leaves the gold to them; the walking-home deaths are not caused by the route. Ranked 11-9 over 20.
