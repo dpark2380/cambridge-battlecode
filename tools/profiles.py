@@ -133,11 +133,13 @@ def header(prof):
     return "\n".join(lines)
 
 
-def build(base):
+def build(base, prefix="prof-", only=None):
     src = ROOT / "bots" / "daniel" / base
     for path in sorted(OUT.glob("*.json")):
+        if only and path.stem not in only:
+            continue
         prof = json.loads(path.read_text())
-        dst = ROOT / "bots" / "_var" / f"prof-{path.stem}"
+        dst = ROOT / "bots" / "_var" / f"{prefix}{path.stem}"
         shutil.rmtree(dst, ignore_errors=True)
         shutil.copytree(src, dst, ignore=shutil.ignore_patterns(".cambc"))
         (dst / "src" / "profile.h").write_text(header(prof))
@@ -193,8 +195,10 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("command", choices=["extract", "build", "show"])
     ap.add_argument("--base", default="v51")
+    ap.add_argument("--prefix", default="prof-", help="build: folder prefix under bots/_var (a candidate, not a sparring bot)")
+    ap.add_argument("--only", nargs="*", help="build: these profile slugs only")
     a = ap.parse_args()
-    {"extract": extract, "build": lambda: build(a.base), "show": show}[a.command]()
+    {"extract": extract, "build": lambda: build(a.base, a.prefix, a.only), "show": show}[a.command]()
 
 
 if __name__ == "__main__":
