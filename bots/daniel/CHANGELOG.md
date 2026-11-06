@@ -7,6 +7,11 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v71 (2026-11-06)
+
+- v70 + B178: carriers under threat leave at 50% health (B121's 65% → 50%). Gain PASS vs v70, 53% over 1,536, captured +32 ± 10; 0.8 was 35%, 0.4 no better than 0.5.
+- Rejected on v70: B176 Ryth health soak (51%), B177 tribute detour 15 (48%).
+
 ## v70 (2026-11-06)
 
 - v69 + B170: five-pick drafts take Vendetta for Vesper (Marcella, Heart of Ruin, Vendetta, Ryth, Varg); no draft takes Vesper now. B171c: four-pick drafts take Varg for Vendetta (60% on four-pick maps, nonreg 52%). B175: carriers bank from 20 gems for 30 rounds after seeing an enemy (52% over 3,328, gems +22 ± 8).
