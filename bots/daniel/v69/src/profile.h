@@ -24,6 +24,7 @@ inline std::optional<profile_build> profile_build_for(cambc::champion_type c) {
     if (c == champion_type::marcella) return profile_build{{item_type::jungle_shard_of_focus, item_type::prospector_shard_of_health, item_type::durability_shard_of_health, item_type::bruiser_shard_of_focus}, 0.0f, item_type::bruiser_shard_of_health};
     if (c == champion_type::ryth) return profile_build{{item_type::prospector_shard_of_health, item_type::durability_shard_of_health, item_type::jungle_shard_of_strength, item_type::bruiser_shard_of_strength}, 0.0f, item_type::bruiser_shard_of_health};
     if (c == champion_type::vendetta) return profile_build{{item_type::prospector_shard_of_health, item_type::durability_shard_of_health, item_type::jungle_shard_of_strength, item_type::bruiser_shard_of_strength}, 0.0f, item_type::bruiser_shard_of_health};
+    if (c == champion_type::varg) return profile_build{{item_type::prospector_shard_of_health, item_type::durability_shard_of_health, item_type::jungle_shard_of_strength, item_type::bruiser_shard_of_strength}, 0.0f, item_type::bruiser_shard_of_health};
     if (c == champion_type::vesper_vale) return profile_build{{item_type::prospector_shard_of_strength, item_type::durability_shard_of_health, item_type::jungle_shard_of_strength, item_type::bruiser_shard_of_strength}, 0.0f, item_type::bruiser_shard_of_health};
     return std::nullopt;
 }
