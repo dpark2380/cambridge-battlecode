@@ -12,3 +12,5 @@
 - nonreg, all 128 maps: PASS 270/512 = 53%.
 - gain (55%): inconclusive after 3,328 games, 53%. Submitted gems +47.8 ± 7.4, gems captured +56.6 ± 6.8, gold +204 ± 52, deaths −0.5 ± 0.2.
 - B168, Varg's build: arena vs v69-with-default-Varg on the 81 five-pick maps 178/324 = 55% (CI 49-60%); nonreg 272/512 = 53%, gems +6.5 ± 19. Folded in before submission.
+
+**Live (version 87, live 12:12:38Z 6 Nov).** Panel v69p1: 53-37, the best panel since engine 3.0.0. Vs v68p1 (90 paired): wins 48 → 53, gem margin +115 ± 59 (z 1.9), gems +50 ± 35, deaths +0.6 ± 0.8; panelcmp neutral (inside its ±9 flip band). Kept.

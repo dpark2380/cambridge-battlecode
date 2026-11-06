@@ -15,7 +15,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 ## v69 (2026-11-06)
 
 - v68 + B167: four-pick drafts take Vendetta for Vesper; five-pick drafts take Varg for Vendetta. B168: Varg buys Vendetta's order (Prospector, Durability, Jungle, then Bruiser) instead of Treasure first (arena 55% on five-pick maps, nonreg 53%).
-- Submitted 12:00Z 6 Nov as team bot version 87.
+- Submitted 12:00Z 6 Nov as team bot version 87 (live 12:12Z). Panel v69p1 53-37: vs v68p1 wins 48 → 53, margin +115 ± 59.
 - Gates vs v68: nonreg PASS 53% (512); gain inconclusive at 53% over 3,328 games, submitted gems +48 ± 7, captured +57 ± 7, deaths −0.5 ± 0.2; profgate +11 ± 32. Rosters rejected on the way: B165a-c (3 picks), B166a/b (Willow, Prism).
 
 ## v68 (2026-11-06)
