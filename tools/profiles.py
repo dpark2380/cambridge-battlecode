@@ -37,16 +37,32 @@ def champ_key(name):
 
 def draft_key(name):
     k = champ_key(name)
-    return "cassi_and_issac" if k in ("cassi", "issac") else k
+    return "cassi_and_issac" if k in ("cassi", "issac", "cassi_&_issac") else k
 
 
 def slug(team):
     return re.sub(r"[^a-z0-9]+", "-", team.lower()).strip("-")
 
 
-def extract(pattern="*p2*"):
-    games = collections.defaultdict(list)  # team -> [(summary, their side)]
-    for vdir in sorted(glob.glob(str(ROOT / "data" / "scrims" / pattern))):
+def scout_games(engine):
+    """Top-team games from tools/scout.py: data/scout/features.jsonl rows name the scouted team and its side."""
+    games = collections.defaultdict(list)
+    seen = set()
+    for line in (ROOT / "data" / "scout" / "features.jsonl").read_text().splitlines():
+        r = json.loads(line)
+        path = ROOT / "data" / "scout" / "summaries" / f"{r['match']}.json.gz"
+        if not r.get("team") or (r["match"], r["team"]) in seen or not path.exists():
+            continue
+        seen.add((r["match"], r["team"]))
+        if engine and json.load(gzip.open(path, "rt"))["match"].get("engineVersion") != engine:
+            continue
+        games[r["team"]].append((path, r["side"]))
+    return games
+
+
+def extract(pattern="*p2*", scout_engine=None):
+    games = scout_games(scout_engine) if scout_engine else collections.defaultdict(list)  # team -> [(summary, their side)]
+    for vdir in ([] if scout_engine else sorted(glob.glob(str(ROOT / "data" / "scrims" / pattern)))):
         feats = Path(vdir) / "features.jsonl"
         if not feats.exists():
             continue
@@ -199,11 +215,12 @@ def main():
     ap.add_argument("--only", nargs="*", help="build: these profile slugs only")
     ap.add_argument("--scrims", default="*p2*", help="extract: data/scrims folders to read (glob)")
     ap.add_argument("--out", help="extract/build/show: profile folder (default data/profiles)")
+    ap.add_argument("--scout", metavar="ENGINE", help="extract: from the scouted top teams' games on this engine version (e.g. 3.0.0)")
     a = ap.parse_args()
     global OUT
     if a.out:
         OUT = ROOT / a.out
-    {"extract": lambda: extract(a.scrims), "build": lambda: build(a.base, a.prefix, a.only), "show": show}[a.command]()
+    {"extract": lambda: extract(a.scrims, a.scout), "build": lambda: build(a.base, a.prefix, a.only), "show": show}[a.command]()
 
 
 if __name__ == "__main__":
