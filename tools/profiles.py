@@ -44,9 +44,9 @@ def slug(team):
     return re.sub(r"[^a-z0-9]+", "-", team.lower()).strip("-")
 
 
-def extract():
+def extract(pattern="*p2*"):
     games = collections.defaultdict(list)  # team -> [(summary, their side)]
-    for vdir in sorted(glob.glob(str(ROOT / "data" / "scrims" / "*p2*"))):
+    for vdir in sorted(glob.glob(str(ROOT / "data" / "scrims" / pattern))):
         feats = Path(vdir) / "features.jsonl"
         if not feats.exists():
             continue
@@ -197,8 +197,13 @@ def main():
     ap.add_argument("--base", default="v51")
     ap.add_argument("--prefix", default="prof-", help="build: folder prefix under bots/_var (a candidate, not a sparring bot)")
     ap.add_argument("--only", nargs="*", help="build: these profile slugs only")
+    ap.add_argument("--scrims", default="*p2*", help="extract: data/scrims folders to read (glob)")
+    ap.add_argument("--out", help="extract/build/show: profile folder (default data/profiles)")
     a = ap.parse_args()
-    {"extract": extract, "build": lambda: build(a.base, a.prefix, a.only), "show": show}[a.command]()
+    global OUT
+    if a.out:
+        OUT = ROOT / a.out
+    {"extract": lambda: extract(a.scrims), "build": lambda: build(a.base, a.prefix, a.only), "show": show}[a.command]()
 
 
 if __name__ == "__main__":

@@ -71,8 +71,9 @@ def main():
     ap.add_argument("versions", nargs="+")
     ap.add_argument("--base")
     ap.add_argument("--handicap", type=int, default=0, help="candidates cannot shop before this round")
+    ap.add_argument("--profiles", default="prof-", help="profile bot folder prefix under bots/_var")
     a = ap.parse_args()
-    profiles = sorted((ROOT / "bots" / "_var").glob("prof-*"))
+    profiles = sorted((ROOT / "bots" / "_var").glob(a.profiles + "*"))
     if not profiles:
         sys.exit("no profile bots: run tools/profiles.py extract && tools/profiles.py build")
     for p in profiles:
