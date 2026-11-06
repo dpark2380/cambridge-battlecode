@@ -3,6 +3,7 @@
 // v68 (B164): three bodies draft Aynir's Heart of Ruin, Ryth, Marcella (arena 62% vs v67 on the 21 three-pick maps).
 // v69 (B167): four picks take Vendetta for Vesper, five picks Varg for Vendetta (nonreg 53% vs v68, submitted gems +48 ± 7 over 3,328 games).
 // v70 (B170): five picks take Vendetta for Vesper (gain gate PASS vs v69, 54% over 768).
+// v70 (B171c): four picks take Varg for Vendetta (60% vs v70-without on the 26 four-pick maps).
 #include <cambc.h>
 #include <optional>
 #include <vector>
@@ -11,7 +12,7 @@ inline std::vector<cambc::champion_draft> profile_picks(std::size_t size) {
     using cambc::champion_draft;
     switch (size) {
     case 3: return {champion_draft::heart_of_ruin, champion_draft::ryth, champion_draft::marcella};
-    case 4: return {champion_draft::heart_of_ruin, champion_draft::ryth, champion_draft::marcella, champion_draft::vendetta};
+    case 4: return {champion_draft::heart_of_ruin, champion_draft::ryth, champion_draft::marcella, champion_draft::varg};
     case 5: return {champion_draft::marcella, champion_draft::heart_of_ruin, champion_draft::vendetta, champion_draft::ryth, champion_draft::varg};
     default: return {};
     }

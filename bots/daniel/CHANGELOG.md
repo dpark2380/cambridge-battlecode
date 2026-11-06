@@ -9,7 +9,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 
 ## v70 (2026-11-06)
 
-- v69 + B170: five-pick drafts take Vendetta for Vesper (Marcella, Heart of Ruin, Vendetta, Ryth, Varg); no draft takes Vesper now.
+- v69 + B170: five-pick drafts take Vendetta for Vesper (Marcella, Heart of Ruin, Vendetta, Ryth, Varg); no draft takes Vesper now. B171c: four-pick drafts take Varg for Vendetta (60% on four-pick maps, nonreg 52%).
 - Gates vs v69: arena on five-pick maps 57% (324); nonreg PASS 54% (512); gain PASS 54% (768), gems +30 ± 15, deaths −0.7. Rejected on the way: B169 bag 28, B170b (Vendetta for Marcella, 39%).
 
 ## v69 (2026-11-06)
