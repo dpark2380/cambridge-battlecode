@@ -11,7 +11,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 
 - v73 + B193: eight constants tuned together by `tools/tune.py` (max_damage_share 4.04 → 4.90, help_wait_turns 50 → 40, gold_weight 0.30 → 0.233, recall 0.40 → 0.42, carrier recall 0.50 → 0.52, spawn leave 0.95 → 0.94, extra_body_value 1.0 → 1.12, threat bag 20 → 19).
 - Gate: gain vs v73 PASS 59% (512), gems +64 ± 20, captured +69 ± 17, deaths −0.9.
-- Submitted 18:27Z 6 Nov as team bot version 91.
+- Submitted 18:27Z 6 Nov as team bot version 91 (live 18:32Z). Panel v74p1 57-33, the best on engine 3 (v73p1 56-34, v71p1 56-34). Later tune rounds on v74 (B194, B195) found no further step.
 - Rejected on v73 before it: B184c 5 bodies, B185 extra body value alone, B186 siege value, B187 detour 6 / stall 20, B188 Vesper recheck, B190 siege bodies / Monolith gather, B191 bag 30/42, B192 Cassi & Issac.
 
 ## v73 (2026-11-06)

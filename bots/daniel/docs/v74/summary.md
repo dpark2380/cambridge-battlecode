@@ -16,3 +16,5 @@
 The largest move is `max_damage_share` (+21%): a group is "survivable" when its exposure per damage is at most this many health bars, so bodies take on bigger groups alone or in smaller teams. The one-at-a-time sweeps (B176-B191) could not find this: it works together with the other shifts.
 
 **Gate:** gain vs v73 PASS 300/512 = 59%; submitted gems +63.5 ± 19.8, gems captured +69.4 ± 16.8, deaths −0.9 ± 0.5, gold −91 ± 137.
+
+**Live (version 91, live 18:32:38Z 6 Nov).** Panel v74p1 57-33, the best panel on engine 3: vs v73p1 (90 paired) 56 → 57 wins, margin +16 ± 50, gems +9 ± 27, deaths −0.6 ± 0.7 (neutral); vs v71p1 56 → 57, margin +36, panelcmp BETTER. Kept. Ranked 11-14 by 19:29Z.
