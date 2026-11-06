@@ -9,7 +9,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 
 ## v71 (2026-11-06)
 
-- Submitted 15:0xZ 6 Nov as team bot version 89.
+- Submitted 15:04Z 6 Nov as team bot version 89.
 - v70 + B178: carriers under threat leave at 50% health (B121's 65% → 50%). Gain PASS vs v70, 53% over 1,536, captured +32 ± 10; 0.8 was 35%, 0.4 no better than 0.5.
 - B179: every body goes home at 40% health, not 28.8% (v23). 53% over 3,328, deaths −1.5 ± 0.2, gems +28 ± 8; 0.5 was worse.
 - Rejected on v70: B176 Ryth health soak (51%), B177 tribute detour 15 (48%).
