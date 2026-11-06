@@ -11,7 +11,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 
 - v72 + B183 + B184: max_group_bodies 3 → 4 (gain PASS 54% vs 3, gems +35 ± 16). B183: gold_weight 0.2 → 0.3 (target value = gems + weight × gold). vs v72: gems +44 ± 14, deaths −2.2 ± 0.3, gold +900 at a flat 51% mirror win rate; 0.25 similar, 0.4 and 0.12 worse.
 - Gates: nonreg vs v71 PASS 54% (512), gems +50 ± 20, deaths −2.4 ± 0.4, gold +986. v72 was never submitted on its own.
-- Submitted 2026-11-06T16:29:20Z as team bot version 90.
+- Submitted 2026-11-06T16:29:20Z as team bot version 90 (live 16:32Z). Panel v73p1 56-34 (= v71p1), gold +570 (z 2.8), deaths −1.1, their deaths +1.6 (z 2.6): kept.
 
 ## v72 (2026-11-06)
 
