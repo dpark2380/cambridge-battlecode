@@ -7,6 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v66 (2026-11-06)
+
+- v64 + B153: a gem-less group's gold counts up to 150 in the target value. On the new 04lines, 31-cluster gold walls (620 gold, 0 gems) rated 124 against 11-19 for gem groups; both teams farmed gold all game (11-0 at r2000).
+- Platform: engine 3.0.0 since 2026-11-04 23:00Z (cambc/SDK 5.0.0, 42 new 04* maps); local tools upgraded 6 Nov 07:30Z. v65's panel (engine 3.0.0) vs v64p2 (2.0.0) is not a fair comparison; v64 re-uploaded 07:23Z as version 83 and re-paneled as v64p3.
+- Gates vs v64 (engine 3.0.0): 04lines 8/8 (+872), 04orchard 7/8 (+322); nonreg PASS 50% (512); profgate +4 ± 4.
+
 ## v65 (2026-11-06)
 
 - v64 + B152: Heart of Ruin engages only with a 1.5x power edge. Ranked per 1000 rounds, our HoR deals 6.0k champion / 8.6k camp damage against the opponents' HoR 4.3k / 12.7k, and dies 2.5 vs 1.6.
