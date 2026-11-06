@@ -39,7 +39,7 @@
 | [v68](v68/summary.md) | `v68` | v67 + B164: three-pick roster HoR, Ryth, Marcella | 62% vs v67 on 3-pick maps; nonreg 52% |
 | [v69](v69/summary.md) | `v69` | v68 + B167: Vendetta in 4-pick drafts, Varg in 5-pick drafts | nonreg 53% vs v68, gems +48 ± 7 over 3,328 |
 | [v70](v70/summary.md) | `v70` | v69 + B170: five-pick drafts take Vendetta for Vesper | gain PASS vs v69 (54% over 768), gems +30 |
-| [v71](v71/summary.md) | `v71` | v70 + B178: carriers under threat leave at 50% health | gain PASS vs v70 (53% over 1,536) |
+| [v71](v71/summary.md) | `v71` | v70 + B178/B179: carriers under threat leave at 50% health, every body at 40% | gain PASS vs v70 (53% over 1,536); B179 deaths −1.5 |
 | [v44](v44/summary.md) | `v44` | v43 + B112a lone Vesper/HoR fall-back. Team bot version 58: panel 28-62 (deaths 15.8), ranked 20-20 over 40 | nonreg 49% vs v43, 81% v12, 92% Jame v3 |
 | [v43](v43/summary.md) | `v43` | v41 + B118: everyone fights only with ≥1.2x power. Team bot versions 55/57: panel 24-66 (= v41), ranked 38-27 over two stints | nonreg 48% vs v41 (borderline), 81% v12, 92% Jame v3 |
 | [v42](v42/summary.md) | `v42` | v41 + B113b: gold counts 0.5 before round 500 (losses trail 1.2k vs 2.3k gold by r500). Ranked from 09:37Z (team bot version 53): 11-19 over 30, reverted 10:40Z | gain gate vs v41 PASS 55%; nonreg 81% v12, 90% Jame v3 |

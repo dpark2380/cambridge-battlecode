@@ -60,7 +60,7 @@ constexpr float extra_body_value = 1.0f;  // v16 (B36): was 0.4538; bodies soloe
 // Extra turns charged to starting a group that needs help, for the wait until it arrives.
 constexpr float help_wait_turns = 50;
 // The duo carries the most gems and Cassi has 700 health: it leaves earlier when enemies are around.
-constexpr float recall_health = 0.2880f, duo_recall_health = 0.5f;  // v23 (B62b): was 0.7487
+constexpr float recall_health = 0.4f, duo_recall_health = 0.5f;  // v71 (B179): recall_health 0.288 -> 0.4 (deaths -1.5 ± 0.2, gems +28 ± 8 over 3,328; 0.5: 46% vs 0.4)
 constexpr float spawn_leave_health = 0.7716f;
 constexpr int tribute_gems = profile_bag;      // always bank at least this many
 constexpr int tribute_detour = 10;     // bank anything when an altar is this close
