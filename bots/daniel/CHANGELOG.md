@@ -7,6 +7,11 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v73 (2026-11-06)
+
+- v72 + B183: gold_weight 0.2 → 0.3 (target value = gems + weight × gold). vs v72: gems +44 ± 14, deaths −2.2 ± 0.3, gold +900 at a flat 51% mirror win rate; 0.25 similar, 0.4 and 0.12 worse.
+- Gates: nonreg vs v71 PASS 54% (512), gems +50 ± 20, deaths −2.4 ± 0.4, gold +986. v72 was never submitted on its own: v73 goes up after v71's panel.
+
 ## v72 (2026-11-06)
 
 - v71 + B180: bodies heal to 95% at spawn before heading out (was 0.7716 from a v5 tune). vs v71: 52% over 3,328, gems +22.5 ± 7.8, captured +16 ± 7.
