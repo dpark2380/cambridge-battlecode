@@ -7,6 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v65 (2026-11-06)
+
+- v64 + B152: Heart of Ruin engages only with a 1.5x power edge. Ranked per 1000 rounds, our HoR deals 6.0k champion / 8.6k camp damage against the opponents' HoR 4.3k / 12.7k, and dies 2.5 vs 1.6.
+- Rejected on the way (profgate vs v64): B150 bigger bags (−17, −56), B151 HoR strength build (−134).
+- Gates: nonreg vs v64 PASS 50%; profgate −8 ± 23 (blind to fight changes). User 06:10Z: "Try carrier safety, and more trials" (carrier losses turned out not to be a gap: 14.7 gems a game vs the opponents' 27).
+
 ## Ranked check, v62-v64 (2026-11-04T10:20Z)
 
 - Ranked 03:01-10:20Z 4 Nov (145 games): v62 20-15, v63 16-19, v64 33-47; overall 65-80, rating 1713 → 1659. On maps none of v62-v64's changes touch the line falls the same way (v62 16-13, v63 13-15, v64 28-35), so the drop is the field (the morning pool, B135), not the changes; changed maps under v64: Golem rings (B143) 1-5, islands (B145) 3-4, early fixes (B137-B140) 1-3; 03fan 1-1 (won 1011:164), 00gem_fields 1-0, 00dunes 2-0, 00crater 2-1, 03riverbed 0-3. Held; not reverted (too few games per changed map).
