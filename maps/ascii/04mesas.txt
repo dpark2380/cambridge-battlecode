@@ -1,0 +1,99 @@
+# 04mesas: 80x75, 4 picks per team, symmetry: 180-degree rotation
+# Legend: . floor  # wall  o hole  " bush  A altar  S team-A spawn  E team-B spawn
+#         w wolf  k elk  M monolith  G golem  g gem cluster  $ gold cluster (camp spawn tiles)
+# Row index is y, column index is x. Dumped via the engine from Team A's perspective.
+
+      0         1         2         3         4         5         6         7         
+      01234567890123456789012345678901234567890123456789012345678901234567890123456789
+   0  oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+   1  oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+   2  oooooooooooooooooooooooooooooooooooooooooooooooooooooo......oooooooooooooooooooo
+   3  ooooooooooooooooooooooooooooooooooo..oooooooooooooooo..........ooooooooooooooooo
+   4  ooooooooo...oooooooooooooooooooo.......ooooooooooooo........wg..oooooooooooooooo
+   5  ooooooo.......oooooooooooooooo..........ooooooooooo....""""......ooooooooooooooo
+   6  ooooooo..........ooooooooooo.............ooooooooo....""""""".....oooooooooooooo
+   7  oooooo.............oooooooo......w.......ooooooooo......."""""....oooooooooooooo
+   8  oooooo....................o..............oooo.............."""....oooooooooooooo
+   9  oooooo....................o................................."""...oooooooooooooo
+  10  oooooo....................o......."".........................""...oooooooooooooo
+  11  oooooo...............oooo.o.....""""............o................ooooooooooooooo
+  12  oooooo....SSS........ooooooo...."""...k.ooooooooo................ooooooooooooooo
+  13  oooooo....SSS........oooooooo........$g.oooooooooo..............oooooooooooooooo
+  14  ooooo.....SSS.......oooooooooo.........oooooooooooo..............ooooooooooooooo
+  15  oooo................ooooooooooo........ooooooooooooo..............oooooooooooooo
+  16  oooo................ooooooooooo.......ooooooooooooooooo............ooooooooooooo
+  17  oooo..................oooooooooo.....ooooooooooooooooooooooooo......oooooooooooo
+  18  oooo....................oooooooooo..ooooooooooooooooooooooooooo......ooooooooooo
+  19  oooo.............A........oooooooooooooooooooooooooooooooooooooo.........o.ooooo
+  20  oooo...............o.................oooooooooooooooooooooooooooo......$.....ooo
+  21  ooooo.............oooo............w..ooooooooooooooooooooooooooooo....$k$.....oo
+  22  ooooooo...........oooooo..............oooooooooooooooooooooooooooo.....g......oo
+  23  oooooooooo.......oooooooo............ooooooooooooooooooooooooooooo............oo
+  24  oooooooooooo....ooooooooo............ooooooooooooooooooooooooooooo...........ooo
+  25  ooooooooooooo...ooooooooo...""".....ooooooooooooooooooooooooooooo............ooo
+  26  ooooooooooooo...ooooooooo...."""....ooooooooooooooooooooooooooooo...........oooo
+  27  ooooooooooooo...oooooooooo....."....ooooooooooooooooooooooooooooo...w.......oooo
+  28  ooooooooooooo....oooooooooo.........ooo......ooooooooooooooooo..............oooo
+  29  ooooooooooooo.....ooooooooooooo......o........ooooooooooooooo......oo......ooooo
+  30  ooooooooooooo.......ooooooooooooo.............oooooooooooooo........ooo....ooooo
+  31  oooooooooooooo.......oooooooooooo..............ooooooooooo...........oo....ooooo
+  32  ooooooooooooo........ooooooooooo......."""......oooooooo..............oo...ooooo
+  33  ooo...ooooooo...$k....ooooooooo......"""""......ooooooo........""......ooooooooo
+  34  ooo...oooo......$$....ooooooooo......""""".......oooooo.......""""".........oooo
+  35  ooo....o...............oooooooo..................o..........."""""""........oooo
+  36  ooo....o....""""".......ooo.................................."""""""........oooo
+  37  ooo........."""""".....................ww....................."""""".........ooo
+  38  oooo........"""""""..................................ooo......."""""....o....ooo
+  39  oooo........"""""""...........o..................oooooooo...............o....ooo
+  40  oooo.........""""".......oooooo......."""""......ooooooooo....$$......oooo...ooo
+  41  ooooooooo......""........ooooooo......"""""......ooooooooo....k$...ooooooo...ooo
+  42  ooooo...oo..............oooooooo......""".......ooooooooooo........ooooooooooooo
+  43  ooooo....oo...........ooooooooooo..............oooooooooooo.......oooooooooooooo
+  44  ooooo....ooo........oooooooooooooo.............ooooooooooooo.......ooooooooooooo
+  45  ooooo......oo......ooooooooooooooo........o......ooooooooooooo.....ooooooooooooo
+  46  oooo..............ooooooooooooooooo......ooo.........oooooooooo....ooooooooooooo
+  47  oooo.......w...ooooooooooooooooooooooooooooo....".....oooooooooo...ooooooooooooo
+  48  oooo...........ooooooooooooooooooooooooooooo...."""....ooooooooo...ooooooooooooo
+  49  ooo............ooooooooooooooooooooooooooooo....."""...ooooooooo...ooooooooooooo
+  50  ooo...........ooooooooooooooooooooooooooooo............ooooooooo....oooooooooooo
+  51  oo............ooooooooooooooooooooooooooooo............oooooooo.......oooooooooo
+  52  oo......g.....oooooooooooooooooooooooooooo..............oooooo...........ooooooo
+  53  oo.....$k$....ooooooooooooooooooooooooooooo..w............oooo.............ooooo
+  54  ooo.....$......oooooooooooooooooooooooooooo.................o...............oooo
+  55  ooooo.o.........oooooooooooooooooooooooooooooooooooooo........A.............oooo
+  56  ooooooooooo......ooooooooooooooooooooooooooo..oooooooooo....................oooo
+  57  oooooooooooo......ooooooooooooooooooooooooo.....oooooooooo..................oooo
+  58  ooooooooooooo............ooooooooooooooooo.......ooooooooooo................oooo
+  59  oooooooooooooo..............ooooooooooooo........ooooooooooo................oooo
+  60  ooooooooooooooo..............oooooooooooo.........oooooooooo.......EEE.....ooooo
+  61  oooooooooooooooo..............oooooooooo.g$........oooooooo........EEE....oooooo
+  62  ooooooooooooooo................ooooooooo.k..."""....ooooooo........EEE....oooooo
+  63  ooooooooooooooo................o............"""".....o.oooo...............oooooo
+  64  oooooooooooooo...""........................."".......o....................oooooo
+  65  oooooooooooooo...""".................................o....................oooooo
+  66  oooooooooooooo...."""..............oooo..............o....................oooooo
+  67  oooooooooooooo....""""".......ooooooooo.......w......oooooooo.............oooooo
+  68  oooooooooooooo....."""""""....ooooooooo.............ooooooooooo..........ooooooo
+  69  ooooooooooooooo......""""....ooooooooooo..........oooooooooooooooo.......ooooooo
+  70  oooooooooooooooo..gw........ooooooooooooo.......oooooooooooooooooooo...ooooooooo
+  71  ooooooooooooooooo..........oooooooooooooooo..ooooooooooooooooooooooooooooooooooo
+  72  oooooooooooooooooooo......oooooooooooooooooooooooooooooooooooooooooooooooooooooo
+  73  oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+  74  oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+# Camp groups (gems/gold per capture, respawn in rounds, centroid of spawn tiles)
+# G0 {'w': 1} gems=4 gold=40 respawn=40 at=(33,7)
+# G1 {'w': 1} gems=4 gold=40 respawn=40 at=(46,67)
+# G2 {'$': 3, 'k': 1} gems=15 gold=150 respawn=60 at=(16,34)
+# G3 {'$': 3, 'k': 1} gems=15 gold=150 respawn=60 at=(62,40)
+# G4 {'w': 1} gems=4 gold=40 respawn=40 at=(68,27)
+# G5 {'w': 1} gems=4 gold=40 respawn=40 at=(11,47)
+# G6 {'k': 1, '$': 1, 'g': 1} gems=22 gold=110 respawn=60 at=(38,13)
+# G7 {'k': 1, '$': 1, 'g': 1} gems=22 gold=110 respawn=60 at=(41,61)
+# G8 {'w': 1} gems=4 gold=40 respawn=40 at=(34,21)
+# G9 {'w': 1} gems=4 gold=40 respawn=40 at=(45,53)
+# G10 {'g': 1, '$': 3, 'k': 1} gems=22 gold=150 respawn=60 at=(71,21)
+# G11 {'g': 1, '$': 3, 'k': 1} gems=22 gold=150 respawn=60 at=(8,53)
+# G12 {'w': 2} gems=8 gold=80 respawn=40 at=(40,37)
+# G13 {'w': 1, 'g': 1} gems=11 gold=40 respawn=50 at=(60,4)
+# G14 {'w': 1, 'g': 1} gems=11 gold=40 respawn=50 at=(18,70)

@@ -4441,6 +4441,8 @@ namespace vision
 {
 
 /// Like `champion_tiles`, but writes into `out` instead of returning a new board.
+/// Copies current visible positions, including movement earlier in this round.
+/// Call again to refresh `out` after actions or turn changes; it is a snapshot.
 /// @param side Team to include.
 /// @param out Destination; its previous contents are overwritten.
 inline void champion_tiles_into(team side, bitboard& out)
@@ -4451,6 +4453,7 @@ inline void champion_tiles_into(team side, bitboard& out)
 }
 
 /// Get visible champion occupancy for one side.
+/// The returned board is a snapshot of positions visible when called.
 /// @param side Team to include.
 [[nodiscard]] inline bitboard champion_tiles(team side)
 {
@@ -4466,6 +4469,7 @@ inline void champion_tiles_into(team side, bitboard& out)
 }
 
 /// Like `champion_tiles()`, but writes into `out`.
+/// Copies current visible positions; call again to refresh this snapshot.
 /// @param out Destination; its previous contents are overwritten.
 inline void champion_tiles_into(bitboard& out)
 {

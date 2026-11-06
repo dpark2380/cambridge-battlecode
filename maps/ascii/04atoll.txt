@@ -1,0 +1,98 @@
+# 04atoll: 81x75, 5 picks per team, symmetry: horizontal mirror (x reflected)
+# Legend: . floor  # wall  o hole  " bush  A altar  S team-A spawn  E team-B spawn
+#         w wolf  k elk  M monolith  G golem  g gem cluster  $ gold cluster (camp spawn tiles)
+# Row index is y, column index is x. Dumped via the engine from Team A's perspective.
+
+      0         1         2         3         4         5         6         7         8
+      012345678901234567890123456789012345678901234567890123456789012345678901234567890
+   0  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+   1  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+   2  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+   3  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+   4  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+   5  oooooooooooooooooooooooooooooooo.................oooooooooooooooooooooooooooooooo
+   6  oooooooooooooooooooooooooooo.........................oooooooooooooooooooooooooooo
+   7  oooooooooooooooooooooooooo..............A..............oooooooooooooooooooooooooo
+   8  oooooooooooooooooooooooogg.............................ggoooooooooooooooooooooooo
+   9  oooooooooooooooooooooo..gGg...........................gGg..oooooooooooooooooooooo
+  10  ooooooooooooooooooooo...gg.............................gg...ooooooooooooooooooooo
+  11  oooooooooooooooooooo.........................................oooooooooooooooooooo
+  12  oooooooooooooooooo.............................................oooooooooooooooooo
+  13  ooooooooooooooooo...............................................ooooooooooooooooo
+  14  oooooooooooooooo.................................................oooooooooooooooo
+  15  oooooooooooooo.....................................................oooooooooooooo
+  16  oooooooooooooo.......................ooo.ooo.......................oooooooooooooo
+  17  ooooooooooooowg.................ooooooooooooooooo.................gwooooooooooooo
+  18  oooooooooooo"""..............ooooooooooooooooooooooo.............."""oooooooooooo
+  19  ooooooooooo"""".............ooooooooooooooooooooooooo.............""""ooooooooooo
+  20  oooooooooo."""""..........ooooooooooooooooooooooooooooo..........""""".oooooooooo
+  21  oooooooooo.."""".........ooooooooooooooooooooooooooooooo.........""""..oooooooooo
+  22  ooooooooo...""".........ooooooooooooooooooooooooooooooooo........."""...ooooooooo
+  23  oooooooo...............ooooooooooooooooooooooooooooooooooo...............oooooooo
+  24  oooooooo..............ooooooooooooooooooooooooooooooooooooo..............oooooooo
+  25  ooooooog.............ooooooooooooooooooooooooooooooooooooooo.............gooooooo
+  26  ooooooow............ooooooooooooooooooooooooooooooooooooooooo............wooooooo
+  27  oooooooooo..........ooooooooooooooooooooooooooooooooooooooooo..........oooooooooo
+  28  oooooo.ooo.........ooooooooooooooooooooooooooooooooooooooooooo.........ooo.oooooo
+  29  oooooo.ooo.........ooooooooooooooooooooooooooooooooooooooooooo.........ooo.oooooo
+  30  oooooo.............ooooooooooooooooooooooooooooooooooooooooooo.............oooooo
+  31  oooooo.............ooooooooooooooooooooooooooooooooooooooooooo.............oooooo
+  32  ooooo.............ooooooooooooooooooooooooooooooooooooooooooooo.............ooooo
+  33  ooooo.............ooooooooooooooooooooooooooooooooooooooooooooo.............ooooo
+  34  ooooo.............ooooooooooooooooooooooooooooooooooooooooooooo.............ooooo
+  35  ooooo.............ooooooooooo"""ooooooooooooooooo"""ooooooooooo.............ooooo
+  36  ooooo...SSS.................""""....g.......g...."""".................EEE...ooooo
+  37  ooooo...SSS..................""""..ggg.....ggg..""""..................EEE...ooooo
+  38  ooooo...SSS..................""""...g.......g...""""..................EEE...ooooo
+  39  ooooo.............ooooooooooo""ooooooooooooooooooo""ooooooooooo.............ooooo
+  40  ooooo.............ooooooooooooooooooooooooooooooooooooooooooooo.............ooooo
+  41  oooooo............ooooooooooooooooooooooooooooooooooooooooooooo............oooooo
+  42  oooooo............ooooooooooooooooooooooooooooooooooooooooooooo............oooooo
+  43  oooooo.............ooooooooooooooooooooooooooooooooooooooooooo.............oooooo
+  44  oooooo.............ooooooooooooooooooooooooooooooooooooooooooo.............oooooo
+  45  ooooooo............ooooooooooooooooooooooooooooooooooooooooooo............ooooooo
+  46  ooooooogw..........ooooooooooooooooooooooooooooooooooooooooooo..........wgooooooo
+  47  ooooooo.............ooooooooooooooooooooooooooooooooooooooooo.............ooooooo
+  48  oooooooo............ooooooooooooooooooooooooooooooooooooooooo............oooooooo
+  49  oooooooo.............ooooooooooooooooooooooooooooooooooooooo.............oooooooo
+  50  ooooooooo.............ooooooooooooooooooooooooooooooooooooo.............ooooooooo
+  51  ooooooooo..............ooooooooooooooooooooooooooooooooooo..............ooooooooo
+  52  oooooooooo..............ooooooooooooooooooooooooooooooooo..............oooooooooo
+  53  ooooooooooo..............ooooooooooooooooooooooooooooooo..............ooooooooooo
+  54  ooooooooooo...............ooooooooooooooooooooooooooooo...............ooooooooooo
+  55  oooooooooooo................ooooooooooooooooooooooooo................oooooooooooo
+  56  ooooooooooooo................ooooooooooooooooooooooo................ooooooooooooo
+  57  ooooooooooooo...................ooooooooooooooooo...................ooooooooooooo
+  58  oooooooooooooo.ggg...................oo...oo...................ggg.oooooooooooooo
+  59  ooooooooooooooogkg.............................................gkgooooooooooooooo
+  60  oooooooooooooooo.....""".................................""".....oooooooooooooooo
+  61  ooooooooooooooooo..."""".................................""""...ooooooooooooooooo
+  62  oooooooooooooooooo.."""""..............................."""""..oooooooooooooooooo
+  63  ooooooooooooooooooo..""""...............................""""..ooooooooooooooooooo
+  64  ooooooooooooooooooooo.""................................."".ooooooooooooooooooooo
+  65  oooooooooooooooooooooo.....................................oooooooooooooooooooooo
+  66  ooooooooooooooooooooooo...................................ooooooooooooooooooooooo
+  67  ooooooooooooooooooooooooo.oo............A............oo.ooooooooooooooooooooooooo
+  68  oooooooooooooooooooooooooooo..ww.................ww..oooooooooooooooooooooooooooo
+  69  ooooooooooooooooooooooooooooooggg...............gggoooooooooooooooooooooooooooooo
+  70  ooooooooooooooooooooooooooooooooo...............ooooooooooooooooooooooooooooooooo
+  71  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+  72  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+  73  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+  74  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+# Camp groups (gems/gold per capture, respawn in rounds, centroid of spawn tiles)
+# G0 {'G': 1, 'g': 6} gems=78 gold=160 respawn=80 at=(25,9)
+# G1 {'G': 1, 'g': 6} gems=78 gold=160 respawn=80 at=(55,9)
+# G2 {'w': 1, 'g': 1} gems=11 gold=40 respawn=50 at=(14,17)
+# G3 {'w': 1, 'g': 1} gems=11 gold=40 respawn=50 at=(66,17)
+# G4 {'g': 5} gems=35 gold=0 respawn=50 at=(36,37)
+# G5 {'g': 5} gems=35 gold=0 respawn=50 at=(44,37)
+# G6 {'g': 1, 'w': 1} gems=11 gold=40 respawn=50 at=(7,26)
+# G7 {'g': 1, 'w': 1} gems=11 gold=40 respawn=50 at=(73,26)
+# G8 {'w': 1, 'g': 1} gems=11 gold=40 respawn=50 at=(8,46)
+# G9 {'w': 1, 'g': 1} gems=11 gold=40 respawn=50 at=(72,46)
+# G10 {'k': 1, 'g': 5} gems=50 gold=90 respawn=60 at=(16,58)
+# G11 {'k': 1, 'g': 5} gems=50 gold=90 respawn=60 at=(64,58)
+# G12 {'w': 2, 'g': 3} gems=29 gold=80 respawn=50 at=(31,69)
+# G13 {'w': 2, 'g': 3} gems=29 gold=80 respawn=50 at=(49,69)

@@ -792,6 +792,36 @@ void test_move_towards_blocked_target()
 	move_calls = saved_move_calls;
 }
 
+void test_champion_tiles_refresh()
+{
+	const auto saved_position = mock_position;
+	const auto saved_team = mock_champion_team;
+	const auto saved_visibility = visible_tiles;
+	visible_tiles = ~std::uint64_t{0};
+	for (const auto side : {cambc::team::ally, cambc::team::enemy}) {
+		mock_champion_team = side == cambc::team::ally ? mock_my_team : mock_my_team ^ 1;
+		mock_position = {2, 2};
+		auto board = cambc::vision::champion_tiles(side);
+		auto both = cambc::vision::champion_tiles();
+		assert(board.count() == 1 && board.is_set({2, 2}));
+		assert(both == board);
+		mock_position = {3, 2};
+		assert(board.is_set({2, 2})); // Previously copied occupancy remains a snapshot.
+		cambc::vision::champion_tiles_into(side, board);
+		cambc::vision::champion_tiles_into(both);
+		assert(board.count() == 1 && board.is_set({3, 2}) && !board.is_set({2, 2}));
+		assert(both == board && cambc::vision::champion_tiles(side) == board);
+		visible_tiles &= ~tile_bit(mock_position);
+		cambc::vision::champion_tiles_into(side, board);
+		cambc::vision::champion_tiles_into(both);
+		assert(board.is_empty() && both.is_empty());
+		visible_tiles = ~std::uint64_t{0};
+	}
+	mock_position = saved_position;
+	mock_champion_team = saved_team;
+	visible_tiles = saved_visibility;
+}
+
 void test_camp_vision()
 {
 	query_error = 0;
@@ -1511,6 +1541,7 @@ int main()
 {
 	test_in_vision();
 	if (!cambc::is_draft()) test_move_towards_blocked_target();
+	if (!cambc::is_draft()) test_champion_tiles_refresh();
 	test_logical_masks();
 	test_value_semantics();
 	if (!cambc::is_draft()) test_host_flag_decoding();
