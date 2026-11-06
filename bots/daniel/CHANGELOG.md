@@ -7,6 +7,11 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v69 (2026-11-06)
+
+- v68 + B167: four-pick drafts take Vendetta for Vesper; five-pick drafts take Varg for Vendetta.
+- Gates vs v68: nonreg PASS 53% (512); gain inconclusive at 53% over 3,328 games, submitted gems +48 ± 7, captured +57 ± 7, deaths −0.5 ± 0.2; profgate +11 ± 32. Rosters rejected on the way: B165a-c (3 picks), B166a/b (Willow, Prism).
+
 ## v68 (2026-11-06)
 
 - v67 + B164: three-pick drafts take Heart of Ruin, Ryth, Marcella (Aynir) instead of Vesper, Heart of Ruin, Vendetta. Found with `groupgap.py` (04compass, 04standing_stones) and arena against the profile bots.
