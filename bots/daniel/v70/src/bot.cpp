@@ -79,7 +79,7 @@ constexpr int siege = 1;
 // for threat_memory rounds after seeing an enemy, bank at this many gems (carried gems feed killers).
 constexpr int ally_radius = 4;
 constexpr int retreat_to_allies = 1;  // v17 (B37): was 0
-constexpr int threat_tribute_gems = profile_bag;
+constexpr int threat_tribute_gems = 20;  // v70 (B175): bank from 20 gems for 30 rounds after seeing an enemy (was the 36-gem bag)
 constexpr int threat_memory = 30;
 // v7: react to damage from attackers we cannot see (see take_turn). 0 = v6 behaviour.
 constexpr int hidden_response = 1;
