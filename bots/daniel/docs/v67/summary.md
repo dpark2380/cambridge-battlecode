@@ -21,3 +21,5 @@ The build and bag together carry most of it: fewer deaths and more gems captured
 **Gates:** nonreg vs v66 on all 128 maps PASS, 271/512 = 53%; deaths −1.7 ± 0.4, gems captured +28.5 ± 16, submitted gems +14.5 ± 18.
 
 **Next:** a live panel vs v64p3 (same engine). If v67 is neutral there, try build + bag without the draft.
+
+**Live (version 85, live 10:12Z 6 Nov).** Panel v67p1 vs v64p3 (both engine 3.0.0), 84 paired games: wins 41 → 44, gem margin +45 ± 59, deaths −2.1 ± 0.9 (z −2.4), opponents' gold −647 ± 313; panelcmp verdict BETTER. Kept live. Ranked 7-3 by 10:36Z.
