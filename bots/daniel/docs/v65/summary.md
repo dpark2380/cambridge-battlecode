@@ -20,3 +20,5 @@ Every other champion is within 17% of its counterpart's camp damage. Ours fights
 - nonreg vs v64: PASS, 172/344 = 50%.
 
 **Decision metrics:** panel `v65p2` vs `v64p2` (`panelcmp.py`): margin, deaths, and Heart of Ruin camp damage from the summaries.
+
+**Result:** Fair test on engine 3.0.0 (v65p2 vs v64p3, paired 90): wins 44 → 39, margin −50 ± 33, gems −42 ± 22 (z −2.0), deaths −0.3 ± 0.5; the first comparison against v64p2 (engine 2.0.0) was invalid. **Rejected**; v64 re-uploaded 07:23Z (version 83). v64 itself fell from 51 wins (v64p2, engine 2.0.0) to 44 (v64p3, engine 3.0.0).

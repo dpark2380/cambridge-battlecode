@@ -17,7 +17,8 @@ Version folder ≠ team submission number: the platform counts every submission 
 
 - v64 + B152: Heart of Ruin engages only with a 1.5x power edge. Ranked per 1000 rounds, our HoR deals 6.0k champion / 8.6k camp damage against the opponents' HoR 4.3k / 12.7k, and dies 2.5 vs 1.6.
 - Rejected on the way (profgate vs v64): B150 bigger bags (−17, −56), B151 HoR strength build (−134).
-- Gates: nonreg vs v64 PASS 50%; profgate −8 ± 23 (blind to fight changes). User 06:10Z: "Try carrier safety, and more trials" (carrier losses turned out not to be a gap: 14.7 gems a game vs the opponents' 27).
+- Gates: nonreg vs v64 PASS 50%; profgate −8 ± 23 (blind to fight changes).
+- Submitted 2026-11-06T06:20Z as team bot version 82 (live 06:32Z). Fair test on engine 3.0.0 (v65p2 vs v64p3, paired 90): wins 44 → 39, margin −50 ± 33, gems −42 ± 22 (z −2.0), deaths −0.3 ± 0.5; the first comparison against v64p2 (engine 2.0.0) was invalid. **Rejected**; v64 re-uploaded 07:23Z (version 83). v64 itself fell from 51 wins (v64p2, engine 2.0.0) to 44 (v64p3, engine 3.0.0). User 06:10Z: "Try carrier safety, and more trials" (carrier losses turned out not to be a gap: 14.7 gems a game vs the opponents' 27).
 
 ## Ranked check, v62-v64 (2026-11-04T10:20Z)
 

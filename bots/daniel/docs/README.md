@@ -33,7 +33,7 @@
 | [v62](v62/summary.md) | `v62` | v61 + B140: a lone elk ringed by its clusters is worked from outside the ring (00gem-fields, 01concentrated-wealth: ranked 1-11 each) | gem-fields 12/14, concentrated-wealth 11/14 vs v61; nonreg 50% |
 | [v63](v63/summary.md) | `v63` | v62 + B143: lone Golems ringed by clusters too (02cuts ranked 3-17; 8 maps) | gain 57% on the 8 maps, nonreg 54% vs v62 |
 | [v64](v64/summary.md) | `v64` | v63 + B145: Teleport Crystals onto island groups (20+ gems, shore within 3: quadrants, big-world, gemcombat4, membrane) | gain 67% on those maps, nonreg 51% vs v63; team bot version 81: v64p2 vs v60p2 wins 46 → 51, margin +72 ± 48; kept |
-| [v65](v65/summary.md) | `v65` | v64 + B152: Heart of Ruin engages only with a 1.5x power edge (it fights where top HoRs farm). Panel pending | nonreg 50% vs v64 |
+| [v65](v65/summary.md) | `v65` | v64 + B152: Heart of Ruin engages only with a 1.5x power edge (it fights where top HoRs farm). Team bot version 82: v65p2 vs v64p3 (both engine 3.0.0) wins 44 → 39, margin −50 ± 33; **rejected** | nonreg 50% vs v64 |
 | [v66](v66/summary.md) | `v66` | v64 + B153: a gem-less group's gold counts up to 150 (04lines gold walls: 11-0 at r2000 in the mirror) | 04lines 8/8 vs v64; nonreg 50% |
 | [v44](v44/summary.md) | `v44` | v43 + B112a lone Vesper/HoR fall-back. Team bot version 58: panel 28-62 (deaths 15.8), ranked 20-20 over 40 | nonreg 49% vs v43, 81% v12, 92% Jame v3 |
 | [v43](v43/summary.md) | `v43` | v41 + B118: everyone fights only with ≥1.2x power. Team bot versions 55/57: panel 24-66 (= v41), ranked 38-27 over two stints | nonreg 48% vs v41 (borderline), 81% v12, 92% Jame v3 |
