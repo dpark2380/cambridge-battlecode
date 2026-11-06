@@ -17,4 +17,4 @@ The largest move is `max_damage_share` (+21%): a group is "survivable" when its 
 
 **Gate:** gain vs v73 PASS 300/512 = 59%; submitted gems +63.5 ± 19.8, gems captured +69.4 ± 16.8, deaths −0.9 ± 0.5, gold −91 ± 137.
 
-**Live (version 91, live 18:32:38Z 6 Nov).** Panel v74p1 57-33, the best panel on engine 3: vs v73p1 (90 paired) 56 → 57 wins, margin +16 ± 50, gems +9 ± 27, deaths −0.6 ± 0.7 (neutral); vs v71p1 56 → 57, margin +36, panelcmp BETTER. Kept. Ranked 11-14 by 19:29Z.
+**Live (version 91, live 18:32:38Z 6 Nov).** Panel v74p1 57-33, the best panel on engine 3: vs v73p1 (90 paired) 56 → 57 wins, margin +16 ± 50, gems +9 ± 27, deaths −0.6 ± 0.7 (neutral); vs v71p1 56 → 57, margin +36, panelcmp BETTER. Kept. Ranked 11-14 by 19:29Z, 46-54 at 100 games (22:00Z), **80-70 = 53% at 150 games (23:36Z)**: passes the user's 48% rule, kept. Ladder 1746 (#217) at 23:36Z, the high since engine 3.0.0.
