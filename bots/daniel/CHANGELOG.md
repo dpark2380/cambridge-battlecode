@@ -9,6 +9,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 
 ## v71 (2026-11-06)
 
+- Submitted 15:0xZ 6 Nov as team bot version 89.
 - v70 + B178: carriers under threat leave at 50% health (B121's 65% → 50%). Gain PASS vs v70, 53% over 1,536, captured +32 ± 10; 0.8 was 35%, 0.4 no better than 0.5.
 - B179: every body goes home at 40% health, not 28.8% (v23). 53% over 3,328, deaths −1.5 ± 0.2, gems +28 ± 8; 0.5 was worse.
 - Rejected on v70: B176 Ryth health soak (51%), B177 tribute detour 15 (48%).
@@ -16,7 +17,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 ## v70 (2026-11-06)
 
 - v69 + B170: five-pick drafts take Vendetta for Vesper (Marcella, Heart of Ruin, Vendetta, Ryth, Varg); no draft takes Vesper now. B171c: four-pick drafts take Varg for Vendetta (60% on four-pick maps, nonreg 52%). B175: carriers bank from 20 gems for 30 rounds after seeing an enemy (52% over 3,328, gems +22 ± 8).
-- Submitted 13:31Z 6 Nov as team bot version 88. Final v70 vs v69 nonreg 54% (512), gems +48 ± 20.
+- Submitted 13:31Z 6 Nov as team bot version 88 (live 13:42Z). Panel v70p1 52-38, neutral vs v69p1 (53-37). Final v70 vs v69 nonreg 54% (512), gems +48 ± 20.
 - Gates vs v69: arena on five-pick maps 57% (324); nonreg PASS 54% (512); gain PASS 54% (768), gems +30 ± 15, deaths −0.7. Rejected on the way: B169 bag 28, B170b (Vendetta for Marcella, 39%).
 
 ## v69 (2026-11-06)

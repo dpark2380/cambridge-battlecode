@@ -14,3 +14,5 @@
 - B175, threat bag 20 (on v70): gain gate inconclusive after 3,328 games, 52%; submitted gems +22.5 ± 8.2, deaths −0.0 ± 0.2, captured +3.2 ± 7.2. Folded in before submission.
 - Also rejected on v70: B173 Ryth swaps (50%, 40%), B174 HoR half-health soak (49%).
 - Final v70 (with B171c and B175) vs v69, nonreg on all 128 maps: PASS 276/512 = 54%; submitted gems +48.2 ± 19.8, deaths −0.7 ± 0.5.
+
+**Live (version 88, live 13:41:54Z 6 Nov).** Panel v70p1 52-38: vs v69p1 (90 paired) 53 → 52 wins, margin −24 ± 56, neutral; vs v64p3 44 → 52, better. Kept; replaced by v71.
