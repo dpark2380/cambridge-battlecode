@@ -10,7 +10,8 @@ Version folder ≠ team submission number: the platform counts every submission 
 ## v73 (2026-11-06)
 
 - v72 + B183 + B184: max_group_bodies 3 → 4 (gain PASS 54% vs 3, gems +35 ± 16). B183: gold_weight 0.2 → 0.3 (target value = gems + weight × gold). vs v72: gems +44 ± 14, deaths −2.2 ± 0.3, gold +900 at a flat 51% mirror win rate; 0.25 similar, 0.4 and 0.12 worse.
-- Gates: nonreg vs v71 PASS 54% (512), gems +50 ± 20, deaths −2.4 ± 0.4, gold +986. v72 was never submitted on its own: v73 goes up after v71's panel.
+- Gates: nonreg vs v71 PASS 54% (512), gems +50 ± 20, deaths −2.4 ± 0.4, gold +986. v72 was never submitted on its own.
+- Submitted 2026-11-06T16:29:20Z as team bot version 90.
 
 ## v72 (2026-11-06)
 
@@ -19,7 +20,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 
 ## v71 (2026-11-06)
 
-- Submitted 15:04Z 6 Nov as team bot version 89.
+- Submitted 15:04Z 6 Nov as team bot version 89 (live 15:12Z). Panel v71p1 56-34 (v70p1 52-38, v69p1 53-37). Ranked 20-15 while live.
 - v70 + B178: carriers under threat leave at 50% health (B121's 65% → 50%). Gain PASS vs v70, 53% over 1,536, captured +32 ± 10; 0.8 was 35%, 0.4 no better than 0.5.
 - B179: every body goes home at 40% health, not 28.8% (v23). 53% over 3,328, deaths −1.5 ± 0.2, gems +28 ± 8; 0.5 was worse.
 - Rejected on v70: B176 Ryth health soak (51%), B177 tribute detour 15 (48%).

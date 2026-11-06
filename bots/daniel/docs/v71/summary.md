@@ -15,3 +15,5 @@ Leaving early costs more farming time than the carried gems it saves.
 **Also (B179):** `recall_health` 0.288 → 0.4, the health at which any body goes home (v23 set 0.288). Against v71-with-B178-only: 3,328 games, 53% (gain gate inconclusive, LLR +2.05), **deaths −1.5 ± 0.2**, submitted gems +28 ± 8, gold +138 ± 54. 0.5 vs 0.4: 234/512 = 46%, gems −16 ± 20. Folded in before submission.
 
 **Final v71 vs v70** (gain gate, all 128 maps): inconclusive after 3,328 games, 53% (LLR +1.90); submitted gems +28.6 ± 8.1, gems captured +55.4 ± 7.2, gold +264 ± 54, deaths −0.9 ± 0.2.
+
+**Live (version 89, live 15:12:37Z 6 Nov).** Panel v71p1 56-34, the best panel on engine 3: vs v70p1 (90 paired) 52 → 56 wins, margin +1 ± 56; vs v69p1 53 → 56. Ranked 20-15 while live. Kept; replaced by v73.
