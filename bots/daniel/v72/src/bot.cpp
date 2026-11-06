@@ -782,7 +782,7 @@ bool Bot::fight_enemies(int round) {
     // v27 (B73): Vesper is rated at max(strength, focus) = 100, about twice her real damage, and dies in 38% of healthy ranked
     // 1v1s (v25, 75 games; 17% of her deaths are on the walk home, so she dies fighting): she needs a clear edge.
     const bool vesper = me.champion_name() == cambc::champion_type::vesper_vale;
-    const bool even = vesper ? ours >= 1.3f * theirs : ours >= 1.4f * theirs;  // B118: fight only with a clear edge; v72 (B181): 1.2 -> 1.4 (1.6 and 1.0 worse)
+    const bool even = vesper ? ours >= 1.3f * theirs : ours >= 1.2f * theirs;  // B118: fight only with a clear edge
     const bool finish = weakest->health < 0.3f * weakest->max_health && ours >= 0.7f * theirs;
     if (!even && !finish) {
         mark_danger(vec2{centre.x / enemies_near, centre.y / enemies_near}, round);

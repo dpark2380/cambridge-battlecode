@@ -7,6 +7,11 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v72 (2026-11-06)
+
+- v71 + B180: bodies heal to 95% at spawn before heading out (was 0.7716 from a v5 tune). vs v71: 52% over 3,328, gems +22.5 ± 7.8, captured +16 ± 7.
+- Tried and dropped: B181 engage edge 1.4 (stacked, gems +3 ± 11 vs v71), B182 threat memory 50 / help wait 30.
+
 ## v71 (2026-11-06)
 
 - Submitted 15:04Z 6 Nov as team bot version 89.
