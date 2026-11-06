@@ -7,6 +7,11 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v70 (2026-11-06)
+
+- v69 + B170: five-pick drafts take Vendetta for Vesper (Marcella, Heart of Ruin, Vendetta, Ryth, Varg); no draft takes Vesper now.
+- Gates vs v69: arena on five-pick maps 57% (324); nonreg PASS 54% (512); gain PASS 54% (768), gems +30 ± 15, deaths −0.7. Rejected on the way: B169 bag 28, B170b (Vendetta for Marcella, 39%).
+
 ## v69 (2026-11-06)
 
 - v68 + B167: four-pick drafts take Vendetta for Vesper; five-pick drafts take Varg for Vendetta. B168: Varg buys Vendetta's order (Prospector, Durability, Jungle, then Bruiser) instead of Treasure first (arena 55% on five-pick maps, nonreg 53%).
