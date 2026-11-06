@@ -10,12 +10,14 @@ Version folder ≠ team submission number: the platform counts every submission 
 ## v69 (2026-11-06)
 
 - v68 + B167: four-pick drafts take Vendetta for Vesper; five-pick drafts take Varg for Vendetta. B168: Varg buys Vendetta's order (Prospector, Durability, Jungle, then Bruiser) instead of Treasure first (arena 55% on five-pick maps, nonreg 53%).
+- Submitted 12:00Z 6 Nov as team bot version 87.
 - Gates vs v68: nonreg PASS 53% (512); gain inconclusive at 53% over 3,328 games, submitted gems +48 ± 7, captured +57 ± 7, deaths −0.5 ± 0.2; profgate +11 ± 32. Rosters rejected on the way: B165a-c (3 picks), B166a/b (Willow, Prism).
 
 ## v68 (2026-11-06)
 
 - v67 + B164: three-pick drafts take Heart of Ruin, Ryth, Marcella (Aynir) instead of Vesper, Heart of Ruin, Vendetta. Found with `groupgap.py` (04compass, 04standing_stones) and arena against the profile bots.
 - Gates vs v67: arena on the 21 three-pick maps 62% (126 games); profgate +40 ± 23; nonreg PASS 52% (512), gems +30 ± 19.
+- Team bot version 86, live 11:12Z 6 Nov; panel v68p1 48-42, neutral vs v67p1 (+19 ± 26). Replaced by v69 (version 87) 12:00Z.
 - Rejected on the way (backlog): B157 Aynir soak settings, B159 Jungle first for all, B160/B162 Cassi & Issac (our play dies 8-11 more a game), B161 forced pairs (−323), B163 top-10 build grafts. New tools: `tools/fights.py`, `profiles.py extract --scout`.
 
 ## v67 (2026-11-06)

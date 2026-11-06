@@ -8,3 +8,5 @@
 - arena vs v67 on the 21 three-pick maps, 2 seeds: 78/126 = 62% (CI 53-70%); 00collision +830, adgato-gemcombat1 +690, 00anvil +611; losses on 01broken-curve −98, 01the-farm −128, 01gold-rush −51.
 - profgate vs v67 (180): margin +40 ± 23, gold +173 ± 105, deaths −0.2.
 - nonreg vs v67, all 128 maps: PASS 266/512 = 52%; submitted gems +30 ± 19, deaths −0.6 ± 0.4.
+
+**Live (version 86, live 11:12Z 6 Nov).** Panel v68p1: 48-42; vs v67p1 (84 paired) 44 → 43 wins, margin +19 ± 26, neutral (few panel maps have three picks); vs v64p3 44 → 48, better. Ranked 6-4 by 11:31Z. Replaced by v69 at 12:00Z.
