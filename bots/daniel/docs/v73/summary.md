@@ -1,4 +1,4 @@
-# v73: v72 + B183, gold weight 0.3
+# v73: v72 + B183 gold weight 0.3 + B184 four bodies per group
 
 **Change (`src/bot.cpp`):** `gold_weight` 0.2 → 0.3. A camp group's value is gems + gold_weight × gold per body per turn, so gold groups rank higher.
 
@@ -14,3 +14,5 @@
 More gold buys shards sooner, and stronger bodies die less. In the mirror the win rate stays flat (the gain gate fails on pair score), so the panel decides: the panel opponents are where the gold gap was measured.
 
 **Gates:** nonreg vs v71 (v72 + B183 together): PASS 274/512 = 54%; submitted gems +49.6 ± 20.0, deaths −2.4 ± 0.4, gold +986 ± 150, gems captured +22.6 ± 17.6.
+
+**Also (B184):** `max_group_bodies` 3 → 4: up to four bodies work one group. vs v73-with-3: gain PASS 414/768 = 54%, submitted gems +35 ± 16, captured +28 ± 13, deaths −0.8 ± 0.4. Folded in before submission. (Duo recall 0.65 was worse: 46%.)

@@ -54,7 +54,7 @@ constexpr float gold_weight = 0.3f;  // v73 (B183): 0.2 since v6; 0.3 vs v72 gem
 // costs one, charged pro rata so free clusters win over equal-value monsters.
 constexpr float recall_turns = 11;
 // Most bodies on one group: past three, a fourth adds little but splits the reward further.
-constexpr int max_group_bodies = 3;  // v16 (B36): was 2
+constexpr int max_group_bodies = 4;  // v16 (B36): was 2; v73 (B184): 3 -> 4 (gain PASS vs v73-with-3, 54%, gems +35 ± 16)
 // Value kept by a body joining a group that does not need it (see choose_target).
 constexpr float extra_body_value = 1.0f;  // v16 (B36): was 0.4538; bodies soloed elk camps (elkring first clear r49 vs top r12)
 // Extra turns charged to starting a group that needs help, for the wait until it arrives.
