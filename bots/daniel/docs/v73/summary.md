@@ -17,4 +17,4 @@ More gold buys shards sooner, and stronger bodies die less. In the mirror the wi
 
 **Also (B184):** `max_group_bodies` 3 → 4: up to four bodies work one group. vs v73-with-3: gain PASS 414/768 = 54%, submitted gems +35 ± 16, captured +28 ± 13, deaths −0.8 ± 0.4. Folded in before submission. (Duo recall 0.65 was worse: 46%.)
 
-**Golem maps (B189):** groupgap flagged seven maps where opponents take Golem + gem groups 2-4 a game and we 0.5-1.3. Against prof-aynir on them (2 seeds): v71 27/42 = 64%, v73 36/42 = 86%; four bodies make a Golem group a normal target.
+**Golem maps (B189):** groupgap flagged seven maps where opponents take Golem + gem groups 2-4 a game and we 0.5-1.3. Against prof-aynir on them (2 seeds): v71 27/42 = 64%, v73 36/42 = 86%; four bodies make a Golem group a normal target. On seven elk + gem maps also flagged: v71 21/42 = 50%, v73 30/42 = 71%.
