@@ -36,6 +36,7 @@
 | [v65](v65/summary.md) | `v65` | v64 + B152: Heart of Ruin engages only with a 1.5x power edge (it fights where top HoRs farm). Team bot version 82: v65p2 vs v64p3 (both engine 3.0.0) wins 44 → 39, margin −50 ± 33; **rejected** | nonreg 50% vs v64 |
 | [v66](v66/summary.md) | `v66` | v64 + B153: a gem-less group's gold counts up to 150 (04lines gold walls: 11-0 at r2000 in the mirror) | 04lines 8/8 vs v64; nonreg 50% |
 | [v67](v67/summary.md) | `v67` | v66 + B156: meowest's build (no Treasure, Bruiser soak without health), 36-gem bag, 3-4 body draft | profgate +65 ± 41 vs v66, deaths −1.3; nonreg 53% |
+| [v68](v68/summary.md) | `v68` | v67 + B164: three-pick roster HoR, Ryth, Marcella | 62% vs v67 on 3-pick maps; nonreg 52% |
 | [v44](v44/summary.md) | `v44` | v43 + B112a lone Vesper/HoR fall-back. Team bot version 58: panel 28-62 (deaths 15.8), ranked 20-20 over 40 | nonreg 49% vs v43, 81% v12, 92% Jame v3 |
 | [v43](v43/summary.md) | `v43` | v41 + B118: everyone fights only with ≥1.2x power. Team bot versions 55/57: panel 24-66 (= v41), ranked 38-27 over two stints | nonreg 48% vs v41 (borderline), 81% v12, 92% Jame v3 |
 | [v42](v42/summary.md) | `v42` | v41 + B113b: gold counts 0.5 before round 500 (losses trail 1.2k vs 2.3k gold by r500). Ranked from 09:37Z (team bot version 53): 11-19 over 30, reverted 10:40Z | gain gate vs v41 PASS 55%; nonreg 81% v12, 90% Jame v3 |
