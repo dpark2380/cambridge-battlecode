@@ -7,6 +7,11 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v79 (2026-11-07)
+
+- v78 + B224: a body that has died 3+ times this game engages only with a 1.5x power edge. From ranked death-spiral losses (fights.py: 19% deaths in fights started ahead in numbers vs 8% normally).
+- Gates vs v78: profgate on pe3 +12 ± 14, deaths −0.3 ± 0.1; nonreg PASS (48% over 2,048, gems −10 ± 10). Panel decides.
+
 ## v78 (2026-11-07)
 
 - v77 + B204 (as v76): fight_enemies returns before reading allies when no enemy is visible. In ranked, v76 ran out of fuel 12.1 times a game vs v75 21.9 and v77 36.7; v77 won 7 of its 20 fuel-heavy games.
