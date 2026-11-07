@@ -89,6 +89,24 @@ def duel(bot_a, bot_b, seeds, jobs):
     return wins / max(len(results), 1), sum(r[1] for r in results) / max(len(results), 1)
 
 
+def vs_opponents(bot, opponents, seeds, jobs):
+    """Per-setup results of `bot` against each opponent bot (profile bots), keyed so candidates pair with the incumbent."""
+    out = {}
+    for opp in opponents:
+        for m, a_first, stats in arena.run_matches(bot, opp, arena.maps(), repeat=0, jobs=jobs, seeds=seeds):
+            if stats:
+                out.setdefault((opp.name, m, a_first), []).append(arena.a_result(a_first, stats)[0])
+    return out
+
+
+def paired_delta(cand, inc):
+    """Candidate minus incumbent win rate over the setups both played."""
+    keys = [k for k in cand if k in inc]
+    c = sum(sum(cand[k]) for k in keys) / max(1, sum(len(cand[k]) for k in keys))
+    i = sum(sum(inc[k]) for k in keys) / max(1, sum(len(inc[k]) for k in keys))
+    return c - i, c
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--bot", default="main-cpp")
@@ -102,7 +120,14 @@ def main():
     parser.add_argument("--jobs", type=int, default=8)
     parser.add_argument("--rng", type=int, default=int(time.time()))
     parser.add_argument("--apply", action="store_true", help="write the final values back into the bot")
+    parser.add_argument("--opponents", help="score against bots/_var/<prefix>* (profile bots) instead of the incumbent: "
+                        "a candidate must beat the incumbent's win rate against them by --accept-delta")
+    parser.add_argument("--accept-delta", type=float, default=0.03)
     args = parser.parse_args()
+    opponents = sorted((ROOT / "bots" / "_var").glob(args.opponents + "*")) if args.opponents else None
+    if opponents:
+        for o in opponents:
+            arena.build(o)
 
     source = arena.bot_path(args.bot)
     rel_file = Path(args.file) if args.file else Path("src/params.h") if (source / "src/params.h").exists() else Path("src/bot.cpp")
@@ -117,22 +142,35 @@ def main():
     for it in range(args.iterations):
         seeds = [rng.randrange(1, 400) for _ in range(args.seeds)]  # fresh drafts every iteration
         scored = []
+        if opponents:
+            inc = vs_opponents(incumbent, opponents, seeds, args.jobs)
         for i in range(args.candidates):
             values = perturb(best, args.sigma, rng)
             bot = make_bot(source, rel_file, f"_tune_{i}", values)
-            rate, margin = duel(bot, incumbent, seeds, args.jobs)
+            if opponents:
+                delta, own = paired_delta(vs_opponents(bot, opponents, seeds, args.jobs), inc)
+                rate, margin = delta, own
+                print(f"iter {it} cand {i}: win vs opponents {own:.0%} ({delta:+.1%} vs incumbent)", flush=True)
+            else:
+                rate, margin = duel(bot, incumbent, seeds, args.jobs)
+                print(f"iter {it} cand {i}: win {rate:.0%} margin {margin:+.0f}", flush=True)
             scored.append((rate, margin, values))
-            print(f"iter {it} cand {i}: win {rate:.0%} margin {margin:+.0f}", flush=True)
         rate, margin, values = max(scored, key=lambda s: (s[0], s[1]))
-        accepted = rate >= args.accept
+        accepted = rate >= (args.accept_delta if opponents else args.accept)
         if accepted:
             # T7: the best of several candidates is biased upwards (three 50% candidates pass a 56% bar ~18% of
             # the time), so the winner must pass again on fresh seeds.
             confirm_seeds = [rng.randrange(400, 800) for _ in range(args.seeds)]
             bot = make_bot(source, rel_file, "_tune_confirm", values)
-            confirm, _ = duel(bot, incumbent, confirm_seeds, args.jobs)
-            print(f"iter {it}: best {rate:.0%}, confirmation on fresh seeds {confirm:.0%}", flush=True)
-            accepted = confirm >= args.accept
+            if opponents:
+                confirm, _ = paired_delta(vs_opponents(bot, opponents, confirm_seeds, args.jobs),
+                                          vs_opponents(incumbent, opponents, confirm_seeds, args.jobs))
+                print(f"iter {it}: best {rate:+.1%}, confirmation on fresh seeds {confirm:+.1%}", flush=True)
+                accepted = confirm >= args.accept_delta
+            else:
+                confirm, _ = duel(bot, incumbent, confirm_seeds, args.jobs)
+                print(f"iter {it}: best {rate:.0%}, confirmation on fresh seeds {confirm:.0%}", flush=True)
+                accepted = confirm >= args.accept
         with LOG.open("a") as log:
             log.write(json.dumps({"bot": args.bot, "iter": it, "rate": rate, "margin": margin, "accepted": accepted,
                                   "params": {k: v for k, (v, _) in values.items()}}) + "\n")
