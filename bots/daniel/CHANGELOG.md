@@ -7,6 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v75 (2026-11-07)
+
+- v74 + B198: a body carrying 150+ unspent gold weights gold at 0.3× in target value. From v74's ranked breakdown: 04* maps 30-43, with 04orchard/04wheel banking nothing until r300-r500 while farming gold.
+- Gates: arena on 42 04* maps 55% vs v74; gain vs v74 PASS 54% (512), gems +23 ± 21.
+- Rejected: B199 lone-Monolith value ×1.5 (39% on lone-Monolith maps).
+
 ## v74 (2026-11-06)
 
 - v73 + B193: eight constants tuned together by `tools/tune.py` (max_damage_share 4.04 → 4.90, help_wait_turns 50 → 40, gold_weight 0.30 → 0.233, recall 0.40 → 0.42, carrier recall 0.50 → 0.52, spawn leave 0.95 → 0.94, extra_body_value 1.0 → 1.12, threat bag 20 → 19).

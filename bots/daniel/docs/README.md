@@ -43,6 +43,7 @@
 | [v72](v72/summary.md) | `v72` | v71 + B180: heal to 95% at spawn | 52% vs v71 over 3,328, gems +22.5 ± 7.8 |
 | [v73](v73/summary.md) | `v73` | v72 + B183: gold weight 0.3 | nonreg vs v71 54%, gems +50, deaths −2.4 |
 | [v74](v74/summary.md) | `v74` | v73 + B193: eight constants tuned together (tune.py) | gain PASS vs v73 59%, gems +64 |
+| [v75](v75/summary.md) | `v75` | v74 + B198: gold counts 0.3× while a body carries 150+ gold | 55% on 04* maps; gain PASS vs v74 54% |
 | [v44](v44/summary.md) | `v44` | v43 + B112a lone Vesper/HoR fall-back. Team bot version 58: panel 28-62 (deaths 15.8), ranked 20-20 over 40 | nonreg 49% vs v43, 81% v12, 92% Jame v3 |
 | [v43](v43/summary.md) | `v43` | v41 + B118: everyone fights only with ≥1.2x power. Team bot versions 55/57: panel 24-66 (= v41), ranked 38-27 over two stints | nonreg 48% vs v41 (borderline), 81% v12, 92% Jame v3 |
 | [v42](v42/summary.md) | `v42` | v41 + B113b: gold counts 0.5 before round 500 (losses trail 1.2k vs 2.3k gold by r500). Ranked from 09:37Z (team bot version 53): 11-19 over 30, reverted 10:40Z | gain gate vs v41 PASS 55%; nonreg 81% v12, 90% Jame v3 |
