@@ -7,7 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
-## v76 (2026-11-07, panel trial)
+## v77 (2026-11-07)
+
+- v75 + B212: three-pick drafts take Heart of Ruin, Marcella, Vendetta. Checked against the pe3 profile bots (real engine-3 drafts and builds): 192/252 vs v75's 186; head to head 60% on three-pick maps; nonreg PASS.
+- Built on v75: v76's panel trial was not better (55-35 vs 58-31).
+
+## v76 (2026-11-07, panel trial, dropped)
 
 - v75 + B204: fight_enemies returns before reading allies when no enemy is visible (fuel only, ~8k a turn; 04orchard early fuel-outs 186 → 35). Local opponents stall like us, so a live panel judges it; back to v75 unless clearly better.
 - The first v76 (B201, with a ward back-off after any failed placement) lost to v74 on the pe3 profiles and was never submitted. Also rejected tonight: B205 small-team group cap, B206 profile-scored tuning (no step), B207 bigger threat bag, B208 shop-trip gem limit (neutral).

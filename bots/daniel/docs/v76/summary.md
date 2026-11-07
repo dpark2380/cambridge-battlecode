@@ -7,3 +7,5 @@
 **Local evidence is inconclusive** because every local opponent stalls as much as we do, while ranked opponents almost never do: vs pe3 profiles on the panel maps −19 ± 22; on the 44 big maps +6 vs pe3-aynir, −10 vs pe3-meowest (of 176 each). The first v76 (B201: also a 50-round ward back-off after any failed placement) lost to v74 on the pe3 profiles (deaths +0.9) and was never submitted.
 
 **Trial:** a live panel (v76p1) against v75p1 (58-31); back to v75 unless clearly better.
+
+**Panel trial result (06:51Z):** v76p1 55-35 vs v75p1 58-31 (89 paired, 9 flipped, margin −17 ± 30, deaths +0.2). Not better; dropped. v77 is built on v75.
