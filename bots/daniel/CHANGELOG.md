@@ -7,7 +7,7 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
-## v76 (2026-11-07)
+## v76 (2026-11-07, not submitted)
 
 - v75 + B201: fuel fixes with no decision change. Wards wait 50 rounds after a failed placement (out of charges, every turn threw at ~7k fuel); fight_enemies returns before reading allies when no enemy is visible (~8k a turn). (B203, a ward back-off with no bush in reach, was removed before submission: 72% vs 77% on big maps.)
 - From ranked: 04orchard ran out of fuel ~185 times in rounds 0-250 (opponent ~1), 0 gems by r300-r500.

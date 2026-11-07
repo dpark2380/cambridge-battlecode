@@ -15,3 +15,5 @@ No targeting or fighting decision changes.
 - nonreg vs v75, all maps: PASS (gems −6 ± 20; a mirror hides a fuel fix because both sides stall the same way).
 - The full B201 (also refreshing the target field every 6 tiles/20 rounds on big maps) failed the gain gate vs v75 (52% over 1,792, gems −4 ± 10): slower retargeting cancels the gain. Not included.
 - B203 tried on top and removed before submission: a 5-round ward back-off with no bush in reach cut fuel-outs further (02tangle 171 → 134, 04orchard 126 → 104), but vs prof-aynir on the 44 big maps it scored 126/176 = 72% against 136/176 without it (it places fewer wards while moving).
+
+**Not submitted (7 Nov 03:41Z).** On the new pe3 profile set (engine-3 panels, v66 movement), v76 vs v74: margin −35 ± 29, deaths +0.9 ± 0.4 **, while v75 vs v74 was +6 ± 8. The ward back-off fires on any failed placement, so bodies stop warding for 50 rounds; follow-up B204.
