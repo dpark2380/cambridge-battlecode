@@ -9,7 +9,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 
 ## v76 (2026-11-07)
 
-- v75 + B201: fuel fixes with no decision change. Wards wait 50 rounds after a failed placement (out of charges, every turn threw at ~7k fuel); fight_enemies returns before reading allies when no enemy is visible (~8k a turn).
+- v75 + B201: fuel fixes with no decision change. Wards wait 50 rounds after a failed placement (out of charges, every turn threw at ~7k fuel); fight_enemies returns before reading allies when no enemy is visible (~8k a turn); B203: with no bush in reach, wards wait 5 rounds before rescanning (~6k a turn).
 - From ranked: 04orchard ran out of fuel ~185 times in rounds 0-250 (opponent ~1), 0 gems by r300-r500.
 - Gates: vs prof-aynir on 44 big maps 77% (v75 73%, same setups); nonreg vs v75 PASS. A slower target-field refresh (full B201) cancelled the gain and was dropped.
 

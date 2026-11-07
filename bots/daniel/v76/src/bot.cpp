@@ -1232,8 +1232,10 @@ void Bot::place_ward() {
     for (const auto tile : options.positions())
         if (!best || distance(tile, aim) < distance(*best, aim))
             best = tile;
-    if (!best)
+    if (!best) {
+        ward_retry_round = static_cast<int>(cambc::round_number()) + 5;  // v76 (B203): no bush in reach; the scan costs ~6k fuel a turn
         return;
+    }
     try {
         me.place_ward(*best);
     } catch (const cambc::error&) {
