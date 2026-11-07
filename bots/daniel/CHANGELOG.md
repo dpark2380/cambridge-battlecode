@@ -11,6 +11,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 
 - v78 + B224: a body that has died 3+ times this game engages only with a 1.5x power edge. From ranked death-spiral losses (fights.py: 19% deaths in fights started ahead in numbers vs 8% normally).
 - Gates vs v78: profgate on pe3 +12 ± 14, deaths −0.3 ± 0.1; nonreg PASS (48% over 2,048, gems −10 ± 10). Panel decides.
+- Submitted 2026-11-07T10:29:35Z as team bot version 96.
 
 ## v78 (2026-11-07)
 
