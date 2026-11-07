@@ -7,6 +7,12 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v76 (2026-11-07)
+
+- v75 + B201: fuel fixes with no decision change. Wards wait 50 rounds after a failed placement (out of charges, every turn threw at ~7k fuel); fight_enemies returns before reading allies when no enemy is visible (~8k a turn).
+- From ranked: 04orchard ran out of fuel ~185 times in rounds 0-250 (opponent ~1), 0 gems by r300-r500.
+- Gates: vs prof-aynir on 44 big maps 77% (v75 73%, same setups); nonreg vs v75 PASS. A slower target-field refresh (full B201) cancelled the gain and was dropped.
+
 ## v75 (2026-11-07)
 
 - v74 + B198: a body carrying 150+ unspent gold weights gold at 0.3× in target value. From v74's ranked breakdown: 04* maps 30-43, with 04orchard/04wheel banking nothing until r300-r500 while farming gold.
