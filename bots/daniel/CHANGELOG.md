@@ -7,6 +7,11 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
+## v78 (2026-11-07)
+
+- v77 + B204 (as v76): fight_enemies returns before reading allies when no enemy is visible. In ranked, v76 ran out of fuel 12.1 times a game vs v75 21.9 and v77 36.7; v77 won 7 of its 20 fuel-heavy games.
+- Gate: nonreg vs v77 PASS 51%.
+
 ## v77 (2026-11-07)
 
 - v75 + B212: three-pick drafts take Heart of Ruin, Marcella, Vendetta. Checked against the pe3 profile bots (real engine-3 drafts and builds): 192/252 vs v75's 186; head to head 60% on three-pick maps; nonreg PASS.

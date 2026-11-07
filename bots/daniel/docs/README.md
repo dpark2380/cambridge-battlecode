@@ -46,6 +46,7 @@
 | [v75](v75/summary.md) | `v75` | v74 + B198: gold counts 0.3× while a body carries 150+ gold | 55% on 04* maps; gain PASS vs v74 54% |
 | [v76](v76/summary.md) | `v76` | v75 + B204: fight check skipped with no enemy in sight (fuel) | panel trial vs v75 |
 | [v77](v77/summary.md) | `v77` | v75 + B212: three-pick roster HoR/Marcella/Vendetta | 60% vs v75 on 3-pick maps; nonreg PASS |
+| [v78](v78/summary.md) | `v78` | v77 + B204: fight check skipped with no enemy in sight (fuel) | ranked fuel-outs halved with v76; nonreg PASS vs v77 |
 | [v44](v44/summary.md) | `v44` | v43 + B112a lone Vesper/HoR fall-back. Team bot version 58: panel 28-62 (deaths 15.8), ranked 20-20 over 40 | nonreg 49% vs v43, 81% v12, 92% Jame v3 |
 | [v43](v43/summary.md) | `v43` | v41 + B118: everyone fights only with ≥1.2x power. Team bot versions 55/57: panel 24-66 (= v41), ranked 38-27 over two stints | nonreg 48% vs v41 (borderline), 81% v12, 92% Jame v3 |
 | [v42](v42/summary.md) | `v42` | v41 + B113b: gold counts 0.5 before round 500 (losses trail 1.2k vs 2.3k gold by r500). Ranked from 09:37Z (team bot version 53): 11-19 over 30, reverted 10:40Z | gain gate vs v41 PASS 55%; nonreg 81% v12, 90% Jame v3 |
