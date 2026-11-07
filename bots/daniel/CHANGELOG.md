@@ -11,6 +11,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 
 - v75 + B212: three-pick drafts take Heart of Ruin, Marcella, Vendetta. Checked against the pe3 profile bots (real engine-3 drafts and builds): 192/252 vs v75's 186; head to head 60% on three-pick maps; nonreg PASS.
 - Built on v75: v76's panel trial was not better (55-35 vs 58-31).
+- Submitted 06:51Z 7 Nov as team bot version 94.
 
 ## v76 (2026-11-07, panel trial, dropped)
 
