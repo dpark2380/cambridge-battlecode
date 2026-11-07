@@ -11,6 +11,7 @@ Version folder ≠ team submission number: the platform counts every submission 
 
 - v74 + B198: a body carrying 150+ unspent gold weights gold at 0.3× in target value. From v74's ranked breakdown: 04* maps 30-43, with 04orchard/04wheel banking nothing until r300-r500 while farming gold.
 - Gates: arena on 42 04* maps 55% vs v74; gain vs v74 PASS 54% (512), gems +23 ± 21.
+- Submitted 02:51Z 7 Nov as team bot version 92.
 - Rejected: B199 lone-Monolith value ×1.5 (39% on lone-Monolith maps).
 
 ## v74 (2026-11-06)
