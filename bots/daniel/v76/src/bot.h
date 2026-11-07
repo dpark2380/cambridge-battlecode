@@ -21,7 +21,6 @@ class Bot {
     std::optional<draft_plan> plan;  // from draft memory; nullopt if the draft wrote none
     role squad = role::gold_squad;   // the draft's role: now only steers fighting and shopping
     int slot = 0;                    // our claim slot in shared memory
-    int ward_retry_round = 0;        // v76 (B201): after a failed ward placement (no charges), wait before scanning again
     int team_bodies = 3;             // bodies on our team (Cassi and Issac count as two)
     world camps;
     self_estimate own;

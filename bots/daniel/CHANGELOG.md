@@ -7,11 +7,10 @@ commit as any change to a bot.
 
 Version folder ≠ team submission number: the platform counts every submission the team makes (see "Submitted").
 
-## v76 (2026-11-07, not submitted)
+## v76 (2026-11-07, panel trial)
 
-- v75 + B201: fuel fixes with no decision change. Wards wait 50 rounds after a failed placement (out of charges, every turn threw at ~7k fuel); fight_enemies returns before reading allies when no enemy is visible (~8k a turn). (B203, a ward back-off with no bush in reach, was removed before submission: 72% vs 77% on big maps.)
-- From ranked: 04orchard ran out of fuel ~185 times in rounds 0-250 (opponent ~1), 0 gems by r300-r500.
-- Gates: vs prof-aynir on 44 big maps 77% (v75 73%, same setups); nonreg vs v75 PASS. A slower target-field refresh (full B201) cancelled the gain and was dropped.
+- v75 + B204: fight_enemies returns before reading allies when no enemy is visible (fuel only, ~8k a turn; 04orchard early fuel-outs 186 → 35). Local opponents stall like us, so a live panel judges it; back to v75 unless clearly better.
+- The first v76 (B201, with a ward back-off after any failed placement) lost to v74 on the pe3 profiles and was never submitted. Also rejected tonight: B205 small-team group cap, B206 profile-scored tuning (no step), B207 bigger threat bag, B208 shop-trip gem limit (neutral).
 
 ## v75 (2026-11-07)
 

@@ -736,8 +736,10 @@ bool Bot::fight_enemies(int round) {
         if (!weakest || enemy.health < weakest->health)
             weakest = &enemy;
     }
+    // v76 (B204): no enemy in sight, skip reading every ally (~8k fuel a turn). 04orchard: our fuel-outs in rounds 0-250
+    // fell 186 → 35; ranked opponents almost never run out, every local opponent does, so only a live panel can judge it.
     if (enemies.empty())
-        return false;  // v76 (B201): no enemy in sight, skip reading every ally (~8k fuel a turn)
+        return false;
     const seen_champion* friend_near = nullptr;
     const auto allies = visible_champions(team::ally);
     // B112a: ranked v38 losses (19 replays): 68% of Vesper's and 55% of Heart of Ruin's deaths come alone, 89% of them
@@ -1221,8 +1223,7 @@ void Bot::play_turn() {
 // put it on the bush in reach nearest our target (vision into bushes and on the camp's respawn).
 void Bot::place_ward() {
     auto& me = cambc::self();
-    // v76 (B201): out of charges the cooldown stays 0 and every turn scanned bushes and threw (~7k fuel a turn, 04orchard profile).
-    if (!me.is_alive() || me.ward_cooldown() > 0 || static_cast<int>(cambc::round_number()) < ward_retry_round)
+    if (!me.is_alive() || me.ward_cooldown() > 0)
         return;
     const auto* g = camps.group(current_target);
     const vec2 aim = g ? g->anchor : me.position();
@@ -1237,7 +1238,7 @@ void Bot::place_ward() {
     try {
         me.place_ward(*best);
     } catch (const cambc::error&) {
-        ward_retry_round = static_cast<int>(cambc::round_number()) + 50;  // v76 (B201): ally ward present or out of charges
+        // ally ward present or out of charges: try again next turn
     }
 }
 
