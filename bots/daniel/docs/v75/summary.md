@@ -9,3 +9,5 @@
 - gain vs v74 on all 128 maps: **PASS** 276/512 = 54%; submitted gems +23 ± 21, captured +19 ± 18, gold −78 ± 121.
 
 **Rejected alongside (B199):** a lone Monolith's value ×1.5 (ranked opponents take it 2.2 a game on 04yin_yang and 04duel_ring, we never): arena on the 23 lone-Monolith maps 36/92 = 39%.
+
+**Live (version 92, live 03:01:26Z 7 Nov).** Panel v75p1 58-31 (89 games), the best panel on engine 3: vs v74p1 (89 paired) wins 56 → 58, only 2 outcomes changed (both to wins), gem margin +17 ± 10, gems +9 ± 6. Kept.
