@@ -7,3 +7,5 @@
 **Gates vs v75:** head to head on the three-pick maps, 3 seeds, 100/168 = 60% (CI 52-67%); nonreg on all 128 maps PASS, submitted gems +12 ± 21, deaths −0.3.
 
 **v76's panel trial (same night):** v76p1 55-35 vs v75p1 58-31 (89 paired, 9 flipped, margin −17 ± 30): not better, dropped.
+
+**Live (version 94, live 07:01:44Z 7 Nov).** Panel v77p1 60-30, the best on engine 3: vs v75p1 (89 paired) wins 58 → 60, 4 outcomes changed, margin −5 ± 21, deaths −0.4 ± 0.3. Kept. Ranked 13-22 by 08:12Z (three-pick 2-0; the five-pick code is v75's).
